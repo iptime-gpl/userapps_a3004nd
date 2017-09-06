@@ -1,0 +1,299 @@
+<div id="setup" class="cc_padding">
+	<form id="iux_form">
+		<div id="right_main" class="right_main">
+			<div class="lc_row" sid="PRIORITY_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="lc_priority_box">
+						<input name="priority" type="number" pattern="[0-9]*" sid="C_SETUP_PRIORITY" min = "0" style="ime-mode: disabled;">
+					</div>
+					<div class="lc_priority_text_box">
+						<p sid="S_PRIORITY_STRING"></p>
+					</div>
+					<div class="lc_priority_button_box">
+						<button type="button" sid="PRIORITY_UP" data-role="none">
+							<img src="images/pri_up.gif" class="lc_btnimg"> 
+							<span sid="S_PRIUP_STRING"></span>
+						</button>
+					</div>
+					<div class="lc_priority_button_box">
+						<button type="button" sid="PRIORITY_DOWN" data-role="none">
+							<img src="images/pri_down.gif" class="lc_btnimg"> 
+							<span sid="S_PRIDOWN_STRING"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_type_box ui-alt-icon ui-nodisc-icon">
+					<select name="type" sid="C_SETUP_TYPE" type="select"></select>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_rulename_box">
+					<input name="name" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_SETUP_NAME" maxlength="127">
+				</div>
+			</div>
+
+			<div class="lc_row" sid="INTERNET_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_direction_box ui-alt-icon ui-nodisc-icon">
+					<select name="direction" sid="C_SETUP_DIRECTION" type="select"></select>
+				</div>
+			</div>
+
+			<div class="lc_row" sid="INTERNET_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_protocol_box">
+						<select name="protocol" sid="C_SETUP_PROTOCOL" type="select"></select>
+					</div>
+					<div class="lc_port_box">
+						<input name="dstsport" type="number" pattern="[0-9]*" sid="C_SETUP_DSTSPORT" min = "1" max = "65535" maxlength = "5">
+					</div>
+						<div class="lc_hyphen">~</div>
+					<div class="lc_port_box">
+						<input name="dsteport" type="number" pattern="[0-9]*" sid="C_SETUP_DSTEPORT" min = "1" max = "65535" maxlength = "5">
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row" sid="BOTH_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_addrtype_box">
+						<select name="srcaddrtype" sid="C_SETUP_SRCADDRTYPE" type="select"></select>
+					</div>
+					<div sid="L_SETUP_SRCIP" class="lc_wrap_ip_box ip">
+						<div class="lc_ip_box">
+							<input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_hyphen">~</div>
+						<div class="lc_ip_box">
+							<input sid="VALUE4" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+					</div>
+					<div sid="C_SETUP_SRCMAC" class="lc_wrap_ip_box mac">
+						<div class="lc_mac_box">
+							<input sid="VALUE0" maxlength="2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>-</p></div>
+						<div class="lc_mac_box">
+							<input sid="VALUE1" maxlength="2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>-</p></div>
+						<div class="lc_mac_box">
+							<input sid="VALUE2" maxlength="2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>-</p></div>
+						<div class="lc_mac_box">
+							<input sid="VALUE3" maxlength="2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>-</p></div>
+						<div class="lc_mac_box">
+							<input sid="VALUE4" maxlength="2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>-</p></div>
+						<div class="lc_mac_box">
+							<input sid="VALUE5" maxlength="2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+					</div>
+					<div sid="L_SETUP_MACSEARCH" class="lc_wrap_ip_box">
+						<div class="ui-alt-icon ui-nodisc-icon">
+						<select name="macsearch" sid="SETUP_MACSEARCH" type="select"></select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row" sid="INTERNET_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_addrtype_box">
+						<select name="dstaddrtype" sid="C_SETUP_DSTADDRTYPE" type="select"></select>
+					</div>
+					<div sid="L_SETUP_DSTIP" class="lc_wrap_ip_box ip">
+						<div class="lc_ip_box">
+							<input sid="VALUE0" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_hyphen">~</div>
+						<div class="lc_ip_box">
+							<input sid="VALUE4" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="lc_row" sid="SITE_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_sites_box">
+					<input name="url" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_SETUP_URL" maxlength="127">
+				</div>
+			</div>
+			
+			<div class="lc_row" sid="WIFI_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_wifi_box ui-alt-icon ui-nodisc-icon">
+					<select name="band" sid="C_SETUP_BAND" type="select"></select>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_policy_box">
+						<select name="policy" sid="C_SETUP_POLICY" type="select"></select>
+					</div>
+					<div sid="C_SETUP_DAY" class="lc_wrap_day_box">
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day0" id="day0" sid="L_SETUP_DAY0" type="checkbox" value="1">
+						<label for="day0">
+						<p sid="S_MON_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day1" id="day1" sid="L_SETUP_DAY1" type="checkbox" value="1">
+						<label for="day1">
+						<p sid="S_TUE_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day2" id="day2" sid="L_SETUP_DAY2" type="checkbox" value="1">
+						<label for="day2">
+						<p sid="S_WED_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day3" id="day3" sid="L_SETUP_DAY3" type="checkbox" value="1">
+						<label for="day3">
+						<p sid="S_THU_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day4" id="day4" sid="L_SETUP_DAY4" type="checkbox" value="1">
+						<label for="day4">
+						<p sid="S_FRI_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day5" id="day5" sid="L_SETUP_DAY5" type="checkbox" value="1">
+						<label for="day5">
+						<p sid="S_SAT_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day6" id="day6" sid="L_SETUP_DAY6" type="checkbox" value="1">
+						<label for="day6">
+						<p sid="S_SUN_STRING"></p>
+						</label>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_timesel_box">
+						<select name="stime" sid="C_SETUP_STIME" type="select"></select>
+					</div>
+					<div class="ui-alt-icon ui-nodisc-icon lc_timesel_box">
+						<select name="etime" sid="C_SETUP_ETIME" type="select"></select>
+					</div>
+					<div class="ui-alt-icon lc_every_box">
+						<input name="everyday" id="everyday" sid="L_SETUP_EVERY" type="checkbox" value="1">
+						<label for="everyday">
+						<p sid="S_EVERY_STRING"></p>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="right_footer">
+			<div class="lc_row">
+				<div class="lc_controlbtn_line">
+					<div class="lc_newrule_button">
+					<button type="button" sid="S_NEWRULE_BTN" class="custom_css_button" data-role="none">
+						<img src="images/plus_icon.jpg" class="lc_btnimg"> 
+						<span sid="S_NEWRULEBTN_STRING"></span>
+					</button>
+					</div>
+					<div class="lc_usual_button">
+					<button type="button" sid="S_MODIFY_BTN" class="custom_css_button" data-role="none">
+						<span sid="S_BUTTON_SUBMIT"></span>
+					</button>
+					</div>
+					<div class="lc_newrule_button">
+					<button type="button" sid="S_CANCEL_BTN" class="custom_css_button" data-role="none">
+						<span sid="S_INPUTCANCEL"></span>
+					</button>
+					</div>
+					<div class="lc_usual_button">
+					<button type="button" sid="S_DELETE_BTN" class="custom_css_button" data-role="none">
+						<span sid="S_DELETE"></span>
+					</button>
+					</div>
+				</div>
+				<div class="lc_disable_line">
+					<div class="ui-alt-icon lc_disable_box">
+						<input name="disabled" id="disabled_id" sid="C_SETUP_DISABLED" type="checkbox" value="1">
+						<label for="disabled_id">
+						<p sid="S_DISABLED_STRING"></p>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

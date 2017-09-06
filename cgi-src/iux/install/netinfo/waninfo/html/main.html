@@ -1,0 +1,401 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content">
+  <form id="iux_form">
+    <div class="lc_wrap_radiobutton">
+      <input name="info" id="dynamic" sid="C_WANINFO_INFO" type="radio" value="dynamic">
+      <label for="dynamic"><p class="lc_text_bold" sid="S_WANMODE_DYNAMIC"></p></label>
+      <input name="info" id="pppoe" sid="C_WANINFO_INFO" type="radio" value="pppoe">
+      <label for="pppoe"><p class="lc_text_bold" sid="S_WANMODE_PPPOE"></p></label>
+      <input name="info" id="static" sid="C_WANINFO_INFO" type="radio" value="static">
+      <label for="static"><p class="lc_text_bold" sid="S_WANMODE_STATIC"></p></label>
+    </div>
+	<!--pppoe-->
+	<div sid="L_FIELD_PPPOE">
+	<div class="lc_row" sid="USERID">
+      <div class="lc_left"><p sid="S_TITLE_USERID"></p></div>
+      <div class="lc_middle">
+        <div class="lc_input_user">
+          <input name="userid" sid="C_PPPOE_USERID" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled">
+        </div>
+      </div>
+    </div>
+    <div class="lc_row" sid="USERPW">
+      <div class="lc_left"><p sid="S_TITLE_USERPW"></p></div>
+      <div class="lc_middle">
+        <div class="lc_input_user">
+          <input name="userpw" sid="C_PPPOE_USERPW" type="password" maxlength="32" style="ime-mode:disabled">
+        </div>
+      </div>
+      <div class="lc_right">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input sid="PW_CHECK" id="input_passwd_check" type="checkbox" value="1">
+          <label for="input_passwd_check"><p sid="S_TITLE_USERPW_VIEW"></p></label>
+        </div>
+      </div>
+    </div>
+	</div>
+	<!--dynamic and pppoe(status) -->
+    <div sid="L_FIELD_DYNAMIC">
+    <div class="lc_row" sid="EXTIP">
+      <div class="lc_left"><p sid="S_EXTIP_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="extip_field" sid="D_EXTIP_STATUS" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right" sid="ALLOWPRIVATE">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name="allowprivate" sid="C_DYNAMIC_ALLOWPRIVATE" id="input_allowprivate_check" type="checkbox" value="1">
+          <label for="input_allowprivate_check"><p sid="S_TITLE_ALLOWPRIVATE"></p></label>
+        </div>
+      </div>
+    </div>
+    <div class="lc_row" sid="NETMASK">
+      <div class="lc_left"><p sid="S_NETMASK_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="netmask_field" sid="D_NETMASK_STATUS" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"> </div>
+    </div>
+    <div class="lc_row" sid="GATEWAY">
+      <div class="lc_left"><p sid="S_GATEWAY_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="gateway_field" sid="D_GATEWAY_STATUS" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"> </div>
+    </div>
+	</div>
+	<!--dynamic and pppoe(status) -->
+    <div sid="L_FIELD_PPPOE">
+    <div class="lc_row" sid="EXTIP">
+      <div class="lc_left"><p sid="S_EXTIP_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="extip_field" sid="D_EXTIP_STATUS" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right">
+      </div>
+    </div>
+    <div class="lc_row" sid="NETMASK">
+      <div class="lc_left"><p sid="S_NETMASK_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="netmask_field" sid="D_NETMASK_STATUS" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"> </div>
+    </div>
+    <div class="lc_row" sid="GATEWAY">
+      <div class="lc_left"><p sid="S_GATEWAY_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="gateway_field" sid="D_GATEWAY_STATUS" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"> </div>
+    </div>
+	</div>
+	<!--static(config) -->
+    <div sid="L_FIELD_STATIC">
+    <div class="lc_row" sid="EXTIP">
+      <div class="lc_left"><p sid="S_EXTIP_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="extip_field" sid="C_STATIC_EXTIP" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"></div>
+    </div>
+    <div class="lc_row" sid="NETMASK">
+      <div class="lc_left"><p sid="S_NETMASK_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="netmask_field" sid="C_STATIC_NETMASK" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"> </div>
+    </div>
+    <div class="lc_row" sid="GATEWAY">
+      <div class="lc_left"><p sid="S_GATEWAY_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="gateway_field" sid="C_STATIC_GATEWAY" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"> </div>
+    </div>
+	</div>
+	<!----------------------------------------dns---------------------------------------->
+	<!--dynamic-->
+	<div sid="L_FIELD_DYNAMIC">
+    <div class="lc_row" sid="DNS1">
+      <div class="lc_left"><p sid="S_DNS1_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="dns1_field" sid="C_DYNAMIC_DNS1" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+	  </div>
+	  <div class="lc_right" sid="MANUAL_DNS">
+		<div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name="check_dns" sid="C_DYNAMIC_MDNS" id="dns_dynamic_check" type="checkbox" value="1">
+          <label for="dns_dynamic_check"><p sid="S_TITLE_INPUT_MANUAL"></p></label>
+        </div>
+      </div>
+	</div>
+    <div class="lc_row" sid="DNS2">
+      <div class="lc_left"><p sid="S_DNS2_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="dns2_field" sid="C_DYNAMIC_DNS2" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"></div>
+    </div>
+	</div>
+	<!--static-->
+	<div sid="L_FIELD_STATIC">
+    <div class="lc_row" sid="DNS1">
+      <div class="lc_left"><p sid="S_DNS1_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="dns1_field" sid="C_STATIC_DNS1" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+	  <div class="lc_right"> </div>
+    </div>
+    <div class="lc_row" sid="DNS2">
+      <div class="lc_left"><p sid="S_DNS2_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="dns2_field" sid="C_STATIC_DNS2" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right"></div>
+    </div>
+	</div>
+	<!--pppoe-->
+	<div sid="L_FIELD_PPPOE">
+    <div class="lc_row" sid="DNS1">
+      <div class="lc_left"><p sid="S_DNS1_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="dns1_field" sid="C_PPPOE_DNS1" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+      <div class="lc_right" sid="MANUAL_DNS">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name="check_dns" sid="C_PPPOE_MDNS" id="dns_pppoe_check" type="checkbox" value="1">
+          <label for="dns_pppoe_check"><p sid="S_TITLE_INPUT_MANUAL"></p></label>
+        </div>
+      </div>
+    </div>
+    <div class="lc_row" sid="DNS2">
+      <div class="lc_left"><p sid="S_DNS2_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="dns2_field" sid="C_PPPOE_DNS2" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+	  <div class="lc_right"></div>
+    </div>
+	</div>
+    <div class="lc_row" sid="MAC">
+      <div class="lc_left"><p sid="S_MAC_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="mac_field" sid="C_WANINFO_MAC" class="cc_input_mac mac">
+          <div class="lc_inputbox_mac"><input sid="VALUE0" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+          <div class="hyphen"><p>-</p></div>
+          <div class="lc_inputbox_mac"><input sid="VALUE1" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+          <div class="hyphen"><p>-</p></div>
+		  <div class="lc_inputbox_mac"><input sid="VALUE2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+          <div class="hyphen"><p>-</p></div>
+          <div class="lc_inputbox_mac"><input sid="VALUE3" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+          <div class="hyphen"><p>-</p></div>
+          <div class="lc_inputbox_mac"><input sid="VALUE4" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+          <div class="hyphen"><p>-</p></div>
+          <div class="lc_inputbox_mac"><input sid="VALUE5" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+        </div>
+      </div>
+      <div class="lc_right">
+        <div class="lc_manual_check ui-alt-icon">
+          <input  name= "check_mac" sid="C_WANINFO_MMAC" id="mac_manual_check" type="checkbox" value="1">
+          <label for="mac_manual_check"><p sid="S_TITLE_CHANGED"></p></label></div>
+        <div sid="MAC_SEARCH_CHECK" class="lc_manual_macsearch"><img src='/common/images/search.png' style='cursor:pointer;'></div>
+      </div>
+    </div>
+	<!----------------------------------------mtu---------------------------------------->
+	<!--dynamic and static-->
+	<div sid="L_FIELD_DYNAMIC">
+    <div class="lc_row" id="mtu" sid="MTU">
+      <div class="lc_left"><p sid="S_TITLE_MTU"></p></div>
+      <div class="lc_middle">
+        <div id="mtu_field" sid="MTU_FIELD" class="lc_input_mtu">
+          <input sid="C_DYNAMIC_MTU" type="number" pattern="[0-9]*" style="ime-mode:disabled">
+        </div>
+      </div>
+      <div class="lc_right">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name= "check_mtu" sid="C_DYNAMIC_MMTU" id="mtu_dynamic_check" type="checkbox" value="1">
+          <label for="mtu_dynamic_check"><p sid="S_TITLE_INPUT_MANUAL"></p></label></div>
+      </div>
+    </div>
+	</div>
+	<!--dynamic and static-->
+	<div sid="L_FIELD_STATIC">
+    <div class="lc_row" id="mtu" sid="MTU">
+      <div class="lc_left"><p sid="S_TITLE_MTU"></p></div>
+      <div class="lc_middle">
+        <div id="mtu_field" sid="MTU_FIELD" class="lc_input_mtu">
+          <input sid="C_STATIC_MTU" type="number" pattern="[0-9]*" style="ime-mode:disabled">
+        </div>
+      </div>
+      <div class="lc_right">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name= "check_mtu" sid="C_STATIC_MMTU" id="mtu_static_check" type="checkbox" value="1">
+          <label for="mtu_static_check"><p sid="S_TITLE_INPUT_MANUAL"></p></label></div>
+      </div>
+    </div>
+	</div>
+	<!--pppoe-->
+	<div sid="L_FIELD_PPPOE">
+    <div class="lc_row" id="mtu" sid="MTU">
+      <div class="lc_left"><p sid="S_TITLE_MTU"></p></div>
+      <div class="lc_middle">
+        <div id="mtu_field" sid="MTU_FIELD" class="lc_input_mtu">
+          <input sid="C_PPPOE_MTU" type="number" pattern="[0-9]*" style="ime-mode:disabled">
+        </div>
+      </div>
+      <div class="lc_right">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name= "check_mtu" sid="C_PPPOE_MMTU" id="mtu_pppoe_check" type="checkbox" value="1">
+          <label for="mtu_pppoe_check"><p sid="S_TITLE_INPUT_MANUAL"></p></label></div>
+      </div>
+    </div>
+	</div>
+	<div sid="L_FIELD_PPPOE">
+    <div class="lc_row" sid="LCP">
+      <div class="lc_left"><p sid="S_TITLE_LCP"></p></div>
+      <div id="lcp_field" sid="LCP_FIELD" class="lc_middle">
+        <div class="lc_text_lcpcycle"><p sid="S_TITLE_CYCLE"></p> </div>
+        <div sid="INTERVAL_FIELD" class="lc_input_lcpsecond">
+          <input name="interval" sid="C_PPPOE_INTERVAL" type="number" pattern="[0-9]*" style="ime-mode:disabled">
+        </div>
+        <div class="lc_text_lcpsecond"><p sid="S_TITLE_SECOND"></p></div>
+        <div sid="FAILURE_FIELD" class="lc_input_lcpcount">
+          <input name="failure" sid="C_PPPOE_FAILURE" type="number" pattern="[0-9]*" style="ime-mode:disabled">
+        </div>
+        <div class="lc_text_lcpcount"><p sid="S_TITLE_COUNT"></p></div>
+      </div>
+      <div class="lc_right">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name="check_lcp" sid="C_PPPOE_MLCP" id="lcp_manual_check" type="checkbox" value="1">
+          <label for="lcp_manual_check"><p sid="S_TITLE_INPUT_MANUAL"></p></label>
+        </div>
+      </div>
+    </div>
+	</div>
+    <div class="lc_row" sid="STATUS">
+      <div class="lc_left"><p sid="S_TITLE_STATUS"></p></div>
+      <div class="lc_middle"><p sid="STATUS_MSG"></p></div>
+      <div class="lc_right">
+        <input class="custom_css_button lc_apply_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+      </div>
+    </div>
+  </form>
+</div>
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

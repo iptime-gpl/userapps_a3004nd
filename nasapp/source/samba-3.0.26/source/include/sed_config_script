@@ -1,0 +1,26 @@
+s/\/\* #undef USE_SETRESUID \*\//#define USE_SETRESUID 1/
+s/\/\* #undef HAVE_MMAP \*\//#define HAVE_MMAP 1/ 
+s/\/\* #undef HAVE_LONGLONG \*\//#define HAVE_LONGLONG 1/ 
+s/\/\* #undef SIZEOF_INO_T \*\//#define SIZEOF_INO_T 8/ 
+s/\/\* #undef SIZEOF_OFF_T \*\//#define SIZEOF_OFF_T 8/
+s/\/\* #undef HAVE_KERNEL_SHARE_MODES \*\//#define HAVE_KERNEL_SHARE_MODES 1/ 
+s/\/\* #undef HAVE_SECURE_MKSTEMP \*\//#define HAVE_SECURE_MKSTEMP 1/ 
+s/\/\* #undef _LARGEFILE64_SOURCE \*\//#define _LARGEFILE64_SOURCE 1/
+s/\/\* #undef _FILE_OFFSET_BITS \*\//#define _FILE_OFFSET_BITS 64/ 
+s/\/\* #undef HAVE_SENDFILE \*\//#define HAVE_SENDFILE 1/ 
+s/\/\* #undef WITH_SENDFILE64 \*\//#define WITH_SENDFILE64 1/ 
+s/#define SIZEOF_INT cross/#define SIZEOF_INT 4/ 
+s/#define SIZEOF_LONG cross/#define SIZEOF_LONG 4/ 
+s/#define SIZEOF_SHORT cross/#define SIZEOF_SHORT 2/ 
+s/\/\* #undef HAVE_EXPLICIT_LARGEFILE_SUPPORT \*\//#define HAVE_EXPLICIT_LARGEFILE_SUPPORT 1/ 
+s/\/\* #undef LINUX_SENDFILE_API \*\//#define LINUX_SENDFILE_API 1/ 
+s/\/\* #undef HAVE_OFF64_T \*\//#define HAVE_OFF64_T 1/ 
+s/\/\* #undef HAVE_IFACE_IFCONF \*\//#define HAVE_IFACE_IFCONF 1/
+s/\/\* #undef HAVE_STRUCT_DIRENT64 \*\//#define HAVE_STRUCT_DIRENT64 1/
+s/\/\* #undef HAVE_STRUCT_FLOCK64 \*\//#define HAVE_STRUCT_FLOCK64 1/
+s/\/\* #undef STAT_STATVFS64 \*\//#define STAT_STATVFS64 1/
+s/\/\* #undef _GNU_SOURCE \*\//#define _GNU_SOURCE 1/
+s/#define HAVE_STRING_H 1/#undef HAVE_STRING_H/
+s/#define HAVE_STRNDUP 1/#undef HAVE_STRNDUP/
+s/#define HAVE_STRTOK_R 1/#undef HAVE_STRTOK_R/
+/_GNU_SOURCE/a\

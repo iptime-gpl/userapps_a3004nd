@@ -1,0 +1,24 @@
+application/octet-stream	bin dms lha lzh exe class
+application/x-gzip		gz tgz
+application/x-javascript	js
+application/xml
+image/gif			gif
+image/jpeg			jpeg jpg jpe
+image/png			png
+multipart/alternative
+multipart/appledouble
+multipart/byteranges
+multipart/digest
+multipart/encrypted
+multipart/form-data
+multipart/header-set
+multipart/mixed
+multipart/parallel
+multipart/related
+multipart/report
+multipart/signed
+multipart/voice-message
+text/css			css
+text/directory
+text/html			html htm
+text/plain			asc txt

@@ -1,0 +1,138 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content">
+	<div id="maincontent">
+    	<div id="portforward_listbox">
+		<div class="lc_infobox_div">
+			<div class="lc_priority_div">
+				<div class="lc_line_div">
+					<img src="images/green_point.png">
+				</div>
+				<div class="lc_line_div">
+				</div>
+			</div>
+			<div class="lc_leftbox_div">
+				<div class="lc_line_div">
+					<p class="lc_boldfont_text" sid="S_RULENAME_STRING"></p>
+				</div>
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text" sid="S_EXTPORT_STRING"></p>
+				</div>
+			</div>
+			<div class="lc_direction_div">
+				<div class="lc_line_div">
+				</div>
+				<div class="lc_line_div">
+				</div>
+			</div>
+			<div class="lc_rightbox_div">
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text lc_rightfloat_text" sid="S_INTIP_STRING"></p>
+				</div>
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text lc_rightfloat_text" sid="S_INTPORT_STRING"></p>
+				</div>
+			</div>
+    		</div>
+	</div>
+	<div id="upnp_listbox">
+		<div class="lc_infobox_div">
+			<div class="lc_priority_div">
+				<div class="lc_line_div">
+					<img src="images/green_point.png">
+				</div>
+				<div class="lc_line_div">
+				</div>
+			</div>
+			<div class="lc_leftbox_div">
+				<div class="lc_line_div">
+					<p class="lc_boldfont_text" sid="S_UPNPRULE_STRING"></p>
+				</div>
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text" sid="S_EXTPORT_STRING"></p>
+				</div>
+			</div>
+			<div class="lc_direction_div">
+				<div class="lc_line_div">
+				</div>
+				<div class="lc_line_div">
+				</div>
+			</div>
+			<div class="lc_rightbox_div">
+				<div class="lc_line_div">
+				</div>
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text lc_rightfloat_text" sid="S_INTIP_STRING"></p>
+				</div>
+			</div>
+    		</div>
+	</div>
+	<div id="porttrigger_listbox">
+		<div class="lc_infobox_div">
+			<div class="lc_priority_div">
+				<div class="lc_line_div">
+					<img src="images/green_point.png">
+				</div>
+				<div class="lc_line_div">
+				</div>
+			</div>
+			<div class="lc_leftbox_div">
+				<div class="lc_line_div">
+					<p class="lc_boldfont_text" sid="S_TRIGGERRULE_STRING"></p>
+				</div>
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text" sid="S_TRIGGERPORT_STRING"></p>
+				</div>
+			</div>
+			<div class="lc_direction_div">
+				<div class="lc_line_div">
+				</div>
+				<div class="lc_line_div">
+				</div>
+			</div>
+			<div class="lc_rightbox_div">
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text lc_rightfloat_text" sid="S_INTIP_STRING"></p>
+				</div>
+				<div class="lc_line_div">
+					<p class="lc_grayfont_text lc_rightfloat_text" sid="S_FORWARDPORT_STRING"></p>
+				</div>
+			</div>
+    		</div>
+	</div>
+	<div id="fileform_box">
+		<form method="post" id="iux_file_form" enctype="multipart/form-data">
+			<div class="lc_fileformbox_div">
+				<div class="lc_savefile">
+					<div>
+						<button type="button" class="custom_css_button lc_filebutton" sid="PORTFORWARD_BACKUP" data-role="none">
+							<img src="images/backup.png">
+							<span sid="S_BACKUP_STRING"></span>
+						</button>
+					</div>
+				</div>
+				<div class="lc_restorefile">
+					<div class="lc_fileline_left">
+						<div>
+						<button type="button" class="custom_css_button lc_filebutton" sid="PORTFORWARD_RESTORE" data-role="none">
+							<img src="images/restore.png">
+							<span sid="S_RESTORE_STRING"></span>
+						</button>
+						</div>
+					</div>
+					<div class="lc_fileline_right">
+						<div class="lc_customfile_line">
+						<div class="ui-state-disabled lc_fileselector">
+							<input type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="S_PORTFORWARD_FILESELECT" data-role="none" disabled>
+						</div>
+						<button type="button" class="lc_searchbtn" data-role="none"><img src="/common/images/search.png"></button>
+						<input type="file" name="restorefile" sid="C_PORTFORWARD_RESTOREFILE" class="lc_customfile" data-role="none">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	</div>
+</div>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

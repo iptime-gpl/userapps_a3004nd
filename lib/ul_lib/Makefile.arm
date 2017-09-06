@@ -1,0 +1,318 @@
+include $(USERAPPS_ROOT)/mkdefs
+
+VERSION := "1.0.0"
+
+SUBDIRS = 
+
+CFLAGS += -I$(USERAPPS_ROOT)/include -I. -I$(USERAPPS_ROOT)/udhcp-0.9.8
+LDFLAGS := -s -Wl,-warn-common
+
+USERLAND_LIB := libuserland.a
+
+
+#################################################
+#  WIRELESS API
+#################################################
+ifeq ($(USE_WIRELESS_CGI),y)
+WIRELESS_API_SRC := wireless.c
+WIRELESS_API_OBJ := get_active_wl.o get_wireless_wan_enable.o
+endif
+
+#################################################
+#  NETWORK API 
+#################################################
+NETWORK_API_SRC := network.c
+NETWORK_API_OBJ := \
+	eth2wan.o \
+	get_wan_type.o get_wan_ifname.o  get_wan_hw_ifname.o get_wan_name.o get_wan_ip.o \
+	get_autodns.o set_autodns.o get_manual_dns_flag.o set_dns_shadow.o get_dns_shadow.o \
+	set_domain_name_server.o get_domain_name_server.o \
+	get_ifconfig.o set_ifconfig.o string_to_hexa.o\
+	get_default_gateway.o set_default_gateway.o set_default_gateway2.o \
+	sync_rt_db.o read_rt_db.o write_rt_db.o kernel_route.o  \
+	get_internal_pc_hardware_address.o get_local_ifname.o get_wanidx_by_name.o
+
+ifeq ($(USE_PROXY_DNS),y)
+NETWORK_API_OBJ += set_proxy_dns.o
+endif
+
+ifeq ($(USE_DUAL_WAN),y)
+NETWORK_API_OBJ += set_wan_backup_status.o get_wan_backup_status.o wan_is_alive.o
+endif
+
+#################################################
+#  SYSTEM API 
+#################################################
+SYSTEM_API_SRC := system_api.c
+SYSTEM_API_OBJ := \
+	create_pid.o delete_pid.o kill_daemons.o kill_process.o kill_upnp.o \
+	sysconf_nat_get.o get_hwaddr_org.o get_timed_status.o dmztwinip_read_config.o \
+	check_process.o file_exists.o check_process2.o kill_process2.o system2.o
+
+
+#################################################
+#  PPPOE API 
+#################################################
+PPPOE_API_SRC := pppoe_api.c
+PPPOE_API_OBJ := \
+	set_pppoe_status.o
+
+#################################################
+#  MGMT API 
+#################################################
+MGMT_API_SRC := mgmt_port.c
+MGMT_API_OBJ := \
+	open_mgmt_port.o close_mgmt_port.o
+
+#################################################
+#  DHCP API
+#################################################
+#DHCP_API_SRC = dhcp.c
+#DHCP_API_OBJ := \
+#	get_dhcp_auto_detect.o set_dhcp_auto_detect.o get_dhcp_auto_detect_status.o set_dhcp_auto_detect_status.o \
+#	get_dhcp_access_policy.o add_dhcp_access_host.o remove_dhcp_access_host.o set_dhcp_lease_time.o \
+#	get_dhclient_block_private_ip.o dhcpd_set_dns.o update_udhcpd_config.o dhcpd_commit_config.o dhcpd_start.o dhcpd_stop.o \
+#	dhcpd_read_config.o
+
+#################################################
+#  SYSLOG API
+#################################################
+SYSLOG_API_SRC := syslog.c
+SYSLOG_API_OBJ := \
+	syslog_msg.o syslog_get_filename.o syslog_get_status.o syslog_max_count.o \
+	syslog_get_flag.o syslog_set_flag.o syslog_get_email_status.o syslog_save.o syslog_read_syslog_msg.o
+
+#################################################
+#  CONFIG API
+#################################################
+CONFIG_API_SRC := genconfig_api.c
+CONFIG_API_OBJ := \
+		lock_file.o unlock_file.o unlock_filename.o genconfig_free_item.o genconfig_read_file.o genconfig_write_file.o genconfig_set_value.o genconfig_get_value.o genconfig_free_ll.o genconfig_get_pvalue.o \
+		genconfig_set_intvalue.o  genconfig_set_value_direct.o genconfig_get_value_direct.o genconfig_remove_item.o genconfig_get_intvalue_direct.o genconfig_set_intvalue_direct.o \
+		genconfig_get_index_value.o genconfig_set_index_value.o genconfig_remove_index_item.o genconfig_remove_index_allitem.o genconfig_get_index_info.o 
+
+ICONFIG_API_SRC := cconfig_api.c
+ICONFIG_API_OBJ := \
+	iconfig_get_value_direct.o iconfig_get_intvalue_direct.o iconfig_make_default.o iconfig_set_value_direct.o \
+	iconfig_set_intvalue_direct.o iconfig_get_default_value_direct.o iconfig_is_changed.o iconfig_remove_config_tag.o iconfig_remove_tag_prefix.o \
+	istatus_set_intvalue_direct.o istatus_get_intvalue_direct.o istatus_set_value_direct.o istatus_get_value_direct.o istatus_remove_status_tag.o istatus_remove_tag_prefix.o \
+	pid_db_set_value.o pid_db_get_value.o pid_db_remove_value.o \
+	hwinfo_get_intvalue_direct.o hwinfo_get_value_direct.o hwinfo_get_hexvalue_direct.o \
+	iconfig_get_index_info_direct.o iconfig_get_index_value_direct.o iconfig_set_index_value_direct.o iconfig_remove_index_config_tag.o iconfig_get_subtag_value_direct.o iconfig_set_subtag_value_direct.o \
+	iconfig_remove_index_tag.o iconfig_remove_index_alltag.o \
+	istatus_get_index_info_direct.o istatus_get_index_value_direct.o istatus_set_index_value_direct.o istatus_remove_index_tag.o istatus_remove_index_alltag.o
+
+#################################################
+#  UPGRADE API 
+#################################################
+UPGRADE_API_SRC := upgrade.c
+UPGRADE_API_OBJ := \
+	set_sw_upgrade_status.o set_upgrade_mode.o
+
+#################################################
+#  HWINFO API 
+#################################################
+HWINFO_API_SRC := hwinfo.c
+HWINFO_API_OBJ := \
+	hwinfo_get_max_firmware_size.o hwinfo_get_max_syslog.o hwinfo_get_product_code.o
+ifeq ($(USE_WIRELESS_CGI),y)
+HWINFO_API_OBJ += hwinfo_get_wireless_ifname.o
+endif
+
+#################################################
+#  PASSWD API
+#################################################
+PASSWD_API_SRC := passwd.c
+PASSWD_API_OBJ := \
+	exist_passwd.o check_password.o get_id_password.o
+
+#################################################
+#  DDNS_CLIENT API
+#################################################
+ifeq ($(USE_DDNS_CLIENT),y)
+EZDDNS_API_SRC = ezupdate_api.c
+EZDDNS_API_OBJ := \
+	ddnsapi_set_status.o ddnsapi_set_status2.o ddnsapi_update_remaintime.o
+endif	
+
+#################################################
+#  WIZARD API
+#################################################
+WIZARD_API_SRC = wizard.c
+WIZARD_API_OBJ := \
+	wizard_api_set_status.o
+
+#################################################
+#  IPCLONE API
+#################################################
+ifeq ($(USE_REAL_IPCLONE),y)
+IPCLONE_API_SRC = ipclone.c
+IPCLONE_API_OBJ :=  \
+	check_ipclone_ipaddr.o read_real_ipclone.o read_real_ipclone_leasetime.o
+endif
+
+#################################################
+#  KAID API
+#################################################
+ifeq ($(USE_KAID_SUPPORT),y)
+KAID_API_SRC = kaid.c
+KAID_API_OBJ := \
+	set_kaid_status.o
+endif
+
+#################################################
+#  MISC API
+#################################################
+MISC_API_SRC :=misc_api.c
+ifeq ($(USE_SKT_SEMO_OPTION),y)
+MISC_API_OBJ += set_skt_semo_option.o get_skt_semo_option.o
+endif
+
+#################################################
+#  STR API
+#################################################
+STR_API_SRC :=str_api.c
+STR_API_OBJ += str_api.o
+
+#################################################
+#  USERLAND LIB
+#################################################
+USERLAND_LIB_SRC := userland_lib.c
+USERLAND_LIB_OBJ := \
+	get_file_value.o conv_time.o copy_file.o write_file.o write_file_intval.o \
+	convert_mac.o make_virtual_host_page.o \
+	base64_decode.o base64_encode.o email_clear_report.o get_netmask_bit_count.o itoa_with_comma.o
+
+LIB_OBJS := \
+	$(NETWORK_API_OBJ)\
+	$(WIRELESS_API_OBJ)\
+	$(SYSTEM_API_OBJ)\
+	$(PPPOE_API_OBJ)\
+	$(MGMT_API_OBJ)\
+	$(SYSLOG_API_OBJ) \
+	$(CONFIG_API_OBJ) \
+	$(ICONFIG_API_OBJ)\
+	$(UPGRADE_API_OBJ)\
+	$(HWINFO_API_OBJ) \
+	$(PASSWD_API_OBJ) \
+	$(WIZARD_API_OBJ) \
+	$(MISC_API_OBJ) \
+	$(STR_API_OBJ) \
+	$(USERLAND_LIB_OBJ) 
+
+#	$(DHCP_API_OBJ)
+
+ifeq ($(USE_KAID_SUPPORT),y)
+LIB_OBJS += $(KAID_API_OBJ)
+endif
+
+ifeq ($(USE_DDNS_CLIENT),y)
+LIB_OBJS += $(EZDDNS_API_OBJ)
+endif
+
+ifeq ($(USE_DUAL_WAN),y)
+LIB_OBJS += iproute_api.o
+endif
+
+ifeq ($(USE_REAL_IPCLONE),y)
+LIB_OBJS += $(IPCLONE_API_OBJ)
+endif
+
+ifeq ($(USE_MOBILE_CGI_PFORWARD),y)
+LIB_OBJS += pforward.o
+endif
+
+all: $(USERLAND_LIB)
+
+$(NETWORK_API_OBJ) : $(NETWORK_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(WIRELESS_API_OBJ) : $(WIRELESS_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(SYSTEM_API_OBJ) : $(SYSTEM_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(PPPOE_API_OBJ) : $(PPPOE_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+#$(DHCP_API_OBJ) : $(DHCP_API_SRC)
+#	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+#	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(MGMT_API_OBJ) : $(MGMT_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(SYSLOG_API_OBJ) : $(SYSLOG_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(CONFIG_API_OBJ) : $(CONFIG_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(ICONFIG_API_OBJ) : $(ICONFIG_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(UPGRADE_API_OBJ) : $(UPGRADE_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(HWINFO_API_OBJ) : $(HWINFO_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(PASSWD_API_OBJ) : $(PASSWD_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(EZDDNS_API_OBJ) : $(EZDDNS_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(WIZARD_API_OBJ) : $(WIZARD_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(KAID_API_OBJ) : $(KAID_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(IPCLONE_API_OBJ) : $(IPCLONE_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(MISC_API_OBJ) : $(MISC_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(STR_API_OBJ) : $(STR_API_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+$(USERLAND_LIB_OBJ) : $(USERLAND_LIB_SRC)
+	$(CC) $(CFLAGS) -DL_$* $< -c -o $*.o
+	$(STRIPTOOL) -x -R .note -R .comment $*.o
+
+
+$(USERLAND_LIB): $(LIB_OBJS) .FORCE
+	$(AR) $(ARFLAGS) $(USERLAND_LIB) $(LIB_OBJS) 
+ifeq ($(USE_SHARED_CGILIB),y)
+	$(LD) -shared -o libuserland.so $(LIB_OBJS)
+	$(STRIP) libuserland.so
+endif
+
+
+
+
+.FORCE:
+	rm -rf $(USERLAND_LIB)
+
+clean:
+	rm -f *.elf *.o *.bak *.map *.cgi core *.a version.h *.so

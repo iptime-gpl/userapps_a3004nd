@@ -1,0 +1,143 @@
+<div id="wifirule" class="cc_padding">
+	<form id="iux_form">
+		<div id="right_main" class="right_main">
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_type_box ui-alt-icon ui-nodisc-icon">
+					<select name="type" sid="C_WIFIRULE_TYPE" type="select"></select>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_rulename_box">
+					<input name="name" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_WIFIRULE_NAME" maxlength="127">
+				</div>
+			</div>
+
+			<div class="lc_row" sid="WIFI_CONTENT">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right lc_wifi_box ui-alt-icon ui-nodisc-icon">
+					<select name="band" sid="C_WIFIRULE_BAND" type="select"></select>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_policy_box">
+						<select name="policy" sid="C_WIFIRULE_POLICY" type="select"></select>
+					</div>
+					<div sid="C_WIFIRULE_DAY" class="lc_wrap_day_box">
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day0" id="day0" sid="L_WIFIRULE_DAY0" type="checkbox" value="1">
+						<label for="day0">
+						<p sid="S_MON_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day1" id="day1" sid="L_WIFIRULE_DAY1" type="checkbox" value="1">
+						<label for="day1">
+						<p sid="S_TUE_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day2" id="day2" sid="L_WIFIRULE_DAY2" type="checkbox" value="1">
+						<label for="day2">
+						<p sid="S_WED_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day3" id="day3" sid="L_WIFIRULE_DAY3" type="checkbox" value="1">
+						<label for="day3">
+						<p sid="S_THU_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day4" id="day4" sid="L_WIFIRULE_DAY4" type="checkbox" value="1">
+						<label for="day4">
+						<p sid="S_FRI_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day5" id="day5" sid="L_WIFIRULE_DAY5" type="checkbox" value="1">
+						<label for="day5">
+						<p sid="S_SAT_STRING"></p>
+						</label>
+					</div>
+					<div class="ui-alt-icon lc_day_box">
+						<input name="day6" id="day6" sid="L_WIFIRULE_DAY6" type="checkbox" value="1">
+						<label for="day6">
+						<p sid="S_SUN_STRING"></p>
+						</label>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left">
+					<span><img src="/common/images/point.jpg"></span>
+				</div>
+				<div class="lc_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_timesel_box">
+						<select name="stime" sid="C_WIFIRULE_STIME" type="select"></select>
+					</div>
+					<div class="ui-alt-icon ui-nodisc-icon lc_timesel_box">
+						<select name="etime" sid="C_WIFIRULE_ETIME" type="select"></select>
+					</div>
+					<div class="ui-alt-icon lc_every_box">
+						<input name="everyday" id="everyday" sid="L_WIFIRULE_EVERY" type="checkbox" value="1">
+						<label for="everyday">
+						<p sid="S_EVERY_STRING"></p>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="right_footer">
+			<div class="lc_row">
+				<div class="lc_controlbtn_line">
+					<div class="lc_newrule_button">
+					<button type="button" sid="S_NEWRULE_BTN" class="custom_css_button" data-role="none">
+						<img src="images/plus_icon.jpg" class="lc_btnimg"> 
+						<span sid="S_NEWRULEBTN_STRING"></span>
+					</button>
+					</div>
+					<div class="lc_usual_button">
+					<button type="button" sid="S_MODIFY_BTN" class="custom_css_button" data-role="none">
+						<span sid="S_MODIFY"></span>
+					</button>
+					</div>
+					<div class="lc_newrule_button">
+					<button type="button" sid="S_CANCEL_BTN" class="custom_css_button" data-role="none">
+						<span sid="S_INPUTCANCEL"></span>
+					</button>
+					</div>
+					<div class="lc_usual_button">
+					<button type="button" sid="S_DELETE_BTN" class="custom_css_button" data-role="none">
+						<span sid="S_DELETE"></span>
+					</button>
+					</div>
+				</div>
+				<div class="lc_disable_line">
+					<div class="ui-alt-icon lc_disable_box">
+						<input name="disabled" id="disabled_id" sid="C_WIFIRULE_DISABLED" type="checkbox" value="1">
+						<label for="disabled_id">
+						<p sid="S_DISABLED_STRING"></p>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

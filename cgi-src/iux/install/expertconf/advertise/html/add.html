@@ -1,0 +1,40 @@
+<div id="add">
+<form id="local_add_form">
+  <div class="lc_row_r" style="margin-top: 0.5em;">
+	<div class="title"><p>내부IP주소</p></div>
+	<div sid="ADD_SIP" class="content_ip ip">
+      <div class="input"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+      <div class="dot"><p>.</p></div>
+      <div class="input"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+      <div class="dot"><p>.</p></div>
+      <div class="input"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+      <div class="dot"><p>.</p></div>
+      <div class="input"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+    </div>
+  </div>
+  <div class="lc_row_r">
+    <div class="title"><p style="text-align: right; margin-right: 0.6em;">~</p></div>
+	<div sid="ADD_EIP" class="content_ip ip">
+      <div class="input"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+      <div class="dot"><p>.</p></div>
+      <div class="input"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+      <div class="dot"><p>.</p></div>
+      <div class="input"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+      <div class="dot"><p>.</p></div>
+      <div class="input"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+    </div>
+  </div>
+  <div class="lc_row_r">
+    <div class="title"><p>설명</p></div>
+	<div class="content_text">
+	  <input name="desc" sid="ADD_DESC" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32">
+	</div>
+  </div>
+  <div class="lc_row_r lc_submit">
+    <button type="button" sid="SUBMIT_BUTTON" data-role="none">
+	  <p sid="S_ADD"></p>
+	</button>
+  </div>
+</form>
+
+<div>

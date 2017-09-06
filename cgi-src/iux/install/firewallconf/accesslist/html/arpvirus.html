@@ -1,0 +1,36 @@
+<div id="arpvirus">
+  <form id="local_arpvirus_form">
+    <div class="lc_arp_row">
+	  <div class="title"><p sid="S_ARPVIRUS_RUN"></p></div>
+	  <div class="content_radio">
+        <input name="run" id="run_true" sid="C_ARPVIRUS_RUN" type="radio" value="1">
+        <label for="run_true"><p sid="S_START"></p></label>
+      </div>
+      <div class="content_radio">
+	    <input name="run" id="run_false" sid="C_ARPVIRUS_RUN" type="radio" value="0">
+        <label for="run_false"><p sid="S_STOP"></p></label>
+      </div>
+	</div>
+	<div>
+	  <div class="content_arp"><p>초당</p></div>
+	  <div class="content_arp" style="margin-top: 0.5em; width: 3.5em;"><input name="period"sid="C_ARPVIRUS_PERIOD" type="number" pattern="[0-9]*" min = "1"></div>
+	  <div class="content_arp"><p>개의 ARP를</p></div>
+	  <div class="ui-alt-icon ui-nodisc-icon content_arp" style="margin-top: 0.5em; width: 11.7em;">
+	    <select name="ifname" sid="ARPVIRUS_IFNAME" type="select">
+		  <option value="0"><p>유선 네트워크</p></option>
+		  <option value="1"><p>유,무선 네트워크</p></option>
+        </select>
+	  </div>
+	  <div  class="content_arp" style="clear: both;"><p>로 전송합니다.</p></div>
+	</div>
+  <form>
+  <div class="content_button" style="clear: both;">
+    <button class="lc_button" type="button" sid="ARPVIRUS_SUBMIT" data-role="none"><span sid="S_BUTTON_SUBMIT"></span></button>
+  </div>
+  <div class="content_line" style="margin-top: 9em;"></div>
+  <div class="content_desc">
+    <p sid="S_ARPVIRUS_DESC1"></p>
+    <p sid="S_ARPVIRUS_DESC2"></p>
+  </div>
+</div>
+

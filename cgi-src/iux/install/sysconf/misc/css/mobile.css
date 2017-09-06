@@ -1,0 +1,203 @@
+@charset "utf-8";
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr {
+        border:none;
+        background-color: #DDD;
+        text-align:left;
+        clear: both;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border-bottom: 1px solid #ccc;
+        clear: both;
+}
+.listview { clear: both; }
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+        display: block !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-shadow: none;
+        font-style: normal;
+        font-family: "나눔고딕", "Arial Unicode MS";
+        color: #444;
+        font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+.listview .line_title { float: left; }
+.listview .line_title p {
+        padding-left: 0.3em;
+        line-height: 2em;
+}
+.listview .line_status { float: right; display: table; }
+.listview .line_status p {line-height: 2em; }
+.listview .line_status span { display: table-cell;      vertical-align: middle; }
+.listview .line_status img {
+        height: 1em;
+        width: 1em;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+}
+.listview .line_value { clear: both; height: 1.5em; }
+.listview .line_value p { padding-left: 0.3em; color: #888; }
+#right_main, #right_sub {
+        clear: both;
+        margin-bottom: 10px;
+        overflow: auto;
+}
+.lc_left {
+        display: table;
+        float: left;
+        line-height: 2.5em;
+        height: 2.5em;
+        margin-top: 2px;
+        width: 7.5em;
+}
+
+#right_main .lc_left span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 0.7em;
+}
+#right_main .lc_left span img {
+        height: 5px;
+        width: 5px;
+        margin-bottom: 0.2em;
+}
+#right_main .lc_row { clear: both; overflow : hidden; }
+
+.lc_right {
+        float: left;
+        width: 16.5em;
+        overflow: hidden;
+}
+.lc_right_ipdisk { width: 16em; }
+
+#right_main .value p { width: 50px; }
+#right_main #desc p,
+#right_sub #desc p { color: #777; line-height: 1.5em; }
+#right_sub #desc .title {margin-bottom: 5px; }
+
+.custom_css_button {
+        width: 6em;
+        height: 2.5em;
+        float: right;
+}
+
+/*local css*/
+.lc_hyphen{
+	text-align:center; display:inline-block; vertical-align:middle;
+	padding:0; margin:0 -0.2em 0.4em -0.2em; height:2.5em; line-height:2.5em;
+}
+.lc_ip_box{padding:0; margin:0; width:2.8em; height:2.5em; line-height:2.5em; display:inline-block; vertical-align:top;}
+.lc_hubapmode_left{width:5.5em !important;}
+.lc_hubapmode_right{width:18.5em !important;}
+.lc_uselocal_box{padding:0; margin:0; width:5em; height:2.5em; line-height:2.5em; display:inline-block; vertical-align:top;}
+.lc_uselocal_box label{padding-left:.8em; padding-right:0;}
+.lc_uselocal_box input[type=checkbox],
+.lc_uselocal_box .ui-btn-icon-left:after{left:0;}
+.lc_hostname_row{width:100%; overflow:hidden; line-height:1.7em;}
+.lc_host_name{float:left; line-height:1.7em;}
+
+.lc_configmgmt_row{width:100%; overflow:hidden; height:2.3em; line-height:2.3em;}
+.lc_configmgmt_left{width:35%; height:100%; overflow:hidden; display:inline-block;}
+.lc_configmgmt_left .custom_css_button{width:100%; float:left; overflow:hidden; height:100%; padding:0; margin:0;}
+.lc_configmgmt_right{width:65%; height:100%; overflow:hidden; display:inline-block; margin-left:.7em; vertical-align:top;}
+.lc_configmgmt_btn{width:102% !important; height:100% !important; overflow:hidden; padding:0; margin:0;}
+.lc_customfile{position:absolute; width:100%; height:100%; top:0; right:0; margin:0; padding:0; opacity:0; filter:alpha(opacity=0);}
+.lc_customfile_line{width:100%; position:relative; overflow:hidden; margin:0; padding:0; height:100%;}
+.lc_customfile_line .lc_fileselector{width:75%; display:inline-block; height:100%;}
+.lc_customfile_line input[type=text]{width:100%; display:inline; height:100%;}
+.lc_customfile_line .ui-btn{width:15%; height:100%; display:inline; padding:.4em; margin:0;}
+#right_main .ui-li-has-thumb{min-height:0; padding:.7em .5em;}
+#right_main .ui-li-static{min-height:0; padding:.7em .5em;}
+
+.lc_mgmt_port{float:left; width:100%; height:2.3em;}
+.lc_mgmt_port .lc_input_port{width:20%; margin:0; padding:0; display:inline-block; vertical-align:top;}
+.lc_mgmt_port .lc_input_port_check{margin:0; padding:0; display:inline-block; vertical-align:top;}
+
+.lc_fan_left{width:40% !important; height:2.3em;}
+.lc_fan_right{width:60% !important; height:2.3em;}
+.lc_fan_right p{margin-top:.7em;}
+.lc_fan_right .ui-radio p{margin:0; padding:0; vertical-align:top;}
+.lc_fan_right .lc_input_line{width:100%; vertical-align:top;}
+.lc_fan_right .ui-input-text{width:30%; display:inline-block; vertical-align:top;}
+.lc_fan_right .lc_fan_desc{display:inline-block;}
+#right_footer .lc_defaultbtn{width:7.5em !important; margin-right:1em;}
+
+.lc_fakedns_descline,
+.lc_apcplan_descline,
+.lc_usbmode_descline,
+.lc_led_descline,
+.lc_upnp_descline{margin-left:2em;}
+
+.lc_realtime_descline{margin-left:.7em;}
+
+.lc_nologin,
+.lc_led,
+.lc_usbmode .ui-radio,
+.lc_led .ui-radio,
+.lc_usbmode{width:100%;}
+
+.lc_nologin label{padding-right:0;}
+
+.lc_upnp_descline a{color:#dce1cd;}
+.lc_upnp_status_line a{color:#dce1cd; margin:0.3em; background-color:transparent;}
+
+.lc_restart_textline p{width:100%; padding:0; margin:.5em 0em .5em 0em;}
+.lc_restartbtn{width:7.5em !important; margin-right:1em;}
+.lc_apply_and_reboot_div{width:9em; display:inline-block; float:right; vertical-align:top;}
+.lc_apply_and_reboot{width:9em !important; margin-right:0.3em;}
+
+.lc_led_selline{width:100%; height:2.3em; line-height:2.3em;}
+.lc_led_selline .ui-radio{width:12%;}
+.lc_led_selline label{padding:.3em 1em; height:1.7em;}
+.lc_led_controls{display:inline-block; height:2.3em; margin:0; padding:0;}
+.lc_led_controls .lc_timesel{width:4em; display:inline-block; vertical-align:top; height:2.3em; padding:0; margin:0;}
+.lc_led_controls .lc_led_timestr1{width:3.3em; display:inline-block; vertical-align:top; height:2.3em; padding:0; margin:0;}
+.lc_led_controls .lc_led_timestr2{display:inline-block; vertical-align:top; height:2.3em; padding:0; margin:0;}
+
+.lc_autoreboot_line{padding:0; margin:0; width:100%; height:2.3em; line-height:2.3em;}
+.lc_autoreboot_day{vertical-align:top; display:inline-block; width:2.5em; height:2.1em;}
+.lc_autoreboot_every{width:4em;}
+.lc_autoreboot_line .ui-alt-icon.ui-checkbox-on:after,
+.lc_autoreboot_line .ui-alt-icon.ui-checkbox-off:after,
+.lc_autoreboot_line .ui-alt-icon .ui-checkbox-on:after,
+.lc_autoreboot_line .ui-alt-icon .ui-checkbox-off:after{left:0px;}
+.lc_autoreboot_line .ui-checkbox .ui-btn{padding:.5em 0em .5em 1.3em !important;}
+.lc_autoreboot_line .lc_timesel{display:inline-block; width:15%; height:2.1em; vertical-align:top; padding:0; margin:0;}
+.lc_autoreboot_line .lc_betweentext{display:inline-block !important; width:5% !important; height:2.1em; vertical-align:top; padding:0; margin:0;}
+.lc_autoreboot_line .lc_lasttext{width:55% !important;}
+.lc_autoreboot_rightmargin{margin-right:1em;}
+
+.lc_realtime_left{width:100%; height:2.3em; margin:0; padding:0; vertical-align:top;}
+.lc_realtime_left .ui-select,
+.lc_realtime_left .ui-checkbox,
+.lc_realtime_left .ui-input-text{margin:0em .7em 0em .7em;}
+#realtime .custom_css_button{margin-right:.7em;}
+
+.lc_onoffline_left{display:inline-block !important; width:70%;}
+.lc_onoffline_right{display:inline-block !important; padding:.7em 1em 0 0;}
+
+.lc_autoreboot_line .ui-btn.ui-checkbox-off:after,
+.lc_autoreboot_line .ui-btn.ui-checkbox-on:after,
+.lc_autoreboot_line .ui-btn.ui-checkbox-off:after,
+.lc_autoreboot_line .ui-btn.ui-checkbox-on:after{width:0.8em !important; height:0.8em !important; margin:-0.3em 0.1em -0.3em 0.1em !important;}
+.lc_autoreboot_line .ui-checkbox input{width:0.8em !important; height:0.8em !important; margin:-0.8em 0 0 0 !important;}
+
+#snmp #right_footer input[type=button] { padding: 0.5em; height: auto; margin-right: 1em; }
+#snmp div.lc_row div.lc_left { width: 10.5em; }
+#snmp div.lc_row div.lc_right { width: 12.5em; }

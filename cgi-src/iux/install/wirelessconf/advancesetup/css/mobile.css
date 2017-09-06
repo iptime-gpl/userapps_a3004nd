@@ -1,0 +1,119 @@
+@charset "utf-8";
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr {
+        border:none;
+        background-color: #DDD;
+        text-align:left;
+        clear: both;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border: 1px solid #ccc;
+        clear: both;
+}
+#right_main, #right_sub {
+        clear: both;
+        margin-bottom: 10px;
+        overflow: auto;
+}
+.lc_left {
+        display: table;
+        float: left;
+        line-height: 2.5em;
+        height: 2.5em;
+        margin-top: 2px;
+        width: 1em;
+}
+
+#right_main .lc_left span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 0.7em;
+}
+#right_main .lc_left span img {
+        height: 0.3em;
+        width: 0.3em;
+        margin-bottom: 0.5em;
+}
+#right_main .lc_row { clear: both; overflow : hidden; }
+
+.lc_right {
+        float: left;
+        width: 23em;
+        overflow: hidden;
+}
+
+#right_main .value p { width: 50px; }
+#right_main #desc p,
+#right_sub #desc p { color: #777; line-height: 1.5em; }
+#right_sub #desc .title { margin-bottom: 5px; }
+
+.custom_css_button {
+        width: 6em;
+        height: 2.5em;
+        float: right;
+}
+
+/*local css*/
+.lc_disabled_text{color:#B6B6B6; text-overflow:ellipsis; white-space:nowrap; font-weight:normal !important;}
+.lc_description_text{color:#CAD6A0; text-overflow:ellipsis; white-space:nowrap; font-weight:normal !important; display:inline-block;}
+.lc_description_img{overflow:hidden; width:1em !important; height:1em !important; display:inline-block; margin-bottom:-0.1em !important; padding:0;}
+.lc_opacity30{opacity:0.3; filter:alpha(opacity=30);}
+
+.lc_hyphen{text-align:center; display:inline-block; vertical-align:top; padding:0; margin:0.4em -0.3em 0 -0.3em; width:2%;}
+
+.lc_whitebox_div{width:100%; overflow:hidden; border:0; background-color:#FFFFFF; padding:.5em .5em .5em 0; cursor:pointer;}
+.lc_greenbox_div{width:100%; overflow:hidden; border:0; background-color:#F9FAF5; padding:.5em .5em .5em 0; cursor:pointer;}
+.lc_bottomborder_div{width:100%; overflow:hidden; border-bottom:#ccc 1px solid; background-color:#FFFFFF; padding:.5em .5em .5em 0; cursor:pointer;}
+.lc_topborder_div{width:100%; overflow:hidden; border-bottom:#ccc 1px solid; border-top:#ccc 1px solid; background-color:#F9FAF5; padding:.5em .5em .5em 0; cursor:pointer;}
+
+.lc_mainline_left{width:35%; padding:0; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle;}
+.lc_mainline_left img{margin-left:.5em; width:1.5em !important; height:1.5em !important;}
+.lc_mainline_right{width:65%; padding:0; margin:0; float:right; display:inline-block; background-color:transparent; vertical-align:middle;}
+.lc_mainline_right span{margin-right:1em; white-space:nowrap; text-overflow:ellipsis; display:block; text-align:right; overflow:hidden;}
+
+.lc_subline_left{width:25%; height:2.3em; padding:0; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle;}
+.lc_mainline_left span{vertical-align:top; display:inline-block; width:75%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.lc_subline_left p{margin:.4em 0 0 .5em;}
+.lc_subline_center{width:45%; height:2.3em; padding:0; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle;}
+.lc_subline_right{width:30%; height:2.3em; padding:0; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle;}
+
+.lc_panel_a{padding:0; margin:0;}
+.lc_panel_a span{vertical-align:middle; text-align:left; float:left; font-weight:normal; width:100%; padding:0; margin:0;
+text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+}
+.lc_panelline{width:100%; height:3.4em; padding:0; margin:0; background-color:transparent; vertical-align:middle;}
+.lc_panelline_left{width:10%; padding:0; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle; height:3.4em;}
+.lc_panelline_left img{margin-top:.7em; margin-left:.5em; width:1.5em !important; height:1.5em !important;}
+.lc_panelline_right{width:90%; padding:0; margin:0; float:right; display:inline-block; background-color:transparent; vertical-align:middle; height:3.4em;}
+.lc_panelsub_line{width:100%; padding:0; margin:0; display:block; background-color:transparent; vertical-align:middle; height:1.7em;}
+.lc_panelsub_left{width:50%; padding:0; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle; height:1.7em;}
+.lc_panelsub_right{width:50%; padding:0; margin:0; float:right; display:inline-block; background-color:transparent; vertical-align:middle; height:1.7em;}
+.lc_panelsub_right span{text-align:right;}
+
+.lc_wrap_textbox,
+.lc_wrap_macbox,
+.lc_wrap_select{width:100%; margin:0; padding:0; display:inline-block;}
+
+.lc_mac_box{width:14.3%; margin:0; padding:0; display:inline-block;}
+
+.lc_netpasscheckbox,
+.lc_usual_button{width:8em; height:2.3em; float:left; margin:0 0 0 0.5em; padding:0;}
+.lc_netpasscheckbox div,
+.lc_usual_button button{width:100%; height:2.3em; float:left; margin:0; padding:0;}
+
+#maincontent img{width:1em;	height:1em; display:inline-block;}
+#maincontent label{background-color:#F9FAF5; height:auto;}
+#maincontent .ui-btn.ui-checkbox-off:after,
+#maincontent .ui-btn.ui-checkbox-on:after{/*width:0.8em !important; height:0.8em !important; margin:-0.3em 0.1em -0.3em 0.1em !important;*/}
+#maincontent .ui-checkbox input{width:0.8em !important; height:0.8em !important; margin:-0.8em 0 0 0!important;}

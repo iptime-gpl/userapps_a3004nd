@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+
+.ui-page { background-color: #F8F8F5 !important;}
+p {	text-overflow:ellipsis; }
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+/*헤더*/
+#header {
+	/*//height: 20px;*/
+	background-color: #dce1cd;
+	border: 1px solid #ccc;
+}
+/*헤더 경계라인*/
+#header hr {
+	border: 1px solid #ccc;
+	clear: both;
+	/*font-size: 0px;*/
+}
+
+.ui-checkbox label {
+	padding-right: 0em;
+}
+
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+/*.ui-page-theme-a .ui-btn { background-color: #EEF1E6; }*/
+
+.lc_row
+{ 
+	overflow: auto;
+	clear:both;
+}
+.lc_left, .lc_middle , .lc_right {float: left; overflow: hidden;}
+.lc_left { width:30%; }
+.lc_left p { margin-left: 1em; line-height: 4em;}
+.lc_middle { width:65%; margin-top: 0.75em; }
+
+/* ------------------------------------------------------- */
+.ddns_host_title
+{
+	background-color: #EEF1E6;
+	border: 1px solid #ccc;
+	overflow:auto;
+}
+.ddns_host_title p, .ddns_host_item p
+{
+	margin-left: 1em;
+	line-height: 3em;
+
+}
+.ddns_host_title .ddnsname 
+{
+	float:left;
+	width:50%;
+}
+.ddns_host_title .ddnsstatus 
+{
+	float:left;
+	width:40%;
+}
+.ddns_host_content
+{
+	overflow:hidden;
+	background-color: #FFFFFF;
+	height: 3em;
+	border: 1px solid #DDDDDD;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 1px;
+	border-left-width: 0;
+}
+.ddns_host_content p
+{
+	margin-left: 1em;
+	line-height: 3em;
+}
+
+/*.ddns_host_item { overflow: auto; }
+.ddns_host_title div, .ddns_host_item div
+{
+	float:left;
+	width:33%;
+}*/
+.ddns_enteradd { border: 1px solid #DDDDDD; overflow:auto; }
+.ddns_enteradd .titleicon{ float:left; }
+.ddns_enteradd .titleicon img
+{
+	 width: 1em;
+	 height: 1em;
+	 margin-left: 1em;
+	 margin-top: 1.3em; 
+}
+
+.ddns_enteradd .titletext { float:left; width: 75%; }
+.ddns_enteradd .titletext p { line-height: 3.5em; margin-left: 1em; }
+.ddns_enteradd .icon_openarrow { float:right; }
+.ddns_enteradd .icon_openarrow img
+{
+	width: 1em;
+	height: 1em;
+	margin-top: 1.25em;
+	margin-right: 1em; 
+}
+.colorgray { color:#9E9F97 }
+
+.ddns_enteradd { border: 1px solid #DDDDDD; overflow:auto; }
+
+/*right panel*/
+.footer_item
+{
+	float: right; 
+}
+.footer_item button
+{
+	background-color: #8daf25;
+	height: 2em;
+	width: 5.5em;
+	border: 0;
+	cursor: pointer;
+}
+
+.lc_row_r{ overflow: hidden; clear: both; }
+.lc_left_r{ float: left; width: 30%; }
+.lc_left_r p{ line-height: 3em; }
+.right_footer { overflow:hidden; margin-top: 0.5em; margin-bottom: 2em;}
+.lc_right_r{ float: left; width: 70%; margin-top: 0.3em;}
+.lc_input_ip_r div, .lc_input_mac_r div{ float:left }
+.lc_input_ip_r .hyphen p
+{
+	line-height: 1em;
+	margin-top: 1em;
+}
+.hyphen p {
+	text-align: center;
+	margin-left: -0.05em;
+}
+.hyphen { width:0.3em; }
+.lc_inputbox_ip { width: 23%; } 
+.lc_inputbox_ip input{ text-align: center; } 
+
+.captcha_button
+{
+	float: left;
+	width: 4.8em;
+	height: 5em;
+	border-width: 1px 0px 1px 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	cursor: pointer;
+}
+.captcha_view{ width: 16.5em;}
+.captcha_button img
+{
+	height: 100%;
+	width: 100%; 
+}
+.captcha_img
+{
+	 float: left;
+	 background-color: #FFFFFF;
+	 height: 5em;
+	 width: 11.3em;
+	 border: 1px solid  #CCCCCC;
+}
+.lc_addddns_desc p{ color:#9E9F97 }
+.ddns_info_desc{ width: 16.3em; margin-top: 0; }
+.ddns_info_desc p, .ddns_info_title p  { line-height: 2em; }
+/*right panel*/
+
+.footer_item div
+{
+	float: right; 
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	margin-right: 0.5em;
+}
+.footer_item button
+{
+	background-color: #8daf25;
+	height: 2em;
+	width: 5.5em;
+	border: 0;
+	cursor: pointer;
+}
+.ddns_host_content .ddns_hostname
+{
+	float: left;
+	width: 50%;
+}
+
+.ddns_host_content .ddns_status
+{
+	float: left;
+	width: 40%;
+}
+
+.ddns_host_content .ddns_detailicon
+{
+	float: right;
+	margin-right: 1em;
+}
+.ddns_host_content .ddns_detailicon img
+{
+	width: 1em;
+	height: 1em;
+	margin-top: 1em; 
+}

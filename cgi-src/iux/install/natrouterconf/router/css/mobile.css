@@ -1,0 +1,173 @@
+@charset "utf-8";
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr {
+        border:none;
+        background-color: #DDD;
+        text-align:left;
+        clear: both;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border: 1px solid #ccc;
+        clear: both;
+}
+.listview { clear: both; }
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+        display: block !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-shadow: none;
+        font-style: normal;
+        font-family: "돋움", "Arial Unicode MS";
+        color: #444;
+        font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+.listview .line_title { float: left; }
+.listview .line_title p {
+        padding-left: 0.3em;
+        line-height: 2em;
+}
+.listview .line_status { float: right; display: table; }
+.listview .line_status p { line-height: 2em; }
+.listview .line_status span { display: table-cell;      vertical-align: middle; }
+.listview .line_status img {
+        height: 1em;
+        width: 1em;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+}
+.listview .line_value { clear: both; height: 1.5em; }
+.listview .line_value p { padding-left: 0.3em; color: #888; }
+#right_main, #right_sub {
+        clear: both;
+        margin-bottom: 10px;
+        overflow: auto;
+}
+.lc_left {
+        display: table;
+        float: left;
+        line-height: 2.5em;
+        height: 2.5em;
+        margin-top: 2px;
+        width: 7.5em;
+}
+
+#right_main .lc_left span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 0.7em;
+}
+#right_main .lc_left span img {
+        height: 5px;
+        width: 5px;
+        margin-bottom: 0.2em;
+}
+#right_main .lc_row { clear: both; overflow : hidden; }
+
+.lc_right {
+        float: left;
+        width: 16.5em;
+        overflow: hidden;
+}
+.lc_right_ipdisk { width: 16em; }
+
+#right_main .value p { width: 50px; }
+#right_main #desc p,
+#right_sub #desc p { color: #777; line-height: 1.5em; }
+#right_sub #desc .title { margin-bottom: 5px; }
+
+.custom_css_button {
+        width: 6em;
+        height: 2.5em;
+        float: right;
+}
+
+/*local css*/
+.lc_infobox_div{width:100%; overflow:hidden; border:1px solid #ddd; background-color:#EEEFE5;}
+.lc_infobox_div .lc_rightbox_div .lc_line_div img { float:right;}
+.lc_priority_div{width:5%; padding-left:.7em; float:left; display:inline-block;}
+.lc_line_div{line-height:1.7em; height:1.7em; width:100%;}
+.lc_line_div img{width:1em; height:1em; margin-top:.3em;}
+.lc_leftbox_div{width:42%; float:left; display:inline-block;}
+.lc_leftbox_div p { margin-left : 0.5em;}
+.lc_boldfont_text{ text-overflow:ellipsis; white-space:nowrap;}
+.lc_bg_disabledcolor{background-color:#E4E4E4;}
+.lc_disabled_text{color:#B6B6B6; text-overflow:ellipsis; white-space:nowrap;}
+
+.lc_grayfont_text{color:#777; text-overflow:ellipsis; white-space:nowrap;}
+.lc_direction_div{width:1em; padding-left:.7em; float:left; display:inline-block;}
+.lc_rightbox_div{width:42%; float:right; display:inline-block; padding-right:.5em;}
+.lc_rightbox_div p{ margin-right:0.5em; text-align:right; text-overflow:ellipsis; white-space:nowrap;}
+.lc_whitebox_div{width:100%; overflow:hidden; border:0; background-color:#FFFFFF; padding:.5em .5em .5em 0;}
+.lc_greenbox_div{width:100%; overflow:hidden; border:0; background-color:#F9FAF5 !important; padding:.5em .5em .5em 0;}
+
+.lc_bg_leftcolor{background-color:#DBE1A2;}
+.lc_bg_rightcolor{background-color:#CBE1A3;}
+
+.rpanel_left { width:19%; float:left;}
+.rpanel_priority_div{width:4%; padding-left:0.5em; float:left; display:inline-block;}
+.rpanel_leftbox_div{width:40%; float:left; display:inline-block;}
+.rpanel_leftbox_div p { margin-left:0.5em;}
+.rpanel_direction_div{width:3%; padding-left:1%; padding-right:2%; float:left; display:inline-block;}
+.rpanel_rightbox_div{width:36%; float:left; display:inline-block; padding-right:.5em;}
+.rpanel_rightbox_div p{text-align:right; text-overflow:ellipsis; white-space:nowrap; margin-right:0.5em;}
+.rpanel_text { font-size : 0.8em; margin-left:0.5em; margin-right:0.5em;}
+
+#right_main form { overflow:hidden;}
+
+.lc_inputbox_ip { width : 22%;}
+.lc_inputbox_ip input {text-align : center;}
+.lc_inner_ip {display:inline-block; width:50%; float:left;}
+.lc_inner_ip >div { float:left;}
+.hyphen { width : 0.3em; margin-top:0.5em;}
+
+.lc_inner_mask { width:22%; float:left;}
+.lc_inner_mask p { width:3em; float:left;}
+.lc_inner_mask >div { width:2.1em; float:left;}
+
+.lc_select_div { width:6em; float:left;}
+.lc_selectAll_div { float:right; margin-bottom:0.5em;}
+
+.lc_list_label {height:inherit !important; width:97%;}
+
+.lc_row { margin-bottom:0.3em;}
+.rpanel_left,
+.lc_inner_mask p { margin-top : 0.3em;}
+
+.lc_div_padding { margin-top:0.5em;}
+
+
+input[disabled] { background-color:#EAEAEA;}
+
+
+#right_panel #deleteroute form label .rpanel_leftbox_div .lc_bg_leftcolor,
+#right_panel #deleteroute form label .rpanel_rightbox_div .lc_bg_rightcolor{ height: 2.5em; overflow:hidden;}
+#right_panel #deleteroute form label .rpanel_leftbox_div .lc_bg_leftcolor p {line-height : 100%;}
+#right_panel #deleteroute form label .rpanel_leftbox_div .lc_bg_leftcolor p:first-child { padding-top:0.3em;}
+#right_panel #deleteroute form label .rpanel_rightbox_div .lc_bg_rightcolor p { padding-top:0.2em; padding-right:0.2em;}
+#right_panel #deleteroute form ::after { margin-top : -0.3em;}
+#right_panel #deleteroute #right_footer { margin-top:1em;}
+#right_panel #right_footer .lc_submit_div { width:8em; height:2em; float:right;}
+#right_panel #right_footer .lc_submit_div button { width:inherit; height:inherit;}
+#right_panel #right_footer .lc_submit_div button img { float:left; margin-left:0.5em; margin-top:0.2em;}
+#right_panel #right_footer .lc_submit_div button span { vertical-align:0.2em;}
+
+#right_panel #modifyroute div.lc_submit_div { width: 6em; }
+#right_panel #modifyroute div.lc_submit_div button { width: 90%; }
+
+#maincontent >.lc_infobox_div:last-child { border-top-color:#EEEFE5; border-bottom-color:#EEEFE5;}

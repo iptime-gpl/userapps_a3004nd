@@ -1,0 +1,12 @@
+#!/bin/sh
+mount -a
+
+cp -r /default/etc/* /etc
+cp -r /default/var/* /var
+
+ln -s /default/run/checkup /home/httpd/checkup
+
+echo 1 >> /proc/sys/net/ipv4/ip_forward
+
+/sbin/inittime
+/sbin/sysd&

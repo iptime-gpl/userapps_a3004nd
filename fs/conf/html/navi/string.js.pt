@@ -1,0 +1,513 @@
+<script>
+
+var TAB_CODE=9
+var DEL_CODE=46 
+var BS_CODE=8
+var SP_CODE=32
+var DOT_CODE=190
+var DOT2_CODE=110
+
+var IDX_ON=0
+var IDX_OFF=1
+
+var IDX_AP_MODE=0
+var IDX_CBRIDGE_MODE=1
+var IDX_WWAN_MODE=2
+var IDX_KAI_MODE=3
+var IDX_MBRIDGE_MODE=4
+
+
+var WIRELESS_AP_MODE=0;
+var WIRELESS_CBRIDGE_MODE=1;
+var WIRELESS_CWAN_MODE=2;
+var WIRELESS_KAI_MODE=3;
+var WIRELESS_MBRIDGE_MODE=4;
+
+var KAID_MODE_INIT=0  // ap mode
+var KAID_MODE_PSP=0 // psp kai
+var KAID_MODE_NORMAL=0 // xbox kai
+
+var AUTH_OPEN=1
+var AUTH_KEY=2
+var AUTH_AUTO=3
+var AUTH_WPA=4
+var AUTH_WPAPSK=5
+var AUTH_OPEN8021X=6
+var AUTH_WPANONE=7
+var AUTH_WPA2=8
+var AUTH_WPA2PSK=9
+var AUTH_WPAPSKWPA2PSK=10
+var AUTH_NOCHANGE=100
+
+var IDX_NOENC=0
+var IDX_WEP64=1
+var IDX_WEP128=2
+var IDX_TKIP=3
+var IDX_AES=4
+var IDX_TKIPAES=5
+
+var ENCRYPT_OFF=0
+var ENCRYPT_64=1
+var ENCRYPT_128=2
+var ENCRYPT_TKIP=3
+var ENCRYPT_AES=4
+var ENCRYPT_TKIPAES=5
+
+var KEY_STRING=0;
+var KEY_HEX=1;
+
+var IDX_KEY_STRING=0;
+var IDX_KEY_HEX=1;
+
+var REGION_USA=1;
+var REGION_JAPAN=2;
+
+var DMZTWINIP_MODE_DMZ=1;
+var DMZTWINIP_MODE_TWINIP=2;
+
+var QOS_SHARING_BOUNDED=2;
+var QOS_SHARING_BORROW=3;
+
+
+var MSG_RESTART_CONFIRM_DEFAULT='Sistema irá reiniciar para os padrão de fábrica.\nContinuar?';
+var MSG_RESTART_CONFIRM_UPNP='Sistema irá reiniciar para alterar a configuração de UPNP.\nContinuar?';
+var MSG_RESTART_CONFIRM_REBOOT='Sistema irá reiniciar.\nContinuar?';
+var MSG_RESTART_CONFIRM_CHANGE_LANIP='Sistema irá reiniciar para alterar o endereço IP da LAN.\nContinuar?';
+var MSG_RESTART_CONFIRM_CHANGE_LANIP_FAKE_TWINIP='Sistema irá reiniciar para alterar o endereço IP da LAN.\nContinuar?';
+var MSG_RESTART_CONFIRM_RESTORE='Sistema irá reiniciar para restaurar as configurações\nContinuar?';
+var MSG_RESTART_CONFIRM_NAT='Sistema irá reiniciar para alterar as configurações de NAT.\nContinuar?';
+var MSG_RESTART_CONFIRM_WIRELESS='Sistema irá reiniciar para alterar o modo Wireless.\nContinuar?';
+var MSG_KAID_MODE_CHANGE_WARNING='Sistema irá reiniciar para alterar o modo KAI.\nContinuar?';
+var MSG_RESTART_CONFIRM_WIRELESS_CBRIDGE='Sistema irá reiniciar para alterar o modo Wireless.\nContinuar?';
+var MSG_RESTART_CONFIRM_WIRELESS_WWAN='Sistema irá reiniciar para alterar o modo Wireless.\nContinuar?'
+var MSG_TWINIP_CONFIRM_WARNING='System will restart to apply Twin IP configuration.\nAre you sure to continue ? ';
+
+
+// common
+var MODIFY_OP='Modificar'
+var MSG_INVALID_HWADDR="Endereço MAC inválido." 
+var MSG_DELETE_RULE_CONFIRM="Remover regra.\nContinuar?" 
+var MSG_SELECT_RULE_TO_DEL="Selecione a regra a ser excluída."
+var MSG_ALL_STOP_RULE="Deseja parar todas as regras?"
+
+var MSG_OPENER_PAGE_MOVED="Página é movida."
+var MSG_INVALID_VALUE="Invalid value."
+
+
+
+// wireless_config_wizard
+var MSG_INVALID_WEP_KEY_HEXVALUE2="Chave de rede dever ser hexadecimal."
+var MSG_INVALID_WPAPSK_KEY_MISMATCH="Chave de rede é diferente.\nInsira a mesma chave."
+
+
+// sysconf_configmgmt
+var MSG_RESTOREFILE_BLANK="Selecione o arquivo de backup de configuração."
+
+//natrouterconf
+var MSG_RULE_NAME_IS_BLANK="Nome da regra é branco (nulo)."
+var MSG_NO_DEL_ROUTING_TABLE="Selecione uma rota a excluir!"
+
+
+// wirelessconf_wdssetup
+var MSG_WDS_DEL_WARNING="Deseja excluir o WDS?" 
+var MSG_APADD_REQUEST_APPLY="Pressione no botão 'Adicionar' para configurar o WDS."
+var MSG_NO_DEL_WDS="Selecione uma regra WDS para excluir!"
+
+// wirelessconf_basicsetup
+var MSG_BLANK_SSID="Insira um SSID válido!"
+var MSG_INVALID_WEP_KEY_LENGTH="Tamanho da chave de rede inválida."
+var MSG_INVALID_WEP_KEY_HEXVALUE="Chave de rede deve ser decimal."
+var MSG_INVALID_WPAPSK_KEY_LENGTH="Chave de rede deve ser superior a 8 caracteres."
+var MSG_INVALID_5_KEY_LENGTH="Chave de rede deve ter 5 caracteres."
+var MSG_INVALID_13_KEY_LENGTH="Chave de rede deve ter 13 caracteres."
+var SAVE_CONFIGURATION_STRING="Salvar todas as configurações?"
+
+var MSG_BLANK_REQUEST_SSID="Insira o SSID e clique no botão 'Aplicar'."
+var MSG_INVALID_REQUEST_KEY="Insira a chave de rede e clique no botão 'Aplicar'."
+var MSG_INVALID_REQUEST_APPLY="Clique no botão 'Aplicar' para conectar no AP especificado."
+var MSG_APPLY_REQUEST_KEY="Clique no botão 'Aplicar' para efetivar a troca do canal"
+var MSG_BEST_CHANNEL_PRE="Melhor canal: "
+var MSG_BEST_CHANNEL_POST=""
+var MSG_KEY_LENGTH_DESC="Tamanho da chave = "
+
+// config_wizard
+var MSG_BLANK_ACCOUNT="Insira um usuário."
+var MSG_BLANK_PASSWORD="Insira uma senha."
+
+var MSG_INVALID_IP="Endereço IP inválido."
+var MSG_INVALID_NETMASK="Máscara de sub-rede inválida."
+var MSG_INVALID_GATEWAY="Gateway padrão inválido."
+var MSG_INVALID_FDNS="DNS primário inválido"
+var MSG_INVALID_SDNS="DNS secundário inválido"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_NETWORK="Endereço IP da LAN é o mesmo endereço IP da WAN."
+var STATIC_LEASE_ALREADY_EXIST_IPADDRESS="Este endereço IP já foi adicionado."
+var STATIC_LEASE_ALREADY_EXIST_HWADDRESS="Este endereço MAC já foi adicionado."
+
+var NETCONF_INTERNAL_TOO_SMALL_LEASETIME="Tempo disponibilizado deve ser superior a 10 segundos."
+var NETCONF_INTERNAL_TOO_BIG_LEASETIME="Tempo disponibilizado deve ser 2147483647 segundos."
+var NETCONF_INTERNAL_INVALID_LEASETIME="Tempo disponibilizado deve ser numérico."
+
+
+
+var MSG_ERROR_NETWORK_LANIP='Endereço IP LAN não pode ser definido por um endereço de rede';
+var MSG_ERROR_BROAD_LANIP='Endereço IP LAN não pode ser um endereço de broadcast';
+
+
+//netconf_wansetup
+var NETCONF_INTERNET_DHCP_MTU_INVALID="MTU é superior a 1500."
+var NETCONF_INTERNET_PPP_MTU_INVALID="MTU é superior a 1492."
+var NETCONF_INTERNET_KEEP_ALIVE_MSG="Tempo máximo inválido."
+var NETCONF_INTERNET_GW_INVALID_NETWORK="Gateway padrão é o mesmo da rede local."
+var NETCONF_WANSETUP_CONFIRM_WANINFO="Confirma as informações da conexão WAN?"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_DHCP_S_ADDR="Endereço DHCP inicial inválido"
+var NETCONF_INTERNAL_INVALID_DHCP_E_ADDR="Endereço DHCP final inválido"
+var NETCONF_INTERNAL_INVALID_DHCP_ADDR="Faixa de endereços DHCP inválido"
+var NETCONF_INTERNAL_DELETE_IP="Confirma a exclusão do endereço IP reservado?"
+
+// wirelessconf_advanced
+var DESC_INVALID_TX_POWER="Potência de transmissão deve ser entre 1 à 100.";
+var DESC_INVALID_RTS_THRESHOLD="Limite de RTS deve ser entre 1 à 2347.";
+var DESC_INVALID_FRAG_THRESHOLD="Limite de Fragmentação deve ser entre 256 à 2346.";
+var DESC_INVALID_BEACON_INTERVAL="Intervalo de Beacon deve ser entre 50 à 1024.";
+
+// expertconf_kai
+var KAID_MODE_CHANGE_WARNING="Reiniciar sistema. Continuar?"
+var KAID_MUST_SELECT_OBT_SERVER="Um servidor deve ser selecionado."
+var KAID_RESTART_KAI_UI="Reinicie a interface KAI."
+
+//natrouterconf_portforward
+var MAX_PORT_FORWARD=60
+var NATCONF_PORTFORWARD_NO_MORE_RULE="Não pode adicionar encaminhamento de porta."
+var NATCONF_PORTFORWARD_INVALID_INT_IP_ADDRESS="Endereço IP local inválido."
+var NATCONF_PORTFORWARD_EXT_PORT_IS_BLANK="Porta externa é nula"
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT="Porta externa inválida."
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT_RANGE="Faixa de porta externa inválida."
+var NATCONF_PORTFORWARD_INVALID_INT_PORT="Porta local inválida."
+var NATCONF_PORTFORWARD_INVALID_INT_PORT_RANGE="Faixa de porta local inválido"
+var NATCONF_PORTFORWARD_RUN_RULE="Aplicar esta regra?"
+
+
+//natrouterconf_misc
+var NATCONF_INTAPPS_NO_MORE_ADD_FTP_PORT="Não pode adicionar porta FTP."
+var NATCONF_INTAPPS_FTP_PORT_EMPTY="Número de porta é nulo."
+var NATCONF_INTAPPS_FTP_PORT_INVALID= "Número de porta inválido."
+
+//natrouterconf_router
+var NETCONF_ROUTE_ENTRY_DELETE="Deseja excluir um roteamento estático?"
+var NETCONF_ROUTE_ENTRY_SELECT="Selecione a rota para excluir na tabela."
+
+//natrouterconf_twinzipdmz
+var NATCONF_TWINIPDMZ_UPDATE_TIME="Tempo de atualização IP não deve ser superior a 60 segundos."
+var NATCONF_TWINIPDMZ_WARNING="Este dispositivo usa Twin IP. Se Twin não for usado, a configuração do PC deve ser reconfigurada.\nContinuar?"
+
+
+//firewallconf_firewall
+var USER_FWSCHED_TYPE=1
+var APP_FWSCHED_TYPE=2
+var URL_FWSCHED_TYPE=4
+var MAX_FWSCHED_COUNT=200 
+var FIREWALLCONF_FIREWALL_INVALID_TIME_TO_BLOCK="Tempo de bloco inválido."
+var FIREWALLCONF_FIREWALL_DATE_WARNING="Selecione a data do bloco."
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_IP="Endereço IP origem inválido."
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_HW="Endereço MAC origem inválido."
+var FIREWALLCONF_FIREWALL_INVALID_DEST_IP="Endereço IP destino inválido."
+var FIREWALLCONF_FIREWALL_INVALID_DEST_PORT="Porta de destino inválido."
+var FIREWALLCONF_FIREWALL_RUN_RULE="Deseja aplicar esta regra?"
+var FIREWALLCONF_FIREWALL_NO_MORE_RULE="Limite de registros excedido."
+var FIREWALLCONF_FIREWALL_INVALID_PRIORITY="Prioridade Inválida."
+
+//firewallconf_netdetect
+var NETCONF_NETDETECT_WARNING1="Conexão mínima é 10."
+var NETCONF_NETDETECT_WARNING2="Valor de 0 à 23"
+
+
+//firewallconf_internet
+var FIREWALLCONF_INTERNET_RESTRICTIVE_WARNING="Número de computadores deve ser de 1 à 253."
+var FIREWALLCONF_INTERNET_RESTRICTIVE_CLEARANCE="Limpar todas as informações de PC?"
+
+//expertconf_ddns
+var EXPERTCONF_DDNS_HOSTNAME_IS_BLANK = "Nome de domínio inválido (nulo)."
+var EXPERTCONF_DDNS_HOSTNAME_NOT_IPTIMEORG = "Hostname não pode ser ddns.org."
+var EXPERTCONF_IPTIMEDNS_NOMORE_WANRING1 ="Host DDNS inexistente."
+var EXPERTCONF_IPTIMEDDNS_INVALID_USERID= "Endereço de e-mail disponível."
+var EXPERTCONF_DYNDNS_NOMORE_WANRING1="Não pode inserir mas endereços DDNS."
+var INVALID_EMAIL_ADDRESS_STR="Endereço de e-mail inválido."
+var EXPERTCONF_IPTIMEDDNS_INVALID_HOSTNAME="Endereço de nome inválido."
+
+//expertconf_remotepc
+var EXPERTCONF_WOL_PC_NAME_IS_BLANK="Nome do PC é branco (nulo)."
+var EXPERTCONF_WOL_DEL_PC="Apagar este PC da lista?"
+var EXPERTCONF_WOL_WANT_TO_WAKE_UP_PC ="Acordar este PC?"
+
+//expertconf_hostscan
+var ICMP_PING=0
+var ARP_PING=1
+var PING_SCAN=0
+var TCP_PORT_SCAN=1
+var SYSINFO_HOST_INVALID_TIMEOUT =   "Hora está em branco (nulo)."
+var SYSINFO_HOST_TIMERANGE   =       "Hora deve ser superior a 1 segundo."
+var SYSINFO_HOST_INVALID_DATASIZE =  "Data está em branco (nulo)."
+var SYSINFO_HOST_DATARANGE    =      "Data deve ser entre 0 à 65,000."
+var SYSINFO_HOST_INVALID_START  =    "Porta inicial está em branco (nulo)"
+var SYSINFO_HOST_PORTRANGE      =    "Faixa de porta deve ser entre 0 à 65.535."
+
+//trafficconf_conninfo
+var TRAFFICCONF_CONNINFO_DELETE_CONN="Deseja excluir o status de conexão deste endereço?"
+
+//trafficconf_switch
+var SELECT_VLAN_PORT_WARNING ="Porta VLAN selecionada."
+var SELECT_VLAN_PORT_TRUNK_WARNING ="All port of TRUNK(%s) must be in VLAN."
+var SELECT_TRUNK_PORT_WARNING ="Select TRUNK Port."
+var SELECT_TRUNK_PORT_VLAN_WARNING ="All port of TRUNK must be in VLAN(%s) or another VLAN."
+var MAX_MEMBER_TRUNK_WARNING="Maximum number of port is %d."
+var ALREADY_OTHER_GROUP_MEMBER="Ports can not be included in multiple groups."
+
+
+
+//trafficconf_loadshare
+var NATCONF_PORTFORWARD_NO_MORE_RULE="Não pode mas adicionar servidor virtual."
+var NATCONF_PORTFORWARD_RULE_NAME_IS_BLANK="Nome da regra está em branco (nulo)."
+var NATCONF_INTSERVER_INVALID_EXT_PORT="Porta inválida."
+var NATCONF_LOADSHARE_KEEP_WRR="Pode desativar a linha automática enquanto o WRR LS está ativado." 
+var NATCONF_LOADSHARE_ON_LINE_BACKUP="Linha automática de backup será ativado. Continuar?"
+var NATCONF_LOADSHARE_DELETE_RULE="Excluir esta regra?"
+var NATCONF_PORTFORWARD_SELECT_RULE_TO_DEL="Selecione uma regra a ser excluída."
+//sysconf_syslog
+var SYSCONF_SYSLOG_WANRING = "Hora inválido."
+var SYSCONF_SYSLOG_EMAIL_CONFIRM= "Enviar um relatório de sistema agora."
+var SYSCONF_SYSLOG_CLEAR_CONFIRM= "Todos os Logs serão excluídos."
+
+//sysconf_login
+var SYSCONF_LOGIN_INVALID_NEW_PASS=     "Sua nova senha inserida não corresponde."
+var SYSCONF_LOGIN_INVALID_NEW_ID  =     "Caracteres da nova conta inválidos: Somente pode ser adicionado letras e números."
+var SYSCONF_LOGIN_RELOGIN         =     "Redefinir a senha do usuário."
+
+//expertconf_pptpvpn
+var EXPERTCONF_PPTPVPN_VPN_ACCOUNT_IS_BLANK="Conta VPN é branco (nulo)"
+var EXPERTCONF_PPTPVPN_VPN_PASSWORD_IS_BLANK="Senha VPN é branco (nulo)"
+var EXPERTCONF_PPTPVPN_IP_ADDRESS_IS_INVALID="Endereço IP é branco (nulo)"
+var EXPERTCONF_PPTPVPN_DO_YOU_WANT_DELETE="Deseja excluir esta conta?"
+
+//accesslist
+
+var ACCESSLIST_NOIPLISTMSG_1="Nenhum endereço IP adicionado. Você pode adicionar o IP de seu computador("
+var ACCESSLIST_NOIPLISTMSG_2=") conectado?"
+var ACCESSLIST_WRONG_INPUT_IP="Endereço IP inválido."
+var ACCESSLIST_WRITE_EXPLAIN="Descrição está em branco."
+var ACCESSLIST_DEL_WANT="Deseja apagar este item?"
+
+//reboot
+var REBOOT_CHANGEIP_RETRY_LOGIN="Será necessário reconectar devido à alteração do Endereço IP da LAN."
+var REBOOT_CHANGEIP_RETRY_NOLOGIN_WINDOWS="Reconectar a página de configuração."
+var SYSCONF_RESTORE_RETRY_CONNET="Reconectar a página de restaurar a configuração."
+
+//trafficconf_qos
+var QOS_BASIC_WARNING="Todas as configurações serão resetadas. Continuar?"
+var QOS_COMMON_EXCCED_MAX_CLASS="Máximo limite excedido."
+var QOS_COMMON_EXCCED_MAX_SPEED="Máximo velocidade da Internet (WAN) excedeu."
+var QOS_COMMON_ISOLATED_EXCEED="A soma total da largura de banda garantido não pode exceder o máximo da velocidade da WAN"
+var QOS_COMMON_NO_CHANGE_DIRECTION="Não pode trocar a direção."
+var QOS_COMMON_ONLY_DIGIT="Permite somente dígitos."
+var QOS_COMMON_BASIC_SETUP_FIRST="Primeiro configure o QoS básico."
+var QOS_PORT_PORTRANGE="O intervalo de porta deve ser entre 1 a 65.535"
+var QOS_PORT_INVALID_EXT_PORT_RANGE="Intervalo de porta externa inválido."
+var QOS_BADNWIDTH_EMPTY="Defina os valores de Download e Upload"
+var QOS_RATE_RANGE="Intervalo da Download e Upload dever ser: 32 Kbps à 50 Mbps"
+
+// wirelessconf_multibssid
+var MSG_DEL_MBSSID_WARNING="Remover este SSID?"
+
+
+//trafficconf_connctrl
+var MSG_CONNECTION_MAX_WARNING="Continuar?"
+var MSG_CONNECTION_MAX_TOO_SMALL="Para uma conexão baixa. Configure mais de 512."
+var MSG_UDP_CONNECTION_MAX_TOO_BIG="Máxima conexão UDP deve ser entre 10 e a máxima conexão!"
+var MSG_ICMP_CONNECTION_MAX_TOO_BIG="Máxima conexão ICMP deve ser menor que a máxima conexão!"
+var MSG_INVALID_RATE_PER_MAX="Taxa de conexão para 1 PC inválida."
+
+//sysconf_misc
+var MSG_WBM_POPUP="Reconectar novamente."
+
+
+// trafficconf_switch
+var MSG_SAME_PORT_MIRROR="The same port can't be mirrored."
+
+var MSG_HUBMODE_WARNING="!!! Warning !!\nIn Hub Mode, all nat routing function would be stopped and Setup web page can't be connected.\n\n\
+Continue? "
+var MSG_HUBMODE_CONFIRM="Press OK button to continue."
+  
+
+// trafficconf_portqos
+var MSG_PORTQOS_BOTH_ZERO=": O valor 0 Mbps não pode ser configurado."
+var MSG_PORTQOS_MAX_ERROR=": O valor acima de 100Mbps não pode ser configurado"
+var MSG_PORTQOS_INVALID_VALUE=": Taxa inválida (deve ser entre "
+
+
+
+//firewallconf_etc
+var DESC_INVALID_ARP_PERIOD="Pacotes ARP por segundo deve ser entre 0 à 100."
+
+// wirelessconf_multibridge
+var MSG_DEL_WWAN_WANRING="Porta Cabeada WAN (Porta da Internet) será interrompida. Você deseja continuar?"
+
+
+// iframe_pppoe_sched
+var MSG_INVALID_HOUR_VALUE="Intervalo de Hora deve ser entre 0 à 23."
+var MSG_INVALID_MIN_VALUE="Intervalo de minutos deve ser entre 0 à 59."
+var MSG_PPPOE_SCHEDULE_SAME_RULE="Este agendador já existe."
+
+var QOS_BPI_RANGE="Intervalo de endereço IP inválido para BPI. (Disponível: 2 ~ 31)"
+var QOS_PROTOCOL_SELECT="Selecione o tipo de protocolo"
+
+// trafficconf_lspolicy
+var MSG_BACKUP_METHOD_AT_LEAST_ONE="Select at least one method"
+var MSG_BACKUP_METHOD_DOMAIN="Domain name should be designated"
+
+
+var MSG_INVALID_PROTONUM="Invalid Proto Num"
+
+
+var MSG_MBRIDGE_AUTO_CHANNEL_STRING="[Localizar Canal Automático] esta função pesquisa um AP que deseja estabelecer a bridge e\
+identifica o canal de operação e altera o seu canal de operação de acordo com o canal identificado.\
+Deseja continuar?"
+
+var TRAFFICCONF_ALL_OPTIONS_CLEAR =  "All options will be cleared.\nContinue?"
+var MSG_SELECT_DEL_MBSS = "Selecione ao menos um item para excluir."
+
+var AUTO_STRING= "Automático"
+var MBRIDGE_AUTO_CHANNEL_SEARCH="Localizar Canal Automático"
+
+
+
+var UPPER_CHANNEL_TXT = "Abaixo"
+var LOWER_CHANNEL_TXT = "Acima"
+var LAN_GATEWAY_WARNING_MSG = "When no WAN internet connection, this option is valid for router itself to connect internet.\nContinue?";
+var MSG_IPPOOL_MAX_WARNING = "No more use of the IP range condition."
+
+var MSG_MBSSID_QOS_WARNING="Minimum value is 100 Kbps."
+
+var MSG_DFS_WARNING="This channel is DFS channel.\nAP may be activated only unless radar signal is found during 1 ~ 10 minutes."
+
+
+var SYSCONF_LOGIN_BLANK_ID =     "Account is empty."
+var SYSCONF_LOGIN_BLANK_PASS  = "Password is empty."
+var SYSCONF_LOGIN_REMOVE_WARNING  = "Remove Account/Password. Continue?"
+var SYSCONF_LOGIN_INVALID_SESSION_TIMEOUT  = "Session Timeout should be 1 ~ 60 minutes."
+
+
+
+var SYSCONF_LOGIN_CANT_REMOVE_ID  = "ID & Password can't be removed when Session method is used."
+var SYSCONF_LOGIN_SHOULD_HAVE_IDPASS  = "To enable Session, ID & Password MUST be set."
+var SYSCONF_LOGIN_RELOGIN_SESSION  = "Move to Login page after configuring. Continue?"
+
+var MSG_PPTPVPN_REBOOT = "Reboot to change PPTPVPN server configuration?"
+var MSG_QOS_REBOOT="Reboot to change QOS configuration."
+var MSG_IGMP_REBOOT = "Reboot to change IPTV configuration?"
+
+var UNALLOWED_ID_MSG  = "Unallowed Used ID"
+
+
+var DESC_INVALID_DCS_PERIOD="The range should be  1 ~ 100."
+
+var INVALID_HOUR_TEXT="The range should be 0 ~ 23."
+var INVALID_MIN_TEXT="The range should be 0 ~ 59."
+var SELECT_DAY_DESC="Check day or every day at least."
+
+
+
+var SNMP_INVALID_PORT= "Port Number should be 1 - 65535."
+var SNMP_COMMUNITY_ALERT= "Community field is mandatory."
+
+
+
+
+
+var SNMP_INVALID_PORT= "Port Number should be 1 - 65535."
+var SNMP_COMMUNITY_ALERT= "Community field is mandatory."
+
+
+var MSG_INVALID_RADIUS_SERVER="Invalid RADIUS server address"
+var MSG_INVALID_RADIUS_SECRET="Invalid RADIUS password"
+var MSG_INVALID_RADIUS_PORT="Invalid RADIUS server port"
+var MSG_WEP_WARNING="Maximum link rate is 54Mbps(11g) when WEP or TKIP is used.\nContinue?"
+var MSG_WEP_SEC_WARNING="WEP is very weak encryption setup. We don't recommend to use WEP.\nUse WEP or not?"
+var MSG_WIRELESS_WAN_WARNING="Wireless WAN function is already used by another wireless interface. Turn off the wireless WAN function in the other wireless interface."
+var MSG_WDS_CHANNEL_WARNING="Channel is mismatched.\nNeed to change the channel after apply.\nContinue?"
+
+
+var MSG_NEW_BSS="Nova rede wireless"
+
+var MSG_ADD_MAC_WARNING="No MAC address is checked to add."
+var MSG_REMOVE_MAC_WARNING="No MAC address is checked to remove."
+var MSG_INVALID_AUTH_FOR_BRIDGE="This AP can't be connected by Bridge."
+
+var MSG_NEED_REBOOT_FOR_WWAN="System will be restarted. Continue?"
+
+
+
+var MSG_ENABLE_ONE_SERVICE_ID="At least one user is needed to run."
+var MSG_DUPLICATE_SERVICE_ID="Some ID is duplicated. Change the User ID."
+
+
+var PASSWORD_NEEDED_TO_SET_REMOTE_MGMT="Account & Password should be changed to enable Remote router connection.\nSet the account & password in the [System]->[Admin Setup] page."
+
+
+
+var MSG_HWADDR_NO_INPUT=MSG_INVALID_HWADDR
+var MSG_SELECT_MAC_REMOVED=NATCONF_PORTFORWARD_SELECT_RULE_TO_DEL
+
+
+
+
+
+var SYSCONF_ONLINE_UPGRADE_CONFIRM="All router's functions will be stopped during firmware upgrade.\nContinue?"
+
+var FIRMUP_DONE_TXT="Firmware upgrade is done.\nClick 'OK' button to continue."
+
+
+
+
+var PASSWORD_NEEDED_TO_SET_THIS="A conta de usuário e senha devem ser alteradas para ativar esta função.\nEstablece ambos na página [Sistema]->[Configuração de Admin]."
+ 
+var CANT_SET_DEFAULT_ID_PASS="Esta é a conta e senha originais de fábrica.\nAlterar a conta e a senha."
+var SYSCONF_LOGIN_NEED_CAPTCHA_CODE="Preencher o código de segurança"
+ 
+var MSG_SELECT_TORRENT_FOLDER_ERR="Selecionar a pasta para download"
+var MSG_SELECT_MEDIA_FOLDER_ERR="Selecionar a pasta multimedia"
+var MSG_MEDIA_NAME_ERR="Escrever o nome do arquivo"
+var DDNS_HOSTNAME_RULE_TXT="Nome do Host DDNS inválido"
+var SYSCONF_LOGIN_CANT_REMOVE_WARNING="Escrever a conta e senha"
+
+var MSG_INVALID_FOLDER_STR="Invalid Folder String.";
+var MSG_INVALID_FOLDER_NON_ASCII_STR="Only Ascii folder name is allowed.";
+var MSG_INVALID_FOLDER_2DOTS_STR=".. can't be used."
+var MSG_INVALID_FOLDER_DOT_STR=". can't be used at the start of folder name."
+var MSG_CANT_BE_USED="can't be used."
+
+var MSG_DYNAMIC_CHANNEL_WARNING="If static channel is used,  [Dynamic Channel Search] function will be disabled\nContinue?"
+
+
+var SYSCONF_INVALID_HOSTNAME="Invalid HostName"
+var UNPERMITTED_STR_PREFIX="Unpermitted characters:"
+var SYSCONF_INVALID_TEMPERATURE="Invalid Temperature.(Temperature <= 100)"
+
+
+var PLUGIN_INSTALL_BT_TXT="Install"
+var PLUGIN_UPDATE_BT_TXT="Update"
+var PLUGIN_CANCEL_BT_TXT="Cancel"
+var PLUGIN_REMOVE_BT_TXT="Remove"
+
+var MSG_TOO_LONG_SSID="SSID length is too long.\nNon ascii character have 3 bytes.\nCurrent Length of SSID Field: "
+
+
+
+</script>
+
+
+

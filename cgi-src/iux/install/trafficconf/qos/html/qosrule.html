@@ -1,0 +1,162 @@
+<div id="panel_qosrule" class="cc_padding">
+        <div id="right_main" class="right_main">
+                <form id="iux_form">
+                        <div class="lc_row lc_priority_row">
+				<div class = "lc_point_div"><span><img src="/common/images/point.jpg"></span></div>
+				<div class = "lc_left">
+					<p sid = "S_QOSRULE_PRIORITY"></p>
+				</div>
+				<div class = "lc_right">
+                                        <div class="lc_priority_box" >
+                                                <input name="priority" type="number" pattern="[0-9]*" sid="QOSRULE_PRIORITYORDER" min = "0" style="ime-mode: disabled;">
+                                        </div>
+
+                                        <div class="lc_priority_button_box">
+                                                <button type="button" sid="PRIORITY_UP" data-role="none">
+                                                        <img src="images/pri_up.gif" class="lc_btn_img">
+                                                        <span sid = "S_QOSRULE_PRIORITYUP"></span>
+                                                </button>
+                                        </div>
+                                        <div class="lc_priority_button_box">
+                                                <button type="button" sid="PRIORITY_DOWN" data-role="none">
+                                                        <img src="images/pri_down.gif" class="lc_btn_img">
+                                                        <span sid = "S_QOSRULE_PRIORITYDOWN"></span>
+                                                </button>
+                                        </div>
+
+				</div>
+                        </div>
+                        <div class="lc_row">
+				<div class = "lc_point_div"><span><img src="/common/images/point.jpg"></span></div>
+				<div class = "lc_left">
+					<p sid = "S_QOSRULE_RULETYPE"></p>
+				</div>
+				<div class = "lc_right">
+					<div class = "lc_select_div ui-alt-icon ui-nodisc-icon">
+						<select type = "select" sid = "S_QOSRULE_PROPERTY">
+						</select>
+					</div>
+				</div>
+                        </div>
+                        <div class="lc_row lc_speed_div">
+				<div class = "lc_point_div"></div>
+				<div class = "lc_left">
+					<div class = "lc_directiontext_div"><p sid = "S_QOSRULE_DOWNLOAD"></p></div>
+				</div>
+				<div class = "lc_right">
+					<div class = "lc_input_div">
+						<input type = "number" pattern="[0-9]*" sid = "QOSRULE_DOWNINPUT" min = "0">
+					</div>
+					<div><p sid = "S_INTERNETTYPE_UNIT1"></p></div>
+					<div class = "lc_directiontext_div"><p sid = "S_QOSRULE_UPLOAD"></p></div>
+					<div class = "lc_input_div">
+						<input type = "number" pattern="[0-9]*" sid = "QOSRULE_UPINPUT" min = "0">
+					</div>
+					<div><p sid = "S_INTERNETTYPE_UNIT1"></p></div>
+				</div>
+                        </div>
+                        <div class="lc_row">
+				<div class = "lc_point_div"><span><img src="/common/images/point.jpg"></span></div>
+				<div class = "lc_left">
+					<p sid = "S_QOSRULE_IPADDRESS"></p>
+				</div>
+				<div class = "lc_right">
+					<div class = "lc_select_div ui-alt-icon ui-nodisc-icon">
+						<select type = "select" sid = "S_QOSRULE_IPSELECTWAY" >
+						</select>
+					</div>
+				</div>
+                        </div>
+                        <div class="lc_row lc_ipaddr2_div">
+				<div class = "lc_point_div"></div>
+				<div class = "lc_left">
+				</div>
+				<div class = "lc_right">
+					<div class = "lc_ipaddress_div" sid = "" class="ip">
+						<div class = "lc_ip_div ip"><input type = "number" pattern="[0-9]*" sid = "VALUE0" min = "1" max = "255" maxlength = "3"></div>
+						<div class="hyphen"><p>.</p></div>
+						<div class = "lc_ip_div ip"><input type = "number" pattern="[0-9]*" sid = "VALUE1" min = "0" max = "255" maxlength = "3"></div>
+						<div class="hyphen"><p>.</p></div>
+						<div class = "lc_ip_div ip"><input type = "number" pattern="[0-9]*" sid = "VALUE2" min = "0" max = "255" maxlength = "3"></div>
+						<div class="hyphen"><p>.</p></div>
+						<div class = "lc_ip_div ip"><input type = "number" pattern="[0-9]*" sid = "VALUE3" min = "0" max = "255" maxlength = "3"></div>
+						<div class="hyphen lastiprange"><p>~</p></div>
+						<div class = "lc_ip_div ip lastiprange"><input type = "number" pattern="[0-9]*" sid = "VALUE4" min = "0" max = "255" maxlength = "3"></div>
+					</div>
+				</div>
+                        </div>
+                        <div class="lc_row lc_bpi_div">
+				<div class = "lc_point_div"></div>
+				<div class = "lc_left">
+				</div>
+				<div class = "lc_right">
+					<div class = "ui-alt-icon"><input type = "checkbox" sid = "S_QOSRULE_BPI"></div>
+					<label for = "">
+						<div><p sid = "S_QOSRULE_BPITEXT"></p></div>
+					</label>
+				</div>
+                        </div>
+                        <div class="lc_row">
+				<div class = "lc_point_div"><span><img src="/common/images/point.jpg"></span></div>
+				<div class = "lc_left">
+					<p sid = "S_QOSRULE_TYPINGWAY"></p>
+				</div>
+				<div class = "lc_right">
+					<div class = "lc_select_div ui-alt-icon ui-nodisc-icon">
+						<select type = "select" sid = "S_QOSRULE_TYPINGWAYLIST">
+						</select>
+					</div>
+				</div>
+                        </div>
+                        <div class="lc_row">
+				<div class = "lc_point_div"></div>
+				<div class = "lc_left">
+				</div>
+				<div class = "lc_right">
+					<div class = "lc_select_div ui-alt-icon ui-nodisc-icon">
+						<select type = "select" sid = "S_QOSRULE_PROTOCOL">
+						</select>
+					</div>
+					<div class = "lc_port_div">
+						<input type = "number" pattern="[0-9]*" sid = "QOSRULE_PORTFROM" min = "1" max = "65535" maxlength = "5">
+					</div>
+					<div class="hyphen"><p>~</p></div>
+					<div class = "lc_port_div">
+						<input type = "number" pattern="[0-9]*" sid = "QOSRULE_PORTTO" min = "1" max = "65535" maxlength = "5">
+					</div>
+				</div>
+                        </div>
+                </form>
+        </div>
+        <div id="right_sub"></div>
+        <div id="right_footer">
+				<div class = "lc_point_div"></div>
+		<div>
+			<button type="button" sid="S_QOSRULE_NEWRULE_BUTTON" class="custom_css_button lc_newrule_button" data-role="none">
+				<img src="images/plus_icon.jpg" class="lc_btnimg">
+				<span sid="S_QOSRULE_NEWRULE"></span>
+			</button>
+		</div>
+		<div>
+			<button type="button" sid="S_MODIFY_BUTTON" class="custom_css_button lc_apply_button" data-role="none">
+				<span sid="S_MODIFY"></span>
+			</button>
+		</div>
+		<div>
+			<button type="button" sid="S_BUTTON_SUBMIT_BUTTON" class="custom_css_button lc_apply_button" data-role="none">
+				<span sid="S_BUTTON_SUBMIT"></span>
+			</button>
+		</div>
+		<div>
+			<button type="button" sid="S_CANCEL_BUTTON" class="custom_css_button lc_cancel_button" data-role="none">
+				<span sid="S_CANCEL"></span>
+			</button>
+		</div>
+		<div>
+			<button type="button" sid="S_DELETE_BUTTON" class="custom_css_button lc_delete_button" data-role="none">
+				<span sid="S_DELETE"></span>
+			</button>
+		</div>
+	</div>
+</div>
+

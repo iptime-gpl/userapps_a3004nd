@@ -1,0 +1,97 @@
+<div id="itunes" class="cc_padding">
+	<form id="iux_form">
+		<div id="right_main" class="right_main"> 
+			<div class = "plugin_setup">  
+				<div class="lc_row">
+					<div class="lc_left lc_media_left"> 
+						<span><img src="/common/images/point.jpg"></span>
+						<p sid="S_SERVICE_TITLE"></p>
+					</div>
+					<div class="lc_right lc_media_right">
+						<input name="run" id="run_true" sid="C_ITUNES_RUN" type="radio" value="1">
+						<label for="run_true"><p sid="S_START"></p></label>
+						<input name="run" id="run_false" sid="C_ITUNES_RUN" type="radio" value="0">
+						<label for="run_false"><p sid="S_STOP"></p></label>
+					</div>
+				</div>
+				<div class="lc_row">
+					<div class="lc_left lc_media_left">
+						<span><img src="/common/images/point.jpg"></span>
+						<p sid="S_ITUNES_NAME_TITLE"></p>
+					</div>
+					<div class="lc_right lc_media_right">
+						<input name="name" sid="C_ITUNES_NAME" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled">
+					</div>
+				</div>
+
+				<div class="lc_row">
+					<div class="lc_left lc_media_left">
+						<span><img src="/common/images/point.jpg"></span>
+						<p sid="S_ITUNES_DATAFOLDER_TITLE"></p>
+					</div>
+					<div class="lc_right lc_media_right">
+						<div class="select_datafolder ui-alt-icon ui-nodisc-icon">
+							<select name="datafolder" sid="C_ITUNES_DATAFOLDER" type="select"></select>
+						</div>
+					</div>
+				</div>
+				<div class="lc_row">
+					<div class="lc_left lc_media_left lc_height_zero"></div>
+					<div class="lc_right lc_media_right">
+						<div>
+							<input sid="L_ITUNES_DATAFOLDER" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+					</div>
+				</div>
+
+				<div class="lc_row lc_row_scan">
+					<div class="lc_left lc_media_left lc_height_zero">
+						<span><img src="/common/images/point.jpg"></span>
+						<p sid="S_ITUNES_AUTOSCAN"></p>
+					</div>
+					<div class="lc_right lc_media_right">
+						<div class = "lc_input_port ui-alt-icon ui-nodisc-icon">
+							<select sid="C_ITUNES_SCAN" type="select" name = "scan"></select>
+						</div>
+						<p sid="S_ITUNES_PERIOD"></p>
+					</div>
+				</div>
+				<div class="lc_row">
+					<div class="lc_left lc_media_left">
+						<span><img src="/common/images/point.jpg"></span>
+						<p sid="S_ITUNES_PATH_TITLE"></p>
+					</div>
+					<div class="lc_right lc_media_right">
+						<p class="lc_media_config_text" class="lc_media_dir" sid="S_MEDIADB_DIR"></p>
+					</div>
+				</div>
+				<div class="lc_media_submit">
+					<input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+				</div>
+				<hr class="lc_media_hr">
+
+				<div class="lc_row">
+					<div class="lc_left lc_media_left">
+						<span><img src="/common/images/point.jpg"></span>
+						<p sid="S_MEDIA_UPDATEDATADB_TITLE"></p>
+					</div>
+					<div class="lc_right lc_media_right">
+						<p class="lc_media_config_text" sid="S_ITUNES_REALTIME"></p>
+					</div>
+				</div>
+				<div>
+					<input class="custom_css_button lc_media_refresh_button" sid="S_BUTTON_UPDATE" type="button" data-role="none">
+				</div>
+			</div>
+			<div class = "plugin_install">  
+			</div>
+		</div>
+	</form>
+	<div id="right_footer">
+		<div class = "plugin_setup">
+		</div>
+		<div class = "plugin_install">
+			<input class="custom_css_button plugin_install_button" sid="S_PLUGIN_INSTALL" type="button" data-role="none">
+		</div>
+	</div>
+</div>

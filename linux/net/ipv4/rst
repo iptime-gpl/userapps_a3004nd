@@ -1,0 +1,359 @@
+fib_trie.c:		seq_indent(seq, iter->depth-1);
+ip_forward.c:                               "unknown or invalid path-MTU (%u)\n",
+netfilter/ipt_REJECT.c:	if (oth->rst)
+netfilter/ipt_REJECT.c:	tcph->source	= oth->dest;
+netfilter/ipt_REJECT.c:	tcph->dest	= oth->source;
+netfilter/ipt_REJECT.c:	if (oth->ack)
+netfilter/ipt_REJECT.c:		tcph->seq = oth->ack_seq;
+netfilter/ipt_REJECT.c:		tcph->ack_seq = htonl(ntohl(oth->seq) + oth->syn + oth->fin +
+netfilter/ipt_REJECT.c:				      (oth->doff << 2));
+netfilter/nf_nat_h323.c:		*data = skb->data + ip_hdrlen(skb) + th->doff * 4 + dataoff;
+netfilter/nf_nat_sip.c:		baseoff = ip_hdrlen(skb) + th->doff * 4;
+netfilter/nf_nat_sip.c:	nf_nat_set_seq_adjust(ct, ctinfo, th->seq, off);
+netfilter/ipt_LOG.c:		       ntohs(th->source), ntohs(th->dest));
+netfilter/ipt_LOG.c:			       ntohl(th->seq), ntohl(th->ack_seq));
+netfilter/ipt_LOG.c:		printk("WINDOW=%u ", ntohs(th->window));
+netfilter/ipt_LOG.c:		if (th->cwr)
+netfilter/ipt_LOG.c:		if (th->ece)
+netfilter/ipt_LOG.c:		if (th->urg)
+netfilter/ipt_LOG.c:		if (th->ack)
+netfilter/ipt_LOG.c:		if (th->psh)
+netfilter/ipt_LOG.c:		if (th->rst)
+netfilter/ipt_LOG.c:		if (th->syn)
+netfilter/ipt_LOG.c:		if (th->fin)
+netfilter/ipt_LOG.c:		printk("URGP=%u ", ntohs(th->urg_ptr));
+netfilter/ipt_LOG.c:		    th->doff * 4 > sizeof(struct tcphdr)) {
+netfilter/ipt_LOG.c:			optsize = th->doff * 4 - sizeof(struct tcphdr);
+netfilter/ipt_ecn.c:			if (th->ece == 1)
+netfilter/ipt_ecn.c:			if (th->ece == 0)
+netfilter/ipt_ecn.c:			if (th->cwr == 1)
+netfilter/ipt_ecn.c:			if (th->cwr == 0)
+route.c:	return (rth->rt_flags & (RTCF_BROADCAST | RTCF_MULTICAST)) &&
+route.c:		rth->fl.iif && rth->dst.rt_next;
+route.c:	return (rth->rt_flags & (RTCF_REDIRECTED | RTCF_NOTIFY)) ||
+route.c:		rth->dst.expires;
+route.c:	if (atomic_read(&rth->dst.__refcnt))
+route.c:	if (rth->dst.expires &&
+route.c:	    time_after_eq(jiffies, rth->dst.expires))
+route.c:	age = jiffies - rth->dst.lastuse;
+route.c:	return rth->rt_genid != rt_genid(dev_net(rth->dst.dev));
+route.c:			next = rth->dst.rt_next;
+route.c:		if (compare_hash_inputs(&aux->fl, &rth->fl))
+route.c:			prefetch(rth->dst.rt_next);
+route.c:				*rthp = rth->dst.rt_next;
+route.c:			if (rth->dst.expires) {
+route.c:				if (time_before_eq(jiffies, rth->dst.expires)) {
+route.c:					rthp = &rth->dst.rt_next;
+route.c:			*rthp = rth->dst.rt_next;
+route.c:					rthp = &rth->dst.rt_next;
+route.c:				*rthp = rth->dst.rt_next;
+route.c:		rth = rth->dst.rt_next;
+route.c:			*rthp = rth->dst.rt_next;
+route.c:		if (compare_keys(&rth->fl, &rt->fl) && compare_netns(rth, rt)) {
+route.c:			*rthp = rth->dst.rt_next;
+route.c:			rcu_assign_pointer(rth->dst.rt_next,
+route.c:			dst_use(&rth->dst, now);
+route.c:				skb_dst_set(skb, &rth->dst);
+route.c:		if (!atomic_read(&rth->dst.__refcnt)) {
+route.c:		rthp = &rth->dst.rt_next;
+route.c:				if (rth->fl.fl4_dst != daddr ||
+route.c:				    rth->fl.fl4_src != skeys[i] ||
+route.c:				    rth->fl.oif != ikeys[k] ||
+route.c:				    rth->fl.iif != 0 ||
+route.c:				    !net_eq(dev_net(rth->dst.dev), net)) {
+route.c:					rthp = &rth->dst.rt_next;
+route.c:				if (rth->rt_dst != daddr ||
+route.c:				    rth->rt_src != saddr ||
+route.c:				    rth->dst.error ||
+route.c:				    rth->rt_gateway != old_gw ||
+route.c:				    rth->dst.dev != dev)
+route.c:				dst_hold(&rth->dst);
+route.c:				dst_confirm(&rth->dst);
+route.c:				netevent.old = &rth->dst;
+route.c:			     rth = rcu_dereference(rth->dst.rt_next)) {
+route.c:				if (rth->fl.fl4_dst != daddr ||
+route.c:				    rth->fl.fl4_src != skeys[i] ||
+route.c:				    rth->rt_dst != daddr ||
+route.c:				    rth->rt_src != iph->saddr ||
+route.c:				    rth->fl.oif != ikeys[k] ||
+route.c:				    rth->fl.iif != 0 ||
+route.c:				    dst_metric_locked(&rth->dst, RTAX_MTU) ||
+route.c:				    !net_eq(dev_net(rth->dst.dev), net) ||
+route.c:					    old_mtu >= dst_mtu(&rth->dst) &&
+route.c:				if (mtu <= dst_mtu(&rth->dst)) {
+route.c:					if (mtu < dst_mtu(&rth->dst)) {
+route.c:						dst_confirm(&rth->dst);
+route.c:							rth->dst.metrics[RTAX_LOCK-1] |=
+route.c:						rth->dst.metrics[RTAX_MTU-1] = mtu;
+route.c:						dst_set_expires(&rth->dst,
+route.c:	rth->dst.output = ip_rt_bug;
+route.c:	rth->dst.obsolete = -1;
+route.c:	atomic_set(&rth->dst.__refcnt, 1);
+route.c:	rth->dst.flags= DST_HOST;
+route.c:		rth->dst.flags |= DST_NOPOLICY;
+route.c:	rth->fl.fl4_dst	= daddr;
+route.c:	rth->rt_dst	= daddr;
+route.c:	rth->fl.fl4_tos	= tos;
+route.c:	rth->fl.mark    = skb->mark;
+route.c:	rth->fl.fl4_src	= saddr;
+route.c:	rth->rt_src	= saddr;
+route.c:	rth->dst.tclassid = itag;
+route.c:	rth->rt_iif	=
+route.c:	rth->fl.iif	= dev->ifindex;
+route.c:	rth->dst.dev	= init_net.loopback_dev;
+route.c:	dev_hold(rth->dst.dev);
+route.c:	rth->idev	= in_dev_get(rth->dst.dev);
+route.c:	rth->fl.oif	= 0;
+route.c:	rth->rt_gateway	= daddr;
+route.c:	rth->rt_spec_dst= spec_dst;
+route.c:	rth->rt_genid	= rt_genid(dev_net(dev));
+route.c:	rth->rt_flags	= RTCF_MULTICAST;
+route.c:	rth->rt_type	= RTN_MULTICAST;
+route.c:		rth->dst.input= ip_local_deliver;
+route.c:		rth->rt_flags |= RTCF_LOCAL;
+route.c:		rth->dst.input = ip_mr_input;
+route.c:	atomic_set(&rth->dst.__refcnt, 1);
+route.c:	rth->dst.flags= DST_HOST;
+route.c:		rth->dst.flags |= DST_NOPOLICY;
+route.c:		rth->dst.flags |= DST_NOXFRM;
+route.c:	rth->fl.fl4_dst	= daddr;
+route.c:	rth->rt_dst	= daddr;
+route.c:	rth->fl.fl4_tos	= tos;
+route.c:	rth->fl.mark    = skb->mark;
+route.c:	rth->fl.fl4_src	= saddr;
+route.c:	rth->rt_src	= saddr;
+route.c:	rth->rt_gateway	= daddr;
+route.c:	rth->rt_iif 	=
+route.c:		rth->fl.iif	= in_dev->dev->ifindex;
+route.c:	rth->dst.dev	= (out_dev)->dev;
+route.c:	dev_hold(rth->dst.dev);
+route.c:	rth->idev	= in_dev_get(rth->dst.dev);
+route.c:	rth->fl.oif 	= 0;
+route.c:	rth->rt_spec_dst= spec_dst;
+route.c:	rth->dst.obsolete = -1;
+route.c:	rth->dst.input = ip_forward;
+route.c:	rth->dst.output = ip_output;
+route.c:	rth->rt_genid = rt_genid(dev_net(rth->dst.dev));
+route.c:	rth->rt_flags = flags;
+route.c:		       rt_genid(dev_net(rth->dst.dev)));
+route.c:	rth->dst.output= ip_rt_bug;
+route.c:	rth->dst.obsolete = -1;
+route.c:	rth->rt_genid = rt_genid(net);
+route.c:	atomic_set(&rth->dst.__refcnt, 1);
+route.c:	rth->dst.flags= DST_HOST;
+route.c:		rth->dst.flags |= DST_NOPOLICY;
+route.c:	rth->fl.fl4_dst	= daddr;
+route.c:	rth->rt_dst	= daddr;
+route.c:	rth->fl.fl4_tos	= tos;
+route.c:	rth->fl.mark    = skb->mark;
+route.c:	rth->fl.fl4_src	= saddr;
+route.c:	rth->rt_src	= saddr;
+route.c:	rth->dst.tclassid = itag;
+route.c:	rth->rt_iif	=
+route.c:	rth->fl.iif	= dev->ifindex;
+route.c:	rth->dst.dev	= net->loopback_dev;
+route.c:	dev_hold(rth->dst.dev);
+route.c:	rth->idev	= in_dev_get(rth->dst.dev);
+route.c:	rth->rt_gateway	= daddr;
+route.c:	rth->rt_spec_dst= spec_dst;
+route.c:	rth->dst.input= ip_local_deliver;
+route.c:	rth->rt_flags 	= flags|RTCF_LOCAL;
+route.c:		rth->dst.input= ip_error;
+route.c:		rth->dst.error= -err;
+route.c:		rth->rt_flags 	&= ~RTCF_LOCAL;
+route.c:	rth->rt_type	= res.type;
+route.c:	     rth = rcu_dereference(rth->dst.rt_next)) {
+route.c:		if ((((__force u32)rth->fl.fl4_dst ^ (__force u32)daddr) |
+route.c:		     ((__force u32)rth->fl.fl4_src ^ (__force u32)saddr) |
+route.c:		     (rth->fl.iif ^ iif) |
+route.c:		     rth->fl.oif |
+route.c:		     (rth->fl.fl4_tos ^ tos)) == 0 &&
+route.c:		    rth->fl.mark == skb->mark &&
+route.c:		    net_eq(dev_net(rth->dst.dev), net) &&
+route.c:				dst_use_noref(&rth->dst, jiffies);
+route.c:				skb_dst_set_noref(skb, &rth->dst);
+route.c:				dst_use(&rth->dst, jiffies);
+route.c:				skb_dst_set(skb, &rth->dst);
+route.c:	atomic_set(&rth->dst.__refcnt, 1);
+route.c:	rth->dst.flags= DST_HOST;
+route.c:		rth->dst.flags |= DST_NOXFRM;
+route.c:		rth->dst.flags |= DST_NOPOLICY;
+route.c:	rth->fl.fl4_dst	= oldflp->fl4_dst;
+route.c:	rth->fl.fl4_tos	= tos;
+route.c:	rth->fl.fl4_src	= oldflp->fl4_src;
+route.c:	rth->fl.oif	= oldflp->oif;
+route.c:	rth->fl.mark    = oldflp->mark;
+route.c:	rth->rt_dst	= fl->fl4_dst;
+route.c:	rth->rt_src	= fl->fl4_src;
+route.c:	rth->rt_iif	= oldflp->oif ? : dev_out->ifindex;
+route.c:	rth->dst.dev	= dev_out;
+route.c:	rth->idev	= in_dev_get(dev_out);
+route.c:	rth->rt_gateway = fl->fl4_dst;
+route.c:	rth->rt_spec_dst= fl->fl4_src;
+route.c:	rth->dst.output=ip_output;
+route.c:	rth->dst.obsolete = -1;
+route.c:	rth->rt_genid = rt_genid(dev_net(dev_out));
+route.c:		rth->dst.input = ip_local_deliver;
+route.c:		rth->rt_spec_dst = fl->fl4_dst;
+route.c:		rth->rt_spec_dst = fl->fl4_src;
+route.c:			rth->dst.output = ip_mc_output;
+route.c:				rth->dst.input = ip_mr_input;
+route.c:				rth->dst.output = ip_mc_output;
+route.c:	rth->rt_flags = flags;
+route.c:		rth = rcu_dereference_bh(rth->dst.rt_next)) {
+route.c:		if (rth->fl.fl4_dst == flp->fl4_dst &&
+route.c:		    rth->fl.fl4_src == flp->fl4_src &&
+route.c:		    rth->fl.iif == 0 &&
+route.c:		    rth->fl.oif == flp->oif &&
+route.c:		    rth->fl.mark == flp->mark &&
+route.c:		    !((rth->fl.fl4_tos ^ flp->fl4_tos) &
+route.c:		    net_eq(dev_net(rth->dst.dev), net) &&
+route.c:			dst_use(&rth->dst, jiffies);
+skipnf.c:                port=htons(th->source);
+skipnf.c:                port=htons(th->dest);
+syncookies.c:				     th->source, th->dest, ntohl(th->seq),
+syncookies.c:	__u32 seq = ntohl(th->seq) - 1;
+syncookies.c:					    th->source, th->dest, seq,
+syncookies.c:	__u32 cookie = ntohl(th->ack_seq) - 1;
+syncookies.c:	if (!sysctl_tcp_syncookies || !th->ack || th->rst)
+syncookies.c:	treq->rcv_isn		= ntohl(th->seq) - 1;
+syncookies.c:	ireq->loc_port		= th->dest;
+syncookies.c:	ireq->rmt_port		= th->source;
+syncookies.c:					       { .sport = th->dest,
+syncookies.c:						 .dport = th->source } } };
+tcp.c:	thlen = th->doff * 4;
+tcp.c:	seq = ntohl(th->seq);
+tcp.c:		th->fin = th->psh = 0;
+tcp.c:		th->check = ~csum_fold((__force __wsum)((__force u32)th->check +
+tcp.c:			th->check =
+tcp.c:		th->seq = htonl(seq);
+tcp.c:		th->cwr = 0;
+tcp.c:	th->check = ~csum_fold((__force __wsum)((__force u32)th->check +
+tcp.c:		th->check = csum_fold(csum_partial(skb_transport_header(skb),
+tcp.c:	thlen = th->doff * 4;
+tcp.c:		if (*(u32 *)&th->source ^ *(u32 *)&th2->source) {
+tcp.c:	flush |= (__force int)(th->ack_seq ^ th2->ack_seq);
+tcp.c:	flush |= (ntohl(th2->seq) + skb_gro_len(p)) ^ ntohl(th->seq);
+tcp.c:	if (th->cwr)
+tcp.c:	__sum16 old_checksum = th->check;
+tcp.c:	th->check = 0;
+tcp.c:	th->check = old_checksum;
+tcp_input.c:	if ((tp->ecn_flags & TCP_ECN_OK) && (!th->ece || th->cwr))
+tcp_input.c:	if ((tp->ecn_flags & TCP_ECN_OK) && (!th->ece || !th->cwr))
+tcp_input.c:	if (th->ece && !th->syn && (tp->ecn_flags & TCP_ECN_OK))
+tcp_input.c:	int length = (th->doff * 4) - sizeof(struct tcphdr);
+tcp_input.c:			length--;
+tcp_input.c:				if (opsize == TCPOLEN_MSS && th->syn && !estab) {
+tcp_input.c:				if (opsize == TCPOLEN_WINDOW && th->syn &&
+tcp_input.c:				if (opsize == TCPOLEN_SACK_PERM && th->syn &&
+tcp_input.c:	if (th->doff == (sizeof(*th) / 4)) {
+tcp_input.c:		   th->doff == ((sizeof(*th) + TCPOLEN_TSTAMP_ALIGNED) / 4)) {
+tcp_input.c:	int length = (th->doff << 2) - sizeof (*th);
+tcp_input.c:			length--;
+tcp_input.c:		(th->ack && seq == TCP_SKB_CB(skb)->end_seq && seq == tp->rcv_nxt) &&
+tcp_input.c:		!tcp_may_update_window(tp, ack, seq, ntohs(th->window) << tp->rx_opt.snd_wscale) &&
+tcp_input.c:	__skb_pull(skb, th->doff * 4);
+tcp_input.c:				eaten = (chunk == skb->len && !th->fin);
+tcp_input.c:		if (th->fin)
+tcp_input.c:	u32 ptr = ntohs(th->urg_ptr);
+tcp_input.c:	ptr += ntohl(th->seq);
+tcp_input.c:	if (th->urg)
+tcp_input.c:		u32 ptr = tp->urg_seq - ntohl(th->seq) + (th->doff * 4) -
+tcp_input.c:			  th->syn;
+tcp_input.c:		if (!th->rst) {
+tcp_input.c:		if (!th->rst)
+tcp_input.c:	if (th->rst) {
+tcp_input.c:	if (th->syn && !before(TCP_SKB_CB(skb)->seq, tp->rcv_nxt)) {
+tcp_input.c:		 * is automatically equal to th->doff*4 due to pred_flags
+tcp_input.c:	if (len < (th->doff << 2) || tcp_checksum_complete_user(sk, skb))
+tcp_input.c:	if (th->ack && tcp_ack(sk, skb, FLAG_SLOWPATH) < 0)
+tcp_input.c:	if (th->ack) {
+tcp_input.c:		if (th->rst) {
+tcp_input.c:		if (!th->syn)
+tcp_input.c:		tp->snd_wnd = ntohs(th->window);
+tcp_input.c:	if (th->rst) {
+tcp_input.c:	if (th->syn) {
+tcp_input.c:		tp->snd_wnd    = ntohs(th->window);
+tcp_input.c:		if (th->ack)
+tcp_input.c:		if (th->rst)
+tcp_input.c:		if (th->syn) {
+tcp_input.c:	if (th->ack) {
+tcp_input.c:				tp->snd_wnd = ntohs(th->window) <<
+tcp_input.c:					     after(TCP_SKB_CB(skb)->end_seq - th->fin, tp->rcv_nxt))) {
+tcp_input.c:					} else if (th->fin || sock_owned_by_user(sk)) {
+tcp_input.c:			    after(TCP_SKB_CB(skb)->end_seq - th->fin, tp->rcv_nxt)) {
+tcp_ipv4.c:	sk = inet_lookup(net, &tcp_hashinfo, iph->daddr, th->dest,
+tcp_ipv4.c:			iph->saddr, th->source, inet_iif(icmp_skb));
+tcp_ipv4.c:	seq = ntohl(th->seq);
+tcp_ipv4.c:		req = inet_csk_search_req(sk, &prev, th->dest,
+tcp_ipv4.c:		th->check = ~tcp_v4_check(skb->len, saddr, daddr, 0);
+tcp_ipv4.c:		th->check = tcp_v4_check(skb->len, saddr, daddr,
+tcp_ipv4.c:						      th->doff << 2,
+tcp_ipv4.c:	th->check = 0;
+tcp_ipv4.c:	if (th->rst)
+tcp_ipv4.c:	rep.th.dest   = th->source;
+tcp_ipv4.c:	rep.th.source = th->dest;
+tcp_ipv4.c:	if (th->ack) {
+tcp_ipv4.c:		rep.th.seq = th->ack_seq;
+tcp_ipv4.c:		rep.th.ack_seq = htonl(ntohl(th->seq) + th->syn + th->fin +
+tcp_ipv4.c:				       skb->len - (th->doff << 2));
+tcp_ipv4.c:	rep.th.dest    = th->source;
+tcp_ipv4.c:	rep.th.source  = th->dest;
+tcp_ipv4.c:	if (tcp_v4_md5_hash_pseudoheader(hp, daddr, saddr, th->doff << 2))
+tcp_ipv4.c:	if (tcp_md5_hash_skb_data(hp, skb, th->doff << 2))
+tcp_ipv4.c:			       &iph->saddr, ntohs(th->source),
+tcp_ipv4.c:			       &iph->daddr, ntohs(th->dest),
+tcp_ipv4.c:	struct request_sock *req = inet_csk_search_req(sk, &prev, th->source,
+tcp_ipv4.c:			th->source, iph->daddr, th->dest, inet_iif(skb));
+tcp_ipv4.c:	if (!th->syn)
+tcp_ipv4.c:	if (th->doff < sizeof(struct tcphdr) / 4)
+tcp_ipv4.c:	if (!pskb_may_pull(skb, th->doff * 4))
+tcp_ipv4.c:	 * provided case of th->doff==0 is eliminated.
+tcp_ipv4.c:	TCP_SKB_CB(skb)->seq = ntohl(th->seq);
+tcp_ipv4.c:	TCP_SKB_CB(skb)->end_seq = (TCP_SKB_CB(skb)->seq + th->syn + th->fin +
+tcp_ipv4.c:				    skb->len - th->doff * 4);
+tcp_ipv4.c:	TCP_SKB_CB(skb)->ack_seq = ntohl(th->ack_seq);
+tcp_ipv4.c:	sk = __inet_lookup_skb(&tcp_hashinfo, skb, th->source, th->dest);
+tcp_ipv4.c:	if (skb->len < (th->doff << 2) || tcp_checksum_complete(skb)) {
+tcp_ipv4.c:	if (skb->len < (th->doff << 2) || tcp_checksum_complete(skb)) {
+tcp_ipv4.c:							iph->daddr, th->dest,
+tcp_ipv4.c:	th->check = ~tcp_v4_check(skb->len - skb_transport_offset(skb),
+tcp_minisocks.c:	if (th->doff > (sizeof(*th) >> 2) && tcptw->tw_ts_recent_stamp) {
+tcp_minisocks.c:			paws_reject = tcp_paws_reject(&tmp_opt, th->rst);
+tcp_minisocks.c:		if (th->rst)
+tcp_minisocks.c:		if (th->syn && !before(TCP_SKB_CB(skb)->seq, tcptw->tw_rcv_nxt))
+tcp_minisocks.c:		if (!th->ack ||
+tcp_minisocks.c:		if (!th->fin ||
+tcp_minisocks.c:	     (TCP_SKB_CB(skb)->seq == TCP_SKB_CB(skb)->end_seq || th->rst))) {
+tcp_minisocks.c:		if (th->rst) {
+tcp_minisocks.c:	if (th->syn && !th->rst && !th->ack && !paws_reject &&
+tcp_minisocks.c:	if (!th->rst) {
+tcp_minisocks.c:		if (paws_reject || th->ack)
+tcp_minisocks.c:	if (th->doff > (sizeof(struct tcphdr)>>2)) {
+tcp_minisocks.c:			paws_reject = tcp_paws_reject(&tmp_opt, th->rst);
+tcp_output.c: * value can be stuffed directly into th->window for an outgoing
+tcp_output.c:		th->ece = 1;
+tcp_output.c:	th->source		= inet->inet_sport;
+tcp_output.c:	th->dest		= inet->inet_dport;
+tcp_output.c:	th->seq			= htonl(tcb->seq);
+tcp_output.c:	th->ack_seq		= htonl(tp->rcv_nxt);
+tcp_output.c:		th->window	= htons(min(tp->rcv_wnd, 65535U));
+tcp_output.c:		th->window	= htons(tcp_select_window(sk));
+tcp_output.c:	th->check		= 0;
+tcp_output.c:	th->urg_ptr		= 0;
+tcp_output.c:			th->urg_ptr = htons(tp->snd_up - tcb->seq);
+tcp_output.c:			th->urg = 1;
+tcp_output.c:			th->urg_ptr = htons(0xFFFF);
+tcp_output.c:			th->urg = 1;
+tcp_output.c: * since header prediction assumes th->window stays fixed.
+tcp_output.c: * Strictly speaking, keeping th->window fixed violates the receiver
+tcp_output.c:	th->syn = 1;
+tcp_output.c:	th->ack = 1;
+tcp_output.c:	th->source = ireq->loc_port;
+tcp_output.c:	th->dest = ireq->rmt_port;
+tcp_output.c:			*tail-- ^= (((__force u32)th->dest << 16) | (__force u32)th->source);
+tcp_output.c:	th->seq = htonl(TCP_SKB_CB(skb)->seq);
+tcp_output.c:	th->ack_seq = htonl(tcp_rsk(req)->rcv_isn + 1);
+tcp_output.c:	th->window = htons(min(req->rcv_wnd, 65535U));
+tcp_output.c:	th->doff = (tcp_header_size >> 2);
+xfrm4_policy.c:	path->ops->update_pmtu(path, mtu);

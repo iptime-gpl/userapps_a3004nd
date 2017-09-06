@@ -1,0 +1,67 @@
+<div id="apache" class="cc_padding">
+  <form id="iux_form">
+  <div id="right_main" class="right_main">  
+    <!--service-->
+	<div class="lc_row">
+	  <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_SERVICE_TITLE"></p></div>
+      <div class="lc_right">
+        <input name="run" id="run_true" sid="C_APACHE_RUN" type="radio" value="1">
+        <label for="run_true"><p sid="S_START"></p></label>
+        <input name="run" id="run_false" sid="C_APACHE_RUN" type="radio" value="0">
+        <label for="run_false"><p sid="S_STOP"></p></label>
+	  </div>
+	</div>
+    
+	<!--port-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_APACHE_PORT_TITLE"></p></div>
+      <div class="lc_right">
+        <div class="lc_input_port">
+          <input name="port" sid="C_APACHE_PORT" type="number" pattern="[0-9]*" min = "1" max = "65535" maxlength = "5" style="ime-mode:disabled"></div>
+        <div class="lc_input_port_check ui-alt-icon">
+          <input name="defaultport" id="lc_input_port_check" sid="L_APACHE_PORT" type="checkbox" value="1">
+          <label for="lc_input_port_check"><p sid="S_USE_DEFAULT"></p></label></div>
+      </div>
+    </div>
+
+	<!--apache_docfolder-->
+    <div class="lc_row_selectfolder lc_row">
+      <div class="lc_left lc_apache_left">
+		<span><img src="/common/images/point.jpg"></span>
+        <p sid="S_APACHE_DATAFOLDER_TITLE"></p></div>
+      <div class="lc_right lc_apache_right">
+        <div class="select_datafolder ui-alt-icon ui-nodisc-icon">
+          <select name="datafolder" sid="C_APACHE_DATAFOLDER" type="select"></select>
+        </div>
+      </div>
+    </div>
+    
+    <!--Createfolder-->
+    <div class="lc_row lc_createfolder_lineall">
+        <input sid="L_APACHE_DATAFOLDER" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+	 </div>
+
+	<!--apache_serverfolder-->
+    <div class="lc_row_selectfolder lc_row">
+      <div class="lc_left lc_apache_left"> 
+		<span><img src="/common/images/point.jpg"></span>
+        <p sid="S_APACHE_SERVERFOLDER_TITLE"></p></div>
+      <div class="lc_right lc_apache_right">
+        <div class="select_datafolder ui-alt-icon ui-nodisc-icon">
+          <select name="serverfolder" sid="C_APACHE_SERVERFOLDER" type="select"></select>
+        </div>
+      </div>
+    </div>
+    
+    <!--Createfolder-->
+    <div class="lc_row lc_createfolder_lineall">
+        <input sid="L_APACHE_SERVERFOLDER" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+    </div>
+    
+  </div>
+</form>
+<div id="right_footer">
+  <input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+</div>

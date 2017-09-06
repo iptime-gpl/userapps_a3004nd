@@ -1,0 +1,57 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:572: checking for a BSD compatible install
+configure:625: checking whether build environment is sane
+configure:682: checking whether make sets ${MAKE}
+configure:728: checking for working aclocal
+configure:741: checking for working autoconf
+configure:754: checking for working automake
+configure:767: checking for working autoheader
+configure:780: checking for working makeinfo
+configure:796: checking for gcc
+configure:909: checking whether the C compiler (gcc  ) works
+configure:925: gcc -o conftest    conftest.c  1>&5
+configure:951: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:956: checking whether we are using GNU C
+configure:984: checking whether gcc accepts -g
+configure:1018: checking for ranlib
+configure:1057: checking for a BSD compatible install
+configure:1110: checking whether ln -s works
+configure:1131: checking whether make sets ${MAKE}
+configure:1159: checking for working const
+configure:1234: checking for inline
+configure:1275: checking for Cygwin environment
+configure:1308: checking for mingw32 environment
+configure:1339: checking for executable suffix
+configure:1370: checking for object suffix
+configure:1396: checking whether #! works in shell scripts
+configure:1420: checking for setsid
+configure:1420: checking for daemon
+configure:1420: checking for setproctitle
+configure:1420: checking for getservbyname
+configure:1420: checking for strlcpy
+configure:1420: checking for fork
+configure:1420: checking for memmove
+configure:1420: checking for strerror
+configure:1474: checking how to run the C preprocessor
+configure:1557: checking for pty.h
+configure:1597: checking for string.h
+configure:1637: checking for syslog.h
+configure:1677: checking for libintl.h
+configure:1717: checking for libutil.h
+configure:1755: checking for ANSI C header files
+configure:1859: checking for size_t
+configure:1892: checking for ssize_t
+configure:1925: checking for u_int8_t
+configure:1958: checking for u_int16_t
+configure:1991: checking for u_int32_t
+configure:2025: checking for socklen_t
+configure:2128: checking for accept in -lc
+configure:2175: checking for gethostbyname in -lc
+configure:2222: checking for openpty in -lc
+configure:2269: checking for gettext in -lc
+configure:2316: checking for accept in -lsocket
+configure:2363: checking for gethostbyname in -lnsl
+configure:2410: checking for openpty in -lutil
+configure:2457: checking for gettext in -lintl

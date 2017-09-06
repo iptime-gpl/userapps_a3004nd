@@ -1,0 +1,174 @@
+<div id="ftp" class="cc_padding">
+  <form id="iux_form">
+    <div id="right_main" class="right_main"> 
+      
+      <!--service-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_SERVICE_TITLE"></p></div>
+        <div class="lc_right">
+          <input name="run" id="run_true" sid="C_FTP_RUN" type="radio" value="1">
+          <label for="run_true"><p sid="S_START"></p></label>
+          <input name="run" id="run_false" sid="C_FTP_RUN" type="radio" value="0">
+          <label for="run_false"><p sid="S_STOP"></p></label>
+        </div>
+      </div>
+      
+      <!--Charset-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_FTP_CHARSET_TITLE"></p></div>
+        <div class="lc_right">
+          <div class="ui-alt-icon ui-nodisc-icon">
+            <select name="charset" sid="C_FTP_CHARSET" type="select"></select>
+          </div>
+        </div>
+      </div>
+      
+      <!--port-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_FTP_PORT_TITLE"></p></div>
+        <div class="lc_right"><div class="lc_input_port">
+            <input name="port" sid="C_FTP_PORT" type="number" pattern="[0-9]*" min = "1" max = "65535" maxlength = "5" style="ime-mode:disabled"></div>
+          <div class="lc_input_port_check ui-alt-icon">
+            <input name="defaultport" id="input_port_check" sid="L_FTP_PORT" type="checkbox" value="1">
+            <label for="input_port_check"><p sid="S_USE_DEFAULT"></p></label>
+          </div>
+        </div>
+      </div>
+      
+      <!--httpport-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_FTP_IPDISKPORT_TITLE"></p></div>
+        <div class="lc_right">
+          <div class="lc_input_port">
+            <input name="ipdiskport" sid="C_FTP_IPDISKPORT" type="number" pattern="[0-9]*" min = "1" max = "65535" maxlength = "5" style="ime-mode:disabled"></div>
+          <div class="lc_input_port_check ui-alt-icon">
+            <input name="defaultipdiskport" id="input_ipdiskport_check" sid="L_FTP_IPDISKPORT" type="checkbox" value="1">
+            <label for="input_ipdiskport_check"><p sid="S_USE_DEFAULT"></p></label></div>
+        </div>
+      </div>
+
+	  <hr>
+    
+	  <!--user setup title-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_FTP_USERSETUP_TITLE"></p></div>
+      </div>
+      
+      <!--user setup aticle-->
+      <div class="lc_row_userarray lc_row">
+        <div class="lc_property"><p sid="S_FTP_USERSETUP_PROPERTY"></p></div>
+        <div class="lc_userid"><p sid="S_FTP_USERSETUP_USERID"></p></div>
+        <div class="lc_passwd"><p sid="S_FTP_USERSETUP_PASSWD"></p></div>
+        <div class="lc_passwd_visible"><p sid="S_FTP_USERSETUP_PASSWD_VISIBLE"></p></div>
+      </div>
+      
+      <!--userarray0-->
+      <div class="lc_row_userarray lc_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty0" sid="C_FTP_USERPROPERTY0" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid0" sid="C_FTP_USERID0" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd0" sid="C_FTP_PASSWD0" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible0" sid="PASSWD_VISIBLE0" type="checkbox" value="1">
+          <label for="userpw_visible0"></label></div>
+      </div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder0" sid="C_FTP_FOLDER0" type="select"></select>
+        </div>
+      </div>
+      
+      <!--userarray1-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty1" sid="C_FTP_USERPROPERTY1" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid1" sid="C_FTP_USERID1" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd1" sid="C_FTP_PASSWD1" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible1" sid="PASSWD_VISIBLE1" type="checkbox" value="1">
+          <label for="userpw_visible1"></label></div>
+      </div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder1" sid="C_FTP_FOLDER1" type="select"></select>
+        </div>
+      </div>
+      
+      <!--userarray2-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty2" sid="C_FTP_USERPROPERTY2" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid2" sid="C_FTP_USERID2" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd2" sid="C_FTP_PASSWD2" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible2" sid="PASSWD_VISIBLE2" type="checkbox" value="1">
+          <label for="userpw_visible2"></label></div>
+      </div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder2" sid="C_FTP_FOLDER2" type="select"></select>
+        </div>
+      </div>
+      
+      <!--userarray3-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty3" sid="C_FTP_USERPROPERTY3" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid3" sid="C_FTP_USERID3" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd3" sid="C_FTP_PASSWD3" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible3" sid="PASSWD_VISIBLE3" type="checkbox" value="1">
+          <label for="userpw_visible3"></label></div>
+      </div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder3" sid="C_FTP_FOLDER3" type="select"></select>
+        </div>
+      </div>
+      
+      <!--userarray4-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty4" sid="C_FTP_USERPROPERTY4" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid4" sid="C_FTP_USERID4" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd4" sid="C_FTP_PASSWD4" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible4" sid="PASSWD_VISIBLE4" type="checkbox" value="1">
+          <label for="userpw_visible4"></label></div>
+      </div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder4" sid="C_FTP_FOLDER4" type="select"></select>
+        </div>
+      </div>
+      <div class="lc_row lc_user_desc">
+	<div class="lc_gray_div"></div>
+        <p class="lc_gray_font" sid="S_USER_DESC1" ></p>
+      </div>
+
+    </div>
+  </form>
+  <div id="right_footer">
+    <input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+  </div>
+</div>

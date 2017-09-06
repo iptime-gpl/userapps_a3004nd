@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+/*헤더*/
+#header { background-color: #dce1cd; border: 1px solid #ccc; }
+/*헤더 경계라인*/
+#header hr { border: 1px solid #ccc; clear: both; }
+.ui-checkbox label { padding-right: 0em; }
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+.ui-checkbox .ui-btn{
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 3em;
+	background-color: #EEF1E6;
+}
+#content { background-color: #EEF1E6; }
+.ui-page-theme-a .ui-btn:hover { background-color: #EEF1E6; }
+.ui-page-theme-a .ui-btn { background-color: #EEF1E6; }
+/*main*/
+.lc_logfield
+{
+	margin: 0.5em;
+	margin-top: 0;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(204, 204, 204);
+	height: 25em;
+	overflow: auto;
+}
+.lc_logfield p 
+{
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	white-space: normal;
+	font-size: 0.7em;
+}
+.lc_row
+{
+	overflow: hidden;
+	clear: both;
+	margin-bottom: 0.5em;
+}
+.lc_radio_attr
+{
+	overflow: hidden;
+	float: left;
+    margin-top: 0.5em;
+}
+
+.content_ip
+{
+	float: left;
+	overflow: hidden;
+	margin-top: 0.5em;
+}
+.content_ip .input
+{
+	float: left;
+	width: 2.7em;
+	overflow: hidden;
+}
+.content_ip .dot
+{
+	float: left;
+	overflow: hidden;
+	margin-top: 0.9em;
+	width: 0.5em;
+}
+.content_ip .dot p { text-align: center; }
+.content_ping_select
+{
+	overflow: hidden;
+	float: left;
+	margin-right: 0.5em;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	width: 5.7em;
+}
+.content_ping_ip
+{
+	overflow: hidden;
+	float: left;
+	margin-right: 0.5em;
+}
+.content_ping_ip .title { float: left; }
+.content_ping_ip .title p { line-height: 3em; margin-left: 0.5em; }
+.content_ping_setvalue p
+{
+	line-height: 3em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.content_ping_setvalue .text { float: left; }
+.content_ping_setvalue .input_text { float: left; margin-top: 0.5em; }
+
+.content_tcp_ip
+{
+	overflow: hidden;
+	float: left;
+	margin-right: 1em;
+}
+.content_tcp_ip .title { float: left; }
+.content_tcp_ip .title p
+{
+	line-height: 3em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.content_tcp_port
+{
+	overflow: hidden;
+	float: left;
+	margin-right: 0.5em;
+}
+.content_tcp_port .title { float: left; }
+.content_tcp_port .title p { line-height: 3em; margin-right: 0.5em; }
+.content_tcp_port .content { float: left; }
+.content_tcp_port .content .input
+{
+	float: left;
+	width: 4.4em;
+	margin-top: 0.5em; 
+}
+.content_tcp_port .content .hyphen
+{
+	float: left;
+	width: 1.5em;
+	margin-top: 0.8em; 
+}
+.content_start_button { float: left; margin-left: 0.5em; }
+.content_start_button button
+{
+	clear: both;
+	width: 5.5em;
+	height: 2em;
+	background-color: #8DAF25;
+	border: 0;
+	cursor: pointer; 
+	margin-top: 0.5em;
+}
+.content_start_button button .icon
+{
+	float: left;
+	margin-top: 0.2em;
+	margin-left: 0.3em;
+}
+.content_start_button button .icon img { width: 1em; height: 1em; }
+.content_start_button button .text
+{
+	float: left;
+	margin-left: 0.5em;
+	margin-top: 0.05em;
+}
+.content_log_titlebar
+{
+	border: 1px solid #DDDDDD;
+	border-right-width: 0;
+	border-left-width: 0;
+}
+.content_log_titlebar .title { float: left; }
+.content_log_titlebar .title p
+{
+	margin-left: 1em;
+	line-height: 2.5em;
+	color: rgb(150,150,150);
+}
+.content_log_titlebar .del
+{
+	float: right;
+	margin-right: 1em;
+	cursor: pointer;
+}
+.content_log_titlebar .del .icon
+{
+	float: left;
+	margin-right: 0.5em;
+	margin-top: 0.8em;
+}
+.content_log_titlebar .del .icon img { width: 1em; height: 1em; }
+.content_log_titlebar .del .text { float: left; }
+.content_log_titlebar .del .text p { line-height: 2.5em; }
+
+

@@ -1,0 +1,3 @@
+root::0:0:root::/bin/sh
+nobody::99:0:nobody:/:/bin/sh
+admin:$1$9Sideh27$eAiGI2LbLrtHkY6lAsoou0:0:0:root::/bin/sh

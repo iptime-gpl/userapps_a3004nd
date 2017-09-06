@@ -1,0 +1,15 @@
+wl_helper.ssid=iptime_setup_ssid
+wl_helper.use_encryption=1
+wl_helper.password=12098309ausoifuaOsidflAisur091Q84uoqif
+wl_helper.ifname=ra1
+wl_helper.hidden=1
+wl_helper.redirect=0
+
+wl_helper2.ssid=iptime_setup
+wl_helper2.use_encryption=0
+wl_helper2.ifname=ra2
+wl_helper2.ip=192.168.254.1
+wl_helper2.hidden=0
+wl_helper2.redirect=0
+
+printer_spool_size=100

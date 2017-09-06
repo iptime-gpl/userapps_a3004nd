@@ -1,0 +1,20 @@
+separator:------ 메신저 ------:0:
+AIM:AIM:1:32:filter:app_filter:tcp:0:5190:policy:drop:
+버디버디:버디버디:3:32:filter:app_filter:tcp:0:952:policy:drop:+:32:filter:app_filter:tcp:0:810-819:policy:drop:+:32:filter:app_filter:tcp:0:940-959:policy:drop:
+ICQ:ICQ:1:32:filter:app_filter:tcp:0:5190:policy:drop:
+IMAN(KT):IMAN(KT):1:32:filter:app_filter:tcp:0:5282:policy:drop:
+IRC:IRC:2:32:filter:app_filter:tcp:0:6660-6669:policy:drop:+:32:filter:app_filter:udp:0:6660-6669:policy:drop:
+MSN 메신저:MSN 메신저:4:32:filter:app_filter:tcp:0:1863:policy:drop:+:32:filter:app_filter:tcp:0:6891-6900:policy:drop:+:16:url:messenger.hotmail.com:+:16:url:login.live.com:
+네이트온:네이트온:2:32:filter:app_filter:tcp:0:5004:policy:drop:+:16:url:prs.nate.com:
+타키:타키(SayClub):2:32:filter:app_filter:tcp:0:6699:policy:drop:+:16:url:sayclub:
+separator:-------- P2P --------:0:
+edonkey:eDonkey,Pruna,eMule:1:32:filter:app_filter:tcp:0:4661-4662:policy:drop:
+파일구리:파일구리:1:32:filter:app_filter:tcp:0:9493:policy:drop:
+구루구루:구루구루:2:32:filter:app_filter:tcp:0:9292:policy:drop:+:32:filter:app_filter:tcp:0:22000-22400:policy:drop:
+소리바다:소리바다:2:32:filter:app_filter:udp:0:7674-7675:policy:drop:+:32:filter:app_filter:udp:0:22321:policy:drop:
+WinMX:WinMX:2:32:filter:app_filter:tcp:0:6699:policy:drop:+:32:filter:app_filter:udp:0:6257:policy:drop:
+separator:-------- 게임 -------:0:
+디아블로:디아블로:1:32:filter:app_filter:tcp:0:4000:policy:drop:
+카트라이더:카트라이더:2:32:filter:app_filter:tcp:0:39311:policy:drop:+:32:filter:app_filter:tcp:0:36567:policy:drop:
+리니지:리니지:2:32:filter:app_filter:tcp:0:1950-2002:policy:drop:+:32:filter:app_filter:tcp:0:2004-2200:policy:drop:
+뮤:뮤:1:32:filter:app_filter:tcp:0:44405:policy:drop:

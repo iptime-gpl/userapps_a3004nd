@@ -1,0 +1,293 @@
+<script>
+
+var TAB_CODE=9
+var DEL_CODE=46 
+var BS_CODE=8
+var SP_CODE=32
+var DOT_CODE=190
+var DOT2_CODE=110
+
+var IDX_ON=0
+var IDX_OFF=1
+
+var IDX_AP_MODE=0
+var IDX_CBRIDGE_MODE=1
+var IDX_WWAN_MODE=2
+var IDX_KAI_MODE=3
+var IDX_MBRIDGE_MODE=4
+
+
+var WIRELESS_AP_MODE=0;
+var WIRELESS_CBRIDGE_MODE=1;
+var WIRELESS_CWAN_MODE=2;
+var WIRELESS_KAI_MODE=3;
+var WIRELESS_MBRIDGE_MODE=4;
+
+var KAID_MODE_INIT=0  // ap mode
+var KAID_MODE_PSP=0 // psp kai
+var KAID_MODE_NORMAL=0 // xbox kai
+
+var AUTH_OPEN=1
+var AUTH_KEY=2
+var AUTH_AUTO=3
+var AUTH_WPA=4
+var AUTH_WPAPSK=5
+var AUTH_OPEN8021X=6
+var AUTH_WPANONE=7
+var AUTH_WPA2=8
+var AUTH_WPA2PSK=9
+var AUTH_WPAPSKWPA2PSK=10
+var AUTH_NOCHANGE=100
+
+var IDX_NOENC=0
+var IDX_WEP64=1
+var IDX_WEP128=2
+var IDX_TKIP=3
+var IDX_AES=4
+
+var ENCRYPT_OFF=0
+var ENCRYPT_64=1
+var ENCRYPT_128=2
+var ENCRYPT_TKIP=3
+var ENCRYPT_AES=4
+
+var KEY_STRING=0;
+var KEY_HEX=1;
+
+var IDX_KEY_STRING=0;
+var IDX_KEY_HEX=1;
+
+var REGION_USA=1;
+var REGION_JAPAN=2;
+
+var DMZTWINIP_MODE_DMZ=1;
+var DMZTWINIP_MODE_TWINIP=2;
+
+
+var MSG_RESTART_CONFIRM_DEFAULT='Because of configuration reset, System must be restart.\nCarry on this process ?';
+var MSG_RESTART_CONFIRM_UPNP='Because of UPNP configuration change, System must be restart.\nCarry on this process ?';
+var MSG_RESTART_CONFIRM_REBOOT='Restart System. Carry on this process ?';
+var MSG_RESTART_CONFIRM_CHANGE_LANIP='Because of local IP address change, System must be restart.\nCarry on this process ?';
+var MSG_RESTART_CONFIRM_RESTORE='Because of configuration recovery, Restart System.\n Carry on this process ?';
+var MSG_RESTART_CONFIRM_NAT='Because of System configuration change, System must be restart.\nCarry on this process ?';
+var MSG_RESTART_CONFIRM_WIRELESS='Because of Wireless mode configuration change, System must be restart.\nCarry on this process ?';
+var MSG_KAID_MODE_CHANGE_WARNING='Because of KAI mode change, System must be restart.\nCarry on this process ?';
+var MSG_RESTART_CONFIRM_WIRELESS_CBRIDGE='In case LAN Card Mode, No one wireless station can communicate with internet.\n모드 변경을 위해서는 유무선공유기 또는 AP가 재시작됩니다.\nCarry on this process ?';
+var MSG_RESTART_CONFIRM_WIRELESS_WWAN='무선 WAN모드는 광랜,FTTH,ADSL,VDSL,케이블모뎀등의 대부분 인터넷 방식에서는 사용할 수 없습니다.\n모드 변경을 위해서는 유무선공유기 또는 AP가 재시작됩니다.\nCarry on this process ?';
+
+// common
+var MODIFY_OP='Modify'
+var MSG_INVALID_HWADDR="Invalid MAC Address." 
+var MSG_DELETE_RULE_CONFIRM="Do you want to delete rule?" 
+var MSG_SELECT_RULE_TO_DEL="Select a rule to be deleted."
+var MSG_ALL_STOP_RULE="Do you stop all rules?"
+
+var MSG_OPENER_PAGE_MOVED="Config page is Moved."
+
+
+// wireless_config_wizard
+var MSG_INVALID_WEP_KEY_HEXVALUE2="Network key should be Hex."
+var MSG_INVALID_WPAPSK_KEY_MISMATCH="Mismatch both Network keys. \nTwo should be same key."
+
+
+// sysconf_configmgmt
+var MSG_RESTOREFILE_BLANK="Select a restore configuration file."
+
+//natrouterconf
+var MSG_RULE_NAME_IS_BLANK="Rule name is blank."
+
+
+// wirelessconf_wdssetup
+var MSG_WDS_DEL_WARNING="Do you want to delete WDS?" 
+var MSG_APADD_REQUEST_APPLY="If press 'Add' button, WDS configuration is finish."   
+
+// wirelessconf_basicsetup
+var MSG_BLANK_SSID="SSID is blank."
+var MSG_INVALID_WEP_KEY_LENGTH="Invalid network key length."
+var MSG_INVALID_WEP_KEY_HEXVALUE="Network key should be Hex."
+var MSG_INVALID_WPAPSK_KEY_LENGTH="Network key should be more than 8 characters."
+var MSG_INVALID_5_KEY_LENGTH="Must be 5 characters."
+var MSG_INVALID_13_KEY_LENGTH="Must be 13 characters."
+var SAVE_CONFIGURATION_STRING="Save all configuration?"
+
+var MSG_BLANK_REQUEST_SSID="After enter the SSID, Press 'Apply' button."
+var MSG_INVALID_REQUEST_KEY="After enter the Network key, Press 'Apply' button."
+var MSG_INVALID_REQUEST_APPLY="If press 'Apply' button, Connetion to selected AP."
+var MSG_APPLY_REQUEST_KEY="If press 'Apply' button, Apply to selected channel."
+var MSG_BEST_CHANNEL_PRE="best channel is" 
+var MSG_BEST_CHANNEL_POST="번 입니다."
+var MSG_KEY_LENGTH_DESC="Key length = "
+
+// config_wizard
+var MSG_BLANK_ACCOUNT="User ID is blank."
+var MSG_BLANK_PASSWORD="Password is blank."
+
+var MSG_INVALID_IP="Invalid IP Address."
+var MSG_INVALID_NETMASK="Invalid subnet mask."
+var MSG_INVALID_GATEWAY="Invalid default gateway."
+var MSG_INVALID_FDNS="Invalid primary DNS"
+var MSG_INVALID_SDNS="Invalid secondary DNS"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_NETWORK="Lan address is the same WAN address."
+var STATIC_LEASE_ALREADY_EXIST_IPADDRESS="This IP Address has been already added."
+var STATIC_LEASE_ALREADY_EXIST_HWADDRESS="This MAC Address has been already added."
+
+//netconf_wansetup
+var NETCONF_INTERNET_DHCP_MTU_INVALID="MTU is not over 1500."
+var NETCONF_INTERNET_PPP_MTU_INVALID="MTU is net over 1492."
+var NETCONF_INTERNET_KEEP_ALIVE_MSG="Invalid max idle tme."
+var NETCONF_INTERNET_GW_INVALID_NETWORK="Default Gateway is the same as internal network."
+var NETCONF_WANSETUP_CONFIRM_WANINFO="Do you want to confrim WAN connection info?"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_DHCP_S_ADDR="Invalid DHCP start pool address"
+var NETCONF_INTERNAL_INVALID_DHCP_E_ADDR="Invalid DHCP end pool address"
+var NETCONF_INTERNAL_INVALID_DHCP_ADDR="Invalid DHCP pool range"
+var NETCONF_INTERNAL_DELETE_IP="Do you want to delete this reserved IP address?"
+
+// wirelessconf_advanced
+var DESC_INVALID_TX_POWER="Tx Power should be from 1 to 100.";
+var DESC_INVALID_RTS_THRESHOLD="RTS Threshold should be from 1 to 2347.";
+var DESC_INVALID_FRAG_THRESHOLD="Fragmentation Threshold should be from 256 to 2346.";
+var DESC_INVALID_BEACON_INTERVAL="Beacon Period should be from 50 to 1024.";
+
+// expertconf_kai
+var KAID_MODE_CHANGE_WARNING="Restart system. Carry on this process ?"
+var KAID_MUST_SELECT_OBT_SERVER="At least, one server should be selected."
+var KAID_RESTART_KAI_UI="Please restart KAI UI."
+
+//natrouterconf_portforward
+var MAX_PORT_FORWARD=60
+var NATCONF_PORTFORWARD_NO_MORE_RULE="No more add Port Forward."
+var NATCONF_PORTFORWARD_INVALID_INT_IP_ADDRESS="Invalid internal IP Address."
+var NATCONF_PORTFORWARD_EXT_PORT_IS_BLANK="External Port is blank"
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT="Invalid External Port."
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT_RANGE="Invalid External Port Range."
+var NATCONF_PORTFORWARD_INVALID_INT_PORT="Invalid Internal Port."
+var NATCONF_PORTFORWARD_INVALID_INT_PORT_RANGE="Invalid Internal Port Range"
+var NATCONF_PORTFORWARD_RUN_RULE="Do you want to apply rule?"
+
+
+//natrouterconf_misc
+var NATCONF_INTAPPS_NO_MORE_ADD_FTP_PORT="No more add FTP port."
+var NATCONF_INTAPPS_FTP_PORT_EMPTY="Port Number is blank."
+var NATCONF_INTAPPS_FTP_PORT_INVALID= "Invalid Port Number."
+
+//natrouterconf_router
+var NETCONF_ROUTE_ENTRY_DELETE="Do you want to delete routing table?"
+var NETCONF_ROUTE_ENTRY_SELECT="Select routing table to be deleted."
+
+//natrouterconf_twinzipdmz
+var NATCONF_TWINIPDMZ_UPDATE_TIME="IP Update Duration time should be more than 60 second."
+var NATCONF_TWINIPDMZ_WARNING="현재 접속한 PC는 Twin IP를 사용하고 있습니다. Twin IP를 해제 하시면 해당 PC는 IP 주소를 재설정 해야 정상적으로 사용할 수 있습니다.  (설정 해제 직 후 부터는 ipTIME 웹 설정 페이지 접속을 포함한 모든 통신이 이루어 지지 않습니다.)  Carry on this process ?"
+
+
+//firewallconf_firewall
+var USER_FWSCHED_TYPE=1
+var APP_FWSCHED_TYPE=2
+var URL_FWSCHED_TYPE=4
+var MAX_FWSCHED_COUNT=200 
+var FIREWALLCONF_FIREWALL_INVALID_TIME_TO_BLOCK="Invalid Time to Block."
+var FIREWALLCONF_FIREWALL_DATE_WARNING="Select Date to Block."
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_IP="Invalid Source IP Address."
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_HW="Invalid Source MAC Address."
+var FIREWALLCONF_FIREWALL_INVALID_DEST_PORT="Invalid Destination IP Address."
+var FIREWALLCONF_FIREWALL_RUN_RULE="Do you want to apply rule?"
+var FIREWALLCONF_FIREWALL_NO_MORE_RULE="No more add account."
+var FIREWALLCONF_FIREWALL_INVALID_PRIORITY="Invalid priority."
+
+//firewallconf_netdetect
+var NETCONF_NETDETECT_WARNING1="Minimum connection is 10."
+var NETCONF_NETDETECT_WARNING2="0 ~ 23 range value"
+
+
+//firewallconf_internet
+var FIREWALLCONF_INTERNET_RESTRICTIVE_WARNING="Number of PC should be from 1 to 253."
+var FIREWALLCONF_INTERNET_RESTRICTIVE_CLEARANCE="Do you clear configuration to all PC infomation?"
+
+//expertconf_ddns
+var EXPERTCONF_DDNS_HOSTNAME_IS_BLANK = "Host name is blank."
+var EXPERTCONF_DDNS_HOSTNAME_NOT_IPTIMEORG = "Host name must be end whid iptime.org."
+var EXPERTCONF_IPTIMEDNS_NOMORE_WANRING1 ="No more ipTIME DDNS Host."
+var EXPERTCONF_IPTIMEDDNS_INVALID_USERID= "Only E-mail Address available."
+var EXPERTCONF_DYNDNS_NOMORE_WANRING1="No more Dyndns Host."
+var INVALID_EMAIL_ADDRESS_STR="Invalid E-mail Address."
+
+//expertconf_remotepc
+var EXPERTCONF_WOL_PC_NAME_IS_BLANK="PC name is blank."
+var EXPERTCONF_WOL_DEL_PC="Do you want to delete PC?"
+var EXPERTCONF_WOL_WANT_TO_WAKE_UP_PC ="Do you want to wake up this PC?"
+
+//expertconf_hostscan
+var ICMP_PING=0
+var ARP_PING=1
+var PING_SCAN=0
+var TCP_PORT_SCAN=1
+var SYSINFO_HOST_INVALID_TIMEOUT =   "Time out is blank."
+var SYSINFO_HOST_TIMERANGE   =       "Time out should be more than 1 sec."
+var SYSINFO_HOST_INVALID_DATASIZE =  "Data Size is blank."
+var SYSINFO_HOST_DATARANGE    =      "Data range should be from 0 to 65,000."
+var SYSINFO_HOST_INVALID_START  =    "Start Port is blank"
+var SYSINFO_HOST_PORTRANGE      =    "Port range should be form 0 to 65,535."
+
+//trafficconf_conninfo
+var TRAFFICCONF_CONNINFO_DELETE_CONN="Do you want to delete a connection of designated IP address?"
+
+//trafficconf_switch
+var SELECT_VLAN_PORT_WARNING ="Select VLAN Port."
+//trafficconf_loadshare
+var NATCONF_PORTFORWARD_NO_MORE_RULE="No more add Port Forward."
+var NATCONF_PORTFORWARD_RULE_NAME_IS_BLANK="Rule name is blank."
+var NATCONF_INTSERVER_INVALID_EXT_PORT="Invalid Port."
+var NATCONF_LOADSHARE_KEEP_WRR="You can deactivate Auto Line Backup while WRR LS has being activated." 
+var NATCONF_LOADSHARE_ON_LINE_BACKUP="Auto Line Backup will be activated also. Do you want to continue?"
+var NATCONF_LOADSHARE_DELETE_RULE="Do you want to delete rule?"
+var NATCONF_PORTFORWARD_SELECT_RULE_TO_DEL="Select a rule to be detected."
+//sysconf_syslog
+var SYSCONF_SYSLOG_WANRING = "Invalid Hour."
+var SYSCONF_SYSLOG_EMAIL_CONFIRM= "Send system log report to the admin by e-mail now."
+var SYSCONF_SYSLOG_CLEAR_CONFIRM= "All system log will be cleared."
+
+//sysconf_login
+var SYSCONF_LOGIN_INVALID_NEW_PASS=     "Your New password entries did not match."
+var SYSCONF_LOGIN_INVALID_NEW_ID  =     "Invalid new account string: only allowed for alphabet and numeric character."
+var SYSCONF_LOGIN_RELOGIN         =     "You would re-login the system,if you altered a password."
+
+//expertconf_pptpvpn
+var EXPERTCONF_PPTPVPN_VPN_ACCOUNT_IS_BLANK="VPN account is blank"
+var EXPERTCONF_PPTPVPN_VPN_PASSWORD_IS_BLANK="VPN password is blank"
+var EXPERTCONF_PPTPVPN_IP_ADDRESS_IS_INVALID="IP Address is blank"
+var EXPERTCONF_PPTPVPN_DO_YOU_WANT_DELETE="Do you want to delete a Account?"
+
+//accesslist
+
+var ACCESSLIST_NOIPLISTMSG_1="No configured IP Address. Would you add your computer's IP Address("
+var ACCESSLIST_NOIPLISTMSG_2=") connected?"
+var ACCESSLIST_WRONG_INPUT_IP="Invalid IP Address."
+var ACCESSLIST_WRITE_EXPLAIN="Description is blank."
+var ACCESSLIST_DEL_WANT="Do you want to delete item?"
+
+//reboot
+var REBOOT_CHANGEIP_RETRY_LOGIN="Because of local IP address change, Reconnect."
+var REBOOT_CHANGEIP_RETRY_NOLOGIN_WINDOWS="Reconnect to the configuration page."
+var SYSCONF_RESTORE_RETRY_CONNET="Reconnect to the restore configuration page."
+
+//trafficconf_qos
+var QOS_BASIC_WARNING="All QoS configurations would be reset. Carry on this process?"
+var QOS_COMMON_EXCCED_MAX_CLASS="Excced max number of class."
+var QOS_COMMON_EXCCED_MAX_SPEED="Excced max internet speed range."
+var QOS_COMMON_ISOLATED_EXCEED="Total bandwidth sum of classes which has 'isolated' proerty cat NOT exceed max internet speed rang"
+var QOS_COMMON_NO_CHANGE_DIRECTION="Can't change a direction of class."
+var QOS_COMMON_ONLY_DIGIT="Only digit available."
+var QOS_COMMON_BASIC_SETUP_FIRST="QoS Basic setup first."
+var QOS_PORT_PORTRANGE="Port range should be from 1 to 65,535"
+var QOS_PORT_INVALID_EXT_PORT_RANGE="Invalid External Port Range."
+var QOS_BADNWIDTH_EMPTY="Bandwidth Field Empty."
+var QOS_RATE_RANGE="Rate range : 32 Kbps ~ 50 Mbps"
+
+
+</script>
+

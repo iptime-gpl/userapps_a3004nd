@@ -1,0 +1,118 @@
+<div id="header" class="header" data-role="header" data-position="fixed"></div>
+
+<div id="content" class="content">
+	<div id="maincontent">
+		<div class = "lc_syslogsetting_table lc_table_div">
+			<div class = "lc_title_div">
+				<div class = "lc_left_div">
+					<div class = "lc_line_div">
+						<p sid = "S_TABLE1_TITLE"></p>
+					</div>
+				</div>
+				<div class = "lc_right_div">
+					<div class = "lc_line_div">
+					</div>
+				</div>
+			</div>
+			<div class = "lc_contents_div">
+				<div class = "lc_onoff_div">
+					<div class = "lc_left_div">
+						<div class = "lc_line_div">
+							<p sid = "S_TABLE1_OPTION1"></p>
+						</div>
+					</div>
+					<div class = "lc_right_div">
+						<div class = "lc_line_div">
+							<div class = "lc_flipswitch_div">
+								<div class="flipswitch" style="margin-top: 0.6em;">
+									<label class="ui-hidden-accessible" for="button_onoff"></label>
+									<select name="button_onoff" sid="LC_ONOFF"id="button_onoff" data-role="slider">
+										<option value="0">Off</option>
+										<option value="1">On</option>
+									</select>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class = "lc_logsize_div">
+					<div class = "lc_left_div">
+						<div class = "lc_line_div">
+							<p sid = "S_TABLE1_OPTION2"></p>
+						</div>
+					</div>
+					<div class = "lc_right_div">
+						<div class = "lc_line_div">
+							<p sid = "S_TABLE1_DESC1"></p>
+							<p id = "lc_syslog_size"></p>
+						</div>
+					</div>
+				</div>
+				<div class = "syslog_email">
+					<div class = "lc_email_notenrolled">
+						<div class = "lc_left_div">
+							<div class = "lc_line_div">
+								<p sid = "S_TABLE1_OPTION3"></p>
+							</div>
+						</div>
+						<div class = "lc_right_div">
+							<div class = "lc_line_div">
+								<p sid = "S_TABLE1_DESC2" id = "sysconf_login_link"></p>
+								<p sid = "S_TABLE1_DESC3"></p>
+								<p sid = "S_TABLE1_DESC8"></p>
+							</div>
+						</div>
+					</div>
+					<div class = "lc_available_email">
+						<div class = "lc_left_div">
+							<div class = "lc_line_div">
+								<p sid = "S_TABLE1_OPTION3"></p>
+							</div>
+						</div>
+						<div class = "lc_right_div">
+							<div class = "lc_line_div ui-alt-icon email_setting_div">
+								<label for = "send_email">
+									<input type = "checkbox" name = "send_email">
+								</label>
+								<p sid = "S_TABLE1_DESC4"></p>
+								<div class = "input_time ui-alt-icon ui-nodisc-icon">
+									<select id = "syslog_hour"></select>
+								</div>
+								<p sid = "S_TABLE1_DESC5"></p>
+							</div>
+							<div class = "lc_line_div ui-alt-icon remove_email_div">
+								<label for = "delete_email">
+									<p sid = "S_TABLE1_DESC6"></p>
+									<input type = "checkbox" name = "delete_email">
+								</label>
+							</div>
+							<div class = "lc_line_div send_email_div">
+								<input type = "button" sid = "S_TABLE1_DESC7" data-role = "none" id = "sendemail">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "lc_syslog_table lc_table_div">
+			<div class = "lc_title_div">
+				<div class = "lc_line_div">
+					<div class = "lc_left_div">
+						<p sid = "S_TABLE2_TITLE"></p>
+					</div>
+					<div class = "lc_right_div">
+						<div id = "delete_log">
+							<img src="/common/images/del_icon.png">
+							<p sid = "S_TABLE2_OPTION1"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = "lc_contents_div" id = "syslog">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

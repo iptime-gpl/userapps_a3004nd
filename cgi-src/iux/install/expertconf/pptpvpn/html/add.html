@@ -1,0 +1,58 @@
+<div id="addmanual" class="cc_padding">
+<form id="local_add_form">
+  <div class="lc_row_r">
+	<div class="lc_right_r"><p sid="S_ACCOUNTLIST_ID"></p></div>
+	<div class="lc_left_r" style="width: 16.3em;">
+		<input name="account" sid="ADD_ACCOUNT_ID" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="margin-left: 0.5em;">
+	</div>
+  </div>
+  <div class="lc_row_r">
+	<div class="lc_right_r"><p sid="S_ACCOUNTLIST_PW"></p></div>
+	<div class="lc_left_r">
+	  <div style="float: left; width: 11em; margin-right: 0.5em;">
+	    <input name="password" sid="ADD_PASSWORD" type="password" maxlength="32" style="margin-left: 0.5em;">
+	  </div>
+	  <div class="ui-alt-icon" style="float: left;" sid="SHOW_PASSWD">
+	    <input sid="PW_CHECK" id="pw_check" type="checkbox" value="1">
+        <label for="pw_check"><p sid="S_PWSHOW"></p></label>
+	  </div>
+	</div>
+  </div>
+  <div class="lc_row_r">
+	<div class="lc_right_r"><p sid="S_ACCOUNTLIST_IPADDR"></p>
+	</div>
+	<div class="lc_left_r">
+		 <div sid="ACCOUNTLIST_IPADDR" id="ip_field_r" class="lc_input_ip_r ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+	</div>
+  </div>
+  <div sid="CAPTCHA_FIELD" style="margin-bottom: 1em;">
+    <div class="lc_row_r">
+	  <div class="lc_right_r"><p sid="S_ADD_CAPTCHA"></p></div>
+	  <div class="lc_left_r" style="width: 16.3em;">
+  		  <input name="captcha_code" sid="ADD_CAPTCHA_CODE" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="5" style="margin-left: 0.5em;">
+  	  </div>
+    </div>
+    <div class="lc_row_r">
+	  <div class="lc_right_r"><p>　</p></div>	
+	  <div class="lc_left_r captcha_view">
+	    <div sid="CAPTCHA_REFRESH" class="captcha_button"><img style="width:100%; height:100%" src="/common/images/refresh_0.png"></div>
+	    <div sid="CAPTCHA_IMG" class="captcha_img"></div>
+	  </div>
+    </div>
+  </div>
+  <div id="right_footer" class="right_footer">
+    <div class="footer_item" style="margin-right: 0.5em;">
+	  <button class="lc_button" type="button" sid="ADD_SUBMIT" data-role="none">
+	    <span sid="S_BTTEXT_ADD"></span>
+	  </button>
+  </div>
+</form>
+

@@ -1,0 +1,74 @@
+<div id="snmp" class="cc_padding">
+        <div id="right_main" class="right_main">
+		<form id = "iux_form">
+			<div class = "lc_row">
+				<div class = "lc_left">
+					<p sid = "S_SNMP_RUN_TXT"></p>
+				</div>
+				<div class = "lc_right">
+					<input name="run" id = "run_true" sid="C_SNMP_RUN" type="radio" value="1">
+					<label for="run_true">
+						<p sid="S_START"></p>
+					</label>
+					<input name="run" id = "run_false"  sid="C_SNMP_RUN" type="radio" value="0">
+					<label for="run_false">
+						<p sid="S_STOP"></p>
+					</label>
+				</div>
+			</div>
+			<div class = "lc_row">
+				<div class = "lc_left">
+					<p sid="S_SNMP_PORT_TXT"></p>
+				</div>
+				<div class = "lc_right">
+					<input sid="C_SNMP_PORT" id = "port" name = "poot" type="number" pattern="[0-9]*" min="1" max="65535" maxlength="5">
+				</div>
+			</div>
+			<div class = "lc_row">
+				<div class = "lc_left">
+					<p sid="S_SNMP_COMMUNITY_TXT"></p>
+				</div>
+				<div class = "lc_right">
+					<input sid="C_SNMP_COMMUNITY" id = "community" name = "community" type = "text" autocomplete = "off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" >
+				</div>
+			</div>
+			<div class = "lc_row">
+				<div class = "lc_left">
+					<p sid="S_SNMP_NAME_TXT"></p>
+				</div>
+				<div class = "lc_right">
+					<input sid="C_SNMP_NAME" id = "name" name = "name" type = "text" autocomplete = "off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" >
+				</div>
+			</div>
+			<div class = "lc_row">
+				<div class = "lc_left">
+					<p sid="S_SNMP_LOCATION_TXT"></p>
+				</div>
+				<div class = "lc_right">
+					<input sid="C_SNMP_LOCATION" id = "location" name = "location" type = "text" autocomplete = "off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" >
+				</div>
+			</div>
+			<div class = "lc_row">
+				<div class = "lc_left">
+					<p sid="S_SNMP_CONTACT_TXT"></p>
+				</div>
+				<div class = "lc_right">
+					<input sid="C_SNMP_CONTACT" id = "contact" name = "contact" type = "text" autocomplete = "off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" >
+				</div>
+			</div>
+			<div class = "lc_row">
+				<div class = "lc_left">
+					<p sid="S_SNMP_DESC_TXT"></p>
+				</div>
+				<div class = "lc_right">
+					<input sid="C_SNMP_DESC" id = "desc" name = "desc" type = "text" autocomplete = "off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" >
+				</div>
+			</div>
+		</form>
+	</div>
+        <div id="right_footer">
+		<div class="lc_row">
+			<input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+		</div>
+        </div>
+</div>

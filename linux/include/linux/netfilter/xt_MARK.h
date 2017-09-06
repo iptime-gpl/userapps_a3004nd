@@ -1,0 +1,25 @@
+#ifndef _XT_MARK_H_target
+#define _XT_MARK_H_target
+
+#ifdef CONFIG_EFM_PATCH
+/* Version 0 */
+struct xt_mark_target_info {
+        unsigned long mark;
+};
+
+/* Version 1 */
+enum {
+        XT_MARK_SET=0,
+        XT_MARK_AND,
+        XT_MARK_OR,
+};
+
+struct xt_mark_target_info_v1 {
+        unsigned long mark;
+        u_int8_t mode;
+};
+#else
+#include <linux/netfilter/xt_mark.h>
+#endif
+
+#endif /*_XT_MARK_H_target */

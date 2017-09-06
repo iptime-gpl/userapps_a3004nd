@@ -1,0 +1,185 @@
+@charset "utf-8";
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr {
+        border:none;
+        background-color: #DDD;
+        text-align:left;
+        clear: both;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border: 1px solid #ccc;
+        clear: both;
+}
+.listview { clear: both; }
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+        display: block !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-shadow: none;
+        font-style: normal;
+        font-family: "나눔고딕", "Arial Unicode MS";
+        color: #444;
+        font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+.listview .line_title { float: left; }
+.listview .line_title p {
+        padding-left: 0.3em;
+        line-height: 2em;
+}
+.listview .line_status { float: right; display: table; }
+.listview .line_status p {line-height: 2em; }
+.listview .line_status span { display: table-cell;      vertical-align: middle; }
+.listview .line_status img {
+        height: 1em;
+        width: 1em;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+}
+.listview .line_value { clear: both; height: 1.5em; }
+.listview .line_value p { padding-left: 0.3em; color: #888; }
+#right_main, #right_sub {
+        clear: both;
+        margin-bottom: 10px;
+        overflow: auto;
+}
+.lc_left {
+        display: table;
+        float: left;
+        line-height: 2.5em;
+        height: 2.5em;
+        margin-top: 2px;
+        width: 7.5em;
+}
+
+#right_main .lc_left span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 0.7em;
+}
+#right_main .lc_left span img {
+        height: 0.3em;
+        width: 0.3em;
+        margin-bottom: 0.3em;
+}
+#right_main .lc_row { clear: both; overflow : hidden; }
+
+.lc_right {
+        float: left;
+        width: 16.5em;
+        overflow: hidden;
+}
+.lc_right_ipdisk { width: 16em; }
+
+#right_main .value p { width: 50px; }
+#right_main #desc p,
+#right_sub #desc p { color: #777; line-height: 1.5em; }
+#right_sub #desc .title { margin-bottom: 5px; }
+
+.custom_css_button {
+        width: 6em;
+        height: 2.5em;
+        float: right;
+}
+
+/*local css*/
+.lc_dot{width:0.5em; display:inline-block; margin-top:1em; vertical-align:top;}
+.lc_dot p{text-align:center; margin-left:-0.05em;}
+.lc_hyphen{width:1em; text-align:center; display:inline-block; vertical-align:top; padding:0;}
+.lc_input_ip{width:100%;}
+
+.lc_infobox_div{width:100%; overflow:hidden; border:1px solid #ddd; background-color:#EEEFE5;}
+.lc_fileformbox_div{width:100%; overflow:hidden; border-top:1px solid #CCC; height:2.3em; padding-top:.7em; padding-left:.5em;}
+.lc_whitebox_div{width:100%; overflow:hidden; border:0; background-color:#FFFFFF; padding:.5em .5em .5em 0; cursor:pointer;}
+.lc_greenbox_div{width:100%; overflow:hidden; border:0; background-color:#F9FAF5; padding:.5em .5em .5em 0; cursor:pointer;}
+
+.lc_fileformbox_div img{width:1em; height:1em; vertical-align:top; padding-top:.1em;}
+.lc_savefile{width:7em; overflow:hidden; display:inline-block; vertical-align:top;}
+.lc_restorefile{width:20em; overflow:hidden; display:inline-block; vertical-align:top;}
+.lc_fileline_left{width:7em; overflow:hidden; display:inline-block; vertical-align:top;}
+.lc_fileline_right{width:12em; overflow:hidden; display:inline-block; vertical-align:top;}
+
+.lc_direction_div{width:15%; float:left; display:inline-block;}
+.lc_direction_div p{text-align:center;}
+.lc_priority_div{width:5%; padding-left:.7em; float:left; display:inline-block;}
+.lc_leftbox_div{width:38%; float:left; display:inline-block;}
+.lc_rightbox_div{width:38%; float:right; display:inline-block; padding-right:.5em;}
+.lc_rightbox_div p{text-align:right; text-overflow:ellipsis; white-space:nowrap;}
+.lc_filebutton{width:7em !important; height:1.6em !important;}
+
+.lc_bg_leftcolor{background-color:#DBE1A2;}
+.lc_bg_rightcolor{background-color:#CBE1A3;}
+.lc_bg_disabledcolor{background-color:#E4E4E4;}
+
+.lc_line_div{line-height:1.7em; height:1.7em; width:100%;}
+.lc_line_div img{width:1em; height:1em; margin-top:.3em;}
+.lc_newline_div{line-height:3.4em; height:3.4em; width:100%;}
+.lc_newline_div img{width:1em; height:1em; vertical-align:middle;}
+.lc_bgfont_text{color:#92B056; text-overflow:ellipsis; white-space:nowrap;}
+.lc_boldfont_text{text-overflow:ellipsis; white-space:nowrap;}
+.lc_grayfont_text{color:#777; text-overflow:ellipsis; white-space:nowrap;}
+.lc_disabled_text{color:#B6B6B6; text-overflow:ellipsis; white-space:nowrap;}
+.lc_rightfloat_text{float:right; margin-right:0.7em;}
+
+.lc_panel_left{width:30%; float:left; vertical-align:middle; padding:0; margin:0;}
+.lc_panel_subleft p{padding-left:.7em;}
+.lc_panel_right{width:70%; float:left; vertical-align:middle; padding:0; margin:0;}
+
+.lc_priority_line{float:left; vertical-align:middle; width:100%; padding:0; margin:0;}
+.lc_btnimg{padding:0; margin:0; width:.7em !important; height:.7em !important; border:0;}
+.lc_priority_box{width:3em; height:2.3em; line-height:2.3em; padding:0; margin:0; display:inline-block; vertical-align:top; overflow:hidden;}
+.lc_priority_btnbox{width:6em;}
+.lc_priority_btnbox button{width:100%; height:90%; margin:0; padding:0; vertical-align:top;}
+
+.lc_usual_right{width:15.5em; height:2.3em; line-height:2.3em; overflow:hidden;}
+
+.lc_inputbox_ip{width:3em; display:inline-block; vertical-align:top;}
+.lc_inputbox_ip input{text-align:center;}
+
+.lc_protocol_class{width:9em; display:inline-block; vertical-align:top;}
+.lc_port_class,
+.lc_dualwan_class{width:6em; display:inline-block; vertical-align:top;}
+.lc_ports_class{width:11em; display:inline-block; vertical-align:top;}
+
+.lc_borderbottom_row{margin-bottom:.5em; border-bottom:1px solid #ddd;}
+.lc_bordertop_row{border-top:1px solid #ddd;}
+.lc_controlbtn_line{float:left; overflow:hidden; width:70%; display:inline-block; vertical-align:top; padding-left:.7em; padding-top:.5em;}
+.lc_delbtn_line{float:right; overflow:hidden; display:inline-block; vertical-align:top; padding-right:.7em; padding-top:.5em;}
+
+.lc_newrule_button,
+.lc_newrule_button button{width:6em; height:1.7em; float:left;}
+.lc_usual_button,
+.lc_usual_button button{width:4em; height:1.7em; float:left; margin-left:.2em;}
+.lc_cancel_button button{width:6em !important;}
+
+.lc_title_block{overflow:hidden; width:80%;}
+.lc_title_textellipsis{width:100%; overflow:hidden !important; text-overflow:ellipsis !important; white-space:nowrap !important;}
+
+.lc_customfile{position:absolute; width:100%; height:1.7em; top:0; right:0; margin:0; padding:0; opacity:0; filter:alpha(opacity=0);}
+.lc_customfile_line{width:100%; position:relative; overflow:hidden; margin:0; padding:0; height:100%;}
+.lc_customfile_line .lc_fileselector{width:10em; display:inline-block; height:1.6em; vertical-align:top;}
+.lc_customfile_line input[type=text]{width:100%; display:inline; height:1.6em;}
+.lc_customfile_line .lc_searchbtn{width:1.6em; height:1.6em; vertical-align:top; padding:0em .2em .1em .2em;}
+
+#right_main .ui-btn.ui-checkbox-off:after,
+#right_main .ui-btn.ui-checkbox-on:after,
+#right_footer .ui-btn.ui-checkbox-off:after,
+#right_footer .ui-btn.ui-checkbox-on:after{/*width:0.8em !important; height:0.8em !important; margin:-0.3em 0.1em -0.3em 0.1em !important;*/}
+#right_main .ui-checkbox input,
+#right_footer .ui-checkbox input{width:0.8em !important; height:0.8em !important; margin:-0.8em 0 0 0 !important;}
+

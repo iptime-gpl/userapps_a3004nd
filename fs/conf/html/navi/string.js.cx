@@ -1,0 +1,476 @@
+<script>
+
+var TAB_CODE=9
+var DEL_CODE=46 
+var BS_CODE=8
+var SP_CODE=32
+var DOT_CODE=190
+var DOT2_CODE=110
+
+var IDX_ON=0
+var IDX_OFF=1
+
+var IDX_AP_MODE=0
+var IDX_CBRIDGE_MODE=1
+var IDX_WWAN_MODE=2
+var IDX_KAI_MODE=3
+var IDX_MBRIDGE_MODE=4
+
+
+var WIRELESS_AP_MODE=0;
+var WIRELESS_CBRIDGE_MODE=1;
+var WIRELESS_CWAN_MODE=2;
+var WIRELESS_KAI_MODE=3;
+var WIRELESS_MBRIDGE_MODE=4;
+
+var KAID_MODE_INIT=0  // ap mode
+var KAID_MODE_PSP=0 // psp kai
+var KAID_MODE_NORMAL=0 // xbox kai
+
+var AUTH_OPEN=1
+var AUTH_KEY=2
+var AUTH_AUTO=3
+var AUTH_WPA=4
+var AUTH_WPAPSK=5
+var AUTH_OPEN8021X=6
+var AUTH_WPANONE=7
+var AUTH_WPA2=8
+var AUTH_WPA2PSK=9
+var AUTH_WPAPSKWPA2PSK=10
+var AUTH_NOCHANGE=100
+
+var IDX_NOENC=0
+var IDX_WEP64=1
+var IDX_WEP128=2
+var IDX_TKIP=3
+var IDX_AES=4
+var IDX_TKIPAES=5
+
+var ENCRYPT_OFF=0
+var ENCRYPT_64=1
+var ENCRYPT_128=2
+var ENCRYPT_TKIP=3
+var ENCRYPT_AES=4
+var ENCRYPT_TKIPAES=5
+
+var KEY_STRING=0;
+var KEY_HEX=1;
+
+var IDX_KEY_STRING=0;
+var IDX_KEY_HEX=1;
+
+var REGION_USA=1;
+var REGION_JAPAN=2;
+
+var DMZTWINIP_MODE_DMZ=1;
+var DMZTWINIP_MODE_TWINIP=2;
+
+var QOS_SHARING_BOUNDED=2;
+var QOS_SHARING_BORROW=3;
+
+
+var MSG_RESTART_CONFIRM_DEFAULT="系統將恢復到原廠預設值，是否繼續？";
+var MSG_RESTART_CONFIRM_UPNP="變更UPnP設定，系統將重新開機，是否繼續？"
+var MSG_RESTART_CONFIRM_REBOOT="系統將重新開機，是否繼續？";
+var MSG_RESTART_CONFIRM_CHANGE_LANIP="變更LAN IP位址系統將重新開機，是否繼續？"
+var MSG_RESTART_CONFIRM_CHANGE_LANIP_FAKE_TWINIP="變更LAN IP位址系統將重新開機，是否繼續？"
+
+var MSG_RESTART_CONFIRM_RESTORE="恢復設定，系統將重新開機，是否繼續？";
+var MSG_RESTART_CONFIRM_NAT="變更NAT設定系統將重新開機，是否繼續？"
+var MSG_RESTART_CONFIRM_WIRELESS="變更無線模式系統將重新開機，是否繼續？";
+var MSG_KAID_MODE_CHANGE_WARNING="變更KAI模式系統將重新開機，是否繼續？";
+var MSG_RESTART_CONFIRM_WIRELESS_CBRIDGE="變更無線模式系統將重新開機，是否繼續？";
+var MSG_RESTART_CONFIRM_WIRELESS_WWAN="變更無線模式系統將重新開機，是否繼續？";
+// common
+var MODIFY_OP="修改"
+var MSG_INVALID_HWADDR="MAC位址錯誤"
+var MSG_DELETE_RULE_CONFIRM="確定移除此規則？"
+var MSG_SELECT_RULE_TO_DEL="請選擇要刪除的規則"
+var MSG_ALL_STOP_RULE="是否停用所以規則？"
+
+var MSG_OPENER_PAGE_MOVED="頁面已移除"
+var MSG_INVALID_VALUE="Invalid value."
+
+
+
+// wireless_config_wizard
+var MSG_INVALID_WEP_KEY_HEXVALUE2="無線網路密碼應該由十六進位的字串組成"
+var MSG_INVALID_WPAPSK_KEY_MISMATCH="無線網路密碼不同"
+
+
+// sysconf_configmgmt
+var MSG_RESTOREFILE_BLANK="請選擇備份檔"
+
+//natrouterconf
+var MSG_RULE_NAME_IS_BLANK="規則名稱不可空白"
+
+
+// wirelessconf_wdssetup
+var MSG_WDS_DEL_WARNING="確定刪除WDS嗎？"
+var MSG_APADD_REQUEST_APPLY="點選\"新增\"按鈕將完成WDS設定。"
+
+// wirelessconf_basicsetup
+var MSG_BLANK_SSID="請輸入SSID"
+var MSG_INVALID_WEP_KEY_LENGTH="無線網路密碼長度錯誤"
+var MSG_INVALID_WEP_KEY_HEXVALUE="無線網路密碼應該為十六進位字串"
+var MSG_INVALID_WPAPSK_KEY_LENGTH="無線網路密碼最少需8個英數字"
+var MSG_INVALID_5_KEY_LENGTH="無線網路密碼要剛好5個英數字"
+var MSG_INVALID_13_KEY_LENGTH="無線網路密碼需剛好13個英數字"
+var SAVE_CONFIGURATION_STRING="是否儲存全部設定？"
+
+var MSG_BLANK_REQUEST_SSID="請輸入SSID，並點選\"確定\"。"   
+var MSG_INVALID_REQUEST_KEY="請輸入無線網路密碼，並點選\"確定\"。"
+var MSG_INVALID_REQUEST_APPLY="請選擇AP並點選\"確定\"。"
+var MSG_APPLY_REQUEST_KEY="選擇完頻道，請點選\"確定\"。"
+var MSG_BEST_CHANNEL_PRE="最好的頻道是"
+var MSG_BEST_CHANNEL_POST="頻道"
+var MSG_KEY_LENGTH_DESC="密碼長度="
+
+// config_wizard
+var MSG_BLANK_ACCOUNT="請輸入使用者名稱"
+var MSG_BLANK_PASSWORD="請輸入密碼"
+
+var MSG_INVALID_IP="IP位址錯誤"
+var MSG_INVALID_NETMASK="子網路遮罩錯誤"
+var MSG_INVALID_GATEWAY="預設閘道錯誤"
+var MSG_INVALID_FDNS="主要DNS錯誤"
+var MSG_INVALID_SDNS="次要DNS錯誤"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_NETWORK="區域網路與WAN相同網段"
+var STATIC_LEASE_ALREADY_EXIST_IPADDRESS="此IP址址已被新增"
+var STATIC_LEASE_ALREADY_EXIST_HWADDRESS="此MAC位址已被新增"
+
+//netconf_wansetup
+var NETCONF_INTERNET_DHCP_MTU_INVALID="MTU不能超過1500"
+var NETCONF_INTERNET_PPP_MTU_INVALID="MTU不能超過1492"
+var NETCONF_INTERNET_KEEP_ALIVE_MSG="最大閒置時間錯誤"
+var NETCONF_INTERNET_GW_INVALID_NETWORK="預設閘道與區域網路需同網段"
+var NETCONF_WANSETUP_CONFIRM_WANINFO="是否變更WAN？"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_DHCP_S_ADDR="DHCP起始IP位址錯誤"
+var NETCONF_INTERNAL_INVALID_DHCP_E_ADDR="DHCP結束IP位址錯誤"
+var NETCONF_INTERNAL_INVALID_DHCP_ADDR="DHCP位址範圍錯誤"
+var NETCONF_INTERNAL_DELETE_IP="是否刪除保留的IP位址？"
+
+// wirelessconf_advanced
+var DESC_INVALID_TX_POWER="發射功\率應該是1~100"
+var DESC_INVALID_RTS_THRESHOLD="RTS THRESHOLD應該是1~2347"
+var DESC_INVALID_FRAG_THRESHOLD="FRAGMENT THRESHOLD應該是256~2346"
+var DESC_INVALID_BEACON_INTERVAL="BEACON INTERVAL應該是50~1024"
+
+// expertconf_kai
+var KAID_MODE_CHANGE_WARNING="重開新機，是否繼續？"
+var KAID_MUST_SELECT_OBT_SERVER="請選擇伺服器"
+var KAID_RESTART_KAI_UI="請開啟KAI頁面"
+
+//natrouterconf_portforward
+var MAX_PORT_FORWARD=60
+var NATCONF_PORTFORWARD_NO_MORE_RULE="規則上限已滿"
+var NATCONF_PORTFORWARD_INVALID_INT_IP_ADDRESS="IP位址錯誤"
+var NATCONF_PORTFORWARD_EXT_PORT_IS_BLANK="請輸入外部通訊埠"
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT="外部通訊埠錯誤"
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT_RANGE="外部通訊埠範圍錯誤"
+var NATCONF_PORTFORWARD_INVALID_INT_PORT="內部通訊埠錯誤"
+var NATCONF_PORTFORWARD_INVALID_INT_PORT_RANGE="內部通訊埠範圍錯誤"
+var NATCONF_PORTFORWARD_RUN_RULE="使用此規則嗎？"
+
+
+//natrouterconf_misc
+var NATCONF_INTAPPS_NO_MORE_ADD_FTP_PORT="FTP PORT已滿"
+var NATCONF_INTAPPS_FTP_PORT_EMPTY="請填入通訊埠號碼"
+var NATCONF_INTAPPS_FTP_PORT_INVALID="通訊埠號碼錯誤"
+
+//natrouterconf_router
+var NETCONF_ROUTE_ENTRY_DELETE="是否刪除路由表？"
+var NETCONF_ROUTE_ENTRY_SELECT="請選擇要刪除的路由表"
+
+//natrouterconf_twinzipdmz
+var NATCONF_TWINIPDMZ_UPDATE_TIME="IP更新週期為60秒"
+var NATCONF_TWINIPDMZ_WARNING="目前電腦使用TWINIP，如果取消，此電腦的IP將被重新設定，是否繼續？"
+
+
+//firewallconf_firewall
+var USER_FWSCHED_TYPE=1
+var APP_FWSCHED_TYPE=2
+var URL_FWSCHED_TYPE=4
+var MAX_FWSCHED_COUNT=200 
+var FIREWALLCONF_FIREWALL_INVALID_TIME_TO_BLOCK="阻擋時間無效"
+var FIREWALLCONF_FIREWALL_DATE_WARNING="請選擇過濾日期及時間"
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_IP="來源IP位址錯誤"
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_HW="來源MAC位址錯誤"
+var FIREWALLCONF_FIREWALL_INVALID_DEST_IP="目的地IP位址錯誤"
+var FIREWALLCONF_FIREWALL_INVALID_DEST_PORT="目的地通訊埠錯誤"
+var FIREWALLCONF_FIREWALL_RUN_RULE="是否應用此規則？"
+var FIREWALLCONF_FIREWALL_NO_MORE_RULE="規則已滿"
+var FIREWALLCONF_FIREWALL_INVALID_PRIORITY="優先權錯誤"
+
+//firewallconf_netdetect
+var NETCONF_NETDETECT_WARNING1="最小連線是10"
+var NETCONF_NETDETECT_WARNING2="範圍0~23"
+
+
+//firewallconf_internet
+var FIREWALLCONF_INTERNET_RESTRICTIVE_WARNING="主機數量最大253"
+var FIREWALLCONF_INTERNET_RESTRICTIVE_CLEARANCE="是否刪除全部電腦資訊設定？"
+
+//expertconf_ddns
+var EXPERTCONF_DDNS_HOSTNAME_IS_BLANK ="請輸入主機名稱"
+var EXPERTCONF_DDNS_HOSTNAME_NOT_IPTIMEORG ="主機名稱須以iptime.org結尾"
+var EXPERTCONF_IPTIMEDNS_NOMORE_WANRING1 ="沒有更多的IPTIME DDNS主機"
+var EXPERTCONF_IPTIMEDDNS_INVALID_USERID="只有E-mail位址有用"
+var EXPERTCONF_DYNDNS_NOMORE_WANRING1="?有更多的DDNS主机"
+var INVALID_EMAIL_ADDRESS_STR="E-mail位址錯誤"
+var EXPERTCONF_IPTIMEDDNS_INVALID_HOSTNAME="位址錯誤"
+
+//expertconf_remotepc
+var EXPERTCONF_WOL_PC_NAME_IS_BLANK="請填入電腦名稱"
+var EXPERTCONF_WOL_DEL_PC="是否刪除此電腦？"
+var EXPERTCONF_WOL_WANT_TO_WAKE_UP_PC ="是否喚醒此電腦？"
+
+//expertconf_hostscan
+var ICMP_PING=0
+var ARP_PING=1
+var PING_SCAN=0
+var TCP_PORT_SCAN=1
+var SYSINFO_HOST_INVALID_TIMEOUT ="請輸入逾時時間"
+var SYSINFO_HOST_TIMERANGE   ="逾時時間需大於一秒"
+var SYSINFO_HOST_INVALID_DATASIZE ="請輸入數據大小"
+var SYSINFO_HOST_DATARANGE    ="數據大小範圍0~65000"
+var SYSINFO_HOST_INVALID_START  ="請輸入通訊埠"
+var SYSINFO_HOST_PORTRANGE      ="通訊埠範圍0~65535"
+
+//trafficconf_conninfo
+var TRAFFICCONF_CONNINFO_DELETE_CONN="是否刪除此IP位址連線資訊？"
+
+//trafficconf_switch
+var SELECT_VLAN_PORT_WARNING ="請選擇VLAN PORT"
+var SELECT_VLAN_PORT_TRUNK_WARNING ="All port of TRUNK(%s) must be in VLAN."
+var SELECT_TRUNK_PORT_WARNING ="請選擇VLAN PORT"
+var SELECT_TRUNK_PORT_VLAN_WARNING ="All port of TRUNK must be in VLAN(%s) or another VLAN."
+var MAX_MEMBER_TRUNK_WARNING="Maximum number of port is %d."
+var ALREADY_OTHER_GROUP_MEMBER="Ports can not be included in multiple groups."
+
+
+
+//trafficconf_loadshare
+var NATCONF_PORTFORWARD_NO_MORE_RULE="轉發規則已滿"    
+var NATCONF_PORTFORWARD_RULE_NAME_IS_BLANK="請填入規則名稱"
+var NATCONF_INTSERVER_INVALID_EXT_PORT="通訊埠錯誤"
+var NATCONF_LOADSHARE_KEEP_WRR="當啟用WRR LS時，可解除自動備援"
+var NATCONF_LOADSHARE_ON_LINE_BACKUP="自動備援將啟用，是否繼續？"
+var NATCONF_LOADSHARE_DELETE_RULE="是否刪除此規則？"
+var NATCONF_PORTFORWARD_SELECT_RULE_TO_DEL="請選擇規則"
+//sysconf_syslog
+var SYSCONF_SYSLOG_WANRING ="時間錯誤"
+var SYSCONF_SYSLOG_EMAIL_CONFIRM="發送E-MAIL報告給管理者"
+var SYSCONF_SYSLOG_CLEAR_CONFIRM="全部系統記錄檔將被刪除"
+
+//sysconf_login
+var SYSCONF_LOGIN_INVALID_NEW_PASS=    "新密碼錯誤"
+var SYSCONF_LOGIN_INVALID_NEW_ID  =    "使用者名稱錯誤：請輸入英文或數字"
+var SYSCONF_LOGIN_RELOGIN         =    "變更成功\後請使用新使用者名稱與密碼登入"
+
+//expertconf_pptpvpn
+var EXPERTCONF_PPTPVPN_VPN_ACCOUNT_IS_BLANK="請填入VPN帳號"
+var EXPERTCONF_PPTPVPN_VPN_PASSWORD_IS_BLANK="請填入VPN密碼"
+var EXPERTCONF_PPTPVPN_IP_ADDRESS_IS_INVALID="請輸入IP位址"
+var EXPERTCONF_PPTPVPN_DO_YOU_WANT_DELETE="是否刪除帳號？"
+
+//accesslist
+
+var ACCESSLIST_NOIPLISTMSG_1="無法設定IP位址，是否增加IP位址連線？"
+var ACCESSLIST_NOIPLISTMSG_2=") 已連線?"
+var ACCESSLIST_WRONG_INPUT_IP="IP位錯誤"
+var ACCESSLIST_WRITE_EXPLAIN="請填入描述"
+var ACCESSLIST_DEL_WANT="是否刪除此設定？"
+
+//reboot
+var REBOOT_CHANGEIP_RETRY_LOGIN="LAN IP已變更，請重新連線？"
+var REBOOT_CHANGEIP_RETRY_NOLOGIN_WINDOWS="重新連線設定頁面"
+var SYSCONF_RESTORE_RETRY_CONNET="重新連線至還原頁面"
+
+//trafficconf_qos
+var QOS_BASIC_WARNING="是否變更QOS設定？"
+var QOS_COMMON_EXCCED_MAX_CLASS="超出最大分類"
+var QOS_COMMON_EXCCED_MAX_SPEED="超出最大頻寬範圍"
+var QOS_COMMON_ISOLATED_EXCEED="獨立頻寬總和不可超過最大頻寬"  
+var QOS_COMMON_NO_CHANGE_DIRECTION="無法變更"
+var QOS_COMMON_ONLY_DIGIT="請輸入數字"
+var QOS_COMMON_BASIC_SETUP_FIRST="首先QoS基本設定"
+var QOS_PORT_PORTRANGE="通訊埠範圍1~65535"
+var QOS_PORT_INVALID_EXT_PORT_RANGE="外部通訊埠範圍錯誤"
+var QOS_BADNWIDTH_EMPTY="頻寬"
+var QOS_RATE_RANGE="速率範圍：32 Kbps ~ 50 Mbps"
+
+// wirelessconf_multibssid
+var MSG_DEL_MBSSID_WARNING="無線網路將中斷，是否繼續？"
+
+
+//trafficconf_connctrl
+var MSG_CONNECTION_MAX_WARNING="繼續？"
+var MSG_CONNECTION_MAX_TOO_SMALL="最大連線數至少512"
+var MSG_UDP_CONNECTION_MAX_TOO_BIG="最大UDP連線數範圍10~最大連線"
+var MSG_ICMP_CONNECTION_MAX_TOO_BIG="最大ICMP連線數應小於最大連線數"
+var MSG_INVALID_RATE_PER_MAX="連線速率錯誤"
+
+//sysconf_misc
+var MSG_WBM_POPUP="重新連線"
+
+
+var MSG_NO_DEL_ROUTING_TABLE="刪除路由表!"
+var MSG_NO_DEL_WDS="刪除WDS!"
+
+
+// trafficconf_switch
+var MSG_SAME_PORT_MIRROR="相同連接埠無法監控"
+
+var MSG_HUBMODE_WARNING="注意!!\n使用交換器模式，NAT路由功能將被停用，是否繼續？"
+var MSG_HUBMODE_CONFIRM="點選確定繼續"
+
+// trafficconf_portqos
+var MSG_PORTQOS_BOTH_ZERO=": 不可設定0 Mbps."
+var MSG_PORTQOS_MAX_ERROR=":不可超過100 Mbps"
+var MSG_PORTQOS_INVALID_VALUE=": 錯誤值(範圍 "
+
+
+//firewallconf_etc
+var DESC_INVALID_ARP_PERIOD="ARP封包/秒範圍1 ~ 100."
+
+// wirelessconf_multibridge
+var MSG_DEL_WWAN_WANRING="有線WAN端將被停用，是否繼續？"
+
+// iframe_pppoe_sched
+var MSG_INVALID_HOUR_VALUE="時設定範圍0 ~ 23."
+var MSG_INVALID_MIN_VALUE="分設定範圍0 ~ 59."
+var MSG_PPPOE_SCHEDULE_SAME_RULE="已存在相同規則"
+var QOS_BPI_RANGE="BPI的IP位址範圍無效 (範圍： 2 ~ 31)"
+
+// qosconf
+var QOS_PROTOCOL_SELECT="請選擇協定"
+
+
+// trafficconf_lspolicy
+var MSG_BACKUP_METHOD_AT_LEAST_ONE="請選擇一個原則"
+var MSG_BACKUP_METHOD_DOMAIN="請指定網域名稱"
+
+var MSG_INVALID_PROTONUM="Invalid Proto Num"
+
+var MSG_MBRIDGE_AUTO_CHANNEL_STRING="使用自動設定頻道功能，系統將自動搜尋伺服器的頻道，當中繼AP的頻道變更，系統將自動調整，是否繼續？"
+
+
+var TRAFFICCONF_ALL_OPTIONS_CLEAR =  "是否清除所有訊息？"
+var MSG_SELECT_DEL_MBSS = "Select wireless network to remove."
+
+var AUTO_STRING = "自動"
+var MBRIDGE_AUTO_CHANNEL_SEARCH = "自動設定頻道"
+
+var UPPER_CHANNEL_TXT = "Lower"
+var LOWER_CHANNEL_TXT = "Upper"
+
+var LAN_GATEWAY_WARNING_MSG = "當WAN沒有連線時自動連線\n是否繼續？";
+
+var MSG_IPPOOL_MAX_WARNING = "IP範圍條件不足"
+
+var MSG_MBSSID_QOS_WARNING="最小值為100 Kbps"
+
+
+var MSG_DFS_WARNING="這是DFS頻道"
+
+                     
+var SYSCONF_LOGIN_BLANK_ID =    "帳號空的"
+var SYSCONF_LOGIN_BLANK_PASS  = "密碼空的"
+var SYSCONF_LOGIN_REMOVE_WARNING  = "除帳號/密碼。繼續?  刪"
+var SYSCONF_LOGIN_INVALID_SESSION_TIMEOUT  = "連線數超時1-60分鐘"
+var SYSCONF_LOGIN_CANT_REMOVE_ID  = "使用連線數時ID和密碼不能被刪除"
+var SYSCONF_LOGIN_SHOULD_HAVE_IDPASS  = " 啟用連線數時,必須設定ID和密碼"
+var SYSCONF_LOGIN_RELOGIN_SESSION  = " 移動到配置後的登錄頁面。繼續?"
+var MSG_PPTPVPN_REBOOT = "新更改PPTP VPN伺服器配置重"
+var MSG_IGMP_REBOOT =  "重啟路由器後，MOD設定才會生效"
+var MSG_QOS_REBOOT="重新更改Qos配置"
+var UNALLOWED_ID_MSG  = "不被允許的ID"
+var DESC_INVALID_DCS_PERIOD="範圍在1~100"
+var INVALID_HOUR_TEXT="範圍在0~23"
+var INVALID_MIN_TEXT="範圍在0~59"
+var SELECT_DAY_DESC="少某天或每天確認至"
+var SNMP_INVALID_PORT= "連接埠應為1 - 65535"
+var SNMP_COMMUNITY_ALERT= "強制的社區領域"
+
+var MSG_INVALID_RADIUS_SERVER="RADIUS伺服器位址無效"
+var MSG_INVALID_RADIUS_SECRET="RADIUS伺服器密碼無效"
+var MSG_INVALID_RADIUS_PORT="RADIUS伺服器通訊埠無效"
+var MSG_WEP_WARNING="當加密模式為WEP或TKIP時，頻寬最大值為54Mbps"
+var MSG_WEP_SEC_WARNING="因WEP安全性較低，不建議使用"
+var MSG_WIRELESS_WAN_WARNING="本無線網路管理介面已被啟用，請關閉其他無線網路管理介面"
+var MSG_WDS_CHANNEL_WARNING="頻道不符"
+var MSG_NEW_BSS="新增無線網路"
+var MSG_ADD_MAC_WARNING="無需新增的MAC位址"
+var MSG_REMOVE_MAC_WARNING="無需刪除的MAC位址"
+var MSG_INVALID_AUTH_FOR_BRIDGE="無線橋接失敗"
+var MSG_TWINIP_CONFIRM_WARNING="Twin IP配置後,系統將重新啟動.  是否繼續?"
+
+
+var MSG_NEED_REBOOT_FOR_WWAN="路由器將重新啟動，請問要繼續嗎?"	
+
+var MSG_ENABLE_ONE_SERVICE_ID="最少需配置一個使用者"
+var MSG_DUPLICATE_SERVICE_ID="使用者ID重覆，請更改ID" 
+
+
+
+var PASSWORD_NEEDED_TO_SET_THIS="為了安全性的考量，請您先由系統工具-\n登入密碼當中變更您的使用者登入帳號及密碼"
+
+
+var CANT_SET_DEFAULT_ID_PASS="這是出廠預設的使用者名稱及密碼\n請更改您的使用者名稱及密碼"
+var SYSCONF_LOGIN_NEED_CAPTCHA_CODE="請填寫驗證碼"
+
+var MSG_SELECT_TORRENT_FOLDER_ERR="請選擇下載的文件夾"
+var MSG_SELECT_MEDIA_FOLDER_ERR="選擇媒體文件夾"
+var MSG_MEDIA_NAME_ERR="請填寫名稱"
+
+var MSG_HWADDR_NO_INPUT=MSG_INVALID_HWADDR
+var MSG_SELECT_MAC_REMOVED=NATCONF_PORTFORWARD_SELECT_RULE_TO_DEL
+
+var DDNS_HOSTNAME_RULE_TXT="錯誤的DDNS使用者名稱"
+
+var SYSCONF_LOGIN_CANT_REMOVE_WARNING="請填寫使用者名稱和密碼"
+
+
+
+var SYSCONF_ONLINE_UPGRADE_CONFIRM="All router's functions will be stopped during firmware upgrade.\nContinue?"
+
+var FIRMUP_DONE_TXT="Firmware upgrade is done.\nClick 'OK' button to continue."
+
+var MSG_INVALID_FOLDER_STR="Invalid Folder String.";
+var MSG_INVALID_FOLDER_NON_ASCII_STR="Only Ascii folder name is allowed.";
+var MSG_INVALID_FOLDER_2DOTS_STR=".. can't be used."
+var MSG_INVALID_FOLDER_DOT_STR=". can't be used at the start of folder name."
+var MSG_CANT_BE_USED="can't be used."
+
+var MSG_DYNAMIC_CHANNEL_WARNING="If static channel is used,  [Dynamic Channel Search] function will be disabled\nContinue?"
+
+
+var SYSCONF_INVALID_HOSTNAME="Invalid HostName"
+var UNPERMITTED_STR_PREFIX="Unpermitted characters:"
+var SYSCONF_INVALID_TEMPERATURE="Invalid Temperature.(Temperature <= 100)"
+
+
+
+// USE_SYSCONF_MISC2
+var SYSCONF_HOSTNAME_WARNING="The router name must be at least one letter."
+var SYSCONF_HOSTNAME_SPECIAL_WARNING="The router name can't be entered special characters and spaces."
+var SYSCONF_LED_START_TIME_ALERT="The start time can't be later than the end time."
+var SYSCONF_APPLY_BUTTON_NAME="Reboot"
+var SYSCONF_APPLY_ORIGINAL_VALUE="確定"
+var SYSCONF_FAN_ALERT="Temperature range setting is incorrect."
+
+var PLUGIN_INSTALL_BT_TXT="Install"
+var PLUGIN_UPDATE_BT_TXT="Update"
+var PLUGIN_CANCEL_BT_TXT="Cancel"
+var PLUGIN_REMOVE_BT_TXT="Remove"
+
+var MSG_TOO_LONG_SSID="SSID length is too long.\nNon ascii character have 3 bytes.\nCurrent Length of SSID Field: "
+
+</script>

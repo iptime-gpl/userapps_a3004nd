@@ -1,0 +1,77 @@
+<!-- panel --> 
+<div id="left_panel" data-role="panel" data-display="overlay" data-position-fixed="true" data-history="false">
+  <!--div id="left_header"></div-->
+  <div id="menu" class="left_menu"></div>
+  <div id="left_footer"></div>
+</div>
+<!-- panel -->  
+<div id="right_panel" data-role="panel" data-display="overlay" data-position="right" data-position-fixed="true" data-history="false" data-dismissible="false" data-swipe-close="false">
+  <div id="right_header"></div>
+  <div id="right_content" class="right_content"></div>
+  <div id="right_marginer"></div>
+</div>
+<div id = "right_panel_dismiss"></div>
+<!-- loading popup --> 
+<div id="loading" class="loading" data-role="popup" data-dismissible="false" data-overlay-theme="a"
+	data-theme="none" data-shadow="false" data-history="false"> <img src="/common/images/loading.gif">
+</div>
+<!-- loading reboot popup --> 
+<div data-role="popup" class="loading" id="loading_reboot" data-overlay-theme="a" data-theme="none" data-shadow="false" data-dismissible="false" data-history="false">
+	<p align="center"><img src="/common/images/loading.gif"></p><p align="center" sid="REBOOT_MSG"></p>
+</div>
+<!-- confirm popup --> 
+<div id="confirm_popup" class="stylepopup" data-role="popup" data-position-to="window" data-dismissible="false" data-overlay-theme="b"
+	data-theme="none" data-history="false">
+	
+	<div class="titlebar"><p sid="CONFIRM_TITLE_TEXT"></p></div>
+	<hr>
+	<div class="content_field">
+		<div style="float:left; margin-right: 1em;"><img src="/common/images/alert.png"></div>
+		<div style="float:left;"><p sid="CONFIRM_CONTENT_TEXT"></p></div>
+	</div>
+	<div class="button_field">
+		<div sid="CONFIRM_POSITIVE" class="confirm_yes"><input onClick='confirm_close(true);' sid="confirm__yes" type="button" data-role="none" value="확인"></div>
+		<div sid="CONFIRM_NEGATIVE" class="confirm_no"><input onClick='confirm_close(false);' sid="confirm_no" type="button" data-role="none" value="취소"></div>
+	</div>
+</div>
+<!-- alert popup --> 
+<div id="alert_popup" class="stylepopup" data-role="popup" data-position-to="window" data-dismissible="false" data-overlay-theme="b"
+	data-theme="none" data-history="false">
+	<div class="titlebar"><p sid="ALERT_TITLE_TEXT"></p></div>
+	<hr>
+	<div class="content_field">
+		<div style="float:left; margin-right: 1em;"><img src="/common/images/alert.png"></div>
+		<div style="float:left;"><p sid="ALERT_CONTENT_TEXT"></p></div>
+	</div>
+	<div class="button_field">
+		<div class="alert"><input onClick='alert_close();' sid="alert__yes" type="button" data-role="none" value="확인"></div>
+	</div>
+</div>
+<!-- list popup -->
+<div id="list_popup" class="stylepopup" data-role="popup" data-position-to="window" data-dismissible="false" data-overlay-theme="b"
+        data-theme="none" data-history="false">
+	<div class="titlebar_listpop">
+		<div class="title"><p sid="S_POPUP_MACSELECT_TITLE_TEXT"></p></div>
+		<div class="exit" id ="popup_title_exit" onClick='listpopup_close();'><img src="/common/images/closed_w.png"></div>
+	</div>
+    <ul sid="C_WANINFO_MACLIST" class="listview ui-listview" data-role="listview">
+    </ul>
+</div>
+
+<div id="taphold_popup" class="taphold_style" data-role="popup" data-position-to="window" data-overlay-theme="b" data-history = "false" data-dismissible = "false">
+        <div class="popup_titlebar">
+                <p sid="S_QOSPOPUP_TITLE1"></p>
+                <p id = "taphold_popup_title"></p>
+                <p sid="S_QOSPOPUP_TITLE2"></p>
+        </div>
+        <div class="popup_list_div">
+                <p sid="S_MODIFY"></p>
+        </div>
+        <div class="popup_list_div">
+                <p sid="S_DELETE"></p>
+        </div>
+        <div class="popup_list_div">
+                <p sid="S_CANCEL"></p>
+        </div>
+</div>
+

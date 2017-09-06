@@ -1,0 +1,49 @@
+# Path to parent kernel include files directory (default /usr/include)
+KERNEL_INCLUDE=$(LINOS_ROOT)/include
+
+DEFINES= #-g #-DDEBUG #-pg #-DIPTC_DEBUG #-DRESOLVE_HOSTNAMES
+
+#options if you have a bind>=4.9.4 libresolv (or, maybe, glibc)
+#LDLIBS=-lresolv
+#LDLIBS=-ldl
+ADDLIB=
+
+#options if you compile with libc5, and without a bind>=4.9.4 libresolv
+#LDLIBS=
+#ADDLIB=inet_ntop.o inet_pton.o
+
+#options for decnet
+#ADDLIB+=dnet_ntop.o dnet_pton.o
+
+#CROSS = mips-
+#CC=$(CROSS)gcc
+#AR=$(CROSS)ar
+include $(USERAPPS_ROOT)/mkdefs
+
+
+#CFLAGS=-D_GNU_SOURCE -O2 -Wstrict-prototypes -Wall -g $(GLIBCFIX) -I$(KERNEL_INCLUDE) -I../include $(DEFINES)
+
+CFLAGS = -Wall -Wunused -I$(KERNEL_INCLUDE) -I../include $(DEFINES) -DNOT_USE_DYNAMICLINK=1 
+
+#LDLIBS += -L../lib -lnetlink -lutil
+#LDFLAGS = --static
+LDFLAGS = 
+
+SUBDIRS=lib ip tc
+
+LIBNETLINK=../lib/libnetlink.a ../lib/libutil.a
+
+all: 
+	@set -e; \
+	for i in $(SUBDIRS); \
+	do $(MAKE) -C $$i; done
+	$(CP) tc/tc tc/tc.temp
+	$(STRIP_ZIP) tc/tc.temp tc/tc
+	$(RM) tc/tc.temp
+
+
+clean:
+	for i in $(SUBDIRS) doc; \
+	do $(MAKE) -C $$i clean; done
+
+.EXPORT_ALL_VARIABLES:

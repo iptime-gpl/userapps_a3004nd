@@ -1,0 +1,24 @@
+include $(USERAPPS_ROOT)/mkdefs
+
+CFLAGS= -O -I../include/net
+OBJS = pppdump.o bsd-comp.o deflate.o zlib.o
+
+PPPINFO_OBJS = pppinfodump.o 
+
+INSTALL= install
+
+all:	pppdump pppinfodump
+
+pppdump: $(OBJS)
+	$(CC) -o pppdump $(OBJS)
+
+pppinfodump: $(PPPINFO_OBJS)
+	$(CC) -o pppinfodump $(PPPINFO_OBJS) $(USERAPPS_ROOT)/cgi-src/timepronew/libtimecgi.a
+
+clean:
+	rm -f pppdump $(OBJS) *~
+
+install:
+	mkdir -p $(BINDIR) $(MANDIR)/man8
+	$(INSTALL) -s -c pppdump $(BINDIR)
+	$(INSTALL) -c -m 444 pppdump.8 $(MANDIR)/man8

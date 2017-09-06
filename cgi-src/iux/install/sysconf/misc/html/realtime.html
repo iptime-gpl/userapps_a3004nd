@@ -1,0 +1,56 @@
+<div id="realtime" class="cc_padding">
+  <form id="iux_form">
+    <div id="right_main" class="right_main"> 
+            
+      	<div id="service" class="lc_row">
+		<div class="lc_left lc_realtime_left">
+			<span><img src="/common/images/point.jpg"></span>
+        		<p sid="S_REALTIME_NOWTIME_TITLE"></p>
+		</div>
+	</div>
+      	<div class="lc_row">
+       		<div id="desc" class="lc_realtime_descline"><p sid="D_REALTIME_CURTIME"></p></div>
+	</div>
+
+      	<div id="timeserver" class="lc_row">
+		<div class="lc_left lc_realtime_left">
+			<span><img src="/common/images/point.jpg"></span>
+          		<p sid="S_REALTIME_TIMESERVER_TITLE"></p>
+		</div>
+      	</div>
+      	<div class="lc_row">
+          	<div class="ui-alt-icon ui-nodisc-icon lc_realtime_left">
+            		<select name="serverlist" sid="C_REALTIME_SERVERLIST" type="select"></select>
+          	</div>
+      	</div>
+      	<div class="lc_row">
+		<div id="serveredit" class="lc_realtime_left">
+			<input name="serveredit" sid="C_REALTIME_SERVEREDIT" maxlength="64" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" style="ime-mode:disabled;">
+		</div>
+	</div>
+      	<div class="lc_row">
+        	<div class="lc_left lc_realtime_left"> 
+			<span><img src="/common/images/point.jpg"></span>
+          		<p sid="S_REALTIME_STANDARD_TITLE"></p>
+        	</div>
+	</div>
+      	<div class="lc_row">
+          	<div class="ui-alt-icon ui-nodisc-icon lc_realtime_left">
+            		<select name="gmtidx" sid="C_REALTIME_GMTIDX" type="select"></select>
+          	</div>
+	</div>
+      	<div class="lc_row">
+ 		<div class="ui-alt-icon lc_realtime_left">
+      			<input name="summerflag" id="summer_flag"  type="checkbox" value="1" sid="C_REALTIME_SUMMERFLAG">
+      			<label for="summer_flag"><p sid="S_REALTIME_SUMMERTIME_TITLE"></p></label>
+    		</div>
+	</div>
+
+     </div>
+  </form>
+
+  <div id="right_footer">
+    <input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+  </div>
+
+</div>

@@ -1,0 +1,76 @@
+<div id="triggerstatus" class="cc_padding">
+  	<form id="iux_form">
+   	 	<div id="right_main" class="right_main"> 
+	      		<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+       					<p sid="S_RULENAME_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<input name="name" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_TRIGGERSTATUS_NAME" maxlength="127">
+					</div>
+				</div>
+			</div>
+
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+        				<p sid="S_TRIGGERACT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="ui-alt-icon ui-nodisc-icon lc_protocol_class">
+							<select name="triggerprotocol" sid="C_TRIGGERSTATUS_TRIGGERPROTOCOL" type="select"></select>
+						</div>
+					</div>
+				</div>
+			</div>
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left lc_panel_subleft">
+        				<p sid="S_PORTRANGE_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="lc_port_class">
+							<input name="triggersport" type="number" pattern="[0-9]*" sid="C_TRIGGERSTATUS_TRIGGERSPORT" min = "1" max = "65535" maxlength = "5">
+						</div>
+						<div class="lc_hyphen">~</div>
+						<div class="lc_port_class">
+							<input name="triggereport" type="number" pattern="[0-9]*" sid="C_TRIGGERSTATUS_TRIGGEREPORT" min = "1" max = "65535" maxlength = "5">
+						</div>
+					</div>
+				</div>
+			</div>
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+        				<p sid="S_FORWARDACT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="ui-alt-icon ui-nodisc-icon lc_protocol_class">
+							<select name="forwardprotocol" sid="C_TRIGGERSTATUS_FORWARDPROTOCOL" type="select"></select>
+						</div>
+					</div>
+				</div>
+			</div>
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left lc_panel_subleft">
+        				<p sid="S_PORTRANGE_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="lc_ports_class">
+							<input name="forwardport" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_TRIGGERSTATUS_FORWARDPORT" maxlength="127">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+  	<div id="right_footer">
+	</div>
+
+</div>

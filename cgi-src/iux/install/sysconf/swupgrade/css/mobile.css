@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+p{ text-overflow: ellipsis; white-space: nowrap !important; font-weight: normal !important;}
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+.ui-page-theme-a .ui-body-inherit { height: 2.2em }
+/*헤더*/
+#header { background-color: #dce1cd; border: 1px solid #ccc; }
+/*헤더 경계라인*/
+#header hr { border: 1px solid #ccc; clear: both; }
+.ui-checkbox label { padding-right: 0em; }
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+.ui-checkbox .ui-btn{
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 3em;
+	background-color: #EEF1E6;
+}
+#content { background-color: #EEF1E6; }
+.ui-page-theme-a .ui-btn:hover { background-color: #EEF1E6; }
+.ui-page-theme-a .ui-btn { background-color: #EEF1E6; }
+.ui-listview > li p { margin: 0;}
+.ui-btn.ui-checkbox-off::after { margin-left: 0 }
+.ui-btn.ui-checkbox-on::after { margin-left: 0 }
+.ui-btn-icon-left:after { left: 0.4em; }
+
+.lc_main_top, .lc_main_middle, .lc_main_bottom { overflow: hidden; clear: both; }
+.lc_main_top .row { overflow: hidden; clear: both; }
+.lc_main_top .row p { line-height: 3em; }
+.lc_main_top .row .title { float: left; width: 28%; }
+.lc_main_top .row .title p { margin-left: 0.5em; }
+.lc_main_top .row .context { float: left; width: 72%; }
+.lc_main_top .row .title p { margin-right: 0.5em; }
+.lc_main_middle
+{
+	border: 1px solid rgb(170, 170, 170);
+	border-right-width: 0;
+	border-left-width: 0;
+}
+
+.lc_main_middle .radio { overflow: hidden; margin-top: 0.4em; }
+.lc_main_middle .radio div { float: left; }
+.lc_main_middle .desc
+{
+	background-color: #FFFFFF;
+	margin: 0.5em;
+	padding: 1em;
+	height: 6em;
+}
+.lc_main_middle .desc p { line-height: 1.5em; color: #828282; }
+.lc_main_middle .desc .text { margin: 0.5em; }
+
+/*desc*/
+.status_search_for_firmware div { float: left; }
+.status_search_for_firmware div img { height: 1.2em; width: 1.2em; padding-top: 0.1em; }
+
+.lc_main_middle .content
+{
+	overflow: hidden;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.lc_main_middle .search_field { margin-left: 0.5em; float: left; }
+.lc_main_middle .search_field .left { width: 13em; overflow: hidden; }
+.lc_main_middle .search_field .left .hidden_field
+{
+	opacity: 0;
+	position: absolute;
+	width: 15.5em;
+	height: 2.3em;
+	cursor: pointer;
+}
+
+.lc_main_middle .search_field .right { margin-left: 0.2em; }
+.lc_main_middle .search_field div {	float: left; }
+.lc_main_middle .search_field .right button
+{
+	height: 2.3em;
+	width: 2.3em;
+	border: 0;
+	border: 1px solid #AAAAAA;
+	cursor: pointer;
+}
+.lc_main_middle .search_field .right button img { width: 1.5em; height: 1.5em; }
+.lc_main_middle .submit_field { float: right; margin-right: 0.5em;  }	
+.lc_main_middle .submit_field button
+ {
+	height: 2.3em;
+	width: 14em;
+	background-color: #8DAF25;
+	border: 0;
+	cursor: pointer;
+ }	
+.lc_main_bottom { padding: 0.5em; }
+.lc_main_bottom p { color: #828282; }
+.lc_main_bottom .title .icon { float: left; }
+.lc_main_bottom .title .icon img { width: 1.2em; height: 1.2em; }
+.lc_main_bottom .title .text { float: left; }
+.lc_main_bottom .content { clear: both; }
+
+

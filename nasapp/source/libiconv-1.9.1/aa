@@ -1,0 +1,3 @@
+./configure --host=mipsel-linux --target=mipsel-linux --build=i686-pc-linux --prefix=$USERAPPS_ROOT/nasapp
+
+

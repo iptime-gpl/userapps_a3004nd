@@ -1,0 +1,10 @@
+<script>
+var MSG_CONNECTION_MAX_WARNING="確定要繼續？";
+var MSG_CONNECTION_MAX_TOO_SMALL="最大連線數至少512";
+var MSG_UDP_CONNECTION_MAX_TOO_BIG="最大UDP連線數範圍10~最大連線數";
+var MSG_ICMP_CONNECTION_MAX_TOO_BIG="最大ICMP連線數應小於最大連線數";
+var MSG_INVALID_RATE_PER_MAX="每台電腦最大連線率錯誤";
+var TRAFFICCONF_CONNCTRL_INVALID_TIME = "時間值錯誤";
+
+
+</script>

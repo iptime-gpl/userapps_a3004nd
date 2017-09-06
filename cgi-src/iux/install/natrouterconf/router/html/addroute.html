@@ -1,0 +1,61 @@
+<div id="addroute" class="cc_padding">
+        <div id="right_main" class="right_main">
+                <form id="iux_form">
+			 <div class="lc_row">
+                                <div class = "rpanel_left">
+                                        <p sid = "S_ADD_INPUT1"></p>
+                                </div>
+				<div class = "lc_select_div">
+					<div class = "ui-alt-icon ui-nodisc-icon">
+						<select type = "select" sid = "ROUTING_TYPE">
+							<option value = "net" sid = "S_ROUTER_TYPE1"></option>
+							<option value = "host" sid = "S_ROUTER_TYPE2"></option>
+						</select>	
+					</div>
+				</div>
+                        </div>
+			 <div class="lc_row">
+                                <div class = "rpanel_left">
+                                        <p sid = "S_ADD_INPUT2"></p>
+                                </div>
+				<div class="lc_inner_ip ip" sid = "ROUTING_TARGET">
+					  <div class="lc_inputbox_ip"><input sid = "VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+					  <div class="hyphen"><p>.</p></div>
+					  <div class="lc_inputbox_ip"><input sid = "VALUE1" type="number" pattern="[0-9]*" min = "0" max="255" maxlength = "3"></div>
+					  <div class="hyphen"><p>.</p></div>
+					  <div class="lc_inputbox_ip"><input sid = "VALUE2" type="number" pattern="[0-9]*" min = "0" max="255" maxlength = "3"></div>
+					  <div class="hyphen"><p>.</p></div>
+					  <div class="lc_inputbox_ip"><input sid = "VALUE3" type="number" pattern="[0-9]*" min = "0" max="255" maxlength = "3"></div>
+				</div>
+				<div class= "lc_inner_mask">
+					<p sid = "S_ADD_INPUT3"></p>
+					<div sid = "ROUTING_MASK"><input type = "number" pattern="[0-9]*" min = "0" max = "32" maxlength = "2"></div>
+				</div>
+                        </div>
+			 <div class="lc_row">
+                                <div class = "rpanel_left">
+                                        <p sid = "S_ADD_INPUT4"></p>
+                                </div>
+				<div class="lc_inner_ip ip" sid = "ROUTING_GATEWAY">
+					  <div class="lc_inputbox_ip"><input sid = "VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+					  <div class="hyphen"><p>.</p></div>
+					  <div class="lc_inputbox_ip"><input sid = "VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+					  <div class="hyphen"><p>.</p></div>
+					  <div class="lc_inputbox_ip"><input sid = "VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+					  <div class="hyphen"><p>.</p></div>
+					  <div class="lc_inputbox_ip"><input sid = "VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+				</div>
+                        </div>
+                </form>
+        </div>
+        <div id="right_sub"></div>
+        <div id="right_footer">
+		<div class = "lc_submit_div">
+			<button class = "custom_css_button lc_submit_button" type = "button" data-role = "none">
+				<img src = "/common/images/add_icon.png">
+				<span sid = "S_ADD"></span>
+			</button>
+		</div>
+	</div>
+</div>
+

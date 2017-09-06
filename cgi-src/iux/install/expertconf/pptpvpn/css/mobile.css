@@ -1,0 +1,347 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+/*헤더*/
+#header {
+	/*//height: 20px;*/
+	background-color: #dce1cd;
+	border: 1px solid #ccc;
+}
+/*헤더 경계라인*/
+#header hr {
+	border: 1px solid #ccc;
+	clear: both;
+	/*font-size: 0px;*/
+}
+
+.ui-checkbox label {
+	padding-right: 0em;
+}
+
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+/*.ui-page-theme-a .ui-btn { background-color: #EEF1E6; }*/
+
+.lc_row
+{ 
+	overflow: auto;
+	clear:both;
+}
+.lc_left, .lc_middle , .lc_right {float: left; overflow: hidden;}
+.lc_left { width:30%; }
+.lc_left p { margin-left: 1em; line-height: 4em;}
+.lc_middle { width:65%; margin-top: 0.75em; }
+.pptpvpn_account_list
+{
+	background-color: #EEF1E6;
+	border: 1px solid #ccc;
+	overflow:auto;
+}
+.pptpvpn_account_list p, .pptpvpn_account_list_item p
+{
+	margin-left: 1em;
+	line-height: 3em;
+}
+.pptpvpn_account_list_item { overflow: auto; }
+.pptpvpn_account_list div, .pptpvpn_account_list_item div
+{
+	float:left;
+	width:33%;
+}
+
+.radio_run , .radio_stop { float:left; width:50%; }
+.colorgray { color:#9E9F97 }
+
+.pptpvpn_enteradd { border: 1px solid #DDDDDD; overflow:auto; }
+.pptpvpn_entermodify
+{
+	border: 1px solid #DDDDDD;
+	border-top-width: 0;
+	border-bottom-width:0;
+	overflow:auto;
+}
+/*pptpvpn_enteradd*/
+/*pptpvpn_entermodify*/
+.titleicon{ float:left; }
+.titleicon img
+{
+	 width: 1em;
+	 height: 1em;
+	 margin-left: 1em;
+	 margin-top: 1.3em; 
+}
+
+.titletext { float:left; width: 75%; }
+.titletext p { line-height: 3.5em; margin-left: 1em; }
+.icon_openarrow { float:right; }
+.icon_openarrow img
+{
+	width: 1em;
+	height: 1em;
+	margin-top: 1.25em;
+	margin-right: 1em; 
+}
+
+/*right panel*/
+.footer_item { float: right; }
+.footer_item button
+{
+	background-color: #8daf25;
+	height: 2em;
+	width: 5.5em;
+	border: 0;
+	cursor: pointer;
+}
+
+.lc_row_r{ overflow: hidden; clear: both; }
+.lc_right_r{ float: left; width: 30%; }
+.lc_right_r p{ line-height: 3em; }
+.right_footer { overflow:hidden; margin-top: 0.5em;}
+.lc_left_r{ float: left; width: 70%; margin-top: 0.3em;}
+.lc_input_ip_r div, .lc_input_mac_r div{ float:left }
+.lc_input_ip_r .hyphen p
+{
+	line-height: 1em;
+	margin-top: 1em;
+}
+.hyphen p { text-align: center; margin-left: -0.05em; }
+.hyphen { width:0.3em; }
+.lc_inputbox_ip input{ text-align: center; width: 3.7em; margin: 0; padding: 0; } 
+
+.captcha_button
+{
+	float: left;
+	width: 4.8em;
+	height: 5em;
+	border-width: 1px 0px 1px 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	cursor: pointer;
+}
+.captcha_view{ width: 16.5em;}
+.captcha_button img
+{
+	height: 100%;
+	width: 100%; 
+}
+.captcha_img
+{
+	 float: left;
+	 background-color: #FFFFFF;
+	 height: 5em;
+	 width: 11.3em;
+	 border: 1px solid  #CCCCCC;
+}
+/*modify*/
+.lc_modify_accountlist
+{
+	border: 1px solid #CCCCCC;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+.modifyaccount_item { clear:both; overflow:hidden; }
+.modifyaccount_item .title { float:left; width: 30%; overflow:hidden; }
+.modifyaccount_item .title p { margin-left: 0.5em; line-height: 3em; }
+.modifyaccount_item .ipaddr { float:left; width: 35%; }
+.modifyaccount_item .ipaddr p { line-height: 3em; }
+.modifyaccount_item .status { float:left; width: 25%; }
+.modifyaccount_item .status p { line-height: 3em; color:#AAAAAA; }
+.modifyaccount_item .check { float: right; width: 10%; margin-top: 0.5em; }
+
+
+
+/*.lc_wrap_radiobutton {
+	overflow: auto;	
+	border: 1px solid #DDD;
+	border-top-width: 0;
+}
+.lc_wrap_radiobutton label{ border:0px}
+.lc_wrap_mainobject{overflow:auto;}
+.lc_row { 
+	clear:both;
+	overflow:hidden;
+	height: 4em;
+	min-width: 20em;
+}
+.lc_left, .lc_middle ,.lc_right {float: left; overflow: hidden;}
+.lc_left { width:27%; }
+.lc_left p { margin-left: 1em; line-height: 4em;}
+.lc_middle { width:42%; margin-top: 0.75em; }
+.lc_middle div{ float: left; }
+
+.lc_right {
+	width:30%;
+	float: left;
+	margin-top: 1em;
+	overflow: hidden;
+}
+.hyphen p {
+	text-align: center;
+	margin-left: -0.05em;
+}
+.hyphen { width:0.3em; }
+cc_input_ip { width: 100% }
+.cc_input_ip .hyphen{ margin-top: 1em;}
+.cc_input_mac .hyphen{ margin-top: 0.4em; }
+.lc_inputbox_ip { width: 23%; } 
+.lc_inputbox_ip input{ text-align: center; } 
+.lc_inputbox_mac { width: 14.8%; } 
+.lc_inputbox_mac input{ text-align: center; } 
+.lc_manual_check {
+	margin-left: 2px;
+	width: 66%;
+	float: left;
+}
+.lc_manual_macsearch {
+	float: left;
+}
+.lc_manual_macsearch img {
+	margin-top: 0.3em;
+	width: 1.8em;
+	height: 1.8em;
+}
+.lc_input_mtu, .lc_input_user{ width: 96%; }
+.lc_input_mtu div, .lc_input_user div{ width: 100%; }
+
+.lc_input_lcpcount, .lc_input_lcpsecond { width: 23%; margin-right: 0.2em;}
+.lc_text_lcpcycle { width: 33.2%; }
+.lc_text_lcpcycle p { text-align: right; margin-right: 0.2em;}
+.lc_text_lcpsecond { width: 10%; }
+.lc_text_lcpcount { width: 8%; }
+.lc_text_lcpcycle p, .lc_text_lcpsecond p, .lc_text_lcpcount p { line-height: 2em }
+
+.lc_apply_button { width: 90%; height: 2.5em; }
+.lc_select_datafolder { width: 85.5%; }
+.lc_select_datafolder div { width: 100%; }
+.lc_select_datafolder div div { width: 100%; }
+
+.lc_fullwidth { width: 100%; }
+
+.listview { clear: both; }
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+        display: block !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-shadow: none;
+        font-style: normal;
+        font-family: "돋움", "Arial Unicode MS";
+        color: #444;
+        font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+.listview .line_title { float: left; }
+.listview .line_title p {
+        padding-left: 0.3em;
+        line-height: 2em;
+}
+.listview .line_status { float: right; display: table; }
+.listview .line_status p { line-height: 2em; }
+.listview .line_status span { display: table-cell;      vertical-align: middle; }
+.listview .line_status img {
+        height: 1em;
+        width: 1em;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+}
+
+li a{border :0 !important;}
+
+.addrmgr { clear:both; }
+.addrmgr .title_row
+{
+	float:left;
+	margin-left: 0.2em;
+	width: 85%;
+}
+
+.addrmgr .title_row .title { clear:both; }
+.addrmgr .title_row .subtitle { clear:both; }
+.addrmgr .title_row .subtitle p { color:#AAA; }
+.addrmgr .check_row { float:right; margin-top: 0.8em; margin-right:0.5em; width: 2em;}
+.right_footer .checkedall { float:right; margin-top: 1em; width: 2.5em;}
+.right_footer .checkedall label { background-color:#F6F6F6;}
+.right_footer .submitbutton { float:right; }
+.right_footer .submitbutton input
+{
+	 width: 8em;
+	 height: 2em;
+	 float: right; 
+	 margin-top: 1em;
+	 margin-right: 1em;
+}
+
+.dhcpdetect .lc_left label { height: 3em; }
+.dhcpdetect .lc_left { width: 100%; margin-left: 1em;}
+.dhcpdetect .lc_left p { margin-left: 0; line-height: 3em;}
+/*
+.dhcpdetect .lc_middle p { color: rgb(143, 178, 36); }
+
+.autodns .lc_left{ width: 70%; }
+.autodns .lc_left .lc_manual_check
+{
+	width: 100%;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+.autodns .lc_right{ width: 30%; }
+.autodns .lc_right .submitbutton_div{ float: right; width: 10em; }	
+
+.submenu
+{
+	height: 4em;
+	background-color: #EEF1E6;
+	border: 1px solid #ccc;
+}
+.submenu p 
+{
+	margin-left: 0.5em;
+	line-height: 4em;
+}
+.submenulist .submenu_icon1
+{
+	float: left;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+.submenulist .submenu_icon1 img
+{
+	width:1.5em;
+	height:1.5em;
+}
+.submenulist .submenu_title { float:left; }
+.submenulist .submenu_title p { line-height: 3em; }
+.submenulist .submenu_icon2
+{
+	float:right;
+	margin-top: 1em; 
+	margin-right: 1em;
+}
+.manualaddr_submit
+{
+	width: 8em;
+	height: 2em;
+	float: right;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
+}
+ */

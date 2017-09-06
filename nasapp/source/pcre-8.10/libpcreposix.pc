@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/home/ysmt7621/userapps/nasapp
+exec_prefix=/home/ysmt7621/userapps/nasapp
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libpcreposix
+Description: PCREPosix - Posix compatible interface to libpcre
+Version: 8.10
+Libs: -L${libdir} -lpcreposix
+Cflags: -I${includedir} 
+Requires.private: libpcre

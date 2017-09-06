@@ -1,0 +1,160 @@
+pcre_valid_utf8.lo: pcre_valid_utf8.c config.h pcre_internal.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/ctype.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/features.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_config.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/cdefs.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/types.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/wordsize.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stddef.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/typesizes.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/pthreadtypes.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/sched.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_touplow.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include-fixed/limits.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include-fixed/syslimits.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/limits.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/posix1_lim.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/local_lim.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/linux/limits.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_local_lim.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/posix2_lim.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/stdio.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_stdio.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/wchar.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/wchar.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_mutex.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/pthread.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sched.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/time.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/time.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_clk_tck.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/signal.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/sigset.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/initspin.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/sigthread.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_pthread.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stdarg.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/stdio_lim.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/stdlib.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/types.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/endian.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/endian.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/byteswap.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/byteswap.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/byteswap-common.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/select.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/select.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/sysmacros.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/alloca.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/string.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stdint.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/stdint.h \
+ pcre.h ucp.h
+
+config.h:
+
+pcre_internal.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/ctype.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/features.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_config.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/cdefs.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/types.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/wordsize.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stddef.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/typesizes.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/pthreadtypes.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/sched.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_touplow.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include-fixed/limits.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include-fixed/syslimits.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/limits.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/posix1_lim.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/local_lim.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/linux/limits.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_local_lim.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/posix2_lim.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/stdio.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_stdio.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/wchar.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/wchar.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_mutex.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/pthread.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sched.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/time.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/time.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_clk_tck.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/signal.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/sigset.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/initspin.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/sigthread.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_pthread.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stdarg.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/stdio_lim.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/stdlib.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/types.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/endian.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/endian.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/byteswap.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/byteswap.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/byteswap-common.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/select.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/select.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/sysmacros.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/alloca.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/string.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stdint.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/stdint.h:
+
+pcre.h:
+
+ucp.h:

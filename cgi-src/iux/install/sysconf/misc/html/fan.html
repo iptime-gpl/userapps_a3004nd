@@ -1,0 +1,81 @@
+<div id="fan" class="cc_padding">
+  <form id="iux_form">
+    <div id="right_main" class="right_main"> 
+            
+      	<div class="lc_row">
+		<div class="lc_left lc_fan_left">
+			<span><img src="/common/images/point.jpg"></span>
+        		<p sid="S_FAN_CURRENTTEMPER"></p>
+		</div>
+		<div class="lc_right lc_fan_right">
+       			<p sid="D_FAN_TEMPER"></p>
+		</div>
+	</div>
+
+      	<div class="lc_row">
+		<div class="lc_left lc_fan_left">
+			<span><img src="/common/images/point.jpg"></span>
+        		<p sid="S_FAN_FANSPEED"></p>
+		</div>
+		<div class="lc_right lc_fan_right">
+            		<label for="automode_true">
+            		<input name="automode" id="automode_true" sid="C_FAN_AUTOMODE" type="radio" value="1">
+            			<p sid="S_AUTO"></p>
+            		</label>
+            		<label for="automode_false">
+            		<input name="automode" id="automode_false" sid="C_FAN_AUTOMODE" type="radio" value="0">
+            			<p sid="S_MANUAL"></p>
+            		</label>
+		</div>
+	</div>
+
+	<div id="fan_automode">
+		<div class="lc_row">
+			<div class="lc_left lc_fan_left"></div>
+          		<div class="lc_right lc_fan_right">
+				<div class="lc_input_line">
+						<input name="mintemper" sid="C_FAN_MINTEMPER" type="number" pattern="[0-9]*" min = "0" style="ime-mode:disabled;" maxlength = "3">
+					<div class="lc_fan_desc"><p sid="S_FAN_LOWER"></p></div>
+				</div>
+          		</div>
+		</div>
+		<div class="lc_row">
+			<div class="lc_left lc_fan_left"></div>
+          		<div class="lc_right lc_fan_right">
+				<div class="lc_input_line">
+						<input name="maxtemper" sid="C_FAN_MAXTEMPER" type="number" pattern="[0-9]*" min = "0" style="ime-mode:disabled;" maxlength = "3">
+					<div class="lc_fan_desc"><p sid="S_FAN_HIGHER"></p></div>
+				</div>
+          		</div>
+		</div>
+		<div class="lc_row">
+			<div class="lc_left lc_fan_left"></div>
+          		<div class="lc_right lc_fan_right">
+				<div class="lc_input_line">
+					<div class="lc_fan_desc"><p sid="C_FAN_BETWEEN"></p></div>
+				</div>
+          		</div>
+		</div>
+	</div>
+
+	<div id="fan_manualmode" class="lc_row">
+		<div class="lc_left lc_fan_left"></div>
+          	<div class="ui-alt-icon ui-nodisc-icon lc_right lc_fan_right">
+            		<select name="manualop" sid="C_FAN_MANUALOP" type="select"></select>
+          	</div>
+	</div>
+
+     </div>
+  </form>
+
+  	<div id="right_footer">
+		<div class="lc_fan_buttons">
+		<div>
+   	 	<input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+		</div><div>
+   	 	<input class="custom_css_button lc_defaultbtn" sid="S_FAN_DEFAULT" type="button" data-role="none">
+		</div>
+  		</div>
+	</div>
+
+</div>

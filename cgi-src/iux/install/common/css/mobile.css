@@ -1,0 +1,588 @@
+@charset "utf-8";
+/*common css*/
+/*----------------------------------------------*/
+/*공통*/
+/*a {-webkit-touch-callout: none !important; }*/
+
+/*
+.ui-focus, .ui-btn:focus
+{
+	-moz-box-shadow: inset 0 0 3px 		#555  , 0 0 4px 		#555  !important;
+	-webkit-box-shadow: inset 0 0 3px 	#555  , 0 0 4px 		#555  !important;
+    box-shadow: inset 0 0 3px 			#555  , 0 0 4px 		#555  !important;
+}
+.ui-input-text.ui-focus, .ui-input-search.ui-focus
+{
+	-moz-box-shadow: 0 0 6px 			#555 !important;
+    -webkit-box-shadow: 0 0 6px 		#555 !important;
+    box-shadow: 0 0 6px 				#555 !important;	
+}
+*/
+
+input[type='checkbox'], input[type='radio'] { opacity: 0; }
+
+input[type=checkbox]+ label:before {
+	background-color: #FFF !important;
+	opacity: !important;
+}
+
+input[type=checkbox]:checked + label:before {
+	background-color: #FFF !important;
+	opacity: !important;
+}
+
+input[type=checkbox]:disabled+ label:before {
+	background-color: #FFF !important;
+	opacity: !important;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input[type='number'], input[type='text'] {
+	opacity: 1 !important;
+}
+
+input[type='text']:disabled, input[type='text'][disabled="disabled"],
+input[type='number']:disabled, input[type='number'][disabled="disabled"] {
+	-webkit-text-fill-color: #262626;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.ui-focus, .ui-btn:focus
+{
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.ui-input-text.ui-focus, .ui-input-search.ui-focus
+{
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.ui-page{
+	background-color: #F8F8F5 !important;
+}
+p, em, input {
+	display: block;
+	/*text-overflow: ellipsis;*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-shadow: none;
+	/*font-size: 10px;*/
+	font-style: normal;
+	font-weight: normal;
+	font-family: "나눔고딕", "Arial Unicode MS";
+	color: #444;
+}
+
+a {
+	text-decoration: none;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, button {
+	margin: 0px;
+	padding: 0px;
+	-webkit-overflow-scrolling: touch;
+	-webkit-appearance: none;
+}
+img, fieldset {
+	border: none;
+}
+li {
+	list-style: none;
+}
+input, select, button, select {
+	vertical-align: middle;
+}
+h1, h2, h3, h4, h5, h6 {
+	/*font-size: 100%;*/
+	font-weight: normal;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+label p{margin-left: 0.2em;}
+/*------------------------------------- 패널관련 css -------------------------------------*/
+/*패널메뉴의 길이*/
+.ui-panel { width: 25em; }
+.ui-panel-animate.ui-panel-position-right.ui-panel-display-overlay{
+	transform: translate3d(25em, 0px, 0px); 
+	-webkit-transform: translate3d(25em, 0px, 0px);
+	-moz-transform: translate3d(25em, 0px, 0px);
+}
+.ui-panel-dismiss-open.ui-panel-dismiss-position-right{right: 25em;}
+.ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay{
+	transform: translate3d(-25em, 0px, 0px); 
+	-webkit-transform: translate3d(-25em, 0px, 0px);
+	-moz-transform: translate3d(-25em, 0px, 0px);
+}
+.ui-panel-dismiss-open.ui-panel-dismiss-position-left{left: 25em;}
+/*----------------------------------------------------------------------------------------*/
+
+@media (max-width:360px) {html {font-size: 10px;}}
+@media (min-width:361px) and (max-width:399px) {html {font-size: 11px;}}
+@media (min-width:400px) and (max-width:439px) {html {font-size: 12px;}}
+@media (min-width:440px) and (max-width:479px) {html {font-size: 13px;}}
+@media (min-width:480px) and (max-width:519px) {html {font-size: 14px;}}
+@media (min-width:520px) and (max-width:559px) {html {font-size: 15px;}}
+@media (min-width:560px) and (max-width:599px) {html {font-size: 16px;}}
+@media (min-width:600px) and (max-width:639px) {html {font-size: 17px;}}
+@media (min-width:640px) and (max-width:679px) {html {font-size: 18px;}}
+@media (min-width:680px) and (max-width:719px) {html {font-size: 19px;}}
+@media (min-width:720px) and (max-width:759px) {html {font-size: 20px;}}
+@media (min-width:760px) and (max-width:799px) {html {font-size: 21px;}}
+@media (min-width:800px) and (max-width:839px) {html {font-size: 22px;}}
+@media (min-width:840px) and (max-width:879px) {html {font-size: 23px;}}
+@media (min-width:880px) and (max-width:919px) {html {font-size: 24px;}}
+@media (min-width:920px) and (max-width:959px) {html {font-size: 25px;}}
+@media (min-width:960px) and (max-width:999px) {html {font-size: 26px;}}
+@media (min-width:1000px) and (max-width:1039px) {html {font-size: 27px;}}
+@media (min-width:1040px) and (max-width:1079px) {html {font-size: 28px;}}
+@media (min-width:1080px) {html {font-size:29px;}}
+/*비활성화시 투명도*/
+.ui-state-disabled{ opacity: 0.6 !important; background-color: #F7F7F7 !important;}
+.ui-checkbox input{	width: 18px; height: 18px; }
+/*헤더*/
+#header {
+	height: 4.9em;
+	background-color: #DADFCB;
+}
+/*헤더 아이콘*/
+#header .cc_icon {
+	float: left;
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+	padding-right:0.5em;
+}
+
+#header .cc_iconbar
+{
+	float: left;
+	height: 1.5em;
+	margin-top: 0.35em;
+	/*margin-left: 1.5em;*/
+	width: 2px;
+	background-color: rgb(160, 160, 160);
+}
+
+/*헤더 타이틀 (페이지 이름)*/
+#header .PAGE_TITLE p {
+	margin-left: 0.5em;
+	line-height: 1.5em;
+}
+#header .PAGE_TITLE select{
+	float:right;
+	margin-right:0.5em;
+	display:none;
+}
+#header .cc_leftheader_div{width:45%; float:left; display:inline-block; vertical-align:top;}
+#header .cc_rightheader_div{width:55%; float:right; display:inline-block; vertical-align:top; overflow:hidden; padding:0; margin:0;}
+#header #icon_model img {
+	margin: 0.5em 0 0.2em 0.6em;
+	height: 2em;
+}
+#header #logo {
+	float: right;
+	padding-right:0.7em;
+	padding-top:0.5em;
+}
+#header #logo img {
+	width: 5.5em;
+	padding-right:0.2em;
+	display:inline-block;
+	vertical-align:middle;
+}
+#header #logo p{
+	display:inline-block !important;
+	font-weight:700 !important;
+	vertical-align:middle !important;
+}
+/*헤더 아이콘 이미지 크기*/
+#header .cc_icon img { height: 1.5em; width:1.5em; padding-left: 0.75em; padding-right:0.75em;}
+
+/*컨텐츠*/
+#content {
+	background-color: #D7DFC4;
+	padding: 0px;
+}
+
+/*----------------------------------------------*/
+/*풋터*/
+#footer {
+	height: 2.5em;
+	background-color: #C4C6BF;
+	clear:both;
+}
+#footer #footer_content {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#footer #version {
+	float: left;
+}
+#footer #version p {
+	text-shadow: none;
+	margin-top: 0.5em;
+}
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/*컨트롤로 요소 커스텀 디자인*/
+/*모서리 둥굴게 처리 헤제*/
+.ui-corner-all, .ui-btn.ui-corner-all {
+	border-radius: 0;
+}
+/*UI 쉐도우 효과 해제*/
+.ui-shadow {
+	box-shadow: none;
+}
+/*input textbox*/
+/*포커스상태*/
+.ui-page-theme-a .ui-focus {
+	box-shadow: none;
+	border-color: #999;
+}
+/*일반상태*/
+.ui-shadow-inset {
+	box-shadow: none;
+	border-color: #CCC !important;
+}
+/*힌트메세지 색상*/
+.placeholdersjs {
+	color: #ccc !important;
+}
+/*----------------------------------------------*/
+/*button (data-role="none" 옵션필요) */
+.custom_css_button {
+	background-color: #8daf25;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+/*----------------------------------------------*/
+/*panel*/
+/*panel 공통*/
+/*panel 여백*/
+.ui-panel-inner {
+	padding: 0px;
+}
+/*-----------------right_panel------------------*/
+/*right_panel은 제목만 공통적인 요소다.*/
+/*따라서 여기에는 제목스타일만 정의한다.*/
+#right_panel {
+	background-color: #F6F6F6;
+	border: 1px solid #CCC;
+}
+#right_panel img {
+	height: 1em;
+	width: 1em;
+}
+#right_panel p {
+	display: block;
+	text-overflow: clip;
+	overflow: inherit;
+	white-space: normal;
+	text-shadow: none;
+	/*font-size: 0.7em;*/
+}
+#right_panel #right_header {
+	background-color: #EEF1E6;
+	border: none;
+	height: 3em;
+}
+
+#right_panel #right_marginer{
+	width:100%;
+	height:3em;
+}
+
+#right_panel #icon_title_run, #right_panel .SUBTITLE {
+	float: left;
+	margin-top: 1em;
+	padding-left:0.3em;
+}
+#right_panel_dismiss {
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1000;
+	position: fixed;
+	display: none;
+}
+//#right_panel label { background-color: inherit; }
+#popup_title_exit, #left_title_exit, #right_title_exit { float:right; padding-right:2em; padding-top:1em; cursor: pointer;}
+#popup_title_exit img, #left_title_exit img { max-width :1em;}
+/*---------------------------------------------------*/
+/*-----------------control object css------------------*/
+.ui-mobile label{font-size: inherit;}
+
+.ui-radio {
+	float: left;
+	/*width: 100%;*/
+	margin: 0;
+	margin-left: -0.6em;
+}
+.ui-input-text{
+	margin: 0;
+}
+.ui-radio label, .ui-checkbox label{
+	border: none;
+}
+
+.ui-radio .ui-btn.ui-radio-on::after {
+	border-color: #9BC369;
+	background-color: #425924;
+}
+.ui-checkbox {margin: 0px; }
+.ui-checkbox .ui-btn{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	height: 1em;
+}
+.ui-page-theme-a .ui-checkbox-on::after {
+	background-color: #9BC369;
+	background-size:contain;
+}
+.ui-select {margin : 0px;}
+.ui-select span {
+	color: #444;
+	text-shadow: none;
+	/*font-size: 0.7em;*/
+	font-weight: normal;
+}
+.ui-select .ui-btn {
+	background-color: #FFF !important;
+	border-color: #CCC;
+	height: 0.7em;
+	padding-left : 0.4em;
+}
+.ui-select .ui-btn-icon-right {	padding-right: 1.5em; }
+.ui-select .ui-btn-icon-right span { margin-top: -0.25em; }
+.ui-page-theme-a .ui-body-inherit{height: 2.1em;}
+/*loading*/
+.loading img {
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.cc_tail_text {
+	float:left;
+	line-height: 3em;
+}
+.cc_tail_text p {
+	margin-left: 0.25em;
+}
+.ui-listview > li p{margin:0.3em;}
+.ui-page-active{overflow:hidden !important;}
+.cc_padding{padding: 0.5em;}
+.ui-nodisc-icon .ui-btn::after {width: 0.5em !important;}
+.incompletion{background-color: #DDD !important;}
+
+/*popup*/
+.stylepopup { min-width: 25em; }
+.stylepopup .titlebar { background-color: #F5F5F5; }
+.stylepopup .titlebar p
+{
+	line-height: 3em;
+	margin-left: 1em;
+}
+/*listpopup*/
+.stylepopup .titlebar_listpop
+{
+	background-color: #8DAF25;
+	overflow: auto;
+}
+.stylepopup .titlebar_listpop .title
+{
+	overflow: auto;
+	float: left;
+}
+.stylepopup .titlebar_listpop .title p
+{
+   line-height: 3em;
+   margin-left: 1em;
+   min-width: 22em;
+}
+.stylepopup .titlebar_listpop .exit
+{
+	background-color: #8DAF25;
+	overflow:hidden;
+}
+/*listpopup*/
+
+.stylepopup hr
+{
+	height: 0.1em;
+	margin: 0;
+	background-color: #8DBA55;
+}
+.stylepopup p
+{
+	white-space: inherit;
+}
+.stylepopup .content_field {
+	background-color: #F5F5F5;
+	padding: 1em;
+	overflow: auto;
+}
+.stylepopup .content_field img
+{
+	width: 2em;
+	height: 2em;
+}
+.stylepopup .button_field
+{
+	 overflow:auto;
+	 background-color: #F5F5F5;
+	 padding: 1em;
+	 padding-top: 0;
+}
+.stylepopup .button_field .confirm_yes
+{
+	 float: left;
+	 width: 47%;
+	 margin-right: 0.8em;
+}
+.stylepopup .button_field .confirm_yes input
+{
+	 width: 100%;
+	 border: 1px solid #ccc;
+	 cursor: pointer;
+	 height: 2.5em;
+	 background-color: #8DBA55;
+}
+
+.stylepopup .button_field .confirm_no { float: left; width: 48%; }
+.stylepopup .button_field .confirm_no input
+{
+	 width: 100%;
+	 border: 1px solid #ccc;
+	 cursor: pointer;
+	 height: 2.5em;
+	 background-color: #8DBA55; 
+}
+.stylepopup .button_field .alert { float: left; width: 100%; }
+.stylepopup .button_field .alert input
+{
+	 width: 100%;
+	 border: 1px solid #ccc;
+	 cursor: pointer;
+	 height: 2.5em;
+	 background-color: #8DBA55; 
+}
+
+/*flip switch*/
+.ui-slider span
+{
+	font-size: inherit;
+}
+.ui-slider-track .ui-btn.ui-slider-handle {
+	width: 2.4em;
+	height: 2.3em;
+	margin: 0;
+	padding: 0;
+	margin-top: 0.04em;
+	background-color: #8DAF25;
+	font-size: inherit;
+}	
+.ui-slider{
+	height: 2.5em !important;
+	/*width: 6em !important;*/
+	margin: 0px !important;
+	padding: 0px !important;
+	border-radius: 5em !important;
+	background-color: inherit !important;
+}
+.ui-slider span
+{
+	line-height: 1.3em !important;
+	height: 1.3em;
+	background-color: #FFFFFF;
+	font-weight: normal !important;
+	font-size: 1em !important;
+	line-height: 2.5em !important;
+}
+.ui-page-theme-a .ui-slider-track .ui-btn-active {
+	border: 0 !important;
+	text-shadow: inherit !important;
+	color: #000000 !important;
+	background-color: #FFFFFF;
+}
+.ui-slider-inneroffset 
+{
+	margin: 0;
+	margin-left: 0.1em;
+	margin-right: 2.6em;
+}
+.flipswitch
+{
+	float: right;
+	overflow:hidden;
+	margin-right: 1em;
+}
+
+#blind_div
+{
+	background-color : black;
+	position : absolute;
+	z-index : 998;
+	top: 0px;
+	opacity : 0.1;
+}
+
+#taphold_popup { min-width : 17em; max-width : 26em; height : auto; background-color : white; font-size : 17px;}
+#taphold_popup p { float : left; color : #8DAF25; overflow : hidden; }
+#taphold_popup div { border-style : solid; overflow : hidden; padding : 0.75em;}
+#taphold_popup .popup_titlebar {border-width : 0px 0px 0.2em 0px; border-color : #8DAF25;}
+#taphold_popup .popup_list_div {border-width : 0px 0px 0.1em 0px; border-color : darkgray;}
+#taphold_popup .popup_list_div:last-child { border-bottom : 0; }
+
+#lc_qosrule_div .lc_rules_div,
+#lc_qosrule_div .lc_rules2_div { overflow:hidden;}
+#lc_qosrule_div .lc_rules2_div { height:2.24em;}
+
+/*Android bug clear*/
+#right_panel.ui-panel-closed,
+#left_panel.ui-panel-closed{
+	left: auto !important;
+}
+
+.ui-popup-hidden{
+	filter:alpha(opacity=0);
+	opacity:0;
+}
+
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.animation_blink {
+    -webkit-animation-name: _animation_blink; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: _animation_blink;
+    animation-duration: 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes _animation_blink {
+    33%  {background-color:#D5E199;}
+}
+
+/* Standard syntax */
+@keyframes _animation_blink {
+    33%  {background-color:#D5E199;}
+}
+

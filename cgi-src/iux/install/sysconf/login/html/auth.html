@@ -1,0 +1,68 @@
+<div id="auth" class="cc_padding">
+	<form id="local_auth_form">
+		<div class="lc_row_r">
+			<div class="lc_left_r">
+				<div class="auth_radio_run">
+					<input name="http_auth" id="httpauth_false" sid="C_LOGIN_HTTPAUTH" type="radio" value="0">
+					<label for="httpauth_false"><p sid="S_LOGIN_BASIC_HTTPAUTH"></p></label>
+				</div>
+			</div>
+			<div class="lc_right_r"><p style="line-height: 2.5em; margin-left: 0.5em;" sid="S_LOGIN_BASICDESC"></p></div>
+		</div>
+		<div class="lc_row_r">
+			<div class="lc_left_r">
+				<div class="auth_radio_run">
+					<input name="http_auth" id="httpauth_true" sid="C_LOGIN_HTTPAUTH" type="radio" value="1">
+					<label for="httpauth_true"><p sid="S_LOGIN_SESSION_HTTPAUTH"></p></label>
+				</div>
+			</div>
+			<div class="lc_right_r">
+				<div style="float: left; width: 2.5em; margin-left: 0.5em;">
+					<input name="http_session_timeout" sid="C_LOGIN_TIMEOUT" type="number" pattern="[0-9]*" min = "1">
+				</div>
+				<div style="float: left; width: 12em;"><p style="line-height: 2em; margin-left: 0.5em;" sid="S_LOGIN_TIMEOUTDESC"></p></div>
+			</div>
+		</div>
+		<div class="lc_row_r captcha_option">
+			<div class="subtr_left">
+				<p></p>
+			</div>
+			<div class="subtr_right">
+				<p sid="S_CAPTCHA_DESC2"></p>
+				<div class = "ui-alt-icon ui-nodisc-icon captcha_type">
+					<select type="select" name="usecaptcha" sid="C_LOGIN_USECAPTCHA">
+						<option sid="S_USE_CAPTCHA_OFF" value="0"></option>
+						<option sid="S_USE_CAPTCHA_ALWAYS" value="1"></option>
+						<option sid="S_USE_CAPTCHA_MANUAL" value="2"></option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="lc_row_r captcha_option">
+			<div class="subtr_left">
+				<p></p>
+			</div>
+			<div class="subtr_right">
+				<div id="captcha_manual_option">
+					<div class="captcha_attempt">
+						<input type="number" name="attempt" sid="C_LOGIN_ATTEMPT" pattern="[0-9]*" min = "0">
+					</div>
+					<p sid="S_CAPTCHA_DESC"></p>
+				</div>
+			</div>
+		</div>
+		<div class="lc_row_r captcha_option">
+			<div class="captcha_desc" id="captcha_option_warning">
+				<p sid="S_CAPTCHA_DESC3"></p>
+				<p sid="S_CAPTCHA_DESC4"></p>
+			</div>
+		</div>
+	</form>
+	<div id="right_footer" class="right_footer">
+		<div>
+			<button class="lc_button" type="button" sid="LOGIN_SUBMIT" data-role="none">
+				<span sid="S_BUTTON_SUBMIT"></span>
+			</button>
+		</div>
+	</div>
+</div>

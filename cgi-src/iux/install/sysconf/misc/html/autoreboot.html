@@ -1,0 +1,80 @@
+<div id="autoreboot" class="cc_padding">
+  	<div id="right_main" class="right_main">
+    		<form id="iux_form">
+      			<div class="lc_row">
+            			<label for="run_true">
+            			<input name="run" id="run_true" sid="C_AUTOREBOOT_RUN" type="radio" value="1">
+            				<p sid="S_START"></p>
+            			</label>
+            			<label for="run_false">
+            			<input name="run" id="run_false" sid="C_AUTOREBOOT_RUN" type="radio" value="0">
+            				<p sid="S_STOP"></p>
+            			</label>
+      			</div>
+      			<div class="lc_row lc_autoreboot_line">
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day lc_autoreboot_every">
+					<input name="everyday" id="everyday" type="checkbox" value="1" sid="C_AUTOREBOOT_EVERYDAY">
+					<label for="everyday">
+					<p sid="S_AUTOREBOOT_EVERY" class="lc_day_str"></p>
+					</label>
+				</div>
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day">
+					<input name="days0" id="days0" type="checkbox" value="1" sid="C_AUTOREBOOT_DAYS0">
+					<label for="days0">
+					<p sid="S_AUTOREBOOT_SUN" class="lc_day_str"></p>
+					</label>
+				</div>
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day">
+					<input name="days1" id="days1" type="checkbox" value="1" sid="C_AUTOREBOOT_DAYS1">
+					<label for="days1">
+					<p sid="S_AUTOREBOOT_MON" class="lc_day_str"></p>
+					</label>
+				</div>
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day">
+					<input name="days2" id="days2" type="checkbox" value="1" sid="C_AUTOREBOOT_DAYS2">
+					<label for="days2">
+					<p sid="S_AUTOREBOOT_TUE" class="lc_day_str"></p>
+					</label>
+				</div>
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day">
+					<input name="days3" id="days3" type="checkbox" value="1" sid="C_AUTOREBOOT_DAYS3">
+					<label for="days3">
+					<p sid="S_AUTOREBOOT_WED" class="lc_day_str"></p>
+					</label>
+				</div>
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day">
+					<input name="days4" id="days4" type="checkbox" value="1" sid="C_AUTOREBOOT_DAYS4">
+					<label for="days4">
+					<p sid="S_AUTOREBOOT_THU" class="lc_day_str"></p>
+					</label>
+				</div>
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day">
+					<input name="days5" id="days5" type="checkbox" value="1" sid="C_AUTOREBOOT_DAYS5">
+					<label for="days5">
+					<p sid="S_AUTOREBOOT_FRI" class="lc_day_str"></p>
+					</label>
+				</div>
+				<div class="default_checkbox ui-alt-icon lc_autoreboot_day">
+					<input name="days6" id="days6" type="checkbox" value="1" sid="C_AUTOREBOOT_DAYS6">
+					<label for="days6">
+					<p sid="S_AUTOREBOOT_SAT" class="lc_day_str"></p>
+					</label>
+				</div>
+      			</div>
+      			<div class="lc_row lc_autoreboot_line">
+				<div class="lc_timesel ui-alt-icon ui-nodisc-icon">
+					<select name="hour" sid="C_AUTOREBOOT_HOUR" type="select"></select>
+				</div>
+            			<p class="lc_betweentext" sid="S_AUTOREBOOT_TEXT1"></p>
+				<div class="lc_timesel ui-alt-icon ui-nodisc-icon">
+					<select name="min" sid="C_AUTOREBOOT_MIN" type="select"></select>
+				</div>
+            			<p class="lc_betweentext lc_lasttext" sid="S_AUTOREBOOT_TEXT2"></p>
+				</div>
+      			</div>
+    		</form>
+  	</div>
+  	<div id="right_footer">
+    		<input class="custom_css_button lc_autoreboot_rightmargin" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+  	</div>
+</div>

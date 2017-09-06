@@ -1,0 +1,202 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:585: checking host system type
+configure:606: checking target system type
+configure:624: checking build system type
+configure:663: checking for a BSD compatible install
+configure:716: checking whether build environment is sane
+configure:773: checking whether make sets ${MAKE}
+configure:819: checking for working aclocal
+configure:832: checking for working autoconf
+configure:845: checking for working automake
+configure:858: checking for working autoheader
+configure:871: checking for working makeinfo
+configure:894: checking for gcc
+configure:971: checking whether the C compiler (gcc  ) works
+configure:985: gcc -o conftest    conftest.c  1>&5
+configure:1005: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:1010: checking whether we are using GNU C
+configure:1019: gcc -E conftest.c
+configure:1034: checking whether gcc accepts -g
+configure:1065: checking for ar
+configure:1096: checking for ranlib
+configure:1135: checking for ld used by GCC
+configure:1192: checking if the linker (/usr/bin/ld) is GNU ld
+GNU ld version 2.10.91 (with BFD 2.10.91.0.2)
+configure:1208: checking for BSD-compatible nm
+configure:1245: checking whether ln -s works
+configure:1355: checking whether to include shadow password support
+configure:1377: checking for gethostbyname in -lnsl
+configure:1396: gcc -o conftest -g -O2   conftest.c -lnsl   1>&5
+configure:1424: checking for socket in -lsocket
+configure:1443: gcc -o conftest -g -O2   conftest.c -lsocket  -lnsl  1>&5
+/usr/bin/ld: cannot find -lsocket
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 1432 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char socket();
+
+int main() {
+socket()
+; return 0; }
+configure:1556: checking for crypt in -lcrypt
+configure:1575: gcc -o conftest -g -O2   conftest.c -lcrypt  -lnsl  1>&5
+configure:1608: checking for dirent.h that defines DIR
+configure:1621: gcc -c -g -O2  conftest.c 1>&5
+configure:1646: checking for opendir in -ldir
+configure:1665: gcc -o conftest -g -O2   conftest.c -ldir  -lcrypt -lnsl  1>&5
+/usr/bin/ld: cannot find -ldir
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 1654 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char opendir();
+
+int main() {
+opendir()
+; return 0; }
+configure:1729: checking how to run the C preprocessor
+configure:1750: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1790: checking for ANSI C header files
+configure:1803: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1870: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:1897: checking for crypt.h
+configure:1907: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1897: checking for signal.h
+configure:1907: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1897: checking for sys/signal.h
+configure:1907: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1897: checking for sys/stat.h
+configure:1907: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1937: checking for fcntl.h
+configure:1947: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1937: checking for sys/fcntl.h
+configure:1947: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1977: checking for sys/utsname.h
+configure:1987: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1977: checking for getopt.h
+configure:1987: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1977: checking for unistd.h
+configure:1987: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2017: checking for sys/file.h
+configure:2027: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2017: checking for termios.h
+configure:2027: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2017: checking for sys/ioctl.h
+configure:2027: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2092: checking for working const
+configure:2146: gcc -c -g -O2  conftest.c 1>&5
+configure:2167: checking for off_t
+configure:2200: checking for size_t
+configure:2233: checking whether time.h and sys/time.h may both be included
+configure:2247: gcc -c -g -O2  conftest.c 1>&5
+configure:2268: checking whether struct tm is in sys/time.h or time.h
+configure:2281: gcc -c -g -O2  conftest.c 1>&5
+configure:2304: checking whether gcc needs -traditional
+configure:2350: checking for 8-bit clean memcmp
+configure:2368: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2386: checking whether setvbuf arguments are reversed
+configure:2408: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure: In function `main':
+configure:2401: warning: passing arg 2 of `setvbuf' makes pointer from integer without a cast
+configure:2401: warning: passing arg 3 of `setvbuf' makes integer from pointer without a cast
+configure: failed program was:
+#line 2394 "configure"
+#include "confdefs.h"
+#include <stdio.h>
+/* If setvbuf has the reversed format, exit 0. */
+main () {
+  /* This call has the arguments reversed.
+     A reversed system may check and see that the address of main
+     is not _IOLBF, _IONBF, or _IOFBF, and return nonzero.  */
+  if (setvbuf(stdout, _IOLBF, (char *) main, BUFSIZ) != 0)
+    exit(1);
+  putc('\r', stdout);
+  exit(0);			/* Non-reversed systems segv here.  */
+}
+configure:2432: checking return type of signal handlers
+configure:2454: gcc -c -g -O2  conftest.c 1>&5
+configure:2473: checking for strftime
+configure:2501: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2571: checking for strdup
+configure:2599: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2571: checking for strerror
+configure:2599: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2571: checking for strcasecmp
+configure:2599: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2628: checking for flock
+configure:2656: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2628: checking for fcntl
+configure:2656: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2628: checking for uname
+configure:2656: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2628: checking for gethostname
+configure:2656: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2628: checking for sysinfo
+configure:2656: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2628: checking for getdomainname
+configure:2656: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2683: checking for stricmp
+configure:2711: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+/tmp/cc8o2qYA.o: In function `main':
+/home/ken/userapps/ppp-2.4.2/pppd/plugins/radius/radiusclient/configure:2705: undefined reference to `stricmp'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 2688 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char stricmp(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char stricmp();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_stricmp) || defined (__stub___stricmp)
+choke me
+#else
+stricmp();
+#endif
+
+; return 0; }
+configure:2683: checking for random
+configure:2711: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2683: checking for rand
+configure:2711: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2683: checking for snprintf
+configure:2711: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2683: checking for vsnprintf
+configure:2711: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure:2739: checking for field domainname in struct utsname
+configure:2756: gcc -o conftest -g -O2   conftest.c -lcrypt -lnsl  1>&5
+configure: In function `main':
+configure:2751: structure has no member named `domainname'
+configure: failed program was:
+#line 2744 "configure"
+#include "confdefs.h"
+
+	#include <sys/utsname.h>
+	
+	main(int argc, char **argv)
+	{
+		struct utsname uts;
+		uts.domainname[0] = '\0';
+	}
+	
+configure:2776: checking for /dev/urandom
+configure:2806: checking which syslog facility to use
+configure:2824: checking whether to include Livingston's RADIUS server 1.16 kludge
+configure:2849: checking whether to add service type hints derived from username prefix

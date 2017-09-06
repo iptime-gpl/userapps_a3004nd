@@ -1,0 +1,49 @@
+ap/ap_cfg.c:#ifdef EFM_MISC_PATCH
+ap/ap_cfg.c:#ifdef EFM_MISC_PATCH
+ap/ap_cfg.c:#ifdef EFM_MISC_PATCH
+ap/ap_data.c:#ifdef EFM_MISC_PATCH
+common/cmm_profile.c:#ifdef EFM_MISC_PATCH
+common/cmm_profile.c:#ifdef EFM_MISC_PATCH
+	common/cmm_mac_pci.c:#ifndef EFM_MISC_PATCH_XXX
+	common/cmm_mac_pci.c:#ifndef EFM_MISC_PATCH_XXX
+	common/cmm_mac_pci.c:#ifndef EFM_MISC_PATCH_XXX
+common/igmp_snoop.c:#ifdef EFM_MISC_PATCH
+common/wsc.c:#ifdef EFM_MISC_PATCH
+
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+common/cmm_info.c:#ifndef EFM_MISC_PATCH
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+common/cmm_info.c:#ifndef EFM_MISC_PATCH
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+common/cmm_info.c:#ifdef EFM_MISC_PATCH
+
+common/rt_led.c:#ifdef EFM_MISC_PATCH
+common/rt_led.c:#ifdef EFM_MISC_PATCH
+
+common/cmm_cfg.c:#ifdef EFM_MISC_PATCH
+include/rt_os_net.h:#ifdef EFM_MISC_PATCH
+include/chip/mt76x0.h:#ifdef EFM_MISC_PATCH
+include/rtmp.h:#ifdef EFM_MISC_PATCH
+include/igmp_snoop.h:#ifdef EFM_MISC_PATCH
+
+include/rtmp_cmd.h:#ifdef EFM_MISC_PATCH
+
+include/os/rt_os.h:#ifdef EFM_MISC_PATCH
+include/os/rt_os.h:#ifdef EFM_MISC_PATCH
+
+Makefile:EXTRA_CFLAGS += -DEFM_MISC_PATCH=1 -DUSE_MAC_TRY_TABLE=1
+
+os/linux/pci_main_dev.c:#ifdef EFM_MISC_PATCH
+os/linux/pci_main_dev.c:#ifdef EFM_MISC_PATCH
+os/linux/pci_main_dev.c:#ifdef EFM_MISC_PATCH	
+
+os/linux/ap_ioctl.c:#ifdef EFM_MISC_PATCH
+os/linux/ap_ioctl.c:#ifdef EFM_MISC_PATCH
+os/linux/ap_ioctl.c:#ifdef EFM_MISC_PATCH
+os/linux/ap_ioctl.c:#ifdef EFM_MISC_PATCH
+os/linux/ap_ioctl.c:#ifdef EFM_MISC_PATCH
+os/linux/ap_ioctl.c:#ifdef EFM_MISC_PATCH

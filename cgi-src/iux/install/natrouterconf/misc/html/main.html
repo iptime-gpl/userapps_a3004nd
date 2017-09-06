@@ -1,0 +1,88 @@
+<div id="header" class="header" data-role="header" data-position="fixed"></div>
+
+<div id="content" class="content">
+  	<div id="maincontent">
+  		<ul sid="MAINLISTVIEW" id="listview" class="listview" data-role="listview">
+
+      		<li id="dmztwinip"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_DMZTWINIP_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+					<p sid = "D_DMZTWINIP_STATUS"></p>
+            			</div>
+            			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+				<p sid="DMZTWINIP_VALUE"></p>
+        		</div>
+        	</a> </li>
+
+      		<li id="ftp"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_FTP_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+					<p sid = "S_MENU_STATE"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid = "FTP_VALUE"></p>
+        		</div>
+        	</a></li>
+		<li id = "natonoff"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_NATONOFF_TITLE"></p>
+				</div>
+				<div class="line_value">
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="natonoff_id"></label>
+                                <select sid="C_NATONOFF_RUN" name="run" id="natonoff_id" data-role="slider" type="slider">
+                                        <option value="0">Off</option>
+                                        <option value="1">On</option>
+                                </select>
+			</div>
+        	</li>
+
+		<li id = "pppoe"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_PPPOE_TITLE"></p>
+				</div>
+				<div class="line_value">
+					<p sid="S_PPPOE_DESC"></p>
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="pppoe_id"></label>
+                                <select sid="C_PPPOE_RUN" name="run" id="pppoe_id" data-role="slider" type="slider">
+                                        <option value="0">Off</option>
+                                        <option value="1">On</option>
+                                </select>
+			</div>
+        	</li>
+		<li id = "upnprelay"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_UPNPRELAY_TITLE"></p>
+				</div>
+				<div class="line_value">
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="upnprelay_id"></label>
+                                <select sid="C_UPNPRELAY_RUN" name="run" id="upnprelay_id" data-role="slider" type="slider">
+                                        <option value="0">Off</option>
+                                        <option value="1">On</option>
+                                </select>
+			</div>
+        	</li>
+		</ul>
+	</div>
+</div>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

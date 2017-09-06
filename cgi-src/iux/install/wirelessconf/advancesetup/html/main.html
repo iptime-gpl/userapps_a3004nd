@@ -1,0 +1,136 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content">
+	<div id="maincontent">
+	<form id="iux_form">
+		<div class="lc_bottomborder_div">
+			<div class="lc_mainline_left">
+				<img sid="ADVANCESETUP_IMG" src="images/wifi_unlock.png">
+				<span sid="ADVANCESETUP_SSID"></span>
+			</div>
+			<div class="lc_mainline_right">
+				<span sid="ADVANCESETUP_STATUS"></span>
+			</div>
+		</div>
+		<div class="lc_whitebox_div">
+			<div class="lc_subline_left">
+				<p sid="S_MODE_STRING"></p>
+			</div>
+			<div class="lc_subline_center">
+				<div class="ui-alt-icon ui-nodisc-icon lc_wrap_select">
+					<select type="select" sid="C_ADVANCESETUP_MODE" name="mode"></select>
+				</div>
+			</div>
+			<div class="lc_subline_right">
+			</div>
+		</div>
+		<div class="lc_greenbox_div" sid="MBRIDGE_FIELD">
+			<div class="lc_subline_left">
+				<p sid="S_SSID_STRING"></p>
+			</div>
+			<div class="lc_subline_center">
+				<div class="lc_wrap_textbox">
+					<input type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" name="ssid" sid="C_ADVANCESETUP_SSID" maxlength="32">
+				</div>
+			</div>
+			<div class="lc_subline_right">
+				<div class="lc_usual_button">
+					<button sid="L_SEARCH_BTN" type="button" class="custom_css_button" data-role="none">
+						<img src="images/wifi_unlock.png">
+						<span sid="S_APSELECT_STRING"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="lc_greenbox_div" sid="WDS_FIELD">
+			<div class="lc_subline_left">
+				<p sid="S_SSID_STRING"></p>
+			</div>
+			<div class="lc_subline_center">
+				<div class="lc_wrap_textbox">
+					<input type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" name="wdsssid" sid="C_ADVANCESETUP_WDSSSID" maxlength="32">
+				</div>
+			</div>
+			<div class="lc_subline_right">
+				<div class="lc_usual_button">
+					<button sid="L_SEARCH_BTN" type="button" class="custom_css_button" data-role="none">
+						<img src="images/wifi_unlock.png">
+						<span sid="S_APSELECT_STRING"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="lc_whitebox_div" sid="MBRIDGE_FIELD">
+			<div class="lc_subline_left">
+				<p sid="S_AUTH_STRING"></p>
+			</div>
+			<div class="lc_subline_center">
+				<div class="ui-alt-icon ui-nodisc-icon lc_wrap_select">
+					<select type="select" sid="C_ADVANCESETUP_PERSONALLIST" name="personallist"></select>
+				</div>
+			</div>
+			<div class="lc_subline_right">
+			</div>
+		</div>
+		<div class="lc_greenbox_div" sid="PASSWORD_FIELD">
+			<div class="lc_subline_left">
+				<p sid="S_PASSWORD_STRING"></p>
+			</div>
+			<div class="lc_subline_center">
+				<div class="lc_wrap_textbox">
+					<input type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" name="password" sid="C_ADVANCESETUP_PASSWORD" maxlength="64">
+				</div>
+			</div>
+			<div class="lc_subline_right">
+				<div class="lc_netpasscheckbox ui-alt-icon">
+					<input id="_secret" value="1" type="checkbox" sid="L_ADVANCESETUP_PASSVIEW">
+					<label for="_secret"><p sid="S_PASSWORDVIEW_STRING"></p></label>
+				</div>
+			</div>
+		</div>
+		<div class="lc_whitebox_div" sid="WDS_FIELD">
+			<div class="lc_subline_left">
+				<p sid="S_CONNAPADDR_STRING"></p>
+			</div>
+			<div class="lc_subline_center">
+				<div sid="C_ADVANCESETUP_MAC" class="lc_wrap_macbox mac">
+				  	<div class="lc_mac_box"><input sid="VALUE0" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+					<div class="lc_hyphen"><span>-</span></div>
+				  	<div class="lc_mac_box"><input sid="VALUE1" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+					<div class="lc_hyphen"><span>-</span></div>
+					<div class="lc_mac_box"><input sid="VALUE2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+					<div class="lc_hyphen"><span>-</span></div>
+				  	<div class="lc_mac_box"><input sid="VALUE3" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+					<div class="lc_hyphen"><span>-</span></div>
+				  	<div class="lc_mac_box"><input sid="VALUE4" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+					<div class="lc_hyphen"><span>-</span></div>
+				  	<div class="lc_mac_box"><input sid="VALUE5" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+				</div>
+			</div>
+			<div class="lc_subline_right">
+			</div>
+		</div>
+		<div class="lc_topborder_div">
+			<div class="lc_subline_left">
+			</div>
+			<div class="lc_subline_center">
+			</div>
+			<div class="lc_subline_right">
+				<div class="lc_usual_button">
+					<button type="button" sid="S_MODIFY_BTN" class="custom_css_button" data-role="none">
+						<span sid="S_BUTTON_SUBMIT"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+	</div>
+</div>
+
+<div id="footer" data-tap-toggle="false" data-position="fixed" class="footer" data-role="footer"></div>
+<div data-role="popup" class="loading" id="loading_msg" data-overlay-theme="a" 
+	data-theme="none" data-shadow="false" data-dismissible="false" data-history="false">
+	<p align="center">
+		<img src="/common/images/loading.gif">
+	</p>
+	<p align="center" sid="L_CUSTOM_MSG1"></p><p align="center" sid="L_CUSTOM_MSG2"></p>
+</div>

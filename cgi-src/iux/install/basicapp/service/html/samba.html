@@ -1,0 +1,160 @@
+<div id="samba" class="cc_padding">
+  <form id="iux_form">
+    <div id="right_main" class="right_main"> 
+    <div class = "plugin_setup">
+      <!--service-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_SERVICE_TITLE"></p></div>
+        <div class="lc_right">
+          <input name="run" id="run_true" sid="C_SAMBA_RUN" type="radio" value="1">
+          <label for="run_true"><p sid="S_START"></p></label>
+          <input name="run" id="run_false" sid="C_SAMBA_RUN" type="radio" value="0">
+          <label for="run_false"><p sid="S_STOP"></p></label>
+        </div>
+      </div>
+      
+      <!--name-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_SAMBA_NAME_TITLE"></p></div>
+        <div class="lc_right">
+          <div><input name="name" sid="C_SAMBA_NAME" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled"></div>
+        </div>
+      </div>
+      
+      <!--group-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_SAMBA_GROUP_TITLE"></p></div>
+        <div class="lc_right">
+          <div>
+            <input name="group" sid="C_SAMBA_GROUP" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled"></div>
+        </div>
+      </div>
+      
+	  <hr>
+    
+	  <!--user setup title-->
+      <div class="lc_row">
+        <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_SAMBA_USERSETUP_TITLE"></p></div>
+      </div>
+      
+      <!--user setup aticle-->
+      <div class="lc_row_userarray lc_row">
+        <div class="lc_property"><p sid="S_SAMBA_USERSETUP_PROPERTY"></p></div>
+        <div class="lc_userid"><p sid="S_SAMBA_USERSETUP_USERID"></p></div>
+        <div class="lc_passwd"><p sid="S_SAMBA_USERSETUP_PASSWD"></p></div>
+        <div class="lc_passwd_visible"><p sid="S_SAMBA_USERSETUP_PASSWD_VISIBLE"></p></div>
+      </div>
+      
+      <!--userarray0-->
+      <div class="lc_row_userarray lc_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty0" sid="C_SAMBA_USERPROPERTY0" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid0" sid="C_SAMBA_USERID0" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd0" sid="C_SAMBA_PASSWD0" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible0" sid="PASSWD_VISIBLE0" type="checkbox" value="1">
+          <label for="userpw_visible0"></label></div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder0" sid="C_SAMBA_FOLDER0" type="select"></select>
+        </div>
+      </div>
+      </div>
+      
+      <!--userarray1-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty1" sid="C_SAMBA_USERPROPERTY1" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid1" sid="C_SAMBA_USERID1" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd1" sid="C_SAMBA_PASSWD1" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible1" sid="PASSWD_VISIBLE1" type="checkbox" value="1">
+          <label for="userpw_visible1"></label></div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder1" sid="C_SAMBA_FOLDER1" type="select"></select>
+        </div>
+      </div>
+      </div>
+      
+      <!--userarray2-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty2" sid="C_SAMBA_USERPROPERTY2" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid2" sid="C_SAMBA_USERID2" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd2" sid="C_SAMBA_PASSWD2" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible2" sid="PASSWD_VISIBLE2" type="checkbox" value="1">
+          <label for="userpw_visible2"></label></div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder2" sid="C_SAMBA_FOLDER2" type="select"></select>
+        </div>
+      </div>
+      </div>
+      
+      <!--userarray3-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty3" sid="C_SAMBA_USERPROPERTY3" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid3" sid="C_SAMBA_USERID3" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd3" sid="C_SAMBA_PASSWD3" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible3" sid="PASSWD_VISIBLE3" type="checkbox" value="1">
+          <label for="userpw_visible3"></label></div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder3" sid="C_SAMBA_FOLDER3" type="select"></select>
+        </div>
+      </div>
+      </div>
+      
+      <!--userarray4-->
+      <div class="lc_row_userarray lc_row lc_center_row">
+        <div class="lc_userarray_property ui-alt-icon ui-nodisc-icon">
+          <select name="userproperty4" sid="C_SAMBA_USERPROPERTY4" type="select"></select></div>
+        <div class="lc_userarray_userid">
+          <input name="userid4" sid="C_SAMBA_USERID4" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div>
+        <div class="lc_userarray_passwd">
+          <input name="passwd4" sid="C_SAMBA_PASSWD4" maxlength="32" type="password"></div>
+        <div class="lc_userarray_passwd_visible ui-alt-icon">
+          <input id="userpw_visible4" sid="PASSWD_VISIBLE4" type="checkbox" value="1">
+          <label for="userpw_visible4"></label></div>
+      <div class="lc_row_userarray lc_row lc_center_row" sid="M_DATAFOLDER">
+        <div class="lc_userarray_property">&nbsp;</div>
+        <div class="select_folder ui-alt-icon ui-nodisc-icon">
+          <select name="folder4" sid="C_SAMBA_FOLDER4" type="select"></select>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class = "plugin_install">
+    </div>
+    </div>
+  </form>
+  <div id="right_footer">
+    <div class = "plugin_setup">
+    <input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+    </div>
+    <div class = "plugin_install">
+        <input class="custom_css_button plugin_install_button" sid="S_PLUGIN_INSTALL" type="button" data-role="none">
+    </div>
+  </div>
+</div>

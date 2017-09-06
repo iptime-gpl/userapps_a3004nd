@@ -1,0 +1,25 @@
+frametype.lo: frametype.c config.h global.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/string.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/features.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_config.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/cdefs.h \
+ /opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stddef.h \
+ id3tag.h frametype.h
+
+config.h:
+
+global.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/string.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/features.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/bits/uClibc_config.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/../../../../mipsel-buildroot-linux-uclibc/include/sys/cdefs.h:
+
+/opt/buildroot-gcc463/usr/lib/gcc/mipsel-buildroot-linux-uclibc/4.6.3/include/stddef.h:
+
+id3tag.h:
+
+frametype.h:

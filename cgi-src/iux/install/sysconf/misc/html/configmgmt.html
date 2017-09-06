@@ -1,0 +1,46 @@
+<div id="configmgmt">
+  	<form method="post" id="iux_file_form" enctype="multipart/form-data">
+	<div id="right_main" class="right_main">
+
+		<ul class="listview" data-role="listview">
+		<li>
+			<div class="lc_configmgmt_row">
+				<div class="lc_configmgmt_left">
+				<button class="custom_css_button" type="button" sid="CONFIGMGMT_FACTORY" data-role="none">
+					<img src="/sysconf/misc/images/configmgmt_reset.png" class="lc_configmgmt_btn">
+				</button>
+				</div>
+			</div>
+		</li><li>
+			<div class="lc_configmgmt_row">
+				<div class="lc_configmgmt_left">
+				<button class="custom_css_button" type="button" sid="CONFIGMGMT_BACKUP" data-role="none">
+					<img src="/sysconf/misc/images/configmgmt_backup.png" class="lc_configmgmt_btn">
+				</button>
+				</div>
+			</div>
+		</li><li>
+			<div class="lc_configmgmt_row">
+				<div class="lc_configmgmt_left">
+				<button class="custom_css_button" type="button" sid="CONFIGMGMT_RESTORE" data-role="none">
+					<img src="/sysconf/misc/images/configmgmt_restore.png" class="lc_configmgmt_btn">
+				</button>
+				</div>
+				<div class="lc_configmgmt_right">
+					<div class="lc_customfile_line">
+						<div class="ui-state-disabled lc_fileselector">
+							<input type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="S_CONFIGMGMT_FILESELECT" data-role="none" disabled>
+						</div>
+						<div class="ui-btn"><img src="/common/images/search.png"></div>
+						<input type="file" name="restorefile" sid="C_CONFIGMGMT_RESTOREFILE" class="lc_customfile" data-role="none">
+					</div>
+				</div>
+			</div>
+		</li>
+		</ul>
+
+	</div>
+  	</form>
+
+	<div id="right_footer"></div>
+</div>

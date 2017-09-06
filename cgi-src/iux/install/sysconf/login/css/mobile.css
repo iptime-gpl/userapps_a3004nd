@@ -1,0 +1,239 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+p {	text-overflow:ellipsis; }
+.ui-page { background-color: #F8F8F5 !important;}
+.ui-listview > li p { font-size: inherit; }
+.ui-btn{padding: 0
+}
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+/*헤더*/
+#header {
+	/*//height: 20px;*/
+	background-color: #dce1cd;
+	border: 1px solid #ccc;
+}
+/*헤더 경계라인*/
+#header hr {
+	border: 1px solid #ccc;
+	clear: both;
+}
+.ui-checkbox label {padding-right: 0em;}
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+
+.lc_line_content { height: 4em; }
+.lc_line_right { float:left; width:90%; }
+
+.lc_line_title, .lc_line_status { line-height: 2em; margin-left: 0.5em; }
+.lc_line_status p { color: #AAAAAA; }
+.lc_line_left { float:left; width:10%; }
+.lc_line_left div
+{
+	float:right;
+	margin-top: 1.5em;
+	margin-right: 0.5em;
+}
+.lc_line_left div img { width: 1em; height: 1em; }
+
+
+
+.lc_page_account_subtitle
+{
+	background-color:#F9FAF5;
+	border: 1px solid #BBBBBB;
+	border-right-width: 0;
+	border-left-width: 0;
+}
+.lc_page_account_subtitle p
+{
+	line-height: 2.5em;
+	margin-left: 0.5em;
+	color: #AAAAAA;
+}
+.footer_item { margin-right: 1.1em; float: right; }
+
+.radio_run { width: 50%; float: left; }
+.radio_run label { height: 2.5em; }
+.radio_run label { height: 2.5em; }
+.radio_run p { line-height: 2.5em; margin-left: 3em; }
+
+.auth_radio_run {}
+.auth_radio_run label { height: 3em; }
+.auth_radio_run label { height: 3em; }
+.auth_radio_run p { line-height: 3em !important; margin-left: 3em; }
+
+
+
+/*-------------------------------------------------------------------------*/
+
+.lc_row_r{ overflow: hidden; clear: both; }
+.lc_left_r{ float: left; width: 30%; }
+.lc_left_r p{ line-height: 3em; }
+.right_footer { overflow:hidden; margin-top: 0.5em; margin-bottom: 2em;}
+.lc_right_r{ float: left; width: 70%; margin-top: 0.3em;}
+.lc_input_ip_r div, .lc_input_mac_r div{ float:left }
+.lc_input_ip_r .hyphen p
+{
+	line-height: 1em;
+	margin-top: 1em;
+}
+.hyphen p {
+	text-align: center;
+	margin-left: -0.05em;
+}
+.hyphen { width:0.3em; }
+.lc_inputbox_ip { width: 23%; } 
+.lc_inputbox_ip input{ text-align: center; } 
+
+.captcha_button
+{
+	float: left;
+	width: 4.8em;
+	height: 5em;
+	border-width: 1px 0px 1px 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	cursor: pointer;
+}
+.captcha_view{ width: 16.5em;}
+.captcha_button img
+{
+	height: 100%;
+	width: 100%; 
+}
+.captcha_img
+{
+	 float: left;
+	 background-color: #FFFFFF;
+	 height: 5em;
+	 width: 11.3em;
+	 border: 1px solid  #CCCCCC;
+}
+.lc_addddns_desc p{ color:#9E9F97 }
+.ddns_info_desc{ width: 16.3em; margin-top: 0; }
+.ddns_info_desc p, .ddns_info_title p  { line-height: 2em; }
+/*right panel*/
+
+.footer_item div
+{
+	float: right; 
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	margin-right: 0.5em;
+}
+.footer_item button, button.lc_button
+{
+	background-color: #8daf25;
+	height: 2em;
+	width: 5.5em;
+	border: 0;
+	cursor: pointer;
+}
+.ddns_host_content .ddns_hostname
+{
+	float: left;
+	width: 50%;
+}
+
+.ddns_host_content .ddns_status
+{
+	float: left;
+	width: 40%;
+}
+
+.ddns_host_content .ddns_detailicon
+{
+	float: right;
+	margin-right: 1em;
+}
+.ddns_host_content .ddns_detailicon img
+{
+	width: 1em;
+	height: 1em;
+	margin-top: 1em; 
+}
+
+.subtr_left
+{
+	width: 30%;
+	float: left;
+	height: 2.5em;
+}
+.subtr_right
+{
+	float: left;
+}
+
+.captcha_option div.subtr_right >*
+{
+	display: inline-block;
+}
+
+.captcha_option div.subtr_right >*:nth-child(1)
+{
+	margin-left: 0.5em;
+}
+
+.captcha_option p
+{
+	float: left;
+	line-height: 2em;
+}
+
+.captcha_option div.captcha_type
+{
+	width: 6.5em;
+	height: 2em;
+	display: inline-block;
+	margin-left: 0.5em;
+}
+
+.captcha_option div.captcha_attempt
+{
+	width: 2.5em;
+	float: left;
+}
+
+.captcha_option div.captcha_type div.ui-btn
+{
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+}
+
+button.lc_button
+{
+	margin-right: 1.1em;
+	float: right;
+}
+
+#right_footer >div
+{
+	overflow: hidden;
+}
+
+div.captcha_desc
+{
+	margin: 0.5em 1em;
+	overflow: hidden;
+	float: left;
+}
+
+div.captcha_desc p
+{
+	opacity: 0.4;
+}

@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+/*헤더*/
+#header {
+	/*//height: 20px;*/
+	background-color: #dce1cd;
+	border: 1px solid #ccc;
+}
+/*헤더 경계라인*/
+#header hr {
+	border: 1px solid #ccc;
+	clear: both;
+	/*font-size: 0px;*/
+}
+
+.ui-checkbox label {
+	margin-left: -0.7em !important;
+	padding-right: 0em;
+}
+
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+.ui-page-theme-a .ui-btn { background-color: #EEF1E6; }
+.lc_wrap_radiobutton {
+	overflow: auto;	
+	border: 1px solid #DDD;
+	border-top-width: 0;
+}
+.lc_wrap_radiobutton label{ border:0px}
+.lc_wrap_mainobject{overflow:auto;}
+.lc_row { 
+	clear:both;
+	overflow:hidden;
+	height: 4em;
+	min-width: 20em;
+}
+.lc_left, .lc_middle ,.lc_right {float: left; overflow: hidden;}
+.lc_left { width:26%; }
+.lc_left p { margin-left: 1em; line-height: 4em; }
+.lc_middle { width:52%; margin-top: 0.95em;}
+.lc_middle div{ float: left; }
+
+.lc_right {
+	width:22%;
+	float: left;
+	margin-top: 1em;
+	overflow: hidden;
+}
+.hyphen p {
+	font-weight: bold;
+	text-align: center;
+	margin-left: -0.05em;
+}
+.hyphen { width:0.3em; }
+.cc_input_ip { width: 100%; }
+.cc_input_ip .hyphen{ margin-top: 1em;}
+.cc_input_mac .hyphen{ margin-top: 0.4em; }
+.lc_inputbox_ip { width: 3.1em; } 
+.lc_inputbox_ip input{ text-align: center; } 
+.lc_inputbox_mac { width: 14.8%; } 
+.lc_inputbox_mac input{ text-align: center; } 
+.lc_manual_check {
+	margin-left: 2px;
+	width: 66%;
+	float: left;
+}
+.lc_manual_macsearch {
+	float: left;
+}
+.lc_manual_macsearch img {
+	margin-top: 0.3em;
+	width: 1.8em;
+	height: 1.8em;
+}
+.lc_input_mtu, .lc_input_user{ width: 96%; }
+.lc_input_mtu div, .lc_input_user div{ width: 100%; }
+
+.lc_input_lcpcount, .lc_input_lcpsecond { width: 23%; margin-right: 0.2em;}
+.lc_text_lcpcycle { width: 33.2%; }
+.lc_text_lcpcycle p { text-align: right; margin-right: 0.2em;}
+.lc_text_lcpsecond { width: 10%; }
+.lc_text_lcpcount { width: 8%; }
+.lc_text_lcpcycle p, .lc_text_lcpsecond p, .lc_text_lcpcount p { line-height: 2em }
+
+.lc_apply_button { width: 90%; height: 2.5em; }
+.lc_select_datafolder { width: 85.5%; }
+.lc_select_datafolder div { width: 100%; }
+.lc_select_datafolder div div { width: 100%; }
+
+.lc_fullwidth { width: 100%; }
+
+
+/*right*/
+#maclist ul { overflow: hidden; }
+#maclist li { overflow: hidden; }
+#maclist li:nth-child(even) { background-color: #F9FAF5; }
+#maclist li:nth-child(odd) { background-color: #FFFFFF; }
+#maclist .maclist_li { cursor: pointer; }
+#maclist .maclist_left { width: 45% !important; }
+#maclist .maclist_left p { text-overflow: ellipsis !important; font-size: inherit; line-height: inherit; }
+#maclist .maclist_right { width: 55% !important; margin-left: 0 !important; margin-top: 0; }
+#maclist .maclist_right p
+{
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+	font-size: inherit;
+	line-height: 3em;
+}
+#maclist .right_refresh_button
+{
+        margin-top: 1em !important;
+        margin-right: 0.5em !important;
+}
+.lc_content_addbutton
+{
+        float: right;
+        width: 6em;
+        height: 2.5em;
+        margin-right: 0.5em;
+        margin-bottom: 1em;
+        border: 0;
+        background-color: #8DAF25;
+        cursor: pointer;
+}
+.lc_content_addbutton .icon { float: left; margin-right: 0.5em;}
+.lc_content_addbutton .icon img
+{
+        height: 1.2em !important;
+        width: 1.2em !important;
+        margin-top: 0.4em;
+        margin-left: 0.4em;
+}
+.lc_content_addbutton .text { float: left; }
+.lc_content_addbutton .text p { line-height: 2em; }
+.lc_content_remotepclist_titlebar
+{
+        height: 2.5em;
+        border: 1px solid #CCCCCC;
+        border-left-width:0;
+        border-right-width:0;
+}
+

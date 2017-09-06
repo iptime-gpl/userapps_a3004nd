@@ -1,0 +1,75 @@
+<div id="url" class="cc_padding">
+<form id="iux_form">
+  <div id="right_main" class="right_main">  
+    <!--service-->
+	<div class="lc_row">
+	  <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_SERVICE_TITLE"></p>
+      </div>
+      <div class="lc_right">
+        <input name="run" id="run_true" sid="C_URL_RUN" type="radio" value="1">
+        <label for="run_true"><p sid="S_START"></p></label>
+		<div class="lc_service_radio_margin"></div>
+        <input name="run" id="run_false" sid="C_URL_RUN" type="radio" value="0">
+        <label for="run_false"><p sid="S_STOP"></p></label>
+	  </div>
+	</div>
+    
+    <!--enableauth-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_URL_ENABLEAUTH_TITLE"></p>
+      </div>
+      <div class="lc_right">
+        <input name="enableauth" id="enableauth_true" sid="C_URL_ENABLEAUTH" type="radio" value="1">
+        <label for="enableauth_true">
+        <p sid="S_USE"></p>
+        </label>
+        <input name="enableauth" id="enableauth_false" sid="C_URL_ENABLEAUTH" type="radio" value="0">
+        <label for="enableauth_false">
+        <p sid="S_UNUSE"></p>
+        </label>
+      </div>
+    </div>
+    
+    <!--userid-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_URL_USERID_TITLE"></p>
+      </div>
+      <div class="lc_right">
+        <input name="userid" sid="C_URL_USERID" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled">
+      </div>
+    </div>
+    
+    <!--passwd-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_URL_PASSWD_TITLE"></p></div>
+      <div class="lc_right">
+        <div class="lc_input_passwd">
+          <input name="passwd" sid="C_URL_PASSWD" type="password" maxlength="32" style="ime-mode:disabled"></div>
+        <div class="lc_input_passwd_check ui-alt-icon">
+          <input id="input_passwd_check" sid="PASSWD_VISIBLE" type="checkbox" value="1">
+          <label for="input_passwd_check"><p sid="S_PASSWD_VISIBLE"></p></label></div>
+      </div>
+    </div>
+    
+	<!--port-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_URL_PORT_TITLE"></p></div>
+      <div class="lc_right">
+        <div class="lc_input_port">
+          <input name="port" sid="C_URL_PORT" type="number" pattern="[0-9]*" min = "1" max = "65535" maxlength = "5" style="ime-mode:disabled"></div>
+        <div class="lc_input_port_check ui-alt-icon">
+          <input name="defaultport" id="lc_input_port_check" sid="L_URL_PORT" type="checkbox" value="1">
+          <label for="lc_input_port_check"><p sid="S_USE_DEFAULT"></p></label></div>
+      </div>
+    </div>
+
+  </div>
+</form>
+<div id="right_footer">
+  <input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+</div>

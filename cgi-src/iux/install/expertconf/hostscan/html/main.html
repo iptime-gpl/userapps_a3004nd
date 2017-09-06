@@ -1,0 +1,107 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content" >
+
+  <form id="iux_form">
+
+	  <div class="lc_row"> 
+		<div class="lc_radio_attr">
+		  <input name="scantype" id="scantype_false" sid="C_HOSTSCAN_SCANTYPE" type="radio" value="0">
+		  <label for="scantype_false"><p sid="S_PINGTEST"></p></label>
+		</div>
+		<div class="lc_radio_attr">
+		  <input name="scantype" id="scantype_true" sid="C_HOSTSCAN_SCANTYPE" type="radio" value="1">
+		  <label for="scantype_true"><p sid="S_TCPPORTSCAN"></p></label>
+		</div>
+	  </div>
+	  
+	  <div sid="PING_FIELD" class="lc_row">
+		<div class="ui-alt-icon ui-nodisc-icon content_ping_select">
+		  <select name="pingtype" sid="PINGTYPE" type="select">
+			<option value="0">ICMP</option>
+			<option value="1">ARP</option>
+		  </select>
+		</div>
+
+		<div class="content_ping_ip">
+		  <div class="title"><p sid="S_PING_IPADDR"></p></div>
+		  <div sid="HOSTSCAN_PINGADDR" class="content_ip ip" style="margin-left: 0.5em;">
+			<div class="input"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+			<div class="dot"><p>.</p></div>
+			<div class="input"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+			<div class="dot"><p>.</p></div>
+			<div class="input"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+			<div class="dot"><p>.</p></div>
+			<div class="input"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+		  </div>
+		</div>
+	  </div>
+	 
+	  <div sid="PING_FIELD" class="lc_row content_ping_setvalue">
+		<div class="text"><p sid="S_PING_COUNT"></p></div>
+		<div class="input_text" style="width: 3.2em;"><input name="count" sid="C_HOSTSCAN_COUNT" type="number" pattern="[0-9]*" min = "1" style="ime-mode:disabled;"></div>
+		<div class="text"><p sid="S_PING_COUNTEND" style="margin-right: 1.1em;"></p></div>
+		<div class="text"><p sid="S_PING_TIMEOUT"></p></div>
+		<div class="input_text" style="width: 2.7em;"><input name="timeout" sid="C_HOSTSCAN_TIMEOUT" type="number" pattern="[0-9]*" min = "1" style="ime-mode:disabled;"></div>
+		<div class="text"><p sid="S_PING_TIMEOUT_SEC"></p></div>
+		<div class="text"><p sid="S_PING_SIZE"></p></div>
+		<div class="input_text" style="width: 4.4em;"><input name="size" sid="C_HOSTSCAN_SIZE" type="number" pattern="[0-9]*" min = "1" style="ime-mode:disabled;"></div>
+		<div class="text"><p sid="S_PING_BYTES"></p></div>
+	  </div>
+
+	  <div  sid="TCP_FIELD" class="lc_row">
+		<div class="content_tcp_ip">
+		  <div class="title"><p sid="S_TCP_IPADDR"></p></div>
+		  <div sid="HOSTSCAN_TCPADDR" class="content_ip ip" style="margin-left: 0.25em;">
+			<div class="input"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+			<div class="dot"><p>.</p></div>
+			<div class="input"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+			<div class="dot"><p>.</p></div>
+			<div class="input"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+			<div class="dot"><p>.</p></div>
+			<div class="input"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" style="ime-mode:disabled;" maxlength = "3"></div>
+		  </div>
+		</div>
+
+		<div  class="content_tcp_port">
+		  <div class="title"><p sid="S_TCP_PORT"></p></div>
+		  <div class="content">
+			<div class="input"><input name="sport" sid="C_HOSTSCAN_SPORT" type="number" pattern="[0-9]*" min = "1" max = "65535" style="ime-mode:disabled;" maxlength = "5"></div>
+			<div class="hyphen"><p style="text-align: center;">~</p></div>
+			<div class="input"><input name="eport" sid="C_HOSTSCAN_EPORT" type="number" pattern="[0-9]*" min = "1" max = "65535" style="ime-mode:disabled;" maxlength = "5"></div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="lc_row">
+		<div class="content_start_button">
+		  <button type="button" sid="START_BUTTON" data-role="none">
+			<div class="icon"><img src="/common/images/play_green.png"></div>
+			<div class="text"><p sid="S_START"></p>
+		  </button>
+		</div>	
+
+
+		<div class="content_start_button">
+		  <button type="button" sid="STOP_BUTTON" data-role="none">
+			<div class="icon"><img src="/common/images/stop_green.png"></div>
+			<div class="text"><p sid="S_STOP"></p>
+		  </button>
+		</div>
+	  </div>
+
+	  <div class="lc_row content_log_titlebar">
+		<div class="title"><p sid="S_MAIN_STARTSTATUS"></p></div>
+		<div sid="DEL_BUTTON"class="del">
+		  <div class="icon"><img src="/common/images/minus_icon_green.png"></div>
+		  <div class="text"><p sid="S_MAIN_DEL"></p></div>
+		</div>
+	  </div>
+	  
+	  <div class="lc_row" style="margin-bottom: 0">
+		<div sid="HOSTSCAN_LOGFIELD" class="lc_logfield"></div>
+	  </div>
+	</div>
+
+  </form>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

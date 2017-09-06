@@ -1,0 +1,214 @@
+<div id="extendsetup">
+	<form id="iux_form">
+		<div id="right_main" class="right_main">
+			<div class="lc_row">
+				<div class="lc_left lc_extpanel_firstleft">
+					<p sid="S_EXTMODE_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_firstright">
+					<div class="ui-alt-icon ui-nodisc-icon lc_extpanel_select1">
+						<select name="mode" sid="C_EXTENDSETUP_MODE" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_extpanel_firstleft">
+					<p sid="S_EXTCOUNTRY_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_firstright">
+					<div class="ui-alt-icon ui-nodisc-icon lc_extpanel_select1">
+						<select name="country" sid="C_EXTENDSETUP_COUNTRY" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_extpanel_firstleft">
+					<p sid="S_EXTCHANNEL_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_firstright">
+					<div class="ui-alt-icon ui-nodisc-icon lc_extpanel_select1">
+						<select name="channelwidth" sid="C_EXTENDSETUP_CHANNELWIDTH" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_extpanel_firstleft">
+					<p sid="S_EXTTX_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_firstright">
+					<div class="lc_extpanel_textbox">
+						<input name="txpower" type="number" pattern="[0-9]*" sid="C_EXTENDSETUP_TXPOWER" min = "1" max = "100" maxlength = "3">
+					</div>
+					<span class="lc_extpanel_text">%(1~100)</span>
+					<span sid="S_BEACON_STRING" class="lc_extpanel_text"></span>
+					<div class="lc_extpanel_textbox">
+						<input name="beacon" type="number" pattern="[0-9]*" sid="C_EXTENDSETUP_BEACON" min = "0" maxlength = "4">
+					</div>
+					<span class="lc_extpanel_text">ms</span>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_extpanel_secondleft">
+					<p sid="S_EXTRTS_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_secondright">
+					<div class="lc_extpanel_textbox">
+						<input name="rts" type="number" pattern="[0-9]*" sid="C_EXTENDSETUP_RTS" min = "0" max = "2347" maxlength = "4">
+					</div>
+					<span class="lc_extpanel_text">bytes (0~2347)</span>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_extpanel_secondleft">
+					<p sid="S_EXTFRAG_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_secondright">
+					<div class="lc_extpanel_textbox">
+						<input name="frag" type="number" pattern="[0-9]*" sid="C_EXTENDSETUP_FRAG" min = "256" max = "2346" maxlength = "4">
+					</div>
+					<span class="lc_extpanel_text">bytes (256~2346)</span>
+				</div>
+			</div>
+			<div class="lc_row" sid="LDPC_BOX">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<p sid="S_EXTLDPC_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="ldpc_id"></label>
+					<select sid="C_EXTENDSETUP_LDPC" name="ldpc" id="ldpc_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<p sid="S_EXTWMM_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="wmm_id"></label>
+					<select sid="C_EXTENDSETUP_WMM" name="wmm" id="wmm_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row" sid="WPS_BOX">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<p sid="S_EXTWPS_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="wpsmode_id"></label>
+					<select sid="C_EXTENDSETUP_WPSMODE" name="wpsmode" id="wpsmode_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row" sid="PHY_BOX">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<p sid="S_EXTPHY_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="phywatchdog_id"></label>
+					<select sid="C_EXTENDSETUP_PHYWATCHDOG" name="phywatchdog" id="phywatchdog_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row" sid="WPSNOTI_BOX">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<p sid="S_EXTLGS_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="wpsnoti_id"></label>
+					<select sid="C_EXTENDSETUP_WPSNOTI" name="wpsnoti" id="wpsnoti_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row" sid="DFS_BOX">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<p sid="S_EXTDFS_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="dfs_id"></label>
+					<select sid="C_EXTENDSETUP_DFS" name="dfs" id="dfs_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row" sid="STBC_BOX">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<p sid="S_EXTSTBC_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="stbc_id"></label>
+					<select sid="C_EXTENDSETUP_STBC" name="stbc" id="stbc_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row" sid="DYN_BOX">
+				<div class="lc_left lc_extpanel_thirdleft">
+					<span sid="S_EXTDYNCHANNEL_STRING" class="lc_extpanel_text lc_extpanel_dynchanspan1"></span>
+					<div class="lc_extpanel_textbox">
+						<input name="dcsperiodhour" type="number" pattern="[0-9]*" sid="C_EXTENDSETUP_DCSPERIODHOUR" min = "0">
+					</div>
+					<span sid="S_EXTTIME_STRING" class="lc_extpanel_text lc_extpanel_dynchanspan2"></span>
+				</div>
+				<div class="lc_right lc_extpanel_thirdright">
+					<label class="ui-hidden-accessible" for="dynchannel_id"></label>
+					<select sid="C_EXTENDSETUP_DYNCHANNEL" name="dynchannel" id="dynchannel_id" data-role="slider" type="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
+			</div>
+			<div class="lc_row" sid="TXBFMUMODE_BOX">
+				<div class="lc_left lc_extpanel_secondleft lc_height_mimo">
+					<p sid="S_EXTTXBF_STRING1" class="lc_extpanel_text lc_height_mimo"></p>
+					<p sid="S_EXTTXBF_STRING2" class="lc_extpanel_text lc_height_mimo"></p>
+				</div>
+				<div class="lc_right lc_extpanel_secondright">
+					<div class="ui-alt-icon ui-nodisc-icon lc_extpanel_select_mumimo">
+						<select name="txbfmumode" sid="C_EXTENDSETUP_TXBFMUMODE" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="MUFLAG_BOX">
+				<div class="lc_left lc_extpanel_secondleft lc_height_mimo">
+					<p sid="S_MU_MIMO_STRING1" class="lc_extpanel_text lc_height_mimo"></p>
+				</div>
+				<div class="lc_right lc_extpanel_secondright">
+					<div class="ui-alt-icon ui-nodisc-icon lc_extpanel_select1">
+						<select name="muflag" sid="C_EXTENDSETUP_MUFLAG" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="MIMOANT_BOX">
+				<div class="lc_left lc_extpanel_secondleft">
+					<p sid="S_EXTMIMO_STRING" class="lc_extpanel_text"></p>
+				</div>
+				<div class="lc_right lc_extpanel_secondright">
+					<div class="ui-alt-icon ui-nodisc-icon lc_extpanel_select1">
+						<select name="mimoant" sid="C_EXTENDSETUP_MIMOANT" type="select"></select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<div id="right_footer">
+		<div class="lc_row">
+			<div class="lc_usual_button">
+				<button type="button" sid="S_MODIFY_BTN" class="custom_css_button" data-role="none">
+					<span sid="S_BUTTON_SUBMIT"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

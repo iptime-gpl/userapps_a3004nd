@@ -1,0 +1,2 @@
+auth	required	pam_unknown.so
+account	required	pam_unknown.so

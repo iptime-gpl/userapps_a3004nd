@@ -1,0 +1,97 @@
+<div id="upnprule" class="cc_padding">
+  	<form id="iux_form">
+   	 	<div id="right_main" class="right_main"> 
+            
+	      		<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+       					<p sid="S_RULENAME_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<input name="name" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_UPNPRULE_NAME" maxlength="127">
+					</div>
+				</div>
+			</div>
+
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+        				<p sid="S_INTIPADDR_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div id="ip_field" sid="C_UPNPRULE_IP" class="lc_input_ip ip">
+						<div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+					</div>
+				</div>
+			</div>
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+        				<p sid="S_PROTOCOL_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="ui-alt-icon ui-nodisc-icon lc_protocol_class">
+							<select name="protocol" sid="C_UPNPRULE_PROTOCOL" type="select"></select>
+						</div>
+					</div>
+				</div>
+			</div>
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left lc_panel_subleft">
+        				<p sid="S_EXTPORT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="lc_port_class">
+							<input name="extsport" type="number" pattern="[0-9]*" sid="C_UPNPRULE_EXTSPORT" min = "1" max = "65535" maxlength = "5">
+						</div>
+						<div class="lc_hyphen">~</div>
+						<div class="lc_port_class">
+							<input name="exteport" type="number" pattern="[0-9]*" sid="C_UPNPRULE_EXTEPORT" min = "1" max = "65535" maxlength = "5">
+						</div>
+					</div>
+				</div>
+			</div>
+      			<div class="lc_row">
+				<div class="lc_left lc_panel_left lc_panel_subleft">
+        				<p sid="S_INTPORT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="lc_port_class">
+							<input name="intsport" type="number" pattern="[0-9]*" sid="C_UPNPRULE_INTSPORT" min = "1" max = "65535" maxlength = "5">
+						</div>
+						<div class="lc_hyphen">~</div>
+						<div class="lc_port_class">
+							<input name="inteport" type="number" pattern="[0-9]*" sid="C_UPNPRULE_INTEPORT" min = "1" max = "65535" maxlength = "5">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	
+	<div id="right_footer">
+		<div class="lc_row lc_bordertop_row">
+			<div class="lc_controlbtn_line">
+			</div>
+			<div class="lc_delbtn_line">
+				<div class="lc_usual_button">
+				<button type="button" sid="S_DELETE_BTN"
+					class="custom_css_button" data-role="none">
+					<span sid="S_DELETE"></span>
+				</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

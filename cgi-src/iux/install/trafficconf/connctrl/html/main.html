@@ -1,0 +1,169 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content">
+	<div id = "maincontent">
+		<div class = "lc_ctrl_div">
+			<div class="lc_line_div">
+				<div class="lc_option_div" sid = "S_CTRL_OPTION1"></div>
+				<div class="lc_input_div">
+					<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_CTRL_ALL" min = "0" maxlength = "6">
+					<p sid = "S_CTRL_UNIT1"></p>
+				</div>
+				<div class="lc_desc_div lc_grayfont_text" sid = "S_CTRL_DESC1"></div>
+			</div>
+			<div class="lc_line_div">
+				<div class="lc_option_div" sid = "S_CTRL_OPTION2"></div>
+				<div class="lc_input_div">
+					<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_CTRL_UDPMAX" min = "0" maxlength = "6">
+					<p sid = "S_CTRL_UNIT1"></p>
+				</div>
+				<div class="lc_desc_div lc_grayfont_text" sid = "S_CTRL_DESC2"></div>
+			</div>
+			<div class="lc_line_div">
+				<div class="lc_option_div" sid = "S_CTRL_OPTION3"></div>
+				<div class="lc_input_div">
+					<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_CTRL_ICMPMAX" min = "0" maxlength = "6">
+					<p sid = "S_CTRL_UNIT1"></p>
+				</div>
+				<div class="lc_desc_div lc_grayfont_text" sid = "S_CTRL_DESC3"></div>
+			</div>
+			<div class="lc_line_div">
+				<div class="lc_option_div" sid = "S_CTRL_OPTION4"></div>
+				<div class="lc_input_div">
+					<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_CTRL_RATE" min = "0" maxlength = "6">
+					<p sid = "S_CTRL_UNIT2"></p>
+				</div>
+				<div class="lc_desc_div lc_grayfont_text" sid = "S_CTRL_DESC4"></div>
+			</div>
+			<hr>
+			<div class = "lc_button_div">
+				<div >
+				<input id = "submit_connection_button" class="custom_css_button lc_submit_button" type="button" data-role="none" sid = "S_BUTTON_SUBMIT">
+				</div >
+				<div >
+				<input id = "restore_connection_button" class="custom_css_button" type="button" data-role="none" sid = "S_BUTTON_RESTORE">
+				</div >
+			</div>
+			<hr>
+			<div class = "lc_caution_div">
+                                <span><img src="/common/images/alert.png"></span> 
+				<p class = "lc_grayfont_text" sid = "S_CTRL_CAUTION1"></p>
+				<p class = "lc_grayfont_text" sid = "S_CTRL_CAUTION2"></p>
+				<p class = "lc_grayfont_text" sid = "S_CTRL_CAUTION3"></p>
+				<p class = "lc_grayfont_text" sid = "S_CTRL_CAUTION4"></p>
+			</div>
+		</div>
+		<div class = "lc_titlebox_div">
+			<p sid = "S_PAGE_TITLE2"></p>
+		</div>
+		<div class = "lc_timeout_div">
+			<div class = "lc_line_div">
+				<div class = "lc_left_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION1"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPSYNSENT" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+				<div class = "lc_right_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION7"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPSYNRECV" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+			</div>
+			<div class = "lc_line_div">
+				<div class = "lc_left_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION2"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPESTABLISHED" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+				<div class = "lc_right_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION8"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPFINWAIT" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+			</div>
+			<div class = "lc_line_div">
+				<div class = "lc_left_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION3"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPCLOSEWAIT" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+				<div class = "lc_right_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION9"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPLASTACK" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+			</div>
+			<div class = "lc_line_div">
+				<div class = "lc_left_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION4"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPTIMEWAIT" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+				<div class = "lc_right_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION10"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_TCPCLOSE" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+			</div>
+			<div class = "lc_line_div">
+				<div class = "lc_left_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION5"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_UDP" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+				<div class = "lc_right_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION11"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_UDPSTREAM" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+			</div>
+			<div class = "lc_line_div">
+				<div class = "lc_left_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION6"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_ICMP" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+				<div class = "lc_right_div">
+					<div class="lc_option_div" sid = "S_TIMEOUT_OPTION12"></div>
+					<div class="lc_input_div">
+						<input class = "input_type_text" type="number" pattern="[0-9]*" sid = "C_TIMEOUT_GENERIC" min = "0" maxlength = "6">
+						<p sid = "S_CTRL_UNIT3"></p>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class = "lc_button_div">
+				<div >
+					<input id = "submit_timeout_button" class="custom_css_button lc_submit_button" type="button" data-role="none" sid = "S_BUTTON_SUBMIT">
+				</div>
+				<div>
+					<input id = "restore_timeout_button" class="custom_css_button" type="button" data-role="none" sid = "S_BUTTON_RESTORE">
+				</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

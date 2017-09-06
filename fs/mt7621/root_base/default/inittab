@@ -1,0 +1,2 @@
+::sysinit:/default/rcS
+console::respawn:/bin/sh

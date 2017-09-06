@@ -1,0 +1,55 @@
+<div id="email" class='cc_padding'>
+ <form id="local_email_form" style="padding: 0.5em;">
+  <div class="lc_row_r">
+	<div class="lc_left_r" style="width: 35%;" ><p sid="S_LOGIN_ADMINEMAIL_TITLE"></p></div>
+	<div class="lc_right_r" style="width: 14.5em;">
+		<input name="email" sid="C_LOGIN_ADMINEMAIL" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32">
+	</div>
+  </div>
+  <div class="lc_row_r">
+	<div class="lc_left_r" style="width: 35%;" ><p sid="S_LOGIN_SMTPSERVER_TITLE"></p></div>
+	<div class="lc_right_r" style="width: 14.5em;">
+		<input name="smtp" sid="C_LOGIN_SMTPSERVER" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32">
+	</div>
+  </div>
+  <div class="lc_row_r">
+	<div class="lc_left_r" style="width: 35%;" ><p sid="S_LOGIN_SENDEMAIL_TITLE"></p></div>
+	<div class="lc_right_r" style="width: 14.5em;">
+		<input name="send_email" sid="C_LOGIN_SENDEMAIL" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32">
+	</div>
+  </div>
+  <div class="lc_row_r">
+	<div class="lc_left_r" style="width: 35%;" ><p sid="S_LOGIN_SMTPAUTH_TITLE"></p></div>
+	<div class="lc_right_r" style="width: 14.5em;">
+      <div class="radio_run">
+        <input name="smtp_auth" id="smtpauth_true" sid="C_LOGIN_SMTPAUTH" type="radio" value="1">
+        <label for="smtpauth_true"><p sid="S_USE"></p></label>
+      </div>
+      <div class="radio_run">
+		<input name="smtp_auth" id="smtpauth_false" sid="C_LOGIN_SMTPAUTH" type="radio" value="0">
+        <label for="smtpauth_false"><p sid="S_UNUSE"></p></label>
+      </div>
+	</div>
+  </div>
+  <div class="lc_row_r">
+	<div class="lc_left_r" style="width: 35%;" ><p sid="S_LOGIN_SMTPACCOUNT_TITLE"></p></div>
+	<div class="lc_right_r" style="width: 14.5em;">
+		<input name="account" sid="C_LOGIN_SMTPACCOUNT" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32">
+	</div>
+  </div>
+  <div class="lc_row_r">
+	<div class="lc_left_r" style="width: 35%;" ><p sid="S_LOGIN_SMTPPASSWD_TITLE"></p></div>
+	<div class="lc_right_r" style="width: 14.5em;">
+		<input name="smtp_pass" sid="C_LOGIN_SMTPPASSWD" type="password" maxlength="32">
+	</div>
+  </div>
+  </form>
+   <div id="right_footer" class="right_footer" style="margin-top: -0.1em; margin-right: -0.1em;">
+     <div class="footer_item">
+	   <button class="lc_button" type="button" sid="LOGIN_SUBMIT" data-role="none">
+	     <span sid="S_BUTTON_SUBMIT"></span>
+	   </button>
+     </div>
+   </div>
+</div>
+

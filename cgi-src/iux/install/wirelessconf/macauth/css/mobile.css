@@ -1,0 +1,122 @@
+@charset "utf-8";
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border: 1px solid #ccc;
+        clear: both;
+}
+.custom_css_button {
+        width: 6em;
+        height: 2.5em;
+        float: right;
+}
+
+/*local css*/
+.lc_disabled_text{color:#B6B6B6; text-overflow:ellipsis; white-space:nowrap; font-weight:normal !important;}
+.lc_description_text{color:#CAD6A0; text-overflow:ellipsis; white-space:nowrap; font-weight:normal !important; display:inline-block;}
+.lc_description_img{overflow:hidden; width:1em !important; height:1em !important; display:inline-block; margin-bottom:-0.1em !important; padding:0;}
+.lc_opacity30{opacity:0.3; filter:alpha(opacity=30);}
+
+.lc_hyphen{text-align:center; display:inline-block; vertical-align:top; padding:0; margin:0.1em -0.3em 0 -0.3em; width:.4em;}
+
+.lc_whitebox_div{width:100%; overflow:hidden; border:0; background-color:#FFFFFF; padding:0; cursor:pointer;}
+.lc_clickable,
+.lc_greenbox_div{width:100%; overflow:hidden; border:0; background-color:#EEF1E6; padding:0; cursor:pointer; border-bottom:1px #ccc solid;}
+.lc_nobackground_div{width:100%; overflow:hidden; border:0; padding:0; cursor:pointer;}
+
+.lc_subtitle_left{
+	width:50%; padding:0 0 0 .5em; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle;
+	height:2.3em; line-height:2.3em;
+}
+.lc_maintitle_left{
+	width:50%; padding:0 0 0 .5em; margin:0; float:left; display:inline-block; background-color:transparent; vertical-align:middle;
+	height:3.4em; line-height:3.4em;
+}
+
+.lc_selmac_li,
+.lc_panel_li{padding:0 !important; margin:0 !important; height:3.4em !important; line-height:3.4em !important;}
+.lc_selmac{width:100%; padding:0; margin:0; background-color:transparent; vertical-align:middle; height:3.4em; line-height:3.4em;}
+.lc_panelline{width:100%; padding:0; margin:0 .5em 0 .5em; background-color:transparent; vertical-align:middle; height:3.4em; line-height:3.4em;}
+.lc_selmac p,
+.lc_panelline p{padding:0 !important; margin:0 !important;}
+.lc_panelline_left{width:10%; padding:0; margin:0; background-color:transparent; vertical-align:middle; height:3.4em; line-height:3.4em; display:inline-block;}
+.lc_panelline_right{padding:0; margin:0; background-color:transparent; vertical-align:middle; height:3.4em; line-height:3.4em; display:inline-block;}
+.lc_selmac_left{width:45%; padding:0 .5em 0 .5em; margin:0; background-color:transparent; vertical-align:middle; height:3.4em; line-height:3.4em; display:inline-block;}
+.lc_selmac_right{width:45%; float:right; padding:0 .5em 0 .5em; margin:0; background-color:transparent; vertical-align:middle; height:3.4em; line-height:3.4em; display:inline-block;}
+.lc_selmac_right p{text-align:right;}
+
+.lc_subline_bottom,
+.lc_subline_top{width:100%; padding:0; margin:0; background-color:transparent; vertical-align:middle; height:1.7em; line-height:1.7em;}
+
+.lc_panelline img,
+.lc_maintitle_left img{width:1.5em !important; height:1.5em !important; display:inline-block; vertical-align:middle;}
+.lc_subtitle_left p,
+.lc_maintitle_left p{display:inline-block; vertical-align:top;}
+.lc_subtitle_right{height:2.3em; line-height:2.3em; padding:0 .5em 0 0; margin:0; display:inline-block; background-color:transparent; vertical-align:middle; float:right;}
+.lc_maintitle_right{height:3.4em; line-height:3.4em; padding:0 .5em 0 0; margin:0; display:inline-block; background-color:transparent; vertical-align:middle; float:right;}
+
+.lc_maintitle_right img,
+.lc_subtitle_left img,
+.lc_subtitle_right img,
+.lc_clickable_left img,
+.lc_clickable_right img{display:inline-block; width:1em; height:1em; vertical-align:middle;}
+.lc_delmacline_center p,
+.lc_clickable p,
+.lc_maintitle_right p,
+.lc_subtitle_right p{display:inline-block; text-align:right; vertical-align:middle;}
+
+.lc_clickable_left{width:90%; display:inline-block; padding:0 0 0 .5em; margin:0; height:3.4em; line-height:3.4em;}
+.lc_clickable_right{display:inline-block; padding:0; margin:0 .5em 0 0; height:3.4em; line-height:3.4em; float:right;}
+
+.lc_research_div,
+.lc_clear_div{display:inline-block; float:right;}
+.lc_wrap_select{margin-top:.5em;}
+
+.lc_setupline{width:100%; padding:0; margin:.5em 0 0 0; vertical-align:middle; height:2.3em; line-height:2.3em;}
+.lc_setupline_left{width:25%; padding:0; margin:0; vertical-align:middle; height:2.3em; line-height:2.3em; display:inline-block;}
+.lc_setupline_left p{padding:0;	margin:0 0 0 .5em;}
+.lc_setupline_right{padding:0; margin:0; vertical-align:middle; height:2.3em; line-height:2.3em; display:inline-block;}
+.lc_descbox,
+.lc_wrap_macbox{padding:0; margin:0; height:2.3em; line-height:2.3em; width:17em; display:inline-block;}
+.lc_buttonbox{padding:0; margin:2em 0 0 0; height:2.3em; float:right; line-height:2.3em; width:17em; display:inline-block;}
+.lc_mac_box{padding:0; margin:0; width:2.4em; height:2.3em; line-height:2.3em; display:inline-block; vertical-align:top;}
+
+.lc_buttonline{padding:0; margin:2em 0 0 0; height:2.3em; float:right; line-height:2.3em; width:100%; display:inline-block;}
+.lc_delmac_li{padding:0 !important; margin:0 !important; height:3.4em !important; line-height:3.4em !important;}
+.lc_delmacline{width:100%; padding:0; margin:0 .5em 0 .5em; background-color:transparent; vertical-align:middle; height:3.4em; line-height:3.4em;}
+.lc_delmacbtnline{width:100%; padding:0; margin:0 .5em 0 .5em; background-color:transparent; vertical-align:middle; height:2.3em; line-height:2.3em;}
+.lc_delmac_li p{
+	margin:0 !important; padding:0 !important; width:100%; vertical-align:middle; text-align:left; height:1.7em; line-height:1.7em;
+	text-overflow:ellipsis !important; overflow:hidden !important; white-space:nowrap !important;
+}
+.lc_delmacline_left{width:85%; padding:0; margin:0; vertical-align:middle; height:3.4em; line-height:3.4em; display:inline-block;}
+.lc_delmacbtnline_left{width:85%; padding:0; margin:0; vertical-align:middle; height:2.3em; line-height:2.3em; display:inline-block;}
+.lc_delmacline_right{padding:0; margin:0; vertical-align:middle; height:3.4em; line-height:3.4em; display:inline-block;}
+.lc_delmacbtnline_right{padding:0; margin:0; vertical-align:middle; height:2.3em; line-height:2.3em; display:inline-block;}
+.lc_delmac_li .ui-alt-icon{margin-left:.3em;}
+
+.lc_first_button{width:6.5em; height:2.3em; float:right; margin:0 0.5em 0 0; padding:0; display:inline-block;}
+.lc_usual_button{width:6.5em; height:2.3em; float:right; margin:0 0 0 0.5em; padding:0; display:inline-block;}
+.lc_first_button button,
+.lc_usual_button button{width:100%; height:2.3em; float:left; margin:0; padding:0;}
+
+.lc_greenbox,
+.lc_greenbox label{background-color:#F9FAF5 !important;}
+.lc_whitebox,
+.lc_whitebox label{background-color:#FFFFFF !important;}
+
+#right_main img{width:1em;	height:1em; display:inline-block;}
+#right_main .ui-btn.ui-checkbox-off:after,
+#right_main .ui-btn.ui-checkbox-on:after{/*width:0.8em !important; height:0.8em !important; margin:-0.3em 0.1em -0.3em 0.1em !important;*/}
+#right_main .ui-checkbox input{width:0.8em !important; height:0.8em !important; margin:0.1em 0 0 0 !important;}
+.lc_delmacline .ui-checkbox .ui-btn{padding-top:0; padding-bottom:0; height:3.4em;}
+.lc_delmacbtnline .ui-checkbox .ui-btn{padding-top:0; padding-bottom:0; padding-right:0; height:2.3em;}

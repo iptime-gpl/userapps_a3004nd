@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr { 
+	border:none;
+	background-color: #DDD;
+	text-align:left;
+	clear: both;
+}
+/*헤더*/
+#header {
+	/*//height: 20px;*/
+	background-color: #dce1cd;
+	border: 1px solid #ccc;
+}
+/*헤더 경계라인*/
+#header hr {
+	border: 1px solid #ccc;
+	clear: both;
+	/*font-size: 0px;*/
+}
+/*헤더
+#header {
+	height: 5em;
+	background-color: #dce1cd;
+	border: 1px solid #ccc;
+}
+
+/*헤더 타이틀 (페이지 이름)
+#header .PAGE_TITLE p {
+	margin-left: 0.8em;
+	/*font-size: 0.9em;
+	line-height: 2em;
+}
+/*헤더 아이콘
+#header .icon {
+	float: left;
+	margin-left: 0.8em;
+	margin-top: 0.2em;
+}
+/*헤더 아이콘 이미지 크기
+#header .icon img {
+	height: 1.7em;
+	width: 1.7em;
+}
+/*헤더 경계라인
+#header hr {
+	border: 1px solid #ccc;
+	clear: both;
+	/*font-size: 0.9em;*/
+}
+
+/*--------------------listview style-----------------------*/
+.listview { clear: both; }
+/*넓은 여백 삭제*/
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+	display: block !important;
+	text-overflow: ellipsis !important;
+	overflow: hidden !important;
+	white-space: nowrap !important;
+	text-shadow: none;
+	font-style: normal;
+	font-family: "돋움", "Arial Unicode MS";
+	color: #444;
+	font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+/*리스트뷰 타이틀*/
+.listview .line_title { float: left; }
+/*타이틀 글자*/
+.listview .line_title p {
+	padding-left: 0.3em;
+	line-height: 2em;
+}
+/*리스트뷰 상태*/
+.listview .line_status { float: right; display: table; }
+/*상태 글자*/
+.listview .line_status p { line-height: 2em; }
+/*상태 화살표*/
+.listview .line_status span { display: table-cell; 	vertical-align: middle; }
+/*상태 화살표 사이즈*/
+.listview .line_status img {
+	height: 1em;
+	width: 1em;
+	padding-top: 0.3em;
+	padding-right: 0.3em;
+}
+/*값 */
+.listview .line_value { clear: both; height: 1.5em; }
+/*값 글자*/
+.listview .line_value p { padding-left: 0.3em; color: #888; }
+/*RightPanel 페이지 */
+#right_main, #right_sub {
+	clear: both;
+	margin-bottom: 0.5em;
+	overflow: auto;
+}
+.lc_left {
+	display: table;
+	float: left;
+	line-height: 2.5em;
+	height: 2.5em;
+	margin-top: 2px;
+	width: 7.5em;
+}
+.lc_left_ipdisk { width: 8em; }
+
+#right_main .lc_left span {
+	display: table-cell;
+	vertical-align: middle;
+	width: 0.7em;
+}
+#right_main .lc_left span img {
+	height: 5px;
+	width: 5px;
+	margin-bottom: 0.2em;
+}
+/*설정오브젝트 한줄*/
+/*전체를 싸는 셀렉터*/
+#right_main .lc_row { clear: both; overflow : hidden; }
+.lc_row_selectfolder { height: 5em !important;}
+.lc_row_userarray{
+}
+/*컨트롤러를 싸는 셀렉터*/
+.lc_right {
+	float: left;
+	width: 15.5em;
+	overflow: hidden;
+}
+.lc_right_ipdisk { width: 16em; }
+
+#right_main .value p { width: 50px; }
+#right_sub #desc p { color: #777; line-height: 1.5em; }
+#right_sub #desc .title { margin-bottom: 5px; }
+
+.wrap_input_ipdisk { width: 6.5em; }
+/*버튼*/
+.custom_css_button {
+	width: 6em;
+	height: 2.5em;
+	float: right;
+}
+.lc_input_host { width: 7.5em; float:left; }
+.lc_dname {
+	float:left;
+	padding-left : 0.5em;
+	padding-top : 0.6em;
+}
+
+/*컨텐츠*/
+#content { background-color: #D7DFC4; padding: 0em; }
+
+/*userlist*/
+.lc_userlist_title, lc_connectuser div{overflow: auto;}
+.lc_userlist_title {
+	background-color:#F6F6F6;
+	border: 1px solid #DDD;
+	border-bottom-width: 0px;
+}
+.lc_userlist_title div{ line-height: 1.7em; height: 1.7em; }
+.lc_userlist_title p{ color: #888; }
+.lc_user p, .lc_ipaddr p {margin-left: 0.4em;}
+.lc_ipaddr, .lc_time { width: 50%; float: left; }
+.lc_ipaddr p {color: #888;}
+.lc_time p {
+	margin-right: 0.2em;
+	text-align: right;
+	color: #888;
+}
+.lc_connectuser {
+	padding: 0.1em !important;
+    height: inherit !important;
+	background-color: #FFFFFF;
+}
+.lc_user_center{margin-top: 0.8em;}
+.lc_user_loadstyle{ color:#888 !important; }
+#lc_loaduser { color:#888 !important; font-weight: inherit !important; }
+
+.lc_property { float:left; width:28%;}
+.lc_userid { float:left; width:28%;}
+.lc_passwd { float:left; width:24%;}
+.lc_passwd_visible { float:left; width:20%;}
+.lc_userid p { margin-left: 0.2em; }
+.lc_passwd p { margin-left: 0.4em; }
+.lc_passwd_visible p { text-align: right; }
+.lc_userarray_property
+{
+	float:left;
+	width:28%;
+	margin-right:0.2em;
+	//margin-bottom: 0.5em;
+}
+.select_folder
+{
+	float:left;
+	width:57%;
+}
+.lc_center_row{padding-top:0.2em;}
+.lc_userarray_userid { float:left; width:28%; margin-right:0.2em; }
+.lc_userarray_passwd { float:left; width:28%; }
+.lc_userarray_passwd_visible
+{
+	float:left;
+	width:14%;
+	margin-top:0.1em;
+	overflow:hidden;
+}
+.lc_input_passwd, .lc_input_passwd_check { float:left; }
+.lc_input_port, .lc_input_port_check { float:left; }
+
+.lc_input_port {width: 3.5em; }
+.lc_input_passwd { width: 6.6em; }
+
+.lc_input_map
+{
+	float:left;
+	width: 3em;
+	margin-top: 0.3em;
+	margin-right: 0.5em;
+}
+.lc_left_map { width: 16.5em; margin-right:0.5em; }
+.lc_right_map {width: 7em; }
+.cc_display_none{ display : none; }
+.lc_createfolder_lineall { margin-left: 0.7em; margin-right: 0.1em; }
+.lc_createfolder { margin-bottom: 0.4em; }
+.lc_media_left {width: 8.5em; }
+.lc_media_right {width: 15.5em; }
+.lc_media_dir { margin-top:1em;}
+.lc_media_config_text
+{
+	text-align: right;
+	color:#888;
+	line-height: 3em;
+}
+.lc_media_submit { overflow:auto; margin-bottom:1em; }
+.lc_media_hr { margin-bottom:0.5em }
+.lc_media_refresh_button { float:right; width:15.5em }
+.lc_height_zero { height: 0em; }
+.lc_apache_left {
+	width: 10em;
+	line-height: 1em;
+	margin-top: 1em;
+	height: 1.5em;
+}
+.lc_apache_right {
+	margin-left: 0.7em;
+	width:23.2em; 
+	margin-bottom:0.2em;
+}
+.lc_service_radio_margin{
+	width: 1px;
+	height: 1px;
+	float: left;
+	margin-right: 0.95em;
+}
+
+
+#content #listview li div.line_value * { float:left; }
+#content #listview li div.line_value img { width: 1em; height: 1em; margin-top: 0.45em; }
+
+#right_content div.plugin_install { overflow: hidden; display: none; }
+#right_content .lc_user_desc { display: none; }
+
+#right_content #samba div.plugin_install input.plugin_install_button,
+#right_content #torrent div.plugin_install input.plugin_install_button,
+#right_content #media div.plugin_install input.plugin_install_button { width: auto; padding: 0.5em; margin-top: 0.5em; }
+#right_content #itunes div.plugin_setup div.lc_row_scan div.lc_right p { margin-top: 0.7em; }
+#right_content .lc_gray_div { width: 5px; height: 5px; background-color: #888; float: left; margin: 0.4em 0.5em 0 0; }
+#right_content .lc_gray_font { color: #888 };

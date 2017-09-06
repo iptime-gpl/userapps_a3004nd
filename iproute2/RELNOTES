@@ -1,0 +1,69 @@
+[991023]
+  No news, only several bugs are fixed.
+  * Since ss990630 "ip rule list" printed wrong prefix length.
+      Vladimir V. Ivanov <vlad@alis.tusur.ru>
+  * "ip rule" parsed >INT_MAX values of metric incorrectly.
+      Matthew G. Marsh <mgm@paktronix.com>
+  * Some improvements in doc/Makefile advised by
+      Andi Kleen and Werner Almesberger.
+
+[990824]
+  * new attributes in "ip route": rtt, rttvar, cwnd, ssthresh and advmss.
+  * some updates in documentaion to reflect new status.
+
+[990630]
+  * DiffServ support.
+	Werner Almesberger <almesber@lrc.di.epfl.ch>
+	Jamal Hadi Salim <hadi@nortelnetworks.com> 
+  * DECnet support.
+	Steve Whitehouse <SteveW@ACM.org>
+  * Some minor tweaks in docs and code.
+
+[990530]
+  * routel script. Stephen R. van den Berg <srb@cuci.nl>
+  * Bug in tc/q_prio.c resetting priomap. Reported by
+	Ole Husgaard <sparre@login.dknet.dk> and
+	Jan Kasprzak <kas@informatics.muni.cz>
+  * IP command reference manual is published (ip-cref.tex).
+    I am sorry, but tc-cref.tex is still not ready, to be more
+    exact the draft does not describe current tc 8-)
+  * ip, rtmon, rtacct utilities are updated according to manual 8-)
+    Lots of changes:
+	- (MAIN) "flush" command for addr, neigh and route.
+	- error messages are sanitized; now it does not print
+	  usage() page on each error.
+	- output format is improved.
+	- "oneline" mode is added.
+	- etc.
+  * Name databases; resolution acsii <-> numeric is split out to lib/*
+  * scripts ifcfg, ifone and rtpr.
+  * examples/dhcp-client-script is copied from my patch to ISC dhcp.
+  * Makefile in doc/ directory.
+
+[990417]
+  * "pmtudisc" flag to "ip tunnel". Phil Karn <karn@ka9q.ampr.org>
+  * bug in tc/q_tbf.c preventing setting peak_rate, Martin Mares <mj@ucw.cz>
+  * doc/flowlabels.tex
+
+[990329]
+
+  * This snapshot fixes some compatibility problems, which I introduced
+    occasionally to previous snapshots.
+  * Namely, "allot" to "tc qdisc add ... cbq" is accepted but ignored.
+  * Another changes are supposed to be shown in the next snapshot, but
+    because of troubles with "allot" I am forced to release premature
+    varsion. Namely, "cell", "prio", "weight" etc. are optional now.
+  * doc/ip-tunnels.tex
+
+[990327]
+  * History was not recorded.
+
+[981002]
+  * Rani Assaf <rani@magic.metawire.com> contributed resolving
+    addresses to names.
+	BEWARE! DO NOT USE THIS OPTION, WHEN REPORTING BUGS IN
+	IPROUTE OR IN KERENEL. ALL THE BUG REPORTS MUST CONTAIN
+	ONLY NUMERIC ADDRESSES.
+
+[981101]
+  * now it should compile for any libc.

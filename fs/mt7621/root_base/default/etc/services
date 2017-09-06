@@ -1,0 +1,3 @@
+http		80/tcp
+ftp		21/tcp
+

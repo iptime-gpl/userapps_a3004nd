@@ -1,0 +1,101 @@
+<div id="header" class="header" data-role="header" data-position="fixed"></div>
+<div id="content" class="content">
+  	<div id="maincontent">
+  		<ul sid="MAINLISTVIEW" id="listview" class="listview" data-role="listview">
+
+      		<li><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_QOSONOFF_TITLE"></p>
+				</div>
+				<div class="line_value">
+					<p sid="QOSONOFF_VALUE"></p>
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="qosonoff_id"></label>
+                                <select sid="C_QOSONOFF_TCMODE" name="tcmode" id="qosonoff_id" data-role="slider" type="slider">
+                                        <option value="0">Off</option>
+                                        <option value="1">On</option>
+                                </select>
+			</div>
+        	</li>
+
+      		<li class="internettype"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_INTERNETTYPE_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+					<p></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid = "INTERNETTYPE_VALUE"></p>
+        		</div>
+        	</a></li>
+      		
+      		<li id = "smartqos"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+          			<div class="line_title">
+            				<p sid="S_SMARTQOS_TITLE"></p>
+          			</div>
+				<div class="line_value">
+					<p sid="S_SMARTQOS_VALUE"></p>
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="smartqos_id"></label>
+                                <select sid="C_SMARTQOS_RUN" name="run" id="smartqos_id" data-role="slider" type="slider">
+                                        <option value="0">Off</option>
+                                        <option value="1">On</option>
+                                </select>
+			</div>
+        	</li>
+
+		</ul>
+
+                <div class = "lc_infobox_div">
+                        <div class="lc_priority_div">
+                                <div class="lc_line_div">
+                                        <div class = "lc_greenbox_div"></div>
+                                </div>
+                                <div class="lc_line_div">
+                                </div>
+                        </div>
+                        <div class="lc_leftbox_div">
+                                <div class="lc_line_div">
+                                        <p class="lc_boldfont_text" sid="S_QOSRULE_VIEWRULE"></p>
+                                </div>
+                                <div class="lc_line_div">
+                                        <p class="lc_grayfont_text" sid="S_QOSRULE_OPTION1"></p>
+                                </div>
+                        </div>
+                        <div class="lc_rightbox_div">
+                                <div class="lc_line_div">
+                                        <p class="lc_grayfont_text" sid="S_QOSRULE_OPTION2"></p>
+                                </div>
+                                <div class="lc_line_div">
+                                        <p class="lc_grayfont_text" sid="S_QOSRULE_OPTION3"></p>
+                                </div>
+                        </div>
+                </div>
+		<div id = "lc_qosrule_div">
+				<div id = "list_div"></div>
+		</div>
+		<div class="lc_addrule_div" id = "qosrule">
+			<div class="lc_priority_div">
+				<img src="/common/images/add_icon.png">
+			</div>
+			<div class="lc_leftbox_div lc_div_padding">
+				<p class="lc_boldfont_text" sid="S_QOSRULE_TITLE"></p>
+			</div>
+			<div class = "lc_rightbox_div">
+				<div class="lc_line_div"></div>
+				<div class="lc_line_div"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

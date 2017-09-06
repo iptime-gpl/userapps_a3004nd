@@ -1,0 +1,48 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content">
+  <form id="iux_form">
+
+	<!--operation run-->
+    <div class="lc_row" sid="ROW_OPERATION">
+      <div class="lc_left"><p sid="S_OPERATION_TITLE"></p></div>
+      <div class="lc_middle"> 
+		<label class="ui-hidden-accessible" for="operation_id"></label>
+		<select sid="C_VPNSERVER_OPERATION" name="operation" id="operation_id" data-role="slider" type="slider">
+			<option value="0">Off</option>
+			<option value="1">On</option>
+		</select>
+      </div>
+    </div>
+	
+	<!--MPPE run-->
+    <div class="lc_row" sid="ROW_MPPE">
+      <div class="lc_left"><p sid="S_MPPE_TITLE"></p></div>
+      <div class="lc_middle"> 
+		<label class="ui-hidden-accessible" for="mppe_id"></label>
+                <select sid="C_VPNSERVER_MPPE" name="mppe" id="mppe_id" data-role="slider" type="slider">
+                        <option value="0">Off</option>
+                        <option value="1">On</option>
+                </select>
+      </div>
+    </div>
+
+	<!--VPN account list-->
+	<div sid="ACCOUNTLIST_TITLEBAR" class="pptpvpn_account_list">
+	  <div><p sid="S_ACCOUNTLIST_ID"></p></div>
+	  <div><p sid="S_ACCOUNTLIST_IPADDR" class="colorgray"></p></div>
+	  <div><p sid="S_ACCOUNTLIST_STATUS" class="colorgray"></p></div>
+	</div>
+	<div><ul sid="ACCOUNTLIST"></ul></div>
+	<div class="lc_row pptpvpn_enteradd" sid="ADD_ACCOUNT"><a href="#right_panel" data-icon="false">
+	  <div class="titleicon"><img src="/common/images/add_icon.png"></div>
+	  <div class="titletext"><p>VPN접속계정 추가</p></div>
+	  <div class="icon_openarrow"><img src="/common/images/icon_list_run.png"></div>
+	</a></div>
+	<div class="lc_row pptpvpn_entermodify" sid="MODIFY_ACCOUNT"><a href="#right_panel" data-icon="false">
+	  <div class="titleicon"><img src="/common/images/del_icon.png"></div>
+	  <div class="titletext"><p>VPN접속계정 연결끊기 및 삭제</p></div>
+	  <div class="icon_openarrow"><img src="/common/images/icon_list_run.png"></div>
+	</a></div>
+   </form>
+ </div>
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

@@ -1,0 +1,14 @@
+http:HTTP:1:1:nat:app_portforward:tcp:0:80:dnat:80:
+https:HTTPS:1:1:nat:app_portforward:tcp:0:443:dnat:443:
+ftp:FTP:1:1:nat:app_portforward:tcp:0:21:dnat:21:
+pop3:POP3:1:1:nat:app_portforward:tcp:0:110:dnat:110:
+smtp:SMTP:1:1:nat:app_portforward:tcp:0:25:dnat:25:
+dns:DNS:1:1:nat:app_portforward:udp:0:53:dnat:53:
+telnet:TELNET:1:1:nat:app_portforward:tcp:0:23:dnat:23:
+ipsec:IPSEC:1:1:nat:app_portforward:udp:0:500:dnat:500:
+pptp:PPTP:3:1:nat:app_portforward:tcp:0:1723:dnat:1723:+:0:nat:app_portforward:udp:0:1723:dnat:1723:+:0:nat:app_portforward:47:0:0:dnat:0:
+원격데스크톱:원격데스크톱:1:1:nat:app_portforward:tcp:0:3389:dnat:3389:
+구루구루:구루구루:1:1:nat:app_portforward:tcp:0:9292:dnat:9292:
+h323:H323:4:0:nat:app_portforward:tcp:0:1720:dnat:1720:+:0:filter:app_forward:udp:0:1719:apps:H323RAS:+:0:filter:app_forward:tcp:0:1719:apps:H323RAS:+:0:filter:app_forward:tcp:1720:0:apps:H323RAS:
+소리바다:소리바다:2:0:nat:app_portforward:udp:0:22321:dnat:22321:+:0:nat:app_portforward:udp:0:7674:dnat:7674:
+팀보이스:팀보이스:4:0:nat:app_portforward:udp:0:9000-9020:dnat:0:+:0:nat:app_portforward:tcp:0:9000:dnat:9000:+:0:nat:app_portforward:tcp:0:9101:dnat:9101:+:0:nat:app_portforward:tcp:0:9102:dnat:9102:

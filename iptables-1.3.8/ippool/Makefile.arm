@@ -1,0 +1,11 @@
+ifndef TOPLEVEL_INCLUDED
+include $(USERAPPS_ROOT)/mkdefs
+endif
+
+CFLAGS += -I../include
+ippool: ippool.o
+	$(CC) $(LDFLAGS) -o $@ $^
+	$(STRIP) ippool
+clean: 
+	rm -rf *.o ippool
+

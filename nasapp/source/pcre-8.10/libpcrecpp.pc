@@ -1,0 +1,12 @@
+# Package Information for pkg-config
+
+prefix=/home/ysmt7621/userapps/nasapp
+exec_prefix=/home/ysmt7621/userapps/nasapp
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libpcrecpp
+Description: PCRECPP - C++ wrapper for PCRE
+Version: 8.10
+Libs: -L${libdir} -lpcre -lpcrecpp
+Cflags: -I${includedir} 

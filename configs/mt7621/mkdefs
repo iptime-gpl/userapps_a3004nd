@@ -1,0 +1,28 @@
+CROSS =  /opt/buildroot-gcc463/usr/bin/mipsel-linux-
+CC = $(CROSS)gcc
+LD = $(CROSS)gcc
+AR = $(CROSS)ar
+RANLIB = $(CROSS)ranlib
+NM = $(CROSS)nm
+OBJCOPY = $(CROSS)objcopy
+OBJDUMP = $(CROSS)objdump
+STRIPTOOL = $(CROSS)strip
+STRIP    = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
+UPNP_TARGET = mipsel-linux-uclibc
+
+include $(USERAPPS_ROOT)/config
+include $(USERAPPS_ROOT)/cflags.mk
+
+#KERNEL_PATH := $(USERAPPS_ROOT)/linux
+USERLAND_LIB := -L$(USERAPPS_ROOT)/lib/ul_lib -luserland -lcrypt
+CGI_LIB := -L$(USERAPPS_ROOT)/lib/ul_lib -L$(USERAPPS_ROOT)/lib -L$(USERAPPS_ROOT)/rt288x_app/install/lib -lcgi -luserland -lm -lcrypt -lrt288x 
+
+ifeq ($(USE_ROUTER_NAS),y)
+CGI_LIB += -L$(USERAPPS_ROOT)/nasapp/efmsrc/lib -lnas -L$(USERAPPS_ROOT)/nasapp/lib -liconv
+endif
+
+ifeq ($(USE_KERNEL_3_X),y)
+IPTABLES_PATH:=$(USERAPPS_ROOT)/iptables-1.4.10
+else
+IPTABLES_PATH:=$(USERAPPS_ROOT)/iptables-1.3.8
+endif

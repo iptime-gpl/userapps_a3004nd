@@ -1,0 +1,64 @@
+pptpctrl.c: In function `startCall':
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: passing arg 1 of `strlen' makes pointer from integer without a cast
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: warning: passing arg 1 of `strlen' makes pointer from integer without a cast
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: cast to pointer from integer of different size
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: invalid type argument of `unary *'
+pptpctrl.c:610: warning: passing arg 1 of `strcmp' makes pointer from integer without a cast
+pptpctrl.c:610: parse error before `{'
+pptpctrl.c:614: warning: passing arg 1 of `fclose' from incompatible pointer type
+pptpctrl.c:590: warning: unused variable `pppif'
+pptpctrl.c:617: warning: passing arg 1 of `closedir' from incompatible pointer type
+pptpctrl.c:619: `pppif' undeclared (first use in this function)
+pptpctrl.c:619: (Each undeclared identifier is reported only once
+pptpctrl.c:619: for each function it appears in.)
+pptpctrl.c:518: warning: `dirtable' might be used uninitialized in this function
+pptpctrl.c:590: warning: `qdir' might be used uninitialized in this function
+pptpctrl.c:593: warning: `i' might be used uninitialized in this function
+pptpctrl.c:635: warning: control reaches end of non-void function
+pptpctrl.c: At top level:
+pptpctrl.c:637: warning: type defaults to `int' in declaration of `close'
+pptpctrl.c:637: warning: parameter names (without types) in function declaration
+pptpctrl.c:637: warning: data definition has no type or storage class
+pptpctrl.c:638: parse error before `return'
+make: *** [pptpctrl.o] Error 1

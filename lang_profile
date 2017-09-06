@@ -1,0 +1,30 @@
+DATE := date "+%Y.%m.%d %H:%M:%S"
+ifeq ($(ENGLISH_SUPPORT),y)
+LANGUAGE_POSTFIX:= en
+endif
+ifeq ($(KOREAN_SUPPORT),y)
+LANGUAGE_POSTFIX:= kr
+endif
+ifeq ($(CHINESE_SUPPORT),y)
+LANGUAGE_POSTFIX:= ch
+endif
+ifeq ($(CHINEXE_SUPPORT),y)
+LANGUAGE_POSTFIX:= cx
+endif
+ifeq ($(FRENCH_SUPPORT),y)
+LANGUAGE_POSTFIX:= fr
+endif
+ifeq ($(PORTUGUESE_SUPPORT),y)
+LANGUAGE_POSTFIX:= pt
+endif
+ifeq ($(RUSSIAN_SUPPORT),y)
+LANGUAGE_POSTFIX:= ru
+endif
+
+ifeq ($(LANGUAGE_POSTFIX),)
+ifeq ($(USE_OEM_UI),y)
+LANGUAGE_POSTFIX:= en
+else
+LANGUAGE_POSTFIX:= kr
+endif
+endif

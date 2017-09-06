@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+/*페이지 기본정의*/
+#service_page {
+	background-color: #FFF;
+}
+/*컨텐츠 타이틀*/
+#maincontent .title {
+	background-color: #EEEFE5;
+	height: 150px;
+}
+#maincontent .title p {
+	padding-left: 10px;
+	line-height: 40px;
+	font-weight: bold;
+}
+#subcontent .title {
+	background-color: #EEEFE5;
+	height: 40px;
+}
+#subcontent .title p {
+	padding-left: 10px;
+	line-height: 40px;
+	font-weight: bold;
+}
+#subcontent .subtitle {
+	float: left;
+	width: 33.3%;
+	height: 30px;
+	background-color: #EEEFE5;
+}
+#subcontent .subtitle p {
+	line-height: 30px;
+	text-align: center;
+	color: #888;
+}
+/*RightPanel 페이지 */
+#right_content {
+	padding: 0.5em;
+}
+#right_main, #right_sub {
+	clear: both;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+#right_main .title {
+	display: table;
+	float: left;
+	line-height: 45px;
+	margin-top: 2px;
+}
+#right_main .title p {
+	font-weight: bold;
+	width: 8em;
+}
+#right_main .title span {
+	display: table-cell;
+	vertical-align: middle;
+}
+#right_main .title span img {
+	height: 5px;
+	width: 5px;
+	padding-bottom: 2px;
+	margin-right: 5px;
+}
+/*설정오브젝트 한줄*/
+/*전체를 싸는 셀렉터*/
+#right_main .lc_row {
+	clear: both;
+}
+/*컨트롤러를 싸는 셀렉터*/
+#right_main .lc_right {
+	float: left;
+	width: 12em;
+}
+#right_main .value p {
+	width: 50px;
+}
+#right_sub #desc p {
+	color: #777;
+	line-height: 1.5em;
+}
+#right_sub #desc .title {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+/*----------------------------------------------------*/
+
+
+/*leftPanel 페이지 */
+#left_header {
+	background-color: #80A352;
+}
+.right_lc_row {
+	clear: both;
+	overflow: auto;
+}
+/*----------------------------------------------------*/
+/*----------------------------------------------------페이지별 css 스타일 값 ----------------------------------------------------*/
+.wrap_radio_run {
+	padding-top: 10px
+}
+/*----------------------------------------------------*/
+/*ipdisk*/
+.wrap_input_ipdisk {
+		width: 7em;
+}
+/*----------------------------------------------------*/
+/*ftp*/
+#select-native-2-button {
+	width: 11.8em;
+}
+/*셀렉트버튼길이*/
+.wrap_input_port {
+	float: left;
+	width: 3.7em;
+	margin-right: 10px;
+}
+.wrap_check_port {
+	float: left;
+	padding-top: 7px;
+}
+/*----------------------------------------------------*/
+/*mysql*/
+.wrap_input_map {
+	width: 3.0em;
+}
+/*----------------------------------------------------*/
+/*torrent*/
+.wrap_input_userpw {
+	width: 7em;
+}
+/*----------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------*/

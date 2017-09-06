@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+p{ text-overflow: ellipsis; font-size: inherit !important; font-weight: normal !important;}
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+/*헤더*/
+#header { background-color: #dce1cd; border: 1px solid #ccc; }
+/*헤더 경계라인*/
+#header hr { border: 1px solid #ccc; clear: both; }
+.ui-checkbox label { padding-right: 0em; }
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+.ui-checkbox .ui-btn{
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 3em;
+	background-color: #EEF1E6;
+}
+#content { background-color: #EEF1E6; }
+.ui-page-theme-a .ui-btn:hover { background-color: #EEF1E6; }
+.ui-page-theme-a .ui-btn { background-color: #EEF1E6; }
+
+/*main*/
+.lc_logfield
+{
+	margin: 0.5em;
+	margin-top: 0;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(204, 204, 204);
+	height: 25em;
+	overflow: auto;
+}
+.lc_logfield p 
+{
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	white-space: normal;
+	font-size: 0.7em;
+}
+.lc_row { overflow: hidden; clear: both; }
+.lc_radio_attr
+{
+	overflow: hidden;
+	float: left;
+    margin-top: 0.5em;
+}
+.mtitle
+{
+	overflow: hidden;
+	float: left;
+	width: 6em;
+}
+.mtitle p { margin-left: 0.5em; line-height: 3em; }
+.mcontent_remotepc
+{
+	float: left;
+	overflow: hidden;
+	margin-top: 1em;
+	width: 17.65em;
+}
+.mcontent_remotemac
+{
+	float: left;
+	overflow: hidden;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+.mcontent_remotemac .input
+{
+	float: left;
+	width: 2.4em;
+	overflow: hidden;
+}
+.mcontent_remotemac .dot
+{
+	float: left;
+	overflow: hidden;
+	margin-top: 0.4em;
+	width: 0.65em;
+}
+.mcontent_remotemac .dot p { text-align: center; }
+.lc_content_search
+{
+	float: left;
+	overflow: hidden;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	border: 1px solid rgb(170, 170, 170);
+}
+.lc_content_search img 
+{ 
+	width: 2em;
+	height: 1.7em;
+	background-color: #EEEEEE;
+}
+.lc_content_addcurrentdevice { margin-left: 5.4em; margin-top: -0.5em; width: 20em;}
+.lc_content_addcurrentdevice label { margin-bottom: 0.5em; }
+.lc_content_addcurrentdevice label p { line-height: 3em; }
+.lc_content_addbutton
+{
+	float: right;
+	width: 6em;
+	height: 2.5em;
+	margin-right: 0.5em;
+	margin-bottom: 1em;
+	border: 0;
+	background-color: #8DAF25;
+	cursor: pointer;
+}
+.lc_content_addbutton .icon { float: left; margin-right: 0.5em;}
+.lc_content_addbutton .icon img
+{
+	height: 1.2em !important;
+	width: 1.2em !important;
+	margin-top: 0.4em;
+	margin-left: 0.4em;
+}
+.lc_content_addbutton .text { float: left; }
+.lc_content_addbutton .text p {	line-height: 2em; }
+.lc_content_remotepclist_titlebar
+{
+	height: 2.5em;
+	border: 1px solid #CCCCCC;
+	border-left-width:0;
+	border-right-width:0;
+}
+.lc_content_remotepclist_titlebar p { line-height: 2.5em; margin-left: 0.5em; }
+.lc_content_remotepc
+{
+	overflow:hidden !important;
+	height: 4em !important; 
+	padding: 0 !important; 
+}
+.lc_content_remotepc .lc_left
+{
+	overflow: hidden;
+	float: left;
+	width: 60%;
+}
+.lc_content_remotepc .lc_left .idx { float: left; width: 10%; }
+.lc_content_remotepc .lc_left .idx p { line-height: 3.5em; margin-left: 0.5em; }
+.lc_content_remotepc .lc_left .remotepc { float: left; width: 90%; cursor: pointer;}
+.lc_content_remotepc .lc_left .remotepc p { line-height: 1.5em; }
+.lc_content_remotepc .lc_left .remotepc .mac { line-height: 1.5em; color: #AAAAAA; }
+
+.lc_content_remotepc .lc_middle
+{ 
+	float: left;
+	margin-left: 1em;
+	overflow: hidden;
+	cursor: pointer;
+
+}
+.lc_content_remotepc .lc_middle .lc_text { float: right; }
+.lc_content_remotepc .lc_middle .lc_text p { line-height: 3.4em; text-align: right; }
+.lc_content_remotepc .lc_middle .lc_icon { float: right; margin-top: 1.4em; }
+.lc_content_remotepc .lc_middle .lc_icon img { width: 1.2em; height: 1.2em; }
+.lc_content_remotepc .lc_right
+{
+	float: right;
+	margin-top: 1em;
+	margin-right: 1em;
+	width: 2.6em;
+	overflow: hidden;
+}
+.lc_content_remotepc .lc_right label {width: 2em; height: 2em; }
+
+.lc_content_delbutton { overflow: hidden; float: right; }
+.lc_content_delbutton button
+{
+    float: right;
+    width: 6em;
+    height: 2.5em;
+    margin-right: 0.5em;
+    border: 0;
+    background-color: #8DAF25;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+.lc_content_delbutton button .icon { float: left; }
+.lc_content_delbutton button .icon img
+{
+	height: 1.5em;
+	width: 1.5em;
+	margin-top: 0.2em;
+	margin-left: 0.3em;
+}
+.lc_content_delbutton button .text { float: left; }
+.lc_content_delbutton button .text p { line-height: 2em; }
+.lc_content_allcheck
+{
+    overflow: hidden;
+    float: right;
+    margin-right: 1em;
+    margin-top: 0.7em;
+    width: 2.6em;
+}
+
+/*right*/
+.maclist_li { cursor: pointer; }
+.maclist_left { width: 45% !important; }
+.maclist_left p { text-overflow: ellipsis !important; }
+.maclist_right { width: 55% !important; margin-left: 0 !important;}
+.maclist_right p
+{
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+	line-height: 3em !important;
+}
+.right_refresh_button
+{
+	margin-top: 1em !important;
+	margin-right: 0.5em !important;
+}

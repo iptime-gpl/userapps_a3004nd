@@ -1,0 +1,460 @@
+<script>
+
+var TAB_CODE=9
+var DEL_CODE=46 
+var BS_CODE=8
+var SP_CODE=32
+var DOT_CODE=190
+var DOT2_CODE=110
+
+var IDX_ON=0
+var IDX_OFF=1
+
+var IDX_AP_MODE=0
+var IDX_CBRIDGE_MODE=1
+var IDX_WWAN_MODE=2
+var IDX_KAI_MODE=3
+var IDX_MBRIDGE_MODE=4
+
+
+var WIRELESS_AP_MODE=0;
+var WIRELESS_CBRIDGE_MODE=1;
+var WIRELESS_CWAN_MODE=2;
+var WIRELESS_KAI_MODE=3;
+var WIRELESS_MBRIDGE_MODE=4;
+
+var KAID_MODE_INIT=0  // ap mode
+var KAID_MODE_PSP=0 // psp kai
+var KAID_MODE_NORMAL=0 // xbox kai
+
+var AUTH_OPEN=1
+var AUTH_KEY=2
+var AUTH_AUTO=3
+var AUTH_WPA=4
+var AUTH_WPAPSK=5
+var AUTH_OPEN8021X=6
+var AUTH_WPANONE=7
+var AUTH_WPA2=8
+var AUTH_WPA2PSK=9
+var AUTH_WPAPSKWPA2PSK=10
+var AUTH_NOCHANGE=100
+
+var IDX_NOENC=0
+var IDX_WEP64=1
+var IDX_WEP128=2
+var IDX_TKIP=3
+var IDX_AES=4
+var IDX_TKIPAES=5
+
+var ENCRYPT_OFF=0
+var ENCRYPT_64=1
+var ENCRYPT_128=2
+var ENCRYPT_TKIP=3
+var ENCRYPT_AES=4
+var ENCRYPT_TKIPAES=5
+
+var KEY_STRING=0;
+var KEY_HEX=1;
+
+var IDX_KEY_STRING=0;
+var IDX_KEY_HEX=1;
+
+var REGION_USA=1;
+var REGION_JAPAN=2;
+
+var DMZTWINIP_MODE_DMZ=1;
+var DMZTWINIP_MODE_TWINIP=2;
+
+var QOS_SHARING_BOUNDED=2;
+var QOS_SHARING_BORROW=3;
+
+
+var MSG_RESTART_CONFIRM_DEFAULT='ルータ設定を初期化した場合、ルータを再起動する必要があります。\n再起動しますか？';
+var MSG_RESTART_CONFIRM_UPNP='UPNP設定を変更した場合、ルータを再起動する必要があります。\n再起動しますか？';
+var MSG_RESTART_CONFIRM_REBOOT='ルータを再起動します。続けますか？';
+var MSG_RESTART_CONFIRM_CHANGE_LANIP='内部 IP アドレスと DHCP サーバーの動的 IP アドレス範囲を変更して、ルータが再起動します。\n再起動しますか？';
+var MSG_RESTART_CONFIRM_CHANGE_LANIP_FAKE_TWINIP='内部 IP アドレスと DHCP サーバーの動的 IP アドレス範囲を変更して、ルータが再起動します。\n再起動しますか？';
+var MSG_RESTART_CONFIRM_RESTORE='設定が復旧されてからルータを再起動します。\n 再起動しますか？';
+var MSG_RESTART_CONFIRM_NAT='インターネットルータ機能設定を変更する場合、ルータを再起動する必要があります。\n再起動しますか？';
+var MSG_RESTART_CONFIRM_WIRELESS='無線動作モードに変更する場合、ルータを再起動する必要があります。\n再起動しますか？';
+var MSG_KAID_MODE_CHANGE_WARNING='カイ動作モードに変更する場合、ルータを再起動する必要があります。\n再起動しますか？';
+var MSG_RESTART_CONFIRM_WIRELESS_CBRIDGE='LAN カードモードからは APモードからの無線接続機能を使用できません。\nモード変更のためには有無線ルータ、又は AP を再起動します。\n再起動しますか？';
+var MSG_RESTART_CONFIRM_WIRELESS_WWAN='無線 WAN モードは光 LAN, FTTH, ADSL, VDSL, ケーブルモデムなどのほとんどのインターネット方式では使用できません。\nモード変更のためには有無線ルータ、又は AP を再起動する必要があります。\n再起動しますか？';
+var MSG_TWINIP_CONFIRM_WARNING='Twin IP 設定時にはルータを再起動する必要があります。\n再起動しますか？';
+var MSG_WAN_FOR_LAN_WARNING='WAN ポートの機能を変更するためにはルータを再起動する必要があります。\n再起動しますか?';
+
+// common
+var MODIFY_OP='修正'
+var MSG_INVALID_HWADDR="MAC アドレスが正しくありません。" 
+var MSG_DELETE_RULE_CONFIRM="ルールを削除しますか？" 
+var MSG_SELECT_RULE_TO_DEL="削除するルールを選択してください。" 
+var MSG_ALL_STOP_RULE="全ての動作を停止いますか？"
+
+var MSG_OPENER_PAGE_MOVED="設定ページが移動しました。"
+var MSG_INVALID_VALUE="Invalid value."
+
+
+
+// wireless_config_wizard
+var MSG_INVALID_WEP_KEY_HEXVALUE2="文字入力時には 16真数値を入力する必要があります。"
+var MSG_INVALID_WPAPSK_KEY_MISMATCH="二つのネットワークキーが一致しません。\n同一なキーを入力してください。"
+
+// sysconf_configmgmt
+var MSG_RESTOREFILE_BLANK="復旧する設定ファイルを選択してください。"
+
+//natrouterconf
+var MSG_RULE_NAME_IS_BLANK="ルール名がありません。"
+
+
+// wirelessconf_wdssetup
+var MSG_WDS_DEL_WARNING="WDS 設定を削除しますか？" 
+var MSG_APADD_REQUEST_APPLY="'追加' ボタンをクリックすると、WDS 設定が完了します。"   
+
+// wirelessconf_basicsetup
+var MSG_BLANK_SSID="ネットワーク名(SSID)を入力してください。"
+var MSG_INVALID_WEP_KEY_LENGTH="ネットワークのキーが正しくありません。"
+var MSG_INVALID_WEP_KEY_HEXVALUE="ネットワークキー値は 16 真数値を入力してください。"
+var MSG_INVALID_WPAPSK_KEY_LENGTH="ネットワークキーを 8 文字以上入力してください。"
+var MSG_INVALID_5_KEY_LENGTH="正確に 5 文字のキーを入力してください。"
+var MSG_INVALID_13_KEY_LENGTH="正確に 13 文字のキーを入力してください。"
+var SAVE_CONFIGURATION_STRING="設定を保存しますか？"
+
+var MSG_BLANK_REQUEST_SSID="ネットワーク名(SSID)を入力して '適応' ボタンをクリックします。"
+var MSG_INVALID_REQUEST_KEY="ネットワークキーを入力して '適応' ボタンをクリックしてください。"
+var MSG_INVALID_REQUEST_APPLY="'適用' ボタンをクリックすると選択した AP に接続します。"
+var MSG_APPLY_REQUEST_KEY="'適用' ボタンをクリックすると選択したチャンネルが適用します。"
+var MSG_BEST_CHANNEL_PRE="検索した最適のチャンネルは " 
+var MSG_BEST_CHANNEL_POST="番です。"
+var MSG_KEY_LENGTH_DESC="キーの長さ = "
+
+// config_wizard
+var MSG_BLANK_ACCOUNT="ユーザーアカウントを入力する必要があります。"
+var MSG_BLANK_PASSWORD="ユーザーパスワードを入力する必要があります。"
+
+var MSG_INVALID_IP="IP アドレスが正しくありません。"
+var MSG_INVALID_NETMASK="サブネットマスクが正しくありません。"
+var MSG_INVALID_GATEWAY="基本ゲートウェイが正しくありません。"
+var MSG_INVALID_FDNS="優先 DNSサーバーアドレスが正しくありません。"
+var MSG_INVALID_SDNS="代替 DNSサーバーアドレスが正しくありません。"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_NETWORK="IP アドレスと外部ネットワークが同じです。"
+var STATIC_LEASE_ALREADY_EXIST_IPADDRESS="既に登録済みの IPアドレスです。"
+var STATIC_LEASE_ALREADY_EXIST_HWADDRESS="既に登録済みの MACアドレスです。"
+
+var NETCONF_INTERNAL_TOO_SMALL_LEASETIME="IP 連タール時間を 10秒以上に設定してください。"
+var NETCONF_INTERNAL_TOO_BIG_LEASETIME="IP レンタル時間を 2147483647秒以下に設定してください。" 
+var NETCONF_INTERNAL_INVALID_LEASETIME="IP レンタル時間を数字で入力してください。"
+
+//netconf_wansetup
+var NETCONF_INTERNET_DHCP_MTU_INVALID="MTU 値は 1500を超えることはできません。"
+var NETCONF_INTERNET_PPP_MTU_INVALID="MTU 値は 1492を超えることはできません。"
+var NETCONF_INTERNET_KEEP_ALIVE_MSG="時間を入力してください。"
+var NETCONF_INTERNET_GW_INVALID_NETWORK="ゲートウェイが内部ネットワークと同じです。"
+var NETCONF_WANSETUP_CONFIRM_WANINFO="インターネット接続情報を確認しますか？"
+
+
+//netconf_lansetup
+var NETCONF_INTERNAL_INVALID_DHCP_S_ADDR="動的 IP アドレス割当範囲が正しくありません。"
+var NETCONF_INTERNAL_INVALID_DHCP_E_ADDR="動的 IP アドレスワイ当て範囲が正しくありません。"
+var NETCONF_INTERNAL_INVALID_DHCP_ADDR="動的 IP アドレス割当範囲が間違っています。"
+var NETCONF_INTERNAL_DELETE_IP="指定した IPアドレスを削除しますか？"
+
+// wirelessconf_advanced
+var DESC_INVALID_TX_POWER="送信パワー値は 1 ~ 100 間の値を入力してください。";
+var DESC_INVALID_RTS_THRESHOLD="RTS Thresholdの値は  1 ~ 2347 間の値を入力してください。";
+var DESC_INVALID_FRAG_THRESHOLD="Fragmentation Thresholdの値は  256 ~ 2346 の間の値を入力してください。";
+var DESC_INVALID_BEACON_INTERVAL="Beacon 周期の値は  50 ~ 1024 間の値を入力してください。";
+var DESC_INVALID_BEACON_INTERVAL="Beacon 周期の値は  50 ~ 1024 間の値を入力してください。";
+
+// expertconf_kai
+var KAID_MODE_CHANGE_WARNING="システムが再起動します。続けますか？"
+var KAID_MUST_SELECT_OBT_SERVER="カイサーバーを選択してください。"
+var KAID_RESTART_KAI_UI="カイ UIを再起動してください。"
+
+//natrouterconf_portforward
+var MAX_PORT_FORWARD=60
+var NATCONF_PORTFORWARD_NO_MORE_RULE="これ以上ポートフォワード設定を追加できません。"
+var NATCONF_PORTFORWARD_INVALID_INT_IP_ADDRESS="内部 IP アドレスが正しくありません。"
+var NATCONF_PORTFORWARD_EXT_PORT_IS_BLANK="外部使用ポートが指定されてません。"
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT="外部使用オートが正しくありません。"
+var NATCONF_PORTFORWARD_INVALID_EXT_PORT_RANGE="外部使用ポート範囲が正しくありません。"
+var NATCONF_PORTFORWARD_INVALID_INT_PORT="内部使用ポートが正しくありません。"
+var NATCONF_PORTFORWARD_INVALID_INT_PORT_RANGE="内部使用ポート範囲が正しくありません。"
+var NATCONF_PORTFORWARD_RUN_RULE="ルールを動作しますか？"
+
+
+//natrouterconf_misc
+var NATCONF_INTAPPS_NO_MORE_ADD_FTP_PORT="設定できるポートの数を超えています。"
+var NATCONF_INTAPPS_FTP_PORT_EMPTY="ポートが指定されていません。"
+var NATCONF_INTAPPS_FTP_PORT_INVALID= "ポートが正しくありません。"
+
+//natrouterconf_router
+var NETCONF_ROUTE_ENTRY_DELETE="選択されたルーティングテーブルを削除しますか？"
+var NETCONF_ROUTE_ENTRY_SELECT="削除するルーティングテーブルを選択してください。"
+
+//natrouterconf_twinzipdmz
+var NATCONF_TWINIPDMZ_UPDATE_TIME="IP 更新時間は 60秒以上である必要があります。"
+var NATCONF_TWINIPDMZ_WARNING="現在接続されている PCは Twin IPを使用しています。 Twin IPを解除する場合、該当 PCは IP アドレスを再設定してから正常的に使用することができます。 (設定解除後からは ipTIME ウェブ設定ページ接続を含めている全ての通信が行えません。)  続けて行いますか？"
+
+
+//firewallconf_firewall
+var USER_FWSCHED_TYPE=1
+var APP_FWSCHED_TYPE=2
+var URL_FWSCHED_TYPE=4
+var MAX_FWSCHED_COUNT=200 
+var FIREWALLCONF_FIREWALL_INVALID_TIME_TO_BLOCK="設定した時間範囲が間違っています。"
+var FIREWALLCONF_FIREWALL_DATE_WARNING="制限する曜日を選択してください。"
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_IP="スタート地 IP アドレスが正しくありません。"
+var FIREWALLCONF_FIREWALL_INVALID_SOURCE_HW="スタート地 MAC アドレスが正しくありません。"
+var FIREWALLCONF_FIREWALL_INVALID_DEST_IP="目的地 IP アドレスが正しくありません。"
+var FIREWALLCONF_FIREWALL_INVALID_DEST_PORT="目的地ポートが正しくありません。"
+var FIREWALLCONF_FIREWALL_RUN_RULE="ルールを動作しまうか？"
+var FIREWALLCONF_FIREWALL_NO_MORE_RULE="これ以上設定を追加できません。"
+var FIREWALLCONF_FIREWALL_INVALID_PRIORITY="優先順位値が正しくありません。"
+
+//firewallconf_netdetect
+var NETCONF_NETDETECT_WARNING1="最小接続値は 10 です。"
+var NETCONF_NETDETECT_WARNING2="有効時間範囲は 0時 ~ 23時です。"
+
+
+//firewallconf_internet
+var FIREWALLCONF_INTERNET_RESTRICTIVE_WARNING="制限する PCの数は最小 1個以上で最大 253個以下に設定してください。"
+var FIREWALLCONF_INTERNET_RESTRICTIVE_CLEARANCE="登録されている全ての PC情報を初期化しますか？"
+
+//firewallconf_etc 
+var DESC_INVALID_ARP_PERIOD="秒当たり ARPの数を 1 ~ 100 間の数で設定します。"
+
+//expertconf_ddns
+var EXPERTCONF_DDNS_HOSTNAME_IS_BLANK = "ホスト名がありません。"
+var EXPERTCONF_DDNS_HOSTNAME_NOT_IPTIMEORG = "ホスト名のドメインは  iptime.org にする必要があります。"
+var EXPERTCONF_IPTIMEDNS_NOMORE_WANRING1 ="これ以上 ipTIME DDNS ホストを追加することはできません。"
+var EXPERTCONF_IPTIMEDDNS_INVALID_USERID= "正確な E-mail アドレスを入力してください。"
+var EXPERTCONF_DYNDNS_NOMORE_WANRING1="これ以上 dyndns.orgの DDNS ホストを追加できません。"
+var INVALID_EMAIL_ADDRESS_STR="E-mail アドレス形式が間違っています。"
+var EXPERTCONF_IPTIMEDDNS_INVALID_HOSTNAME = "ホスト名に '_' 又は '.'は使用できません。"
+
+//expertconf_remotepc
+var EXPERTCONF_WOL_PC_NAME_IS_BLANK="PC 説明欄が空いています。"
+var EXPERTCONF_WOL_DEL_PC="PCを削除しますか？"
+var EXPERTCONF_WOL_WANT_TO_WAKE_UP_PC ="PC を起動しますか？"
+
+//expertconf_hostscan
+var ICMP_PING=0
+var ARP_PING=1
+var PING_SCAN=0
+var TCP_PORT_SCAN=1
+var SYSINFO_HOST_INVALID_TIMEOUT =   "時間制限を入力してください。"
+var SYSINFO_HOST_TIMERANGE   =       "時間は 1秒以上入力する必要があります。"
+var SYSINFO_HOST_INVALID_DATASIZE =  "サイズを入力してください。"
+var SYSINFO_HOST_DATARANGE    =      "0~65,500までの範囲を入力してください。"
+var SYSINFO_HOST_INVALID_START  =    "スタートポートを入力してください。"
+var SYSINFO_HOST_PORTRANGE      =    "0~65,535間の範囲を入力してください。"
+
+//trafficconf_conninfo
+var TRAFFICCONF_CONNINFO_DELETE_CONN="指定されている IPアドレスをコネクションを削除しますか？"
+
+//trafficconf_switch
+var SELECT_VLAN_PORT_WARNING ="VLAN ポートを選択してください。"
+var SELECT_VLAN_PORT_TRUNK_WARNING ="All port of TRUNK(%s) must be in VLAN."
+var SELECT_TRUNK_PORT_WARNING ="Select TRUNK Port."
+var SELECT_TRUNK_PORT_VLAN_WARNING ="All port of TRUNK must be in VLAN(%s) or another VLAN."
+var MAX_MEMBER_TRUNK_WARNING="Maximum number of port is %d."
+var ALREADY_OTHER_GROUP_MEMBER="Ports can not be included in multiple groups."
+
+
+//trafficconf_loadshare
+var NATCONF_PORTFORWARD_NO_MORE_RULE="これ以上ポートフォワード設定を追加できません。"
+var NATCONF_PORTFORWARD_RULE_NAME_IS_BLANK="ルール名がありません。"
+var NATCONF_INTSERVER_INVALID_EXT_PORT="ポートが間違っています。"
+var NATCONF_LOADSHARE_KEEP_WRR="自動分散機能動作中には '自動インターネットラインバックアップ' 機能を中止できません。" 
+var NATCONF_LOADSHARE_ON_LINE_BACKUP="'自動インターネットラインバックアップ' 機能も自動で設定できます。続けますか？"
+var NATCONF_LOADSHARE_DELETE_RULE="ルールを削除しますか？"
+var NATCONF_PORTFORWARD_SELECT_RULE_TO_DEL="削除するルールを選択してください。" 
+//sysconf_syslog
+var SYSCONF_SYSLOG_WANRING = "時間範囲が正しくありません。"
+var SYSCONF_SYSLOG_EMAIL_CONFIRM= "E-mail リポートを送りますか？"
+var SYSCONF_SYSLOG_CLEAR_CONFIRM= "全てのシステムログが消されます。"
+
+//sysconf_login
+var SYSCONF_LOGIN_INVALID_NEW_PASS=     "新しいパスワードが一致しません。"
+var SYSCONF_LOGIN_INVALID_NEW_ID  =     "新しいアカウントは英文字と数字だけ入力可能です。"
+var SYSCONF_LOGIN_RELOGIN         =     "パスワードを変更すると新しいパスワードで再ログインする必要があります。"
+
+//expertconf_pptpvpn
+var EXPERTCONF_PPTPVPN_VPN_ACCOUNT_IS_BLANK="VPN接続アカウントを入力してください。"
+var EXPERTCONF_PPTPVPN_VPN_PASSWORD_IS_BLANK="VPN接続パスワードを入力してください。"
+var EXPERTCONF_PPTPVPN_IP_ADDRESS_IS_INVALID="IP アドレスを入力してください。"
+var EXPERTCONF_PPTPVPN_DO_YOU_WANT_DELETE="アカウントを削除しますか？"
+
+//accesslist
+
+var ACCESSLIST_NOIPLISTMSG_1="設定されている IPがありません。現在接続中の PC("
+var ACCESSLIST_NOIPLISTMSG_2=")を接続セキュリティに追加しますか？"
+var ACCESSLIST_WRONG_INPUT_IP="IP アドレスが正しくありません。"
+var ACCESSLIST_WRITE_EXPLAIN="説明を入力してください。"
+var ACCESSLIST_DEL_WANT="削除しますか？"
+
+//reboot
+var REBOOT_CHANGEIP_RETRY_LOGIN="内部 IPアドレスが変更されて再ログインする必要があります。"
+var REBOOT_CHANGEIP_RETRY_NOLOGIN_WINDOWS="変更された IP アドレスでログインしてください。"
+var SYSCONF_RESTORE_RETRY_CONNET="設定復旧されている内部 IP アドレスでたま接続してください。"
+
+//trafficconf_qos
+var QOS_BASIC_WARNING="IP アドレス/ポート/アプリケーション別設定されている場合、全て削除されます。続けますか？"
+var QOS_COMMON_EXCCED_MAX_CLASS="クラス最大数を超えました。"
+var QOS_COMMON_EXCCED_MAX_SPEED="最大インターネット速度範囲を超えました。"
+var QOS_COMMON_ISOLATED_EXCEED="'得点' 属性を持っているクラスの帯域幅の合計は最大インターネット速度を超えることはできません。"
+var QOS_COMMON_NO_CHANGE_DIRECTION="クラスの方向は変更できません。"
+var QOS_COMMON_ONLY_DIGIT="正数のみ入力できます。"
+var QOS_COMMON_BASIC_SETUP_FIRST="Qos 基本設定されてません。"
+var QOS_PROTOCOL_SELECT="プロトコルを選択してください。"
+var QOS_PORT_PORTRANGE="1~65,535までの範囲を入力してください。"
+var QOS_PORT_INVALID_EXT_PORT_RANGE="外部使用ポート範囲が正しくありません。"
+var QOS_BADNWIDTH_EMPTY="速度設定を入力してください。"
+var QOS_RATE_RANGE="32 Kbps ~ 50 Mbps 範囲を守ってください。"
+var QOS_BPI_RANGE="IP アドレス別帯域幅個別割当範囲が正しくありません。 (許容数 : 2 ~ 31)"
+
+// wirelessconf_multibssid
+var MSG_DEL_MBSSID_WARNING="無線ネットワークが削除されます。続けますか？"
+var MSG_MBSSID_QOS_WARNING="最小 100 Kbps 値以上設定する必要があります。"
+
+// wirelessconf_multibridge
+var MSG_DEL_WWAN_WANRING="無線WANを使用する場合有線 WANポートの機能が中断され、\n無線を WANポート(インターネットポート)として使用することになります。\n続けますか？"
+
+//trafficconf_connctrl
+var MSG_CONNECTION_MAX_WARNING="最大コネクション数が初期値より大きい、又は制限がない場合、\n一部環境ではシステムのメモリー不足による誤作動の原因となります。\n\n続けますか？" 
+var MSG_CONNECTION_MAX_TOO_SMALL="最大コネクション数が正しくありません。 512 以上に設定してください。"
+var MSG_UDP_CONNECTION_MAX_TOO_BIG="最大 UDP コネクション数は 10から最大 コネクション数の間の数値で設定してください。"
+var MSG_ICMP_CONNECTION_MAX_TOO_BIG="最大 ICMP コネクション数は最大コネクション数より低く設定する必要があります。"
+var MSG_INVALID_RATE_PER_MAX="正しい PC別最大コネクション比率の数値を入力してください。"
+
+
+//sysconf_misc
+var MSG_WBM_POPUP="設定を適用するためには、管理ツールを閉じてログイン画面から再接続する必要があります。"
+
+// trafficconf_switch
+var MSG_SAME_PORT_MIRROR="同じポートをミラーリングすることはできません。"
+
+var MSG_HUBMODE_WARNING="!!! 注意事項 !!!\nハブモード使用時、全てのインターネットルータの機能が使えなくなり、\n管理者モードに接続できません。\n\n\
+ハブモードを解除するためには\nCPU(PWR/RUN) LEDが周期的に点滅するまで、 Reset(初期化)ボタンを押してください。\n\n\
+続きますか？"
+var MSG_HUBMODE_CONFIRM="確認ボタンを押すとハブモードに設定され、\nこれ以上管理者ページを見る事はできません。\n\n続きますか？"
+
+// trafficconf_portqos
+var MSG_PORTQOS_BOTH_ZERO=": 0 Mbpsに設定できません。"
+var MSG_PORTQOS_MAX_ERROR=": 100 Mbps 以上の値を設定できません。"
+var MSG_PORTQOS_INVALID_VALUE=": 速度設定値が間違っています。 ("
+
+
+// iframe_pppoe_sched
+var MSG_INVALID_HOUR_VALUE="時間設定は 0 と 23 の間の数字を入力してください。"
+var MSG_INVALID_MIN_VALUE="分設定は 0 と 59 の間の数字を入力します。"
+var MSG_PPPOE_SCHEDULE_SAME_RULE="同じスケジュール設定が存在します。"
+
+// trafficconf_lspolicy
+var MSG_BACKUP_METHOD_AT_LEAST_ONE="一つ以上の方法を選択する必要があります。"
+var MSG_BACKUP_METHOD_DOMAIN="ドメイン名を入力してください。"
+
+var MSG_INVALID_PROTONUM="間違っているプロトコル番号です。"
+
+
+var MSG_MBRIDGE_AUTO_CHANNEL_STRING ='[自動チャンネル検索] 機能はブリッジを通じて接続する APのチャンネルが変更される場合,\n\
+自動でチャンネルを検索して接続を行う機能です。\n\
+[자동 채널 검색] 設定時ブリッジの接続が切れた場合、\n\
+本製品の AP機能が正常的に動作しない場合があります。\n\
+続けますか？';
+
+var TRAFFICCONF_ALL_OPTIONS_CLEAR =  "全てのオプション設定が解除されます。\n続けますか？"
+var MSG_SELECT_DEL_MBSS = "削除する無線ネットワークを選択してください。"
+
+var AUTO_STRING = "自動"
+var MBRIDGE_AUTO_CHANNEL_SEARCH = "自動チャンネル検索"
+
+
+var UPPER_CHANNEL_TXT =  "下位"
+var LOWER_CHANNEL_TXT = "上位"
+
+var LAN_GATEWAY_WARNING_MSG = "ルータを AP 又は ハブ専用として使用時、ルータ自体のインタネット接続のための設定です。\n続けますか？ ";
+var MSG_IPPOOL_MAX_WARNING = "IPアドレス範囲条件の最大数を超えました。" 
+
+
+var MSG_DFS_WARNING="This channel is DFS channel.\nAP may be activated only unless radar signal is found during 1 ~ 10 minutes."
+
+
+
+var SYSCONF_LOGIN_BLANK_ID =     "Account is empty."
+var SYSCONF_LOGIN_BLANK_PASS  = "Password is empty."
+var SYSCONF_LOGIN_REMOVE_WARNING  = "Remove Account/Password. Continue?"
+var SYSCONF_LOGIN_INVALID_SESSION_TIMEOUT  = "Session Timeout should be 1 ~ 60 minutes."
+
+
+
+var SYSCONF_LOGIN_CANT_REMOVE_ID  = "ID & Password can't be removed when Session method is used."
+var SYSCONF_LOGIN_SHOULD_HAVE_IDPASS  = "To enable Session, ID & Password MUST be set."
+var SYSCONF_LOGIN_RELOGIN_SESSION  = "Move to Login page after configuring. Continue?"
+
+var MSG_PPTPVPN_REBOOT = "Reboot to change PPTPVPN server configuration?"
+var MSG_QOS_REBOOT="Reboot to change QOS configuration."
+var MSG_IGMP_REBOOT = "Reboot to change IPTV configuration?"
+
+var UNALLOWED_ID_MSG  = "Unallowed Used ID"
+
+
+var DESC_INVALID_DCS_PERIOD="The range should be  1 ~ 100."
+
+var INVALID_HOUR_TEXT="The range should be 0 ~ 23."
+var INVALID_MIN_TEXT="The range should be 0 ~ 59."
+var SELECT_DAY_DESC="Check day or every day at least."
+
+
+
+var SNMP_INVALID_PORT= "Port Number should be 1 - 65535."
+var SNMP_COMMUNITY_ALERT= "Community field is mandatory."
+
+
+
+
+var SNMP_INVALID_PORT= "Port Number should be 1 - 65535."
+var SNMP_COMMUNITY_ALERT= "Community field is mandatory."
+
+
+var MSG_INVALID_RADIUS_SERVER="Invalid RADIUS server address"
+var MSG_INVALID_RADIUS_SECRET="Invalid RADIUS password"
+var MSG_INVALID_RADIUS_PORT="Invalid RADIUS server port"
+var MSG_WEP_WARNING="Maximum link rate is 54Mbps(11g) when WEP or TKIP is used.\nContinue?"
+var MSG_WEP_SEC_WARNING="WEP is very weak encryption setup. We don't recommend to use WEP.\nUse WEP or not?"
+var MSG_WIRELESS_WAN_WARNING="Wireless WAN function is already used by another wireless interface. Turn off the wireless WAN function in the other wireless interface."
+var MSG_WDS_CHANNEL_WARNING="Channel is mismatched.\nNeed to change the channel after apply.\nContinue?"
+
+
+var MSG_NEW_BSS="New Wireless Network"
+
+var MSG_ADD_MAC_WARNING="No MAC address is checked to add."
+var MSG_REMOVE_MAC_WARNING="No MAC address is checked to remove."
+var MSG_INVALID_AUTH_FOR_BRIDGE="This AP can't be connected by Bridge."
+
+
+var MSG_NEED_REBOOT_FOR_WWAN="System will be restarted. Continue?"
+
+
+var MSG_ENABLE_ONE_SERVICE_ID="At least one user is needed to run."
+var MSG_DUPLICATE_SERVICE_ID="Some ID is duplicated. Change the User ID."
+
+
+
+var PASSWORD_NEEDED_TO_SET_REMOTE_MGMT="Account & Password should be changed to enable Remote router connection.\nSet the account & password in the [System]->[Admin Setup] page."
+
+var CANT_SET_DEFAULT_ID_PASS="This is factory default account & password.\nChange the account & password."
+
+var MSG_SELECT_TORRENT_FOLDER_ERR="Select Download Folder"
+
+var MSG_HWADDR_NO_INPUT=MSG_INVALID_HWADDR
+var MSG_SELECT_MAC_REMOVED=NATCONF_PORTFORWARD_SELECT_RULE_TO_DEL
+
+
+</script>
+
+
+

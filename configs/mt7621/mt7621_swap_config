@@ -1,0 +1,76 @@
+PROJECT_ID := mt7621
+BOOTLOADER_DIR := Uboot
+USE_LOCAL_BUSYBOX:=y
+
+
+REAL_KERNEL_PATH:=../MT762X_SDK_4300/RT288x_SDK/source/linux-2.6.36.x
+
+include $(USERAPPS_ROOT)/configs/mt7621/menu_wireless_router_efm
+include $(USERAPPS_ROOT)/configs/mt7621/common_config
+include $(USERAPPS_ROOT)/configs/mt7621/apps_config
+-include $(USERAPPS_ROOT)/lang_config
+
+CPU_ID:=mt7621
+IF_WAN:=\"eth3\"
+IF_LAN:=\"eth2\"
+IF_LAN_PHY:=\"eth2\"
+IF_LOCAL:=\"br0\"
+IF_WIRELESS:=\"rai0\"
+IF_WIRELESS_5G:=\"ra0\"
+
+IF_WIRELESS_PREFIX:=\"rai\"
+IF_WIRELESS_5G_PREFIX:=\"ra\"
+
+IF_WIRELESS_WDS_PREFIX:=\"wdsi\"
+IF_WIRELESS_5G_WDS_PREFIX:=\"wds\"
+
+IF_WIRELESS_SWAP:=y
+
+IF_USB:=\"usb0\"
+
+USE_MOUNT_PTS:=y
+
+
+ifeq ($(USE_MULTI_BRIDGE_SUPPORT),y)
+IF_WWAN:=\"apclii0\"
+IF_WWAN_5G:=\"apcli0\"
+endif
+
+# dummy
+IF_WAN2:=\"eth3\"
+
+#ifeq ($(KOREAN_SUPPORT),y)
+#USE_ISPFAKE:=y
+#endif
+
+USE_SAVE_INFO:=n
+WIRELESS_SSID_TEST_DUP:=y
+USE_WPS_PINCODE_FLASH:=y
+USE_COEX_OPTION:=y
+# USE_WPS_NOTIFICATION:=y
+-include $(USERAPPS_ROOT)/misc_config
+USE_NEW_MAC_SCHEME:=y
+
+USE_MTK_FACTORY_SECTOR:=y
+
+ifeq ($(KOREAN_SUPPORT),)
+USE_PLANTYNET:=n
+endif
+
+USE_TCPMSS_IPTABLES_RULE:=y
+
+ifeq ($(USE_ROUTER_NAS),y)
+BUSYBOX_DIR:=busybox.nas
+#BUSYBOX_DIR:=busybox.5.0.2.0
+else
+BUSYBOX_DIR:=busybox
+endif
+
+WIRELESS_TOOLS_DIR:=wireless_tools.rt6856
+MINIUPNPD_DIR:=miniupnpd-1.6
+MINISSDP_BIN_PATH:=$(USERAPPS_ROOT)/minissdpd-1.5.20160301
+WIRELESS_TOOLS_DIR:=wireless_tools.linux3.10
+USE_KERNEL_3_X:=y
+USE_NETFILTER_QUEUE:=y
+USE_OPENTTY2:=y
+USE_MODULE_PARAM_FOR_USBMODE:=y

@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+/*헤더*/
+#header { background-color: #dce1cd; border: 1px solid #ccc; }
+/*헤더 경계라인*/
+#header hr { border: 1px solid #ccc; clear: both; }
+.ui-checkbox label { padding-right: 0em; }
+.ui-radio { clear:both; width: 100%; margin-left: 0em; }
+.captcha_button
+{
+	float: left;
+	width: 4.8em;
+	height: 5em;
+	border-width: 1px 0px 1px 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	cursor: pointer;
+}
+.captcha_view{ width: 16.5em;}
+.captcha_button img { height: 100%; width: 100%; }
+.captcha_img
+{
+	float: left;
+	background-color: #FFFFFF;
+	height: 5em;
+	width: 11.3em;
+	border: 1px solid  #CCCCCC;
+}
+.ui-checkbox .ui-btn{
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 3em;
+	background-color: #EEF1E6;
+}
+.ui-page-theme-a .ui-btn:hover { background-color: #EEF1E6; }
+/*main page*/
+.lc_title_row
+{
+	clear: both;
+	background-color: #EEF1E6;
+	border: 1px solid #CCCCCC;
+	border-right-width: 0;
+	border-left-width: 0;
+}
+.lc_title_row p { line-height: 2.5em; margin-left: 0.5em; }
+.lc_content_row { overflow: hidden; clear: both; }
+.lc_remote
+{
+	background-color: #EEF1E6;
+	border: 1px solid #DDDDDD;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-left-width: 0;
+}
+.lc_remote_check { width: 12em; float: left; }
+.lc_remote_check p { line-height: 3em; }
+.lc_remote_input_text
+{
+	float: left;
+	width: 5em;
+	margin-top: 0.4em;
+}
+
+.lc_remote_submit_button
+{
+	float: right;
+	margin-top: 0.4em;
+	margin-right: 1em;
+}
+.lc_remote_submit_button button
+{
+	width: 6em;
+	height: 2.2em;
+	background-color: #8DAF25;
+	border: 0; 
+	cursor: pointer;
+}
+.lc_content_row { overflow: hidden; clear: both; }
+.lc_content_row .lc_left { float: left; }
+.lc_content_row .lc_left p { line-height: 2em; margin-left: 0.5em; }
+.lc_content_row .lc_right
+{
+	float: right;
+	margin-right: 1em;
+	margin-top: 0.7em;
+}
+
+.lc_content_row .lc_right .lc_status_text { float: left; }
+.lc_content_row .lc_right .lc_status_text p { line-height: 2.5em; margin-left: 0.5em; }
+.lc_content_row .lc_right .lc_status_icon { float: left; margin-top: 0.7em; }
+.lc_content_row .lc_right .lc_status_icon img { width: 1em; height: 1em; }
+
+/*right_panel : extmgr & intmgr*/
+.r_top
+{
+	clear: both;
+	overflow: hidden;
+	border: 1px solid #DDDDDD;
+	border-right-width: 0;
+	border-left-width: 0;
+}
+.r_top label { background-color: rgb(249, 250, 245); }
+.r_top label p { margin-left: 0.5em; line-height: 3em; }
+.r_middle { clear: both; overflow: hidden; }
+.r_middle .title { float: left; width: 10.5em; }
+.r_middle .title p { line-height: 3em; margin-left: 0.5em; }
+.r_middle .content_ip
+{
+	  float: left;
+	  overflow: hidden;
+	  margin-top: 0.5em;
+}
+.r_middle .content_ip .input
+{
+	  float: left;
+	  width: 3em;
+	  overflow: hidden;
+}
+.r_middle .content_ip .dot
+{
+	  float: left;
+	  overflow: hidden;
+	  margin-top: 0.9em;
+	  width: 0.5em;
+}
+.r_middle .content_ip .dot p { text-align: center; }
+.r_middle .content_text
+{
+	  float: left;
+	  margin-top: 0.3em;
+	  width: 13.5em;
+}
+.r_middle .title_desc { float: left; }
+.r_middle .title_desc p { line-height: 3em; margin-left: 0.5em; }
+.r_middle .content_button 
+{
+	float: right;
+	margin-right: 1em;
+	margin-top: 0.5em;
+}
+.r_middle .content_button button
+{
+	width: 5em;
+	height: 2em;
+	background-color: #8DAF25;
+	border: 0; 
+	cursor: pointer;
+}
+.r_bottom_title
+{
+	clear: both;
+	overflow: hidden;
+	border: 1px solid #DDDDDD;
+	border-right-width: 0;
+	border-left-width: 0;
+	background-color: rgb(249, 250, 245);
+}
+.r_bottom_title div { float: left; width: 50%; }
+.r_bottom_title div p { line-height: 3em; margin-left: 0.5em; }
+.r_bottom_list { background-color: rgb(255, 255, 255); overflow: hidden; }
+.r_bottom_list .title { width: 50%; float: left; }
+.r_bottom_list .title p { line-height: 3em; margin-left: 0.5em; }
+.r_bottom_list .content { width: 50%; float: left; }
+.r_bottom_list .content .descfield { width: 75%; float: left; }
+.r_bottom_list .content .descfield p { line-height: 3em; margin-left: 0.5em; }
+.r_bottom_list .content .checkbutton { float: right; width: 25%; }
+.r_bottom_del { overflow: hidden; }
+.r_bottom_del .checkfield { float: right; margin-right: 0.6em; }
+.r_bottom_del .checkfield label { background-color: #F6F6F6; }
+.r_bottom_del .buttonfield
+{
+	float: right;
+	margin-right: 0.5em;
+	margin-top: 0.5em;
+}
+.r_bottom_del .buttonfield button 
+{ 
+	width: 5em;
+	height: 2em;
+	background-color: #8DAF25;
+	border: 0;
+	cursor: pointer;
+}
+
+/*etc*/ /*csrf*/
+.lc_etc_row { overflow: hidden; height: 4em; }
+.lc_etc_row .title { float: left; width: 9em; }
+.lc_etc_row .title p { line-height: 4em; margin-left: 0.5em; }
+.lc_etc_row .content_radio
+{
+ float: left;
+ margin-top: 0.8em;
+ width: 7.8em;
+}
+ /*csrf*/
+.content_text { margin: 0.5em; }
+.content_button { float: right; margin-right: 0.5em; }
+.content_button button
+{
+	width: 5em;
+	height: 2em;
+	background-color: #8DAF25;
+	border: 0em; 
+	cursor: pointer;
+}
+.content_line
+{
+	border: 1px solid #DDDDDD;
+	margin-top: 3em;
+	clear: both;
+	border-top-width: 0;
+}
+.content_desc { overflow: hidden; margin-left: 0.5em; }
+.content_desc p { color: rgb(150, 150, 150); } 
+
+
+/*etc*/ /*csrf*/
+.lc_arp_row { overflow: hidden; height: 3em; }
+.lc_arp_row .title { float: left; width: 6.5em; }
+.lc_arp_row .title p { line-height: 3em; margin-left: 0.5em; }
+.lc_arp_row .content_radio
+{
+ float: left;
+ margin-top: 0.2em;
+ width: 7.5em;
+}
+
+/*arp*/
+.content_arp { float: left; }
+.content_arp p
+{ 
+	margin-left: 0.5em;
+	line-height: 3em;
+	margin-right: 0.5em;
+}
+.content_arp p { text-align: left; }
+
+.lc_onoffline_left{display:inline-block !important; vertical-align:top;	padding:.7em .5em 0 .5em;}
+.lc_onoffline_right{display:inline-block !important;}
+
+/*on//off

@@ -1,0 +1,130 @@
+@charset "utf-8";
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr {
+        border:none;
+        background-color: #DDD;
+        text-align:left;
+        clear: both;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border: 1px solid #ccc;
+        clear: both;
+}
+.listview { clear: both; }
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+        display: block !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-shadow: none;
+        font-style: normal;
+        font-family: "돋움", "Arial Unicode MS";
+        color: #444;
+        font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+.listview .line_title { float: left; }
+.listview .line_title p {
+        padding-left: 0.3em;
+        line-height: 2em;
+}
+.listview .line_status { float: right; display: table; }
+.listview .line_status p { line-height: 2em; }
+.listview .line_status span { display: table-cell;      vertical-align: middle; }
+.listview .line_status img {
+        height: 1em;
+        width: 1em;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+}
+.listview .line_value { clear: both; height: 1.5em; }
+.listview .line_value p { padding-left: 0.3em; color: #888; }
+#right_main, #right_sub {
+        clear: both;
+        margin-bottom: 10px;
+        overflow: auto;
+}
+.lc_left {
+        display: table;
+        float: left;
+        line-height: 2.5em;
+        height: 2.5em;
+        margin-top: 2px;
+        width: 6.5em;
+	//overflow: hidden;
+}
+
+#right_main .lc_left span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 0.7em;
+}
+#right_main .lc_left span img {
+        height: 5px;
+        width: 5px;
+        margin-bottom: 0.2em;
+}
+#right_main .lc_row { clear: both; overflow : hidden; }
+
+.lc_right {
+        float: left;
+        width: 16.5em;
+        overflow: hidden;
+}
+.lc_right_ipdisk { width: 16em; }
+
+#right_main .value p { width: 50px; }
+#right_main #desc p,
+#right_sub #desc p {color: #777; line-height: 1.5em; }
+#right_sub #desc .title { margin-bottom: 5px; }
+
+.custom_css_button {
+	float : right; 
+	margin-top : 0.5em;
+	margin-right : 0.5em;  
+	height : 1.7em; 
+	padding-left : 0.5em; 
+	padding-right : 0.5em; 
+}
+
+/*local css*/
+
+#maincontent .lc_row { clear : both; overflow : hidden; background-color : #F8F8F5; padding-left : 0.5em; }
+#maincontent .lc_row label { background-color : inherit; }
+#maincontent .lc_row p { padding-left:0.8em; }
+#maincontent .lc_row .lc_right_div { float : right; padding: 0.7em; padding-left:2em;}
+#maincontent .lc_row .lc_right_div p { float : left; margin-right:0.3em;}
+#maincontent .lc_row .lc_right_div img { height:1em; width:1em;}
+
+#right_main .lc_title_div { overflow : hidden; background-color : #EEF1E6; padding : 0.3em 0 0.4em 0; border-style : solid; border-color : #CCC; border-width : 1px 0 1px 0; }
+#right_main .lc_title_div .group_ip_div { float: left; margin-left: 1em; }
+#right_main .lc_title_div .member_div { float : right; margin-right: 1em; }
+#right_main .lc_title_div .member_div div { float : left; margin-left : 1em; }
+#right_main .lc_title_div .member_div .member_ip_div { margin-left : 1.5em; margin-right : 2.5em; }
+#right_main .lc_title_div .member_div .member_status_div { padding-left : 1em; padding-right: 1em;  }
+
+#right_main .lc_contents_div .lc_group_div { padding-bottom : 0.7em; overflow : hidden; }
+#right_main .lc_contents_div .lc_group_div:nth-child(odd) { background-color : #FFFFFF; }
+#right_main .lc_contents_div .lc_group_div:nth-child(even) { background-color : #F9FAF5; }
+#right_main .lc_contents_div .lc_group_div:last-child { border-bottom : 1px solid #CCC; }
+
+#right_main .lc_contents_div .lc_group_div .group_ip_div { float: left; margin-left: 1em; height:1.3em; }
+#right_main .lc_contents_div .lc_group_div .group_ip_div p { float: left; }
+#right_main .lc_contents_div .lc_group_div .group_member_div { float: right; margin-right: 1em; }
+#right_main .lc_contents_div .lc_group_div .group_member_div div { float: left; margin-left: 2em; }
+#right_main .lc_contents_div .lc_group_div .group_member_div p { color: #999; }
+

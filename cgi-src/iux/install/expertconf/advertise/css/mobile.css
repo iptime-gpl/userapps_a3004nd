@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* Swipe works with mouse as well but often causes text selection. */
+/* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+p{ text-overflow: ellipsis; white-space: nowrap !important; font-weight: normal !important;}
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/*페이지 기본정의
+/*전체 배경색*/
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+.ui-page-theme-a .ui-body-inherit { height: 2.2em }
+/*헤더*/
+#header { background-color: #dce1cd; border: 1px solid #ccc; }
+/*헤더 경계라인*/
+#header hr { border: 1px solid #ccc; clear: both; }
+.ui-checkbox label { padding-right: 0em; }
+.ui-radio { width: auto; margin: 0; }
+.ui-checkbox .ui-btn{
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 3em;
+	background-color: #EEF1E6;
+}
+#content { background-color: #EEF1E6; }
+.ui-page-theme-a .ui-btn:hover { background-color: #EEF1E6; }
+//.ui-page-theme-a .ui-btn { background-color: #EEF1E6; }
+.ui-listview > li p{ margin: 0;}
+.ui-btn.ui-checkbox-off::after { margin-left: 0 }
+.ui-btn.ui-checkbox-on::after { margin-left: 0 }
+.ui-btn-icon-left:after { left: 0.4em; }
+
+/*main*/
+.lc_row { overflow: hidden; clear:both; }
+.lc_row div { float: left; }
+.lc_setup 
+{
+	border: 1px solid #CCC;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+.lc_setup p { line-height: 4em; }
+.lc_setup .icon
+{
+	margin-top: 1.5em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.lc_setup .icon img { width: 1.2em; height: 1.2em; }
+.lc_setup .status { float: right; }
+.lc_advertise_url { background-color: rgb(250, 250, 250); }
+.lc_advertise_url .text { width: 24%; }
+.lc_advertise_url .text p { line-height: 4em; margin-left: 0.5em; }
+.lc_advertise_url .input
+{
+	overflow: hidden;
+	margin-top: 0.9em;
+	width: 76%;
+}
+.lc_advertise_url .input div { width: 97.5%; }
+.lc_freedevice_title
+{
+	border: 1px solid #CCC;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+.lc_freedevice_title p { line-height: 3em; margin-left: 0.5em; }
+.lc_freedevice_listview li
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clear: both;
+	height: 2.5em !important;
+	border: 0 !important;
+}
+.lc_freedevice_listview li div { float: left; }
+.lc_freedevice_listview li .desc { float: right; }
+.lc_freedevice_listview li p { line-height: 2.5em; font-size: inherit; !important; }
+.lc_freedevice_listview li .idx { width: 10%; }
+.lc_freedevice_listview li .idx p { margin-left: 0.5em; }
+.lc_freedevice_listview li .ip { width: 40%; }
+.lc_freedevice_listview li .desc { width: 50%; }
+.lc_freedevice_listview li .desc p 
+{
+	text-align: left;
+	margin-right: 0.5em;
+	color: #969696;
+}
+.lc_desc div
+{
+	margin-left: 0.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.lc_desc .icon { width: 1.2em }
+.lc_desc .icon img { width: 1.2em; height: 1.2em; }
+.lc_desc .text { width: 21.5 }
+.lc_desc .text p { color: #969696; }
+
+
+/*right*/
+.radio_div {
+	float: left;
+	margin-top: 0.4em;
+}
+.lc_row_r 
+{
+	height: 3.5em;
+	overflow: hidden;
+	clear: both;
+}
+.lc_row_r p { line-height: 3.5em; }
+.ui-radio p { line-height: inherit; }
+
+.lc_row_r .title { width: 8em; float: left; }
+.lc_row_r .title p { margin-left: 0.5em; }
+.lc_row_r .content_ip { float: left; margin-top: 0.4em; }
+.lc_row_r .content_ip .input { width: 3em; float: left; }
+.lc_row_r .content_ip .dot { width: 0.5em; float: left; }
+.lc_row_r .content_ip .dot p { text-align: center; }
+.lc_row_r .content_text
+{
+	float: left;
+	width: 16em;
+	margin-top: 0.4em;
+}
+.lc_row_r .content_text div { width: 100%; }
+.lc_cycle_text { width: 3em !important; }
+.lc_cycle_desc1
+{
+	float: left;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.lc_cycle_desc2 { float: left; }
+.lc_cycle_desc2 p{ color: #969696; }
+.lc_submit_whitelist { float: left; overflow: hidden; cursor: pointer;}
+.lc_submit_whitelist p { margin-left: 0.5em; color: #969696; }
+.lc_submit
+{
+	float: right;
+	margin-right: 0.9em;
+	margin-top: 0.5em;
+	clear: initial;
+}
+.lc_submit button
+{
+	width: 6em;
+	height: 2.5em;
+	border: 0;
+    background-color: #8DAF25;
+	cursor: pointer;
+}
+.lc_submit button p { line-height: 1em; }
+.lc_freedevice_del_r li
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clear: both;
+	height: 3em !important;
+	border: 0 !important;
+}
+.lc_freedevice_del_r li div { float: left; overflow: hidden;}
+.lc_freedevice_del_r li p { line-height: 3em; font-size: inherit; !important; }
+.lc_freedevice_del_r li .idx { width: 10%; }
+.lc_freedevice_del_r li .idx p { margin-left: 0.5em; }
+.lc_freedevice_del_r li .ip { width: 50%; }
+.lc_freedevice_del_r li .desc { width: 35%; }
+.lc_freedevice_del_r li .desc p 
+{
+	margin-right: 0.5em;
+	color: #969696;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}
+.lc_freedevice_del_r li .check { float: right; width: 10%;}
+.lc_freedevice_del_r li .check label{ width: 100%; }
+.lc_submit_withcheck
+{
+	overflow: hidden;
+	clear: both;
+	float:right;
+	margin-top: 1em;
+}
+
+.lc_submit_withcheck .lc_button { float: left; margin-right: 0.5em; }
+.lc_submit_withcheck .lc_button button{
+	width: 6em;
+	height: 2.5em;
+	border: 0;
+    background-color: #8DAF25;
+	cursor: pointer;
+}
+.lc_submit_withcheck .lc_check { float: left; margin-top: -0.2em; }
+.lc_submit_withcheck .lc_check label{ background-color: #F6F6F6; }
+/*right*/
+.maclist_li { cursor: pointer; }
+.maclist_left { width: 45% !important; }
+.maclist_left p { text-overflow: ellipsis !important; }
+.maclist_right { width: 55% !important; margin-left: 0 !important;}
+.maclist_right p
+{
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+	line-height: 3em !important;
+}
+.right_refresh_button { margin-top: 1em !important; margin-right: 0.5em !important; }
+
+
+/*popup*/
+.whitelist_popup
+{
+	background-color: #EEEEEE;
+	overflow: hidden;
+	min-width: inherit;
+}
+.whitelist_popup .title
+{
+	overflow: hidden;
+	height: 3em;
+	border: 3px solid #8DAF25;
+	border-left-width : 0;
+	border-top-width : 0;
+	border-right-width : 0;
+}
+.whitelist_popup .title .text
+{
+	float: left;
+}
+.whitelist_popup .title .text p
+{
+	line-height: 3em;
+	color: #425925;
+	margin-left: 0.5em;
+}
+.whitelist_popup .title .exit
+{
+	float: right;
+}
+.whitelist_popup .content
+{
+	margin: 1em;
+}
+.whitelist_popup .content p
+{
+	color: #969696;
+}
+.whitelist_popup .content .br
+{
+	margin-bottom: 1em;
+}

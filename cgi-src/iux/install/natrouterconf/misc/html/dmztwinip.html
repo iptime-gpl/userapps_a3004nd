@@ -1,0 +1,149 @@
+<div id="dmztwinip" class="cc_padding">
+    	<form id="iux_form">
+  		<div id="right_main" class="right_main">
+      			<div class="lc_row">
+				<label for="not_use">
+					<input name="menu" id="not_use" sid = "C_DMZTWINIP_W1MODE" type="radio" value="0">
+					<p sid="S_DMZTWINIP_MENU1"></p>
+				</label>
+      			</div>
+
+      			<div class="lc_row">
+				<div class="lc_left">
+	             			<label for="run_dmz">
+		            			<input name="menu" id="run_dmz" sid = "C_DMZTWINIP_W1MODE" type="radio" value="1">
+	            				<p sid="S_DMZTWINIP_MENU2"></p>
+	            			</label>
+				</div>
+		                <div class="lc_right lc_dmztwinip_desc">
+					<div class="lc_dmz_desc lc_text_desc">
+						<p sid="S_DMZ_DESC1"></p>
+						<p sid="S_DMZ_DESC2"></p>
+					</div>
+		      		</div>
+			</div>
+
+      			<div class="lc_row">
+				<div class="lc_left">
+	           			<label for="run_twinip">
+		            			<input name="menu" id="run_twinip" sid = "C_DMZTWINIP_W1MODE" type="radio" value="2">
+	            				<p sid="S_DMZTWINIP_MENU3"></p>
+	            			</label>
+				</div>
+		                <div class="lc_right lc_dmztwinip_desc">
+					<div class="lc_twinip_desc lc_text_desc">
+						<p sid="S_TWINIP_DESC1"></p>
+					</div>
+		      		</div>
+			</div>
+	
+			<hr>
+
+			<div id = "dmz_selected">
+				<div class = "lc_row">
+					<div class="lc_left">
+						<p sid = "S_DMZ_SUB1"></p>
+					</div>
+		                        <div class="lc_right">
+						<div name = "inner_ip" id="lc_inner_ip" sid = "DMZTWINIP_IPADDR" class="lc_inner_ip ip">
+						          <div class="lc_inputbox_ip"><input sid = "VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+						          <div class="hyphen"><p>.</p></div>
+						          <div class="lc_inputbox_ip"><input sid = "VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+						          <div class="hyphen"><p>.</p></div>
+						          <div class="lc_inputbox_ip"><input sid = "VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+						          <div class="hyphen"><p>.</p></div>
+						          <div class="lc_inputbox_ip"><input sid = "VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+					        </div>
+	                                </div>
+	                        </div>
+				<div class = "lc_row">
+					<div class = "lc_left"></div>
+					<div class = "lc_right">
+		                                <div class = "lc_text_desc ui-alt-icon">
+							<label for="current_ip_check" id = "dmz_sub_label">
+								<input id = "current_ip_check" type="checkbox" value="1">
+								<p sid = "S_DMZ_SUB2"></p>
+								<p id = "ipaddr_text"></p>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id = "twinip_selected">
+                                <div class = "lc_row">
+                                        <div class="lc_left lc_twinip_left">
+                                                <div class = "lc_input_line">
+                                                        <p sid= "S_TWINIP_SUB1"></p>
+						</div>
+                                        </div>
+                                        <div class="lc_right lc_twinip_right">
+						<div name = "mac_field" id="mac_field" sid = "DMZTWINIP_HWADDR" class="lc_input_mac mac">
+							<div class="lc_inputbox_mac"><input sid = "VALUE0"  type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+							<div class="hyphen"><p>-</p></div>
+							<div class="lc_inputbox_mac"><input sid = "VALUE1"  type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+							<div class="hyphen"><p>-</p></div>
+							<div class="lc_inputbox_mac"><input sid = "VALUE2"  type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+							<div class="hyphen"><p>-</p></div>
+							<div class="lc_inputbox_mac"><input sid = "VALUE3"  type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+							<div class="hyphen"><p>-</p></div>
+							<div class="lc_inputbox_mac"><input sid = "VALUE4"  type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+							<div class="hyphen"><p>-</p></div>
+							<div class="lc_inputbox_mac"><input sid = "VALUE5"  type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2"></div>
+                                                </div>
+						<div id = "mac_search_button" sid="MAC_SEARCH_CHECK" class="lc_manual_macsearch">
+							<img src='/common/images/search_d.png'>
+						</div>
+					</div>
+				</div>
+				<div class = "lc_row fakeip_menu">
+					<div class="lc_left">
+						<p sid = "S_TWINIP_SUB5"></p>
+					</div>
+		                        <div class="lc_right">
+						<div name = "inner_ip" id = "lc_fake_ip" sid = "DMZTWINIP_FAKEIP" class="lc_inner_ip ip">
+						          <div class="lc_inputbox_ip"><input sid = "VALUE0" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+						          <div class="hyphen"><p>.</p></div>
+						          <div class="lc_inputbox_ip"><input sid = "VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+						          <div class="hyphen"><p>.</p></div>
+						          <div class="lc_inputbox_ip"><input sid = "VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+						          <div class="hyphen"><p>.</p></div>
+						          <div class="lc_inputbox_ip"><input sid = "VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+					        </div>
+	                                </div>
+	                        </div>
+				<div class = "lc_row">
+					<div class = "lc_left"></div>
+                                        <div class="lc_right">
+						<div class="lc_text_desc ui-alt-icon">
+							<label for="current_mac_check">
+								<input id="current_mac_check" type="checkbox" value="1">
+								<p sid = "S_TWINIP_SUB2"></p>
+							</label>
+                                                </div>
+                                        </div>
+                                </div>
+
+				<div class = "lc_row">
+					<div class = "lc_left">
+						<p sid = "S_TWINIP_SUB3"></p>
+					</div>
+					<div class = "lc_right">
+						<div class = "ip_update">
+							<div class = "ip_update_1">
+								<input name = "w1leasetime" id = "w1leasetime" sid = "C_DMZTWINIP_W1LEASETIME" type = "number" pattern="[0-9]*" min = "0">
+							</div>
+							<div class = "ip_update_1">
+								<p id = "ip_update_second" sid = "S_TWINIP_SUB4"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+                        </div>
+	  	</div>
+    	</form>
+	<div id="right_footer">
+		<input class = "custom_css_button lc_apply_button" sid = "S_BUTTON_SUBMIT" type = "button" data-role = "none">		
+  	</div>
+</div>
+

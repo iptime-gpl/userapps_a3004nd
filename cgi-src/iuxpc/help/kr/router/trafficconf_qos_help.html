@@ -1,0 +1,111 @@
+
+<span class="item_string "> 
+<UL TYPE="disc">
+
+<LI TYPE="square"><U><b>QoS 기본 설정</b></U></LI>
+	<UL>
+	<LI>QoS 기능은 공유기에 연결된 장비들의 인터넷 사용 대역폭을 제한 또는 보장하는 기능입니다.</LI>
+	</UL>
+
+<LI><b>동작 설정</b></LI>
+	<UL>
+	<LI>QoS 동작 설정 할 수 있습니다.</LI>
+	</UL>
+
+<LI><b>인터넷 속도 설정</b></LI>
+	<UL>
+	<LI>현재 사용하고 있는 인터넷 속도를 설정합니다.</LI>
+	<LI>기본 설정된 '인터넷 종류'의 인터넷 속도값은 사용자가 이용하는 실질적인 속도로 재 설정 할 수 있습니다.</LI>
+	<LI>QoS의 '최소 속도 보장' 동작방법이 정상적으로 동작하기 위해서는 정확한 인터넷 속도를 설정하는 것이 중요합니다.</LI>
+	<LI>'인터넷 속도 설정'을 수정할 경우에는 설정되어 있는 IP별/포트별/어플리케이션별  QoS 설정은 모두 삭제 됩니다.</LI>
+	</UL>
+	<br><br>
+
+<LI TYPE="square"><U><b>QoS 규칙 설정</b></U></LI>
+<LI><b>사용자 정의 설정</b></LI>
+	<UL>
+	<LI>IP주소 및 포트번호 별 QoS를 설정하면 지정된 내부 IP 주소 PC의 인터넷 다운로드 속도와 업로드 속도를 최대제한 하거나 최소보장 할 수 있습니다.</LI>
+	</UL>
+
+<LI><b>어플리케이션 설정</b></LI>
+	<UL>
+	<LI>어플리케이션별 QoS를 설정하면 지정된 내부 IP 주소 PC의 인터넷 다운로드 속도와 업로드 속도를 최대제한 하거나 최소보장 할 수 있습니다.</LI>
+	</UL>
+           
+<LI><b>IP 주소</b></LI>
+	<UL>
+	<LI>QoS를 설정하고 싶은 PC의 내부 IP 주소를 입력합니다.</LI>
+	</UL>
+
+<LI><b>프로토콜</b></LI>
+	<UL>
+	<LI>Protocol Type (TCP/UDP/ALL)을 선택 합니다.</LI>
+	</UL>
+<LI><b>외부포트번호</b></LI>
+	<UL>
+	<LI>QoS를 설정하고 싶은 외부포트번호를 입력합니다.</LI>
+	</UL>
+<LI><b>어플리케이션</b></LI>
+	<UL>
+	<LI>어플리케이션 종류를 선택합니다.</LI>
+	</UL>
+           	
+<LI><b>동작방법</b></LI>
+	<UL>
+	<LI>'최소 속도 보장' 또는 '최대 속도 제한' 방법을 선택합니다.</LI>
+	</UL>
+            	
+<LI><b>다운로드/업로드</b></LI>
+	<UL>
+	<LI>다운로드 속도 와 업로드 속도를 설정 합니다.</LI>
+
+            	<br>
+            	<table style="margin-top:0; margin-right:0; margin-bottom:0; margin-left:0; border-collapse:collapse;" cellspacing="0">
+            	<tr>
+                        <td width="95" height="25" bgcolor="whitesmoke" style="border-width:1; border-color:rgb(204,204,204); border-style:solid;">            
+                            <p align="center"><span style="font-size:9pt;">
+                            QoS 설정 예
+                            </span></p>
+                        </td>
+                        <td width="200" height="25"  bgcolor="whitesmoke" style="border-width:1; border-color:rgb(204,204,204); border-style:solid;">
+                            <p align="center"><span style="font-size:9pt;">
+                            QoS 동작방식
+                            </span></p>
+                        </td>
+                </tr>
+                <tr>
+                        <td style="border-width:1; border-color:rgb(204,204,204); border-style:solid;">            
+                            <p align="center"><span style="font-size:9pt;">
+                            192.168.0.2<br>
+                            <font color=blue>최대 속도 제한</font><br>
+                            다운로드 1Mbps<br>
+                            </span></p>
+                        </td>
+                        <td style="border-width:1; border-color:rgb(204,204,204); border-style:solid;">
+                            <p><span style="font-size:9pt;">
+                            - 192.168.0.2는 1Mbps 이상의 속도를 다운로드 받을 수 없습니다.<br>
+                            - 다른 트래픽이 증가하면 192.168.0.2의 다운로드 속도는 1Mbps 이하가 될 수도 있습니다.<br>
+                            - 다른 트래픽이 없는 경우에도 192.168.0.2의 다운로드 속도는 1Mbps로 제한됩니다.
+                            </span></p>
+                        </td>
+                </tr>
+                <tr>
+                        <td style="border-width:1; border-color:rgb(204,204,204); border-style:solid;">            
+                            <p align="center"><span style="font-size:9pt;">
+                            192.168.0.3<br>
+                            <font color=blue>최소 속도 보장</font><br>
+                            다운로드 2Mbps<br>
+                            </span></p>
+                        </td>
+                        <td style="border-width:1; border-color:rgb(204,204,204); border-style:solid;">
+                            <p><span style="font-size:9pt;">
+                            - 192.168.0.3는 2Mbps 이상의 속도를 다운로드 받을 수 있습니다.<br>
+                            - 다른 트래픽이 증가하여도 192.168.0.3의 다운로드 속도는 최소 2Mbps를 유지합니다.<br>
+                            - 다른 트래픽이 없는 경우에도 192.168.0.3의 다운로드 속도는 2Mbps이상 증가 할 수 있습니다.
+                            </span></p>
+                        </td>
+                </tr>
+                </table>
+            	<br>
+
+	</UL>

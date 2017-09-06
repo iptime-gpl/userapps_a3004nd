@@ -1,0 +1,36 @@
+<div id="led" class="cc_padding">
+  	<div id="right_main" class="right_main">
+    		<form id="iux_form">
+      			<div class="lc_row lc_led">
+            			<label for="led_basic">
+            				<p sid="S_LED_BASIC"></p>
+				</label>
+            			<input name="mode" id="led_basic" sid="C_LED_MODE" type="radio" value="0">
+      			</div>
+      			<div class="lc_row lc_led">
+            			<label for="led_always">
+            				<p sid="S_LED_ALWAYS"></p>
+				</label>
+            			<input name="mode" id="led_always" sid="C_LED_MODE" type="radio" value="1">
+      			</div>
+			<div class="lc_row lc_led_selline">
+            			<label for="led_time"></label>
+            			<input name="mode" id="led_time" sid="C_LED_MODE" type="radio" value="2">
+				<div class="lc_led_controls">
+					<div class="lc_timesel ui-alt-icon ui-nodisc-icon">
+						<select name="ledstart" sid="C_LED_LEDSTART" type="select"></select>
+					</div>
+            				<div class="lc_led_timestr1"><p sid="S_LED_TIME1"></p></div>
+					<div class="lc_timesel ui-alt-icon ui-nodisc-icon">
+						<select name="ledend" sid="C_LED_LEDEND" type="select"></select>
+					</div>
+            				<div class="lc_led_timestr2"><p sid="S_LED_TIME2"></p></div>
+				</div>
+			</div>
+      			<div id="right_sub"><div id="desc" class="lc_led_descline"><p sid="S_LED_DESC"></p></div></div>
+    		</form>
+  	</div>
+  	<div id="right_footer">
+    		<input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+  	</div>
+</div>

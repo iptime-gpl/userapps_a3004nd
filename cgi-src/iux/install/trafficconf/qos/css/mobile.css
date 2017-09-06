@@ -1,0 +1,176 @@
+@charset "utf-8";
+body { -webkit-touch-callout: none !important; }
+a { -webkit-user-select: none !important; }
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr {
+        border:none;
+        background-color: #DDD;
+        text-align:left;
+        clear: both;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border: 1px solid #ccc;
+        clear: both;
+}
+.listview { clear: both; }
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+        display: block !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-shadow: none;
+        font-style: normal;
+        font-family: "돋움", "Arial Unicode MS";
+        color: #444;
+        font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+.listview .line_title { float: left; }
+.listview .line_title p {
+        padding-left: 0.3em;
+        line-height: 2em;
+}
+.listview .line_status { float: right; display: table; }
+.listview .line_status p { line-height: 2em; }
+.listview .line_status span { display: table-cell;      vertical-align: middle; }
+.listview .line_status img {
+        height: 1em;
+        width: 1em;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+}
+.listview .line_value { clear: both; height: 1.5em; }
+.listview .line_value p { padding-left: 0.3em; color: #888; }
+#right_main, #right_sub {
+        clear: both;
+        margin-bottom: 10px;
+        overflow: hidden;
+}
+.lc_left {
+        display: table;
+        float: left;
+        line-height: 2.5em;
+        height: 2.5em;
+        margin-top: 2px;
+        width: 7.5em;
+}
+
+#right_main .lc_left span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 0.7em;
+}
+#right_main .lc_left span img {
+        height: 5px;
+        width: 5px;
+        margin-bottom: 0.2em;
+}
+#right_main .lc_row { clear: both; overflow : hidden; }
+
+.lc_right {
+        float: left;
+//        width: 16.5em;
+        overflow: hidden;
+}
+.lc_right_ipdisk { width: 16em; }
+
+#right_main .value p { width: 50px; }
+#right_main #desc p,
+#right_sub #desc p { color: #777; line-height: 1.5em; }
+#right_sub #desc .title { margin-bottom: 5px; }
+
+.custom_css_button {
+        width: 6em;
+        height: 2.5em;
+        float: left;
+}
+
+/*local css*/
+#maincontent >div { overflow:hidden;}
+
+#right_main .ui-btn.ui-checkbox-off:after,
+#right_main .ui-btn.ui-checkbox-on:after,
+#right_footer .ui-btn.ui-checkbox-off:after,
+#right_qosrule .ui-btn.ui-checkbox-on:after{ margin-left: 0; }
+#maincontent .lc_grayfont_text{color:#777; text-overflow:ellipsis; white-space:nowrap;}
+
+#maincontent .lc_line_div {line-height:1.7em; height:1.7em; width:100%;}
+
+#maincontent .lc_priority_div {width:4%; padding-left:.7em; float:left;}
+#maincontent .lc_priority_div .lc_line_div .lc_greenbox_div { background-color:limegreen; top:0.7em; width:0.5em; height:0.5em; position:relative;}
+#maincontent .lc_leftbox_div {width:auto; float:left;}
+#maincontent .lc_leftbox_div p { margin-left : 0.5em;}
+#maincontent .lc_rightbox_div {float:right; width:auto; margin-right:1em; text-align:right;}
+
+#maincontent .lc_addrule_div { background-color:white; overflow : hidden; height : 4em;}
+#maincontent .lc_addrule_div a >div { padding-top : 0.7em;}
+#maincontent .lc_addrule_div img { width : 1em;}
+#maincontent .lc_addrule_div .lc_priority_div { padding-top:1.2em;}
+#maincontent .lc_addrule_div .lc_leftbox_div { padding-top : 1em;}
+
+#maincontent ul li { border-bottom: 1px solid #CCC; }
+#maincontent ul li.internettype img { padding-top : 0.7em;}
+
+#lc_qosrule_div ol li {overflow:hidden;}
+#list_div >div { position:relative; z-index : 0;}
+#list_div >div:nth-child(even) { background-color:#FFFFFF;}
+#list_div >div:nth-child(odd) { background-color:#F9FAF5;}
+#lc_qosrule_div ol li .lc_priority_div .lc_line_div { padding-top : 0.3em;}
+#lc_qosrule_div ol li .lc_priority_div .lc_line_div p { margin : 0;}
+
+#panel_internettype .ui-select .ui-btn-icon-right span { padding-bottom:0.1em; }
+#panel_internettype .lc_row .lc_right .lc_select_div { width : 10em;}
+#panel_internettype .lc_row .lc_right >div { width : 4em; float:left;}
+#panel_internettype .lc_row .lc_right p { padding: 0.5em 0 0 0.5em; }
+#panel_internettype #right_footer input { float: right; }
+
+
+#panel_qosrule .lc_left p { position : relative; bottom : 0.25em;}
+#panel_qosrule .lc_point_div { width : 1em; float : left; height : 1.5em;}
+#panel_qosrule .lc_point_div img { height : 0.3em; width : 0.3em; margin-top : 0.9em;}
+#panel_qosrule .lc_left { width : 4.5em;}
+#panel_qosrule .lc_row .lc_right >div { float : left;}
+#panel_qosrule .lc_priority_row .lc_right .lc_priority_box { width : 3em; padding-right : 1.5em;}
+#panel_qosrule .lc_priority_row .lc_right .lc_priority_button_box{ padding : 0; margin : 0; width : 6em; height : 2.3em; line-height : 2.3em; display : inline-block; vertical-align : top; padding-right : 0.5em;}
+#panel_qosrule .lc_priority_row .lc_right .lc_priority_button_box button{width:100%; height:90%; margin:0; padding:0; vertical-align:top;}
+#panel_qosrule .lc_priority_row .lc_right .lc_priority_button_box button img { padding:0; margin:0; width:.7em !important; height:.7em !important; border:0;}
+
+#panel_qosrule .lc_right p { padding-top : 0.2em;}
+
+#panel_qosrule .lc_speed_div .lc_directiontext_div { padding-left : 1em; padding-right : 0.5em; text-align : right;}
+#panel_qosrule .lc_speed_div .lc_right .lc_input_div { width : 4em; margin-right : 0.2em;}
+#panel_qosrule .lc_speed_div .lc_left p { position : relative; bottom : 0.4em;}
+#panel_qosrule .lc_bpi_div .lc_right label p { position : relative; bottom : 0.45em;}
+
+#panel_qosrule .lc_row .lc_right .lc_select_div { width : 9.6em; padding-right : 0.2em; }
+#panel_qosrule .lc_row:last-child .lc_right .lc_select_div { width : 7em; padding-right : 0.2em; }
+#panel_qosrule .lc_ipaddr2_div .lc_right .lc_ipaddress_div >div {width : 3em; float:left; }
+#panel_qosrule .lc_ipaddr2_div .lc_right .lc_ipaddress_div .lc_ip_div input { text-align: center; }
+#panel_qosrule .lc_ipaddr2_div .lc_right .lc_ipaddress_div .hyphen { width : 0.3em; margin-top:0.5em;}
+#panel_qosrule .lc_ipaddr2_div .lc_right .lc_ipaddress_div .hyphen:nth-child(8) { margin-left : 0.2em; margin-right : 0.6em; position : relative; bottom : 0.4em;}
+#panel_qosrule .lc_row .lc_right .lc_port_div { width : 4em; padding-left : 0.2em; padding-right : 0.2em;}
+
+#panel_qosrule #right_footer .lc_newrule_button { width : 5em; height : 1.7em; margin-left : 0.2em;}
+#panel_qosrule #right_footer .lc_apply_button { width : 3.5em; height : 1.7em; margin-left : 0.2em;}
+#panel_qosrule #right_footer .lc_cancel_button { width : 3.5em; height : 1.7em; margin-left : 0.2em;}
+#panel_qosrule #right_footer .lc_delete_button { width : 3.5em; height : 1.7em; margin-left : 0.2em;}
+
+.lc_onoffline_left{display:inline-block !important; width:70%;}
+.lc_onoffline_right{display:inline-block !important; padding:.7em 1em 0 0;}
+
+
+#listview li >a { border: 0; }

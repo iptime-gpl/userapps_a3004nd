@@ -1,0 +1,199 @@
+<div id="forwardrule" class="cc_padding">
+	<form id="iux_form">
+		<div id="right_main" class="right_main">
+
+			<div class="lc_row" id="priority_line">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+					<p sid="S_PRIORITY_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_priority_box">
+						<input name="priority" type="number" pattern="[0-9]*" sid="C_FORWARDRULE_PRIORITY" min = "0"
+							maxlength="3" style="ime-mode: disabled;">
+					</div>
+					<div class="lc_priority_box lc_priority_btnbox">
+						<button type="button" sid="PRIORITY_UP" data-role="none">
+							<img src="images/pri_up.gif" class="lc_btnimg"> <span
+								sid="S_PRIUP_STRING"></span>
+						</button>
+					</div>
+					<div class="lc_priority_box lc_priority_btnbox">
+						<button type="button" sid="PRIORITY_DOWN" data-role="none">
+							<img src="images/pri_down.gif" class="lc_btnimg"> <span
+								sid="S_PRIDOWN_STRING"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+					<p sid="S_RULENAME_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<input name="name" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_FORWARDRULE_NAME"
+							maxlength="127">
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row lc_borderbottom_row">
+				<div class="lc_left lc_panel_left"></div>
+				<div class="lc_right ui-alt-icon lc_panel_right lc_usual_right">
+					<input sid="C_FORWARDRULE_DISABLED" id="_disabled" name="disabled"
+						type="checkbox" value="1"> <label for="_disabled">
+						<p sid="S_DISABLED_STRING"></p>
+					</label>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left lc_panel_subleft">
+					<p sid="S_RULETYPE_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_usual_right">
+						<select name="ruletype" sid="C_FORWARDRULE_RULETYPE" type="select"></select>
+					</div>
+				</div>
+			</div>
+
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+					<p sid="S_INTIPADDR_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div id="ip_field" sid="C_FORWARDRULE_IP" class="lc_input_ip ip">
+						<div class="lc_inputbox_ip">
+							<input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot">
+							<p>.</p>
+						</div>
+						<div class="lc_inputbox_ip">
+							<input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot">
+							<p>.</p>
+						</div>
+						<div class="lc_inputbox_ip">
+							<input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+						<div class="lc_dot">
+							<p>.</p>
+						</div>
+						<div class="lc_inputbox_ip">
+							<input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left"></div>
+				<div class="lc_right lc_panel_right">
+					<div class="ui-alt-icon lc_usual_right">
+						<input sid="CURCON_IP" id="curcon_ip" type="checkbox"> <label
+							for="curcon_ip">
+							<p sid="S_CURCONIP_STRING"></p>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<span><img src="/common/images/point.jpg"></span>
+					<p sid="S_PROTOCOL_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="ui-alt-icon ui-nodisc-icon lc_protocol_class">
+							<select name="protocol" sid="C_FORWARDRULE_PROTOCOL"
+								type="select">
+							</select>
+						</div>
+						<div class="ui-alt-icon ui-nodisc-icon lc_dualwan_class"
+							id="dual_wan_select">
+							<select name="wan_name" sid="C_FORWARDRULE_WANNAME" type="select">
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left lc_panel_subleft">
+					<p sid="S_EXTPORT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="lc_port_class">
+							<input name="extsport" type="number" pattern="[0-9]*" sid="C_FORWARDRULE_EXTSPORT"
+								min = "1" max = "65535" maxlength = "5">
+						</div>
+						<div class="lc_hyphen">~</div>
+						<div class="lc_port_class">
+							<input name="exteport" type="number" pattern="[0-9]*" sid="C_FORWARDRULE_EXTEPORT"
+								min = "1" max = "65535" maxlength = "5">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left lc_panel_subleft">
+					<p sid="S_INTPORT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_usual_right">
+						<div class="lc_port_class">
+							<input name="intsport" type="number" pattern="[0-9]*" sid="C_FORWARDRULE_INTSPORT"
+								min = "1" max = "65535" maxlength = "5">
+						</div>
+						<div class="lc_hyphen">~</div>
+						<div class="lc_port_class">
+							<input name="inteport" type="number" pattern="[0-9]*" sid="C_FORWARDRULE_INTEPORT"
+								min = "1" max = "65535" maxlength = "5">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div id="right_footer">
+		<div class="lc_row lc_bordertop_row">
+			<div class="lc_controlbtn_line">
+				<div class="lc_newrule_button">
+				<button type="button" sid="S_NEWRULE_BTN"
+					class="custom_css_button" data-role="none">
+					<img src="images/plus_icon.jpg" class="lc_btnimg"> <span
+						sid="S_NEWRULEBTN_STRING"></span>
+				</button>
+				</div>
+				<div class="lc_usual_button">
+				<button type="button" sid="S_MODIFY_BTN"
+					class="custom_css_button" data-role="none">
+					<span sid="S_MODIFY"></span>
+				</button>
+				</div>
+				<div class="lc_usual_button lc_cancel_button">
+				<button type="button" sid="S_CANCEL_BTN"
+					class="custom_css_button" data-role="none">
+					<span sid="S_INPUTCANCEL"></span>
+				</button>
+				</div>
+			</div>
+			<div class="lc_delbtn_line">
+				<div class="lc_usual_button">
+				<button type="button" sid="S_DELETE_BTN"
+					class="custom_css_button" data-role="none">
+					<span sid="S_DELETE"></span>
+				</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

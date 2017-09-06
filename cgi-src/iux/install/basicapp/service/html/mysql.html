@@ -1,0 +1,93 @@
+<div id="mysql" class="cc_padding">
+  <form id="iux_form">
+    <div id="right_main" class="right_main">
+    
+    <!--service-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_SERVICE_TITLE"></p></div>
+      <div class="lc_right">
+        <input name="run" id="run_true" sid="C_MYSQL_RUN" type="radio" value="1">
+        <label for="run_true"><p sid="S_START"></p></label>
+        <input name="run" id="run_false" sid="C_MYSQL_RUN" type="radio" value="0">
+        <label for="run_false"><p sid="S_STOP"></p></label>
+      </div>
+    </div>
+    
+	<!--port-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_MYSQL_PORT_TITLE"></p></div>
+      <div class="lc_right">
+        <div class="lc_input_port">
+          <input name="port" sid="C_MYSQL_PORT" type="number" pattern="[0-9]*" min = "1" max = "65535" maxlength = "5" style="ime-mode:disabled"></div>
+        <div class="lc_input_port_check ui-alt-icon">
+          <input name="defaultport" id="lc_input_port_check" sid="L_MYSQL_PORT" type="checkbox" value="1">
+          <label for="lc_input_port_check"><p sid="S_USE_DEFAULT"></p></label></div>
+      </div>
+    </div>
+    
+	<!--datafolder-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_MYSQL_DATAFOLDER_TITLE"></p></div>
+      <div class="lc_right">
+        <div class="select_datafolder ui-alt-icon ui-nodisc-icon">
+          <select name="datafolder" sid="C_MYSQL_DATAFOLDER" type="select"></select>
+        </div>
+      </div>
+    </div>
+    
+    <!--Createfolder-->
+    <div class="lc_row lc_createfolder">
+      <div class="lc_left" style="height:0em;"></div>
+      <div class="lc_right">
+        <div><input sid="L_MYSQL_DATAFOLDER" maxlength="32" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false"></div></div>
+    </div>
+    
+    <!--Charset-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_MYSQL_CHARSET_TITLE"></p></div>
+      <div class="lc_right">
+        <div class="selet_charset ui-alt-icon ui-nodisc-icon">
+          <select name="charset" sid="C_MYSQL_CHARSET" type="select"></select>
+        </div>
+      </div>
+    </div>
+    
+    <!--Map-->
+    <div class="lc_row">
+      <div class="lc_left"> <span><img src="/common/images/point.jpg"></span>
+        <p sid="S_MYSQL_MAP_TITLE"></p></div>
+      <div class="lc_right lc_right_map ">
+        <div class="lc_input_map">
+          <input name="maxallowpacket" sid="C_MYSQL_MAXALLOWPACKET" type="number" pattern="[0-9]*" min = "1" style="ime-mode:disabled"></div>
+        <div class="cc_tail_text"><p sid="S_MB"></p></div>
+	  </div>
+    </div>
+    
+    <!--client use server char-->
+    <div class="lc_row default_checkbox ui-alt-icon">
+      <input name="clientuseserverchar" id="clientuseserverchar" type="checkbox" value="1" sid="C_MYSQL_CLIENTUSESERVERCHAR">
+      <label for="clientuseserverchar"><p sid="S_CLIENTUSESERVERCHAR"></p></label>
+    </div>
+    
+    <!--char case-->
+    <div class="lc_row default_checkbox ui-alt-icon">
+      <input name="charcase"id="charcase" type="checkbox" value="1" sid="C_MYSQL_CHARCASE">
+      <label for="charcase"><p sid="S_CHARCASE"></p></label>
+	</div>
+    
+	<div><br>
+    <div id="right_sub" class="right_sub">
+      <div id="desc">
+        <p sid="S_MYSQL_DESC1" class="title"></p>
+        <p sid="S_MYSQL_DESC2" class="msg1"></p>
+        <p sid="S_MYSQL_DESC3" class="msg2"></p>
+      </div>
+    </div>
+  </form>
+  <div id="right_footer">
+    <input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none"></div>
+</div>

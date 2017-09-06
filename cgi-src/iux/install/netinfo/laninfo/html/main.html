@@ -1,0 +1,165 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content">
+  <form id="iux_form">
+	<!--ip-->
+    <div class="lc_row" sid="ROW_IP">
+      <div class="lc_left"><p sid="S_IP_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="ip_field" sid="C_LANCONF_IP" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+    </div>
+
+	<!--netmask-->
+    <div class="lc_row" sid="ROW_NETMASK">
+      <div class="lc_left"><p sid="S_NETMASK_TITLE"></p></div>
+      <div class="lc_middle">
+        <div id="netmask_field" sid="C_LANCONF_NETMASK" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+    </div>
+
+	<!--dhcp server run-->
+    <div class="lc_row" sid="ROW_DHCPRUN">
+      <div class="lc_left"><p sid="S_DHCPRUN_TITLE"></p></div>
+      <div class="lc_middle"> 
+        <div class="dhcprun">
+          <input name="dhcprun" id="dhcprun_true" sid="C_DHCPCONF_DHCPRUN" type="radio" value="1">
+          <label for="dhcprun_true"><p sid="S_START"></p></label>
+        </div>
+        <div class="dhcpstop">
+		  <input name="dhcprun" id="dhcprun_false" sid="C_DHCPCONF_DHCPRUN" type="radio" value="0">
+          <label for="dhcprun_false"><p sid="S_STOP"></p>
+          </label>
+        </div>
+      </div>
+    </div>
+	
+	<!--ip range(sip)-->
+    <div class="lc_row" sid="ROW_SIP">
+      <div class="lc_left"><p sid="S_SIP_TITLE"></p></div>
+      
+	  <div class="lc_middle">
+        <div id="sip_field" sid="C_DHCPCONF_SIP" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+    </div>
+
+	<!--ip range(eip)-->
+    <div class="lc_row" sid="ROW_EIP">
+      <div class="lc_left"><p sid="S_EIP_TITLE"></p></div>
+     
+	  <div class="lc_middle">
+        <div id="eip_field" sid="C_DHCPCONF_EIP" class="cc_input_ip ip">
+          <div class="lc_inputbox_ip"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+          <div class="hyphen"><p>.</p></div>
+          <div class="lc_inputbox_ip"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        </div>
+      </div>
+	  <div class="lc_right" sid="MIPRANGE">
+        <div class="lc_manual_check lc_fullwidth ui-alt-icon">
+          <input name="miprange" sid="C_DHCPCONF_MIPRANGE" id="check_miprange" type="checkbox" value="1">
+          <label for="check_miprange"><p sid="S_DHCPCONF_MIPRANGE"></p></label>
+        </div>
+      </div>
+    </div>
+
+	<!--leasetime & dns suffix-->
+    <div class="lc_row" sid="ROW_IPLEASE_DNXSUFFIX">
+      <div class="lc_ipleasetime">
+		<div class="lc_title"><p sid="S_IPLEASE_TITLE"></p></div>
+        <div class="ui-alt-icon ui-nodisc-icon lc_content">
+          <select name="leasetime" sid="N_DHCPCONF_LEASETIME" type="select">
+			<option value="-">-</option>
+			<option value="60">1분</option>
+			<option value="600">10분</option>
+			<option value="1800">30분</option>
+			<option value="3600">1시간</option>
+			<option value="7200">2시간</option>
+			<option value="14400">4시간</option>
+			<option value="21600">6시간</option>
+			<option value="43200">12시간</option>
+			<option value="64800">18시간</option>
+			<option value="86400">1일</option>
+			<option value="172800">2일</option>
+			<option value="259200">3일</option>
+			<option value="604800">7일</option>
+          </select>
+        </div>
+	  </div>
+	  <div class="lc_dnssuffix">
+		<div class="lc_title"><p sid="S_DNSSUFFIX_TITLE"></p></div>
+		<div class="lc_content"><input name="dnssuffix" sid="C_DHCPCONF_DNSSUFFIX" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled;"></div>
+	  </div>
+    </div>
+
+	<!--dhcp detect-->
+    <div class="lc_row dhcpdetect" sid="ROW_DHCPDETECT">
+      <div class="lc_left ui-alt-icon">
+		<input name="dhcpautodetect" sid="C_DHCPCONF_DHCPAUTODETECT" id="check_dhcpautodetect" type="checkbox" value="1">
+        <label for="check_dhcpautodetect"><p sid="S_DHCPCONF_DHCPAUTODETECT"></p></label>
+	  </div>
+    </div>
+
+	<!--status-->
+	<div class="lc_row lc_submit">
+		<div class="lc_title"><p sid="DHCP_STATUS"></div>
+		<div class="lc_content"><input class="custom_css_button lc_apply_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none"></div>
+	</div>
+  </form>
+
+  <div class="submenu"><p sid="S_DHCPADDR_MGR_TITLE"></p></div>
+  <div>
+    <ul class="listview ui-listview" data-role="listview">
+	  <li class="submenulist" sid="addsearch"><a href="#right_panel" data-icon="false">
+		<div class="submenu_icon1"><img src="/common/images/add_icon.png"></div>
+		<div class="line_title submenu_title"><p sid="S_SEARCHADDR_REG"></p></div>
+		<div class="line_status submenu_icon2"><img src="/common/images/icon_list_run.png"></div>
+	  </a></li>
+	  <li class="submenulist" sid="addmanual"><a href="#right_panel" data-icon="false">
+		<div class="submenu_icon1"><img src="/common/images/add_icon.png"></div>
+		<div class="line_title submenu_title"><p sid="S_MANUALADDR_REG"></p></div>
+		<div class="line_status submenu_icon2"><img src="/common/images/icon_list_run.png"></div>
+	  </a></li>
+	  <li class="submenulist" sid="dellease"><a href="#right_panel" data-icon="false">
+		<div class="submenu_icon1"><img src="/common/images/mgr_icon.png"></div>
+		<div class="line_title submenu_title"><p sid="S_REGADDR_MGR"></p></div>
+		<div class="line_status submenu_icon2"><img src="/common/images/icon_list_run.png"></div>
+	  </a></li>
+	</ul>
+  </div>
+  <div class="lc_manual_check lc_fullwidth ui-alt-icon" style="margin-left: 1em;">
+	<input sid="C_DHCPCONF_MACRESTRICT" id="check_macrestrict" type="checkbox" value="1">
+	<label for="check_macrestrict"><p sid="S_MACRESTRICTBINDING_DESC"></p></label>
+  </div>
+  <div class="lc_manual_check lc_fullwidth ui-alt-icon" style="margin-left: 1em;">
+	<input sid="C_DHCPCONF_DHCPACCESSPOLICY" id="check_dhcpaccesspolicy" type="checkbox" value="1">
+	<label for="check_dhcpaccesspolicy"><p sid="S_NETCONF_INTERNALDYNAMICONLYINTERNET"></p></label>
+  </div>
+ </form>
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

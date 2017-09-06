@@ -1,0 +1,26 @@
+<STYLE>
+.item_text { font: normal normal normal 12px arial; color:#000000; }
+
+table,td { font: normal normal normal 12px arial; color:#000000; }
+body
+{
+        scrollbar-face-color:#FFFFFF;
+        scrollbar-highlight-color: #aaaaaa;
+        scrollbar-3dlight-color: #FFFFFF;
+        scrollbar-shadow-color: #aaaaaa;
+        scrollbar-darkshadow-color: #FFFFFF;
+        scrollbar-track-color: #FFFFFF;
+        scrollbar-arrow-color: #aaaaaa;
+        font: normal normal normal 12px arial;
+}
+
+/*modification*/
+.login_info_td {height:49; padding:0px 17px 0px 0px; border-collapse:collapse;}
+
+/*new*/
+.login_input { font: normal normal normal 12px arial; color:#000000; border:#C6C9CC 1px solid; width:181px; height:21px;}
+
+
+</STYLE>
+
+

@@ -1,0 +1,65 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content" >
+
+  <form id="iux_form">
+	  
+	  <div class="lc_row">
+		<div class="mtitle" style="margin-top: 0.5em;"><p sid="S_MAIN_PCNAME"></p></div>
+		<div class="mcontent_remotepc">
+			<input name="pcname" sid="REMOTEPC_NAME" id="rpc_name" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+			<p sid="result"></p>
+		</div>
+	  </div>
+	  
+	  <div class="lc_row">
+		<div  class="mtitle"><p sid="S_MAIN_MACADDR"></p></div>
+     	  <div sid="REMOTEPC_MAC" class="mcontent_remotemac mac">
+		    <div class="input"><input sid="VALUE0" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2" style="ime-mode:disabled;"></div>
+			<div class="dot"><p>-</p></div>
+			<div class="input"><input sid="VALUE1" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2" style="ime-mode:disabled;"></div>
+			<div class="dot"><p>-</p></div>
+			<div class="input"><input sid="VALUE2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2" style="ime-mode:disabled;"></div>
+			<div class="dot"><p>-</p></div>
+			<div class="input"><input sid="VALUE3" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2" style="ime-mode:disabled;"></div>
+			<div class="dot"><p>-</p></div>
+			<div class="input"><input sid="VALUE4" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2" style="ime-mode:disabled;"></div>
+			<div class="dot"><p>-</p></div>
+			<div class="input"><input sid="VALUE5" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="2" style="ime-mode:disabled;"></div>
+		  </div>
+		  <div sid="MACLIST" class="lc_content_search"><a href="#right_panel" data-icon="false"><img src="/common/images/search.png"></a></div>
+	  </div>
+
+	  <div class="lc_row ui-alt-icon lc_content_addcurrentdevice">
+	    <input sid="CURRENTPC_CHECK" id="currentpc_check" type="checkbox" value="1">
+        <label for="currentpc_check"><p sid="S_MAIN_CURRENTPC"></p></label>
+	  </div>
+	  
+	  <div class="lc_row">
+	    <button type="button" sid="ADD_BUTTON" data-role="none" class="lc_content_addbutton">
+		  <div class="icon"><img src="/common/images/add_icon.png"></div>
+		  <div class="text"><p sid="S_ADD"></p></div>
+		</button>
+	  </div>
+
+	  <div sid="REMOTELIST_ITEM" class="lc_row lc_content_remotepclist_titlebar"><p sid="S_MAIN_REMOTELIST_TITLEBAR"></p></div>
+
+	  <ul sid="REMOTEPC_LIST" data-role="listview">
+	  </ul>
+	 
+	  <div sid="REMOTELIST_ITEM" class="lc_row">
+		<div class="ui-alt-icon lc_content_allcheck">
+		  <input sid="ALL_CHECK" id="all_check" type="checkbox" value="1"">
+          <label for="all_check"></label>
+		</div>
+		<div class="lc_content_delbutton">
+		  <button type="button" sid="DEL_BUTTON" data-role="none">
+		    <p sid="S_DELETE"></p>
+		  </button>
+		</div>
+	  </div>
+
+  </form>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>
+
+

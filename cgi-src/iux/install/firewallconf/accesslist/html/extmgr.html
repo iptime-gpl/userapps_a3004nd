@@ -1,0 +1,64 @@
+<div id="extmgr">
+  <div class="lc_page_account_subtitle"><p sid="LOGIN_SUBTITLE"></p></div>
+  <form id="local_extmgr_form">
+    <div class="ui-alt-icon r_top">
+		<div class="lc_onoffline_left">
+			<p sid="S_EXTMGR_USE"></p>
+		</div>
+		<div class="lc_onoffline_right">
+			<label class="ui-hidden-accessible" for="ext_id"></label>
+			<select sid="C_EXTMGR_RUN" name="use_ext" id="ext_id" data-role="slider" type="slider">
+				<option value="0">Off</option>
+				<option value="1">On</option>
+			</select>
+		</div>
+	</div>
+	
+	<div class="r_middle">
+	  <div class="title"><p>허용할 IP주소</p></div>
+	  <div sid="ADD_ACCESSIP" class="content_ip ip">
+        <div class="input"><input sid="VALUE0" type="number" pattern="[0-9]*" min = "1" max = "255" maxlength = "3"></div>
+        <div class="dot"><p>.</p></div>
+        <div class="input"><input sid="VALUE1" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        <div class="dot"><p>.</p></div>
+        <div class="input"><input sid="VALUE2" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+        <div class="dot"><p>.</p></div>
+        <div class="input"><input sid="VALUE3" type="number" pattern="[0-9]*" min = "0" max = "255" maxlength = "3"></div>
+      </div>
+	</div>
+	
+	<div class="r_middle">
+	  <div class="title"><p>설명</p></div>
+	  <div class="content_text" style="margin-left: 0"><input sid="ADD_ACCESSDESC" name="desc" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32"></div>
+	</div>
+	
+	<div class="r_middle">
+	  <div class="title_desc"><p>추가 가능한 최대 주소는 10개</p></div>
+	  <div class="content_button">
+	    <button sid="ADD_SUBMIT" type="button" data-role="none">
+		<span>추가</span></button>
+	  </div>
+	</div>
+	
+	<div sid="BUTTON_DEL_FEILD" class="r_bottom_title">
+	  <div><p>IP주소</p></div>
+	  <div><p>설명</p></div>
+	</div>
+	
+	<div>
+	  <ul sid="ACCESSLIST"></ul>
+	</div>
+	<div sid="BUTTON_DEL_FEILD" class="r_bottom_del">
+	  <div class="checkfield ui-alt-icon">
+	   <input sid="CHECKALL" id="check_all" type="checkbox" value="1">
+	   <label for="check_all"></label>
+	  </div>
+	  <div class="buttonfield">
+	   <button type="button" sid="DEL_SUBMIT" data-role="none">
+	   <span>삭제</span></button>
+	  </div>
+  </form>
+</div>
+
+
+

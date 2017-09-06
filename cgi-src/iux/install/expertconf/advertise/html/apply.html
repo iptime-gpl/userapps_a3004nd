@@ -1,0 +1,98 @@
+<div id="apply">
+<form id="local_apply_form">
+  <div class="lc_row_r">
+    <div class="title"><p sid="S_REDIR"></p></div>
+    <div class="radio_div">
+	  <label for="redir_on">
+	  	<input name="redir" type="radio" sid="LC_REDIR"id="redir_on" value="1">
+		<p sid = "S_START"></p>
+  	  </label>
+	  <label for="redir_off">
+	  	<input name="redir" type="radio" sid="LC_REDIR"id="redir_off" value="0">
+		<p sid = "S_STOP"></p>
+  	  </label>
+	</div>
+  </div>
+  <div class="lc_row_r">
+    <div class="title"><p sid="S_ADVERTISE_REDIRURL"></p></div>
+	<div class="content_text">
+	  <input name="redirurl" sid="C_ADVERTISE_REDIRURL" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="128">
+	</div>
+  </div>
+  <div class="lc_row_r">
+    <div class="title"><p sid="S_AUTOCONFIRM"></p></div>
+	    <div class="radio_div">
+	  <label for="autoconfirm_on">
+	  	<input name="autoconfirm" type="radio" sid="LC_AUTOCONFIRM"id="autoconfirm_on" value="1">
+		<p sid = "S_START"></p>
+  	  </label>
+	  <label for="autoconfirm_off">
+	  	<input name="autoconfirm" type="radio" sid="LC_AUTOCONFIRM"id="autoconfirm_off" value="0">
+		<p sid = "S_STOP"></p>
+  	  </label>
+	</div>
+  </div>
+  <div class="lc_row_r">
+    <div class="title"><p sid="S_ADVERTISE_CYCLE"></p></div>
+	<div class="content_text lc_cycle_text">
+	  <input name="cycle" sid="C_ADVERTISE_CYCLE" type="number" pattern="[0-9]*" step = "5" min = "5">
+	</div>
+	<div class="lc_cycle_desc1"><p sid="S_ADVERTISE_CYCLE_DESC1"></p></div>
+	<div class="lc_cycle_desc2"><p sid="S_ADVERTISE_CYCLE_DESC2"></p></div>
+  </div>
+  <!--@@-->
+  <div class="lc_row_r" sid="AUTOCONFIRM_ITEM">
+    <div class="title"><p sid="S_ADVERTISE_BTNMSG_TITLE"></p></div>
+	<div class="content_text">
+	  <input name="btnmsg" sid="C_ADVERTISE_BTNMSG" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="256">
+	</div>
+  </div>
+  <div class="lc_row_r" sid="AUTOCONFIRM_ITEM">
+    <div class="title"><p sid="S_ADVERTISE_USERMSG"></p></div>
+	<div class="content_text">
+	  <input name="usermsg" sid="C_ADVERTISE_USERMSG" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="256">
+	</div>
+  </div>
+  <div class="lc_row_r" sid="AUTOCONFIRM_ITEM">
+    <div class="title"><p sid="S_ADVERTISE_USERMSG2"></p></div>
+	<div class="content_text">
+	  <input name="usermsg2" sid="C_ADVERTISE_USERMSG2" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="256">
+	</div>
+  </div>
+  <div class="lc_row_r">
+    <div class="title"><p sid="S_ADVERTISE_WHITELIST_TITLE"></p></div>
+	<div class="content_text">
+	  <input name="whitelist" sid="C_ADVERTISE_WHITELIST" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="128">
+	</div>
+  </div>
+  <div class="lc_row_r">
+    <div sid="WHITELIST_DESC" class="lc_submit_whitelist"><p sid="S_WHITELIST_DESC"></p></div>
+	<div class="lc_submit">
+      <button type="button" sid="SUBMIT_BUTTON" data-role="none">
+	    <p sid="S_BUTTON_SUBMIT"></p>
+  	  </button>
+    </div>
+  </div>
+</form>
+</div>
+<!-- list popup -->
+<div id="whitelist_desc" class="stylepopup whitelist_popup" data-role="popup" data-position-to="window" data-dismissible="false" data-overlay-theme="b"
+        data-theme="none" data-history="false">
+	<div class="title" style="overflow: hidden; height: 3em;">
+		<div class="text"><p sid="S_WHITELIST_POPUP_TITLE"></p></div>
+		<div class="exit" id ="popup_title_exit" onClick='whitelist_popup();'><img src="/common/images/closed_g.png"></div>
+	</div>
+	<div class="content">
+	  <p sid="S_WHITELIST_POPUP_DESC1"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC2"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC3" class="br"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC4"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC5" class="br"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC6"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC7"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC8"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC9"></p>
+	  <p sid="S_WHITELIST_POPUP_DESC10"></p>
+	</div>
+</div>
+

@@ -1,0 +1,73 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content" >
+  
+  
+  <div class="lc_main_top">
+    <div class="row" style="background-color: #FFFFFF">
+	  <div class="title"><p sid="S_MAIN_CURRENT_FIRMVER"></p></div>
+  	  <div class="context" sid='CVERSION'><p>---</p></div>
+    </div>
+    <div class="row" style="background-color: rgb(245, 245, 245);">
+      <div class="title"><p sid="S_MAIN_BUILDDATE"></p></div>
+	  <div class="context" sid='CBUILDDATE'><p>---</p></div>
+    </div>
+  </div>
+ 
+   <div class="lc_main_middle">
+  
+	
+	<div sid="FIRMUPTYPE_FIELD" class="radio">
+        <div class="radio_run">
+          <input name="firmuptype" id="firmuptype_true" sid="C_ROUTERINFO_FIRMUPTYPE" type="radio" value="1">
+          <label for="firmuptype_true"><p sid="S_MAIN_AUTO_FIRMUP"></p></label>
+        </div>
+        <div class="radio_stop">
+		  <input name="firmuptype" id="firmuptype_false" sid="C_ROUTERINFO_FIRMUPTYPE" type="radio" value="0">
+          <label for="firmuptype_false"><p sid="S_MAIN_MANUAL_FIRMUP"></p></label>
+        </div>
+    </div>
+
+
+	<div sid="STATUS_FIELD" id="ready_firmup_status" class="desc"></div>
+	
+	
+	<div  class="content">
+	  
+	  <div sid="RESTOREFILE_FIELD" class="search_field">
+	    <div class="left">
+		  
+		  <form method="post" id="iux_file_form" enctype="multipart/form-data">
+		    <input name="upgrade" sid="FIRMWAREFILE_SELECT" class="hidden_field" data-role="none" type="file" >
+		  </form>
+	      
+		  <input sid="FIRMWAREFILE_NAME" type="text" maxlength="32" style="width: 12.8em;" readonly>
+	    </div>
+	    <div class="right"><button sid="SEARCH_BUTTON" type="button" data-role="none"><img src="/common/images/search.png"></button></div>
+	  </div>
+	  
+	  <div class="submit_field">
+	    <button type="button" sid="SUBMIT_BUTTON" data-role="none"></button>	
+	  </div>
+    </div>
+  </div>
+
+
+  <div  class="lc_main_bottom">
+    <div class="title">
+	  <div class="icon"><img src="/common/images/alert.png"></div>
+	  <div class="text"><p sid="S_MAIN_CAUTION_DESC1"></p></div>
+	</div>
+	<div class="content">
+	  <div><p sid="S_MAIN_CAUTION_DESC2"></p></div>
+	  <div><p sid="S_MAIN_CAUTION_DESC3"></p></div>
+	  <div>
+	    <div sid="ROUTER_RESTORE" style="float: left;"></div>
+	    <div style="float: left;"><p sid="S_MAIN_CAUTION_DESC5"></p></div>
+	  </div>
+	</div>
+  </div>
+
+
+
+</div>
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

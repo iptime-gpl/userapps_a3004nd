@@ -1,0 +1,28 @@
+SOURCE_PATH=/home/`whoami`/MarvellNas/source
+CROSS_COMPILE=arm-mv5sft-linux-gnueabi
+ToolChainInclude="/opt/sdk/targets/arm-mv5sft-linux-gnueabi/cross/arm-mv5sft-linux-gnueabi/sys-root/usr/include"
+ToolChainLib="/opt/sdk/targets/arm-mv5sft-linux-gnueabi/cross/arm-mv5sft-linux-gnueabi/sys-root/lib"
+
+./configure --host=${CROSS_COMPILE} --target=${CROSS_COMPILE} --build=i686-pc-linux \
+		   CC=${CROSS_COMPILE}-gcc \
+		   CXX=${CROSS_COMPILE}-g++ \
+		   CLFAGS="static" \
+		   CPPFLAGS="-I${TOP_ROOT}/include -I${TOP_SRC}/libusb-1.0.9/install/include -I${TOP_SRC}/tcp_wrappers_7.6" \
+		   LDFLAGS="-L${TOP_ROOT}/lib -L${TOP_SRC}/libusb-1.0.9/install/lib -L${TOP_SRC}/tcp_wrappers_7.6" \
+		   LIBS="-liconv -lrt" \
+		   PKG_CONFIG_PATH="${TOP_SRC}/libusb-1.0.9/install/lib/pkgconfig" \
+		   --enable-static \
+		   --with-local-protocols="dnssd CUPS" \
+		   --enable-libusb \
+		   --enable-tcp-wrappers \
+		   --disable-dnssd \
+		   --disable-shared \
+		   --disable-dbus \
+		   --disable-gssapi \
+		   --disable-ssl \
+		   --disable-pam \
+		   --disable-largefile \
+		   --disable-avahi \
+		   --disable-launchd \
+		   --disable-systemd \
+		   --disable-browsing \

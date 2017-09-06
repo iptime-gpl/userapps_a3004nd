@@ -1,0 +1,114 @@
+@charset "utf-8";
+#service_page :not(INPUT):not(TEXTAREA) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ui-overlay-a, .ui-page-theme-a { background-color: #FFF; }
+hr {
+        border:none;
+        background-color: #DDD;
+        text-align:left;
+        clear: both;
+}
+#header {
+        background-color: #dce1cd;
+        border: 1px solid #ccc;
+}
+#header hr {
+        border: 1px solid #ccc;
+        clear: both;
+}
+.listview { clear: both; }
+.listview a { padding: 0px; background-color: #F6F6F6; }
+.listview p {
+        display: block !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-shadow: none;
+        font-style: normal;
+        font-family: "돋움", "Arial Unicode MS";
+        color: #444;
+        font-size: inherit !important;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active { background-color: #F6F6F6; border-color: #DDD;}
+.ui-page-theme-a .ui-btn:focus { box-shadow: none; }
+
+.listview .line_title { float: left; }
+.listview .line_title p {
+        padding-left: 0.3em;
+        line-height: 2em;
+}
+.listview .line_status { float: right; display: table; }
+.listview .line_status p { line-height: 2em; }
+.listview .line_status span { display: table-cell;      vertical-align: middle; }
+.listview .line_status img {
+        height: 1em;
+        width: 1em;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+}
+.listview .line_value { clear: both; height: 1.5em; }
+.listview .line_value p { padding-left: 0.3em; color: #888; }
+#right_main, #right_sub {
+        clear: both;
+        margin-bottom: 10px;
+        overflow: auto;
+}
+.lc_left {
+        display: table;
+        float: left;
+        line-height: 2.5em;
+        height: 2.5em;
+        margin-top: 2px;
+        width: 7.5em;
+}
+
+#right_main .lc_left span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 0.7em;
+}
+#right_main .lc_left span img {
+        height: 5px;
+        width: 5px;
+        margin-bottom: 0.2em;
+}
+#right_main .lc_row { clear: both; overflow : hidden; }
+
+.lc_right {
+        float: left;
+        width: 16.5em;
+        overflow: hidden;
+}
+.lc_right_ipdisk { width: 16em; }
+
+#right_main .value p { width: 50px; }
+#right_main #desc p,
+#right_sub #desc p { color: #777; line-height: 1.5em; }
+#right_sub #desc .title { margin-bottom: 5px; }
+
+.custom_css_button {
+        height: 2.5em;
+	width : 100%;
+}
+
+#maincontent .lc_grayfont_text {color:#999; text-overflow:ellipsis; white-space:nowrap;}
+/*local css*/
+#maincontent li { padding : 0; margin : 0; height : auto; }
+#maincontent .lc_table_div { background-color : #EEF1E6;}
+#maincontent .lc_title_div { height : 3.5em;}
+#maincontent .lc_desc_div { min-height : 3em; overflow : hidden;}
+#maincontent .lc_table_div .lc_title_div .lc_paragraph_div { padding-top : 1.5em; padding-left : 0.5em; float : left;}
+#maincontent .lc_table_div .lc_title_div .lc_flipswitch_div { float : right;}
+#maincontent .lc_table_div .lc_desc_div div { padding : 0.5em 0 0.5em 0.5em; overflow : hidden;}
+
+#maincontent .lc_portmirroring_div .lc_desc_div p { float : left; margin-right : 0;}
+#maincontent .lc_portmirroring_div .lc_desc_div p:last-child { margin-left : 0;}
+#maincontent .lc_trunk_div .lc_desc_div p { float : left; margin : 0 0 0 0.3em; }
+#maincontent .lc_trunk_div .lc_desc_div p:nth-child(3) { margin-left : 0;}
+#maincontent .lc_trunk_div .lc_desc_div p:last-child { clear:both;}
+

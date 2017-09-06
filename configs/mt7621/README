@@ -1,0 +1,8 @@
+1. rt305x mac assignment
+
+mac0,1,2 : 00-08-9F
+mac5 should be 4x 
+mac5.0 : wireless MAC
+mac5.1 : br0 mac, local eth2.1 mac, wireless multi bss 1
+mac5.2 : eth2.2 wan mac, wireless multi bss 2
+mac5.3 : wireless multibss 3

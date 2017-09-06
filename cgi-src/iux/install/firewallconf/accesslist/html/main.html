@@ -1,0 +1,70 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+<div id="content" class="content" data-role="content">
+  <div class="lc_title_row"><p sid="S_MAIN_EXTERNAL"></p></div>
+  <div class="lc_content_row lc_remote">
+    <form id="iux_form">
+      <div class="lc_remote_check ui-alt-icon" style="margin-right: 0.5em;">
+	    <input name="remoteflag" sid="C_REMOTE_REMOTEFLAG" id="remoteflag_check" type="checkbox" value="1">
+        <label for="remoteflag_check"><p sid="S_MAIN_MGMT_PORT" style="margin-left: 0.5em;"></p></label>
+	  </div>
+	  <div class="lc_remote_input_text"><input sid="C_REMOTE_REMOTEPORT" name="remoteport" type="number" pattern="[0-9]*" min = "1" max = "65535" maxlength = "5"></div>
+	  <div class="lc_remote_submit_button">
+	    <button type="button" sid="REMOTE_SUBMIT" data-role="none"><span sid="S_BUTTON_SUBMIT"></span></button>
+	  </div>
+	</form>
+  </div>
+  <a href="#right_panel" data-icon="false"><div sid="MAIN_EXTMGR" class="lc_content_row"  style="background-color: #FFFFFF;">
+	  <div class="lc_left">
+	    <div><p sid="S_MAIN_EXTERNAL_MGR"></p></div>
+	    <div><p sid="S_MAIN_EXTERNAL_MAX_ADDCOUNT_DESC" style="color: #AAAAAA;"></p></div>
+	  </div>
+	  <div class="lc_right">
+	    <div sid="EXTMGR_STATUS" class="lc_status_text"><p sid="S_MAIN_STATUS_DISUSE"></p></div>
+		<div class="lc_status_icon"><img src="/common/images/icon_list_run.png"></div>
+	  </div>
+  </div></a> 
+  <div class="lc_title_row"><p sid="S_MAIN_INTERNAL"></p></div>
+  <a href="#right_panel" data-icon="false"><div sid="MAIN_INTMGR" class="lc_content_row" style="background-color: #FFFFFF;">
+	  <div class="lc_left">
+	    <div><p sid="S_MAIN_INTERNAL_MGR"></p></div>
+	    <div><p sid="S_MAIN_INTERNAL_MAX_ADDCOUNT_DESC" style="color: #AAAAAA;"></p></div>
+	  </div>
+	  <div class="lc_right">
+	    <div sid="INTMGR_STATUS" class="lc_status_text"><p sid="S_MAIN_STATUS_DISUSE"></p></div>
+		<div class="lc_status_icon"><img src="/common/images/icon_list_run.png"></div>
+	  </div>
+  </div></a>
+  <div class="lc_title_row"><p sid="S_MAIN_HIGHLEVEL_SETUP"></p></div>
+  <a href="#right_panel" data-icon="false"><div sid="MAIN_CSRF" class="lc_content_row" style="background-color: #FFFFFF;">
+	  <div class="lc_left">
+	    <div><p sid="S_MAIN_CSRF"></p></div>
+	    <div sid="CSRF_WHITELIST_STATUS" ><p sid="S_MAIN_CSRF_EMPTY_WHITELIST" style="color: #AAAAAA;"></p></div>
+	  </div>
+	  <div class="lc_right">
+	    <div sid="CSRF_STATUS" class="lc_status_text"><p sid="S_MAIN_STATUS_DISUSE"></p></div>
+		<div class="lc_status_icon"><img src="/common/images/icon_list_run.png"></div>
+	  </div>
+  </div></a>
+  <a href="#right_panel" data-icon="false"><div sid="MAIN_ARPVIRUS" class="lc_content_row" style="background-color: #F9FAF5;">
+	  <div class="lc_left">
+	    <div><p sid="S_MAIN_ARP_PROTECTION"></p></div>
+	    <div><p sid="ARP_DESC_STATUS" style="color: #AAAAAA;">초당 60개의 ATP를 유선 네트워크로 전송</p></div>
+	  </div>
+	  <div class="lc_right">
+	    <div sid="ARP_STATUS" class="lc_status_text"><p sid="S_MAIN_STATUS_DISUSE"></p></div>
+		<div class="lc_status_icon"><img src="/common/images/icon_list_run.png"></div>
+	  </div> 
+  </div></a>
+  <a href="#right_panel" data-icon="false"><div sid="MAIN_ETC" class="lc_content_row" style="background-color: #FFFFFF;">
+	  <div class="lc_left">
+	    <div><p sid="S_MAIN_ETC"></p></div>
+	    <div><p>　</p></div>
+	  </div>
+	  <div class="lc_right">
+	    <div class="lc_status_text"><p sid="S_MAIN_STATUS_USE"></div>
+		<div class="lc_status_icon"><img src="/common/images/icon_list_run.png"></div>
+	  </div>
+  </div></a>
+</div>
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>
+

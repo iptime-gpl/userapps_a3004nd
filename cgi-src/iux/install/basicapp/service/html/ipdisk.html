@@ -1,0 +1,45 @@
+<div id="ipdisk" class="cc_padding">
+  <form id="iux_form">
+    <div id="right_main" class="right_main"> 
+  
+	   <!--service-->
+      <div class="lc_row">
+        <div class="lc_left_ipdisk lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_SERVICE_TITLE"></p></div>
+        <div class="lc_right lc_right_ipdisk">
+          <input name="run" id="run_true" sid="C_IPDISK_RUN" type="radio" value="1">
+          <label for="run_true"><p sid="S_START"></p></label>
+          <input name="run" id="run_false" sid="C_IPDISK_RUN" type="radio" value="0">
+          <label for="run_false"><p sid="S_STOP"></p></label>
+        </div>
+      </div>
+   
+      <!--hostname-->
+      <div class="lc_row">
+        <div class="lc_left_ipdisk lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_IPDISK_HOSTNAME_TITLE"></p></div>
+        <div class="lc_right_ipdisk lc_right">
+          <div class="lc_input_host">
+            <input name="hostname" sid="C_IPDISK_HOSTNAME" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled">
+          </div>
+		  <div class="lc_dname"><p>.ipdisk.co.kr</p></div>
+        </div>
+      </div>
+      
+      <!--email-->
+      <div class="lc_row">
+        <div class="lc_left_ipdisk lc_left"> <span><img src="/common/images/point.jpg"></span>
+          <p sid="S_IPDISK_EMAIL_TITLE"></p></div>
+        <div class="lc_right_ipdisk lc_right">
+          <div>
+            <input name="email" sid="C_IPDISK_EMAIL" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" maxlength="32" style="ime-mode:disabled">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+  <div id="right_footer">
+    <input class="custom_css_button" sid="S_BUTTON_SUBMIT" type="button" data-role="none">
+  </div>
+</div>

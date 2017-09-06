@@ -1,0 +1,281 @@
+<div id="header" class="header" data-role="header" data-position="fixed" data-tap-toggle="false"></div>
+
+<div id="content" class="content">
+  	<div id="maincontent">
+  		<ul id="listview" class="listview" data-role="listview">
+
+      		<li id="hostname"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_HOSTNAME_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+            			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="HOSTNAME_VALUE"></p>
+        		</div>
+        	</a> </li>
+
+      		<li id="configmgmt"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_CONFIGMGMT_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p></p>
+        		</div>
+        	</a></li>
+      		
+      		<li id="autosaving"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_AUTOSAVING_TITLE"></p>
+				</div>
+				<div class="line_value">
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="autosavingrun_id"></label>
+				<select sid="C_AUTOSAVING_RUN" name="run" id="autosavingrun_id" data-role="slider" type="slider">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</select>
+			</div>
+        	</li>
+      		
+		<li id="mgmtport"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_MGMTPORT_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="MGMTPORT_VALUE"></p>
+        		</div>
+        	</a></li>
+
+		<li id="fan"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_FAN_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="FAN_VALUE"></p>
+        		</div>
+        	</a></li>
+
+      		<li id = "fakedns"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_FAKEDNS_TITLE"></p>
+				</div>
+				<div class="line_value">
+					<p sid="FAKEDNS_VALUE"></p>
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="fakedns_id"></label>
+				<select sid="C_FAKEDNS_RUN" name="run" id="fakedns_id" data-role="slider" type="slider">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</select>
+			</div>
+        	</li>
+      		
+		<li id="nologin"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_NOLOGIN_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="NOLOGIN_VALUE"></p>
+        		</div>
+        	</a></li>
+
+		<li id="led"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_LED_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="LED_VALUE"></p>
+        		</div>
+        	</a></li>
+
+		<li id="upnp"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_UPNP_TITLE"></p>
+				</div>
+				<div class="line_value lc_upnp_status_line">
+					<a sid="S_UPNP_LINK"></a>
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="upnp_id"></label>
+				<select sid="C_UPNP_RUN" name="run" id="upnp_id" data-role="slider" type="slider">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</select>
+			</div>
+        	</li>
+
+		<li id="portrole"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_PORTROLE_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="PORTROLE_VALUE"></p>
+        		</div>
+        	</a></li>
+
+      		<li id="hubapmode"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_HUBAPMODE_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="D_HUBAPMODE_STATUS"></p>
+        		</div>
+        	</a></li>
+		
+      		<li id="snmp"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_SNMP_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="D_SNMP_STATUS"></p>
+        		</div>
+        	</a></li>
+		
+		<li id="apcplan"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_APCPLAN_TITLE"></p>
+				</div>
+				<div class="line_value">
+					<p sid="APCPLAN_VALUE"></p>
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="apcplan_id"></label>
+				<select sid="C_APCPLAN_RUN" name="run" id="apcplan_id" data-role="slider" type="slider">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</select>
+			</div>
+        	</li>
+		
+		<li id="restart"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_RESTART_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p></p>
+        		</div>
+        	</a></li>
+		
+		<li id="autoreboot"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_AUTOREBOOT_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="D_AUTOREBOOT_STATUS"></p>
+        		</div>
+        	</a></li>
+		
+		<li id="usbmode"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_USBMODE_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="USBMODE_VALUE"></p>
+        		</div>
+        	</a></li>
+
+		<li id="macclonegiga"><a href="#" data-icon="false"></a>
+			<div class="lc_onoffline_left">
+				<div class="line_title">
+					<p sid="S_MACCLONEGIGA_TITLE"></p>
+				</div>
+				<div class="line_value">
+					<p sid="MACCLONEGIGA_VALUE"></p>
+				</div>
+			</div>
+          		<div class="line_status lc_onoffline_right">
+				<label class="ui-hidden-accessible" for="macclonegiga_id"></label>
+				<select sid="C_MACCLONEGIGA_RUN" name="run" id="macclonegiga_id" data-role="slider" type="slider">
+					<option value="1">Off</option>
+					<option value="0">On</option>
+				</select>
+			</div>
+        	</li>
+
+      		<li id="realtime"><a href="#right_panel" data-icon="false">
+          		<div class="line_title">
+            			<p sid="S_REALTIME_TITLE"></p>
+          		</div>
+          		<div class="line_status">
+            			<div class="text">
+              				<p  sid="S_SETTING_CHANGE_STRING"></p>
+            			</div>
+           			<span><img src="/common/images/icon_list_run.png"></span> </div>
+        		<div class="line_value">
+          			<p sid="REALTIME_VALUE"></p>
+        		</div>
+        	</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="footer" data-position="fixed" class="footer" data-role="footer" data-tap-toggle="false"></div>

@@ -1,0 +1,383 @@
+@charset "utf-8";
+/*left panel*/
+#left_panel {
+	background-color: #EEF0E5;
+	border: 1px solid #CCC;
+}
+#left_panel #left_header {
+	/*background-color: #EEEFE5;
+	border: none;*/
+	border-bottom:1px #CCC solid;
+	height: 2.1em;
+}
+#left_panel p {
+	display: block;
+	text-overflow: clip;
+	overflow: inherit;
+	white-space: normal;
+	text-shadow: none;
+}
+#left_panel .left_menu {
+	padding: 0px;
+}
+#left_panel .wrap_icon_content {
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+}
+#left_panel .menu_title {
+	height: 2.8em;
+	line-height: 2.8em;
+	background-color: #80A352;
+	/*margin-bottom: 5px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;*/
+}
+#left_panel ul .menu_title:first-child { position: relative; }
+#left_panel .menu_title img {
+	float: left;
+	height: 1em;
+	margin: 1em 0.5em 0 1em;
+}
+#left_panel .menu_title p {
+	padding-left: 5px;
+}
+#menu_content  {
+	overflow: hidden;
+}
+#menu_content dl {
+	width: 49.5%;
+	float: left;
+	border-style: solid;
+	border-color: #CCC;
+}
+#menu_content .closeImg { 
+	position : absolute;
+	top: 0;
+	right: 1em;
+}
+#menu_content li:nth-child(even) dl {
+	border-width: 0 1px 1px 0;
+}
+#menu_content li:nth-child(odd) dl {
+	border-width: 0 0 1px 0;
+}
+#left_panel .icon {
+	width: 2.8em;
+	height: 2.8em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	float: left;
+}
+#left_panel .label {
+	width: 60%;
+	float: left;
+}
+#left_panel hr {
+	clear: both;
+	margin-left: 1em;
+	margin-right: 1em;
+	color: #E2E4D2;
+	border: none;
+}
+#left_footer {
+	margin-bottom : 7.5em;
+}
+#left_footer .hr_div {
+	clear: both;
+	height: 0.2em;
+	background-color: #80A352;
+}
+#left_footer .icon {
+	height: 1em;
+	width: 1em;
+	margin-top: 0.2em;
+}
+#left_footer li {
+	background-color:inherit !important;
+}
+
+#left_footer dl {
+	padding-top: 0.5em;
+	height: 2em;
+	width: 49.5%;
+	overflow: hidden;
+	float: left;
+	cursor: pointer;
+}
+
+#left_footer ul:nth-child(even) dl {
+	border-width: 0 1px 1px 0;
+	border-color: #CCC;
+	border-style: solid;
+}
+
+#left_footer ul:nth-child(odd) dl {
+	border-bottom: 1px solid #CCC;
+}
+
+
+/*아이콘 이미지 로드 시작*/
+#system_info .icon {
+	background-image: url(/common/images/menu_icon/systeminfo.png);
+	background-size: cover;
+}
+/*#system_info .icon:active {
+	background-image: url(/common/images/menu_icon/systeminfo_s.png);
+	background-size: cover;
+}*/
+#waninfo .icon {
+	background-image: url(/common/images/menu_icon/waninfo.png);
+	background-size: cover;
+}
+/*#waninfo .icon:active {
+	background-image: url(/common/images/menu_icon/waninfo_s.png);
+	background-size: cover;
+}*/
+#laninfo .icon {
+	background-image: url(/common/images/menu_icon/laninfo.png);
+	background-size: cover;
+}
+/*#laninfo .icon:active {
+	background-image: url(/common/images/menu_icon/laninfo_s.png);
+	background-size: cover;
+}*/
+/*
+#localnetwork_setup .icon {
+	background-image: url(/common/images/menu_icon/localnetwork_setup.png);
+	background-size: cover;
+}
+
+#localnetwork_setup .icon:active {
+	background-image: url(/common/images/menu_icon/localnetwork_setup_s.png);
+	background-size: cover;
+}
+*/
+#wireless_setup .icon {
+	background-image: url(/common/images/menu_icon/wireless_setup.png);
+	background-size: cover;
+}
+/*#wireless_setup .icon:active {
+	background-image: url(/common/images/menu_icon/wireless_setup_s.png);
+	background-size: cover;
+}*/
+#wireless_repeater_WDS .icon {
+	background-image: url(/common/images/menu_icon/wireless_repeater_WDS.png);
+	background-size: cover;
+}
+/*#wireless_repeater_WDS .icon:active {
+	background-image: url(/common/images/menu_icon/wireless_repeater_WDS_s.png);
+	background-size: cover;
+}*/
+#wireless_macauth .icon {
+	background-image: url(/common/images/menu_icon/wireless_macauth.png);
+	background-size: cover;
+}
+/*#wireless_macauth .icon:active {
+	background-image: url(/common/images/menu_icon/wireless_macauth_s.png);
+	background-size: cover;
+}*/
+#portforward .icon {
+	background-image: url(/common/images/menu_icon/portforward.png);
+	background-size: cover;
+}
+/*#portforward .icon:active {
+	background-image: url(/common/images/menu_icon/portforward_s.png);
+	background-size: cover;
+}*/
+#nat_misc_setup .icon {
+	background-image: url(/common/images/menu_icon/nat_misc_setup.png);
+	background-size: cover;
+}
+/*#nat_misc_setup .icon:active {
+	background-image: url(/common/images/menu_icon/nat_misc_setup_s.png);
+	background-size: cover;
+}*/
+#routing_table_setup .icon {
+	background-image: url(/common/images/menu_icon/router_setup.png);
+	background-size: cover;
+}
+/*#routing_table_setup .icon:active {
+	background-image: url(/common/images/menu_icon/router_setup_s.png);
+	background-size: cover;
+}*/
+#internetlimit .icon {
+	background-image: url(/common/images/menu_icon/internetlimit.png);
+	background-size: cover;
+}
+/*#internetlimit .icon:active {
+	background-image: url(/common/images/menu_icon/internetlimit_s.png);
+	background-size: cover;
+}*/
+#vpn_setup .icon {
+	background-image: url(/common/images/menu_icon/vpn_setup.png);
+	background-size: cover;
+}
+/*#vpn_setup .icon:active {
+	background-image: url(/common/images/menu_icon/vpn_setup_s.png);
+	background-size: cover;
+}*/
+#ddns_setup .icon {
+	background-image: url(/common/images/menu_icon/ddns_setup.png);
+	background-size: cover;
+}
+/*#ddns_setup .icon:active {
+	background-image: url(/common/images/menu_icon/ddns_setup_s.png);
+	background-size: cover;
+}*/
+#wol .icon {
+	background-image: url(/common/images/menu_icon/wol_setup.png);
+	background-size: cover;
+}
+/*#wol .icon:active {
+	background-image: url(/common/images/menu_icon/wol_setup_s.png);
+	background-size: cover;
+}*/
+#hostscan .icon {
+	background-image: url(/common/images/menu_icon/searchforhost.png);
+	background-size: cover;
+}
+/*#hostscan .icon:active {
+	background-image: url(/common/images/menu_icon/searchforhost_s.png);
+	background-size: cover;
+}*/
+#advertise .icon {
+	background-image: url(/common/images/menu_icon/notice.png);
+	background-size: cover;
+}
+/*#advertise .icon:active {
+	background-image: url(/common/images/menu_icon/notice_s.png);
+	background-size: cover;
+}*/
+#iptv_setup .icon {
+	background-image: url(/common/images/menu_icon/iptv_setup.png);
+	background-size: cover;
+}
+/*#iptv_setup .icon:active {
+	background-image: url(/common/images/menu_icon/iptv_setup_s.png);
+	background-size: cover;
+}*/
+#qos .icon {
+	background-image: url(/common/images/menu_icon/qos.png);
+	background-size: cover;
+}
+/*#qos .icon:active {
+	background-image: url(/common/images/menu_icon/qos_s.png);
+	background-size: cover;
+}*/
+#connectioninfo .icon {
+	background-image: url(/common/images/menu_icon/connectioninfo.png);
+	background-size: cover;
+}
+/*#connectioninfo .icon:active {
+	background-image: url(/common/images/menu_icon/connectioninfo_s.png);
+	background-size: cover;
+}*/
+#connection_conmgr .icon {
+	background-image: url(/common/images/menu_icon/connection_conmgr.png);
+	background-size: cover;
+}
+/*#connection_conmgr .icon:active {
+	background-image: url(/common/images/menu_icon/connection_conmgr_s.png);
+	background-size: cover;
+}*/
+#linksetup_info .icon {
+	background-image: url(/common/images/menu_icon/linksetup_info.png);
+	background-size: cover;
+}
+/*#linksetup_info .icon:active {
+	background-image: url(/common/images/menu_icon/linksetup_info_s.png);
+	background-size: cover;
+}*/
+#switch_setup .icon {
+	background-image: url(/common/images/menu_icon/switch_setup.png);
+	background-size: cover;
+}
+/*#switch_setup .icon:active {
+	background-image: url(/common/images/menu_icon/switch_setup_s.png);
+	background-size: cover;
+}*/
+#system_log .icon {
+	background-image: url(/common/images/menu_icon/system_log.png);
+	background-size: cover;
+}
+/*#system_log .icon:active {
+	background-image: url(/common/images/menu_icon/system_log_s.png);
+	background-size: cover;
+}*/
+
+#firewallconf_accesslist .icon {
+	background-image: url(/common/images/menu_icon/firewallconf_accesslist.png);
+	background-size: cover;
+}
+/*#firewallconf_accesslist .icon:active {
+	background-image: url(/common/images/menu_icon/firewallconf_accesslist_s.png);
+	background-size: cover;
+}*/
+
+#sysconf_login .icon {
+	background-image: url(/common/images/menu_icon/sysconf_login.png);
+	background-size: cover;
+}
+/*#sysconf_login .icon:active {
+	background-image: url(/common/images/menu_icon/sysconf_login_s.png);
+	background-size: cover;
+}*/
+
+#upgradefirmware .icon {
+	background-image: url(/common/images/menu_icon/updatefirmware.png);
+	background-size: cover;
+}
+/*#upgradefirmware .icon:active {
+	background-image: url(/common/images/menu_icon/updatefirmware_s.png);
+	background-size: cover;
+}*/
+
+#etcsystem_setup .icon {
+	background-image: url(/common/images/menu_icon/etcsystem_setup.png);
+	background-size: cover;
+}
+/*#etcsystem_setup .icon:active {
+	background-image: url(/common/images/menu_icon/etcsystem_setup_s.png);
+	background-size: cover;
+}*/
+
+#usbdevicemgr .icon {
+	background-image: url(/common/images/menu_icon/usbdevicemgr.png);
+	background-size: cover;
+}
+/*#usbdevicemgr .icon:active {
+	background-image: url(/common/images/menu_icon/usbdevicemgr_s.png);
+	background-size: cover;
+}*/
+#basicapp .icon {
+	background-image: url(/common/images/menu_icon/basicappmgr.png);
+	background-size: cover;
+}
+/*#basicapp .icon:active {
+	background-image: url(/common/images/menu_icon/basicappmgr_s.png);
+	background-size: cover;
+}*/
+#pluginapp_setup .icon {
+	background-image: url(/common/images/menu_icon/pluginapp_setup.png);
+	background-size: cover;
+}
+/*#pluginapp_setup .icon:active {
+	background-image: url(/common/images/menu_icon/pluginapp_setup_s.png);
+	background-size: cover;
+}*/
+#pluginapp_install .icon {
+	background-image: url(/common/images/menu_icon/pluginapp_search.png);
+	background-size: cover;
+}
+/*#pluginapp_install .icon:active {
+	background-image: url(/common/images/menu_icon/pluginapp_search_s.png);
+	background-size: cover;
+}*/
+#logout .icon {
+	background-image: url(/common/images/menu_icon/logout.png);
+	background-size: cover;
+}
+#iuxpc .icon {
+	background-image: url(/common/images/menu_icon/iuxpc.png);
+	background-size: cover;
+}

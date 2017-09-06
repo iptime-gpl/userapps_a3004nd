@@ -1,0 +1,183 @@
+<div id="wlrule" class="cc_padding">
+	<form id="iux_form">
+		<div id="right_main" class="right_main">
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_NETSSID_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_textbox">
+						<input name="ssid" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_WLRULE_SSID" maxlength="32">
+					</div>
+				</div>
+			</div>
+			<div class="lc_row">
+				<div class="lc_left lc_panel_left">
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="ui-alt-icon lc_nopadding">
+						<input name="broadcastssid" id="_broad" value="1" type="checkbox" sid="C_WLRULE_BROADCASTSSID">
+						<label for="_broad"><p sid="S_SSIDBROAD_STRING"></p></label>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="POLICY_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_MBSSPOLICY_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_selectbox">
+						<select name="mbsspolicy" sid="C_WLRULE_MBSSPOLICY" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="CHANNEL_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_CHANNEL_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_selectbox">
+						<select name="selchannel" sid="C_WLRULE_SELCHANNEL" type="select"></select>
+					</div>
+					<div class="lc_channel_btn">
+						<button type="button" class="ui-btn" sid="L_CHANSEARCH_BTN" data-role="none">
+						<img src="/common/images/search.png"></button>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="AUTH_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_AUTHENCRYPT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_selectbox">
+						<select name="personallist" sid="C_WLRULE_PERSONALLIST" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="ENTERPRISE_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_AUTHENCRYPT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="ui-alt-icon ui-nodisc-icon lc_selectbox">
+						<select name="enterpriselist" sid="C_WLRULE_ENTERPRISELIST" type="select"></select>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="ENTERPRISECHECK_BOX">
+				<div class="lc_left lc_panel_left">
+				</div>
+				<div class="lc_right lc_panel_right lc_nopadding ui-alt-icon">
+					<input name="useenterprise" id="_enter" value="1" type="checkbox" sid="C_WLRULE_USEENTERPRISE">
+					<label for="_enter"><p sid="S_ENTERPRISE_STRING"></p></label>
+				</div>
+			</div>
+			<div class="lc_row" sid="PERSONAL_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_NETWORKPASSWORD_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_netpassbox">
+						<input name="wpapsk" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_WLRULE_WPAPSK" maxlength="64">
+					</div>
+					<div class="lc_netpasscheckbox lc_nopadding ui-alt-icon">
+						<input id="_secret" value="1" type="checkbox" sid="L_WLRULE_WPAPSKCHECK">
+						<label for="_secret"><p sid="S_PASSWORDVIEW_STRING"></p></label>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="ENTERPRISE_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_RADIUSSERVER_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div sid="C_WLRULE_RADIUSSERVER" class="lc_wrap_ip_box ip">
+						<div class="lc_ip_box">
+							<input sid="VALUE0" maxlength="3" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE1" maxlength="3" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE2" maxlength="3" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+						<div class="lc_dot"><p>.</p></div>
+						<div class="lc_ip_box">
+							<input sid="VALUE3" maxlength="3" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="ENTERPRISE_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_RADIUSPORT_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_portbox">
+						<input name="radiusport" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_WLRULE_RADIUSPORT" maxlength="5">
+					</div>
+					<div class="lc_checkbox lc_nopadding ui-alt-icon">
+						<input name="radiusportcheck" id="_rport" value="1" type="checkbox" sid="L_WLRULE_RADIUSPORTCHECK">
+						<label for="_rport"><p sid="S_RADIUSPORTCHECK_STRING"></p></label>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="ENTERPRISE_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_RADIUSPASS_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_radiuspassbox">
+						<input name="radiussecret" type="text" autocomplete="off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" sid="C_WLRULE_RADIUSSECRET" maxlength="64">
+					</div>
+					<div class="lc_radiuscheckbox lc_nopadding ui-alt-icon">
+						<input id="_rsecret" value="1" type="checkbox" sid="L_WLRULE_RADIUSSECRETCHECK">
+						<label for="_rsecret"><p sid="S_PASSWORDVIEW_STRING"></p></label>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="QOS_BOX">
+				<div class="lc_left lc_panel_left">
+					<p sid="S_QOS_STRING"></p>
+				</div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_ratebox">
+						<span sid="S_DOWNLOADQOS_STRING"></span>
+						<input name="rxrate" type="number" pattern="[0-9]*" sid="C_WLRULE_RXRATE" min = "0" maxlength="4">
+						<span class="lc_minispan">Mbps</span>
+						<div class="lc_qossetupcheckbox lc_nopadding ui-alt-icon">
+							<input id="_qosenable" name="qosenable" value="1" type="checkbox" sid="C_WLRULE_QOSENABLE">
+							<label for="_qosenable"><p sid="S_SETUPQOS_STRING"></p></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="QOS_BOX">
+				<div class="lc_left lc_panel_left"></div>
+				<div class="lc_right lc_panel_right">
+					<div class="lc_ratebox">
+						<span sid="S_UPLOADQOS_STRING"></span>
+						<input name="txrate" type="number" pattern="[0-9]*" sid="C_WLRULE_TXRATE" min = "0" maxlength="4">
+						<span class="lc_minispan">Mbps</span>
+					</div>
+				</div>
+			</div>
+			<div class="lc_row" sid="WEP_BOX">
+				<p class="lc_disabled_text" sid="S_WEP_NOTSUPPORTED_MSG1"></p>
+				<p class="lc_disabled_text" sid="S_WEP_NOTSUPPORTED_MSG2"></p>
+			</div>
+		</div>
+	</form>
+	<div id="right_footer">
+		<div class="lc_row">
+			<div class="lc_usual_button">
+				<button type="button" sid="S_MODIFY_BTN" class="custom_css_button" data-role="none">
+					<span sid="S_BUTTON_SUBMIT"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

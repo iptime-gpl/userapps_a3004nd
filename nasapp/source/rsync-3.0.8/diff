@@ -1,0 +1,72 @@
+8c8
+< #define CAN_HARDLINK_SPECIAL 1
+---
+> /* #undef CAN_HARDLINK_SPECIAL */
+11c11
+< #define CAN_HARDLINK_SYMLINK 1
+---
+> /* #undef CAN_HARDLINK_SYMLINK */
+72c72
+< #define HAVE_C99_VSNPRINTF 1
+---
+> /* #undef HAVE_C99_VSNPRINTF */
+172c172
+< /* #undef HAVE_LCHMOD */
+---
+> #define HAVE_LCHMOD 1
+181c181
+< /* #undef HAVE_LIBCHARSET_H */
+---
+> #define HAVE_LIBCHARSET_H 1
+193c193
+< #define HAVE_LIBPOPT 1
+---
+> /* #undef HAVE_LIBPOPT */
+214c214
+< /* #undef HAVE_LOCALE_CHARSET */
+---
+> #define HAVE_LOCALE_CHARSET 1
+221c221
+< #define HAVE_LONG_DOUBLE 1
+---
+> /* #undef HAVE_LONG_DOUBLE */
+225c225
+< #define HAVE_LONG_DOUBLE_WIDER 1
+---
+> /* #undef HAVE_LONG_DOUBLE_WIDER */
+231c231
+< /* #undef HAVE_LUTIMES */
+---
+> #define HAVE_LUTIMES 1
+306c306
+< #define HAVE_SECURE_MKSTEMP 1
+---
+> /* #undef HAVE_SECURE_MKSTEMP */
+351c351
+< #define HAVE_SOCKETPAIR 1
+---
+> /* #undef HAVE_SOCKETPAIR */
+548c548
+< #define MKNOD_CREATES_FIFOS 1
+---
+> /* #undef MKNOD_CREATES_FIFOS */
+551c551
+< #define MKNOD_CREATES_SOCKETS 1
+---
+> /* #undef MKNOD_CREATES_SOCKETS */
+620c620
+< #define SIZEOF_LONG 8
+---
+> #define SIZEOF_LONG 4
+635c635
+< #define SIZEOF_TIME_T 8
+---
+> #define SIZEOF_TIME_T 4
+682c682
+< /* #undef _FILE_OFFSET_BITS */
+---
+> #define _FILE_OFFSET_BITS 64
+698a699,701
+> /* Define to `unsigned int' if <sys/types.h> does not define. */
+> /* #undef size_t */
+> 
