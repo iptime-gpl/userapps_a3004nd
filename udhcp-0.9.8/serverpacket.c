@@ -48,6 +48,44 @@ static int send_packet_to_relay(struct dhcpMessage *payload)
 
 
 /* send a packet to a specific arp address and ip address by creating our own ip packet */
+
+#ifdef USE_DHCPD_PATCH_FOR_EXTENDER
+static int get_hwaddr_from_arptable(char *ip_addr, char *hw_addr, int max)
+{
+        int line = 0;
+        char buffer[128], *ptr;
+        FILE *fp;
+
+        if ((fp = fopen("/proc/net/arp", "r")) == NULL)
+                return -1;
+
+        strcpy(hw_addr, "");
+
+        while (fgets(buffer, 128, fp))
+        {
+                line++;
+
+                if (line < 2)
+                        continue;
+
+                ptr = strtok(buffer, " \t\n");
+                if (ptr && !strcmp(ip_addr, ptr))
+                {
+                        strtok(NULL, " \t\n");
+                        strtok(NULL, " \t\n");
+                        ptr = strtok(NULL, " \t\n");
+                        if (ptr) sf_strncpy(hw_addr, ptr,max);
+                        fclose(fp);
+                        return 1;
+                }
+        }
+        fclose(fp);
+
+        return 0;
+}
+#endif
+
+
 static int send_packet_to_client(struct dhcpMessage *payload, int force_broadcast)
 {
 	unsigned char *chaddr;
@@ -70,6 +108,41 @@ static int send_packet_to_client(struct dhcpMessage *payload, int force_broadcas
 		ciaddr = payload->yiaddr;
 		chaddr = payload->chaddr;
 	}
+
+#ifdef USE_DHCPD_PATCH_FOR_EXTENDER
+	if(ciaddr != INADDR_BROADCAST)
+	{
+		struct in_addr addr;
+		char hwaddr[32];
+
+		if(payload->ciaddr)
+			addr.s_addr = payload->ciaddr;
+		else
+			addr.s_addr = payload->yiaddr;
+
+		if(!get_hwaddr_from_arptable(inet_ntoa(addr),hwaddr,32))
+		{
+			LOG(LOG_INFO, "--->%s is not FOUND in ARP : Send Broadcast", inet_ntoa(addr));
+			ciaddr = INADDR_BROADCAST;
+			chaddr = MAC_BCAST_ADDR;
+		}
+		else
+		{
+			unsigned char arpmac[8];
+
+			LOG(LOG_INFO, "--->%s is FOUND in ARP", inet_ntoa(addr));
+			strtomac(hwaddr,arpmac);
+			if(memcmp(chaddr,arpmac,6))
+			{
+				ciaddr = INADDR_BROADCAST;
+				chaddr = MAC_BCAST_ADDR;
+				LOG(LOG_INFO, "--->%s's MAC is different(%s): Send Broadcast",inet_ntoa(addr),hwaddr);
+			}
+		}
+	}
+#endif
+
+
 	return raw_packet(payload, server_config.server, SERVER_PORT, 
 			ciaddr, CLIENT_PORT, chaddr, server_config.ifindex);
 }

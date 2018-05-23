@@ -188,6 +188,9 @@ int plantynet_sync_callback(app_timer_t *t);
 #endif
 #endif
 int restart_8021xd_callback(app_timer_t *t);
+#ifdef USE_BAND_STEERING
+int restart_band_steering_callback(app_timer_t *t);
+#endif
 int fuse_callback(app_timer_t *t);
 
 int wps_extender_cb(app_timer_t *t);

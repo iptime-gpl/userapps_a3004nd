@@ -77,38 +77,6 @@ int netdetect_make_email_report(void);
 char *netdetect_comment_for_specified_port(int proto, int port);
 int netdetect_checker(void);
 
-#ifdef USE_MULTI_LANG
-#include "../lib_string_lang.h"
-#else
-
-#ifdef CHINESE_SUPPORT
-#include "../lib_string_ch.h"
-#endif
-
-#ifdef CHINEXE_SUPPORT
-#include "../lib_string_cx.h"
-#endif
-
-#ifdef ENGLISH_SUPPORT
-#include "../lib_string_en.h"
-#endif
-
-#ifdef JAPAN_SUPPORT
-#include "../lib_string_jp.h"
-#endif
-
-#ifdef PORTUGUESE_SUPPORT
-#include "../lib_string_pt.h"
-#endif
-
-#ifdef KOREAN_SUPPORT
-#include "../lib_string_kr.h"
-#endif
-
-#ifdef FRENCH_SUPPORT
-#include "../lib_string_fr.h"
-#endif
-
-#endif
+#include "../lib_string.h"
 
 #endif

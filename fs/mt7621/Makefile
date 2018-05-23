@@ -1,6 +1,8 @@
 export USERAPPS_ROOT:=$(abspath $(dir $(lastword $(MAKEFILE_LIST)))/../..)
-
 TARGET:=a3004nd
+
+$(shell ln -sf clones/$(TARGET)/clone_info.mk clone_info.mk)
+$(shell echo "$(TARGET)" > $(USERAPPS_ROOT)/.product_name)
 
 all: compile_all image
 
@@ -9,9 +11,10 @@ include $(USERAPPS_ROOT)/rules.mk
 
 image:
 	rm -rf temp.fs.gz save.fs.gz
-	ln -sf clones/$(TARGET)/clone_info.mk clone_info.mk
 	$(MAKE) -f irules.mk TARGET=$(TARGET)
-	echo $(TARGET) > $(USERAPPS_ROOT)/.product_name
+
+kernel:
+	$(MAKE) -f kernel.mk
 
 clean: 
 	rm -rf cramfs.img initrd.gz initrd.img rom.cramfs pmon.img zImage.img

@@ -2,7 +2,7 @@
  * Automatically generated C config: don't edit
  * Busybox version: 1.8.2
  */
-#define AUTOCONF_TIMESTAMP "2017-08-03 18:56:39 KST"
+#define AUTOCONF_TIMESTAMP "2017-10-30 15:43:19 KST"
 
 #define CONFIG_HAVE_DOT_CONFIG 1
 #define ENABLE_HAVE_DOT_CONFIG 1
@@ -1844,10 +1844,10 @@
 #define ENABLE_VERBOSE_RESOLUTION_ERRORS 0
 #define USE_VERBOSE_RESOLUTION_ERRORS(...)
 #define SKIP_VERBOSE_RESOLUTION_ERRORS(...) __VA_ARGS__
-#undef CONFIG_ARP
-#define ENABLE_ARP 0
-#define USE_ARP(...)
-#define SKIP_ARP(...) __VA_ARGS__
+#define CONFIG_ARP 1
+#define ENABLE_ARP 1
+#define USE_ARP(...) __VA_ARGS__
+#define SKIP_ARP(...)
 #undef CONFIG_ARPING
 #define ENABLE_ARPING 0
 #define USE_ARPING(...)

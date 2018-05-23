@@ -304,7 +304,8 @@ var QOS_COMMON_BASIC_SETUP_FIRST="QoS膀セ砞﹚"
 var QOS_PORT_PORTRANGE="硄癟梆絛瞅1~65535"
 var QOS_PORT_INVALID_EXT_PORT_RANGE="场硄癟梆絛瞅岿粇"
 var QOS_BADNWIDTH_EMPTY="繵糴"
-var QOS_RATE_RANGE="硉瞯絛瞅32 Kbps ~ 50 Mbps"
+var QOS_RATE_RANGE="“下載/上傳設定值無效”"
+
 
 // wirelessconf_multibssid
 var MSG_DEL_MBSSID_WARNING="礚絬呼隔盢い耞琌膥尿"

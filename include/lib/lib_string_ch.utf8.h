@@ -1,3 +1,4 @@
+#ifdef USE_NETDETECT
 #define LATEST_TIME     	"最新检测时间"
 #define IPADDRESS       	"IP 地址"
 #define PROTOCOL        	"协议"
@@ -15,6 +16,7 @@
 #define KAZAA_COMMENT     	"检测到KaZaA"
 #define BATTLENET_COMMENT     	"检测到Battle Net"
 #define OTHERS_COMMENT    	"检测到未知端口.注意"
+#endif
 
 #define LIB_NETCONF_WIRELESS_KOREA                  "韩国"
 #define LIB_NETCONF_WIRELESS_EU                     "欧洲"

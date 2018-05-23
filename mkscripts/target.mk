@@ -390,7 +390,11 @@ ifeq ($(USE_DUAL_WAN),y)
 ROUTER_SBIN_LIST += $(USERAPPS_ROOT)/linkmon/linkmon
 endif
 ifeq ($(USE_QOS),y)
+ifeq ($(USE_DUAL_WAN),y)
+ROUTER_BIN_LIST+= $(USERAPPS_ROOT)/iproute2-3.14.0/tc/tc
+else
 ROUTER_BIN_LIST += $(USERAPPS_ROOT)/iproute2/tc/tc
+endif
 endif
 #ifeq ($(USE_UPNP),y)
 #ROUTER_BIN_LIST+=$(USERAPPS_ROOT)/upnp/igd/upnpd
@@ -450,7 +454,7 @@ TARGET_LIST+=strip post_targetfs
 
 target.fs: $(TARGET_LIST)
 	@echo "--->Making target.fs - $(TARGET)"
-	@sync; sync; sync;
+#	@sync; sync; sync;
 ifneq ($(LDCONFIG_CMD),)
 	@$(LDCONFIG_CMD)
 endif

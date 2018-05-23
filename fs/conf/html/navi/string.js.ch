@@ -304,7 +304,8 @@ var QOS_COMMON_BASIC_SETUP_FIRST="首先QoS基本设置"
 var QOS_PORT_PORTRANGE="端口范围应是1~65535"
 var QOS_PORT_INVALID_EXT_PORT_RANGE="外部端口范围错误"
 var QOS_BADNWIDTH_EMPTY="带宽量"
-var QOS_RATE_RANGE="速率范围：32 Kbps ~ 50 Mbps"
+var QOS_RATE_RANGE="“下载/上传设定值无效 ”"
+
 
 // wirelessconf_multibssid
 var MSG_DEL_MBSSID_WARNING="无线网络将断开，你确定继续吗?"

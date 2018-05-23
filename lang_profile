@@ -20,6 +20,9 @@ endif
 ifeq ($(RUSSIAN_SUPPORT),y)
 LANGUAGE_POSTFIX:= ru
 endif
+ifeq ($(VIETNAMESE_SUPPORT),y)
+LANGUAGE_POSTFIX:= vi
+endif
 
 ifeq ($(LANGUAGE_POSTFIX),)
 ifeq ($(USE_OEM_UI),y)

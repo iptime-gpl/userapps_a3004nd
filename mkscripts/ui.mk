@@ -32,7 +32,11 @@ include $(USERAPPS_ROOT)/mkscripts/ui_nvext.mk
 else
 
 ifeq ($(USE_WIFI_EXTENDER),y)
+ifeq ($(USE_EXTENDER_UX),y)
+include $(USERAPPS_ROOT)/mkscripts/ui_ext.mk
+else
 include $(USERAPPS_ROOT)/mkscripts/ui_nvext.mk
+endif
 else
 ifeq ($(USE_UI2),n)
 include $(USERAPPS_ROOT)/mkscripts/ui_nv_ui1.mk

@@ -199,9 +199,9 @@ STRIP_OPTION:=-d
 LDCONFIG_CMD:=
 CLIB_DIR:=fs/mt7621/clib/gcc463
 ifneq ($(SQUASHCMD),)
-MAKE_FS_BIANRY_CMD:=./mksquashfs $(ROOT_DIR) $(ROOTFS_IMG) -comp $(SQUASHCMD_COMP)
+MAKE_FS_BIANRY_CMD:=./mksquashfs $(ROOT_DIR) $(ROOTFS_IMG) -comp $(SQUASHCMD_COMP) -all-root
 else
-MAKE_FS_BIANRY_CMD:=./mksquashfs_lzma-3.2 $(ROOT_DIR) $(ROOTFS_IMG)
+MAKE_FS_BIANRY_CMD:=./mksquashfs_lzma-3.2 $(ROOT_DIR) $(ROOTFS_IMG) -all-root
 endif
 
 include $(USERAPPS_ROOT)/mkscripts/target.mk
@@ -212,7 +212,7 @@ include $(USERAPPS_ROOT)/mkscripts/target.mk
 
 
 # Image Section
-FIRMWARE_NAME:=a3004nd_ml_10_006.bin
+FIRMWARE_NAME:=a3004nd_ml_10_022.bin
 KERNELZ := zImage
 COMP := lzma
 FIRMWARE_TYPE:=kernel

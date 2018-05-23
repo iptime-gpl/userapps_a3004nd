@@ -35,6 +35,14 @@ typedef struct wifi_chipset_s {
 #define MAX_WIFI_CHIPSET_TYPE_LEN 8
 	char type[MAX_WIFI_CHIPSET_TYPE_LEN];
 	int  num_of_streams;
+#ifdef USE_MTK_TPC_PATCH
+	int tpc_enable;
+#define MAX_TPC 128
+	char tpc[MAX_TPC];
+#define MAX_TPC_DUTY 128
+	char tpc_duty[MAX_TPC_DUTY];
+#endif
+
 } wifi_chipset_t;
 
 

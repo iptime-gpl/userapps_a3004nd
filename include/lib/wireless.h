@@ -136,6 +136,9 @@
 #endif
 #define DEFAULT_WIRELESS_CONF_FILE      "/var/run/wireless.conf.default"
 #define DEFAULT_WIRELESS_CONF_FILE_5G      "/var/run/wireless.conf.5g.default"
+#if defined(USE_5G_WL) && defined(USE_BAND_STEERING)
+#define DEFAULT_WIRELESS_CONF_FILE_BAND      "/var/run/wireless.conf.band.default"
+#endif
 
 
 #define WPS_STOPPED	0x0
@@ -479,8 +482,12 @@ typedef struct {
 #endif
 
 	int wl_mode;
-#define WL_MODE_24G 	0
-#define WL_MODE_5G 	1
+#define WL_MODE_24G 		0
+#define WL_MODE_5G 		1
+#ifdef USE_BAND_STEERING
+#define WL_MODE_BAND_STEERING	999
+#endif
+#define WL_MODE_END 		-1
 
 /* wl_idx : 32 bit,    
 wl_mode:upper 16bit : Index for 2.4 or 5G, 
@@ -543,6 +550,9 @@ wl_bss_idx:lower 16bit : Index for multiple bss
 #endif
 #if defined(USE_QCA_MUMIMO_UI) || defined(USE_RTL_MUMIMO_UI)
 	int mu_flag;
+#endif
+#if defined(USE_5G_WL) && defined(USE_BAND_STEERING)
+	int band_steering;	
 #endif
 
 	int num_of_streams;
@@ -1339,6 +1349,35 @@ int wireless_api_restart(char *ifname);
 int check_wireless_ifstatus(int wl_mode);
 int check_wireless_ifrun(int wl_mode);
 
+int wireless_api_get_prev_channel(char *ifname,wl_channel_t *channel);
+int wireless_api_set_prev_channel(char *ifname,wl_channel_t *channel);
 
+/* WIRELESSCONF BASICSETUP CGI RENEWAL FUNCTIONS */
+char *get_wl_tag_by_wlmode(int wl_mode);
+char *get_wl_postfix_by_wlmode(int wl_mode);
+void wps_stop_signal_to_another_wireless(int wl_mode);
+int get_num_of_streams_for_wlmode(int wl_mode);
+int get_num_of_streams_bigger();
+int get_wl_mode_by_wl_tag(char *tag);
+void wps_stop_with_status(int wl_mode);
+void wps_stop_each_all();
 
+typedef struct advance_value_set{
+#define MAX_ADVANCE_TEXT_SIZE 128
+	int value;
+	char text[MAX_ADVANCE_TEXT_SIZE];
+}advance_value_t;
+typedef struct advance_select_set{
+#define MAX_ADVANCE_SET_COUNT 30
+	int count;
+	advance_value_t value_set[MAX_ADVANCE_SET_COUNT];
+}advance_select_t;
+
+void fill_advancesetup_mode(int wl_mode, advance_select_t *s);
+void fill_advancesetup_channel_width(int wl_mode, advance_select_t *s);
+#ifdef USE_MTK_TXBF_MUMIMO_UI
+void fill_advancesetup_mumimo(int wl_mode, advance_select_t *s);
+#endif
+void fill_advancesetup_mimo_streams(int wl_mode, advance_select_t *s);
+/* END */
 #endif

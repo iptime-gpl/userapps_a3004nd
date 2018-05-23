@@ -143,13 +143,13 @@ function get_mgraddrlist(actname)
 					if(!targetlistname[i].hostname && targetlistname[i].hostname == "")
 						m_hostname = '';		
 					else
-						m_hostname = ' - '+targetlistname[i].hostname;
+						m_hostname = ' / '+targetlistname[i].hostname;
 					
 					var checkid = 'check_'+i;
 					$('[sid="N_ADDMGRLIST"]').append('<li sid="idx_'+i+'" class="addrmgr"><a href="#" onclick="checktest(\''+checkid+'\'); return false;" data-icon="false">'
 					+ '<div class="title_row"><div class="title"><p>'+targetlistname[i].ipaddr+' ('+targetlistname[i].hwaddr+')</p></div>'
 					+ '<div class="subtitle"><p>'+m_connect_type+m_dynamic+m_hostname+'</p></div></div>'
-					+ '<div class="check_row ui-alt-icon"><input name="lease" sid="check_'+i+'" id="check_'+i+'" type="checkbox" value="'+targetlistname[i].ipaddr+'/'+targetlistname[i].hwaddr+'">'
+					+ '<div class="check_row ui-alt-icon"><input name="lease" sid="check_'+i+'" id="check_'+i+'" type="checkbox" value="'+targetlistname[i].ipaddr+'/'+targetlistname[i].hwaddr+ '/' + ((targetlistname[i].hostname)?targetlistname[i].hostname:'') + '">'
 					+ '<label for="check_'+i+'"></label></div></a></li>');
 				}
 			}

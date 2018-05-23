@@ -75,6 +75,12 @@ int syslog_msg(int level, char *fmt, ...);
 #endif
 #endif
 
+#ifdef VIETNAMESE_SUPPORT
+#ifdef USE_UTF8
+#include "syslog_msg_vi.utf8.h"
+#endif
+#endif
+
 #endif
 
 #endif

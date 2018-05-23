@@ -299,13 +299,15 @@ static const unsigned char pr2six[256] =
     64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64
 };
 
-int Base64decode(char *bufplain, const char *bufcoded)
+int Base64decode(char *bufplain, unsigned int length, const char *bufcoded)
 {
     int nbytesdecoded;
     register const unsigned char *bufin;
     register unsigned char *bufout;
     register int nprbytes;
+    register unsigned int cnt;
 
+    cnt = 0;
     bufin = (const unsigned char *) bufcoded;
     while (pr2six[*(bufin++)] <= 63);
     nprbytes = (bufin - (const unsigned char *) bufcoded) - 1;
@@ -314,7 +316,7 @@ int Base64decode(char *bufplain, const char *bufcoded)
     bufout = (unsigned char *) bufplain;
     bufin = (const unsigned char *) bufcoded;
 
-    while (nprbytes > 4) {
+    while (cnt + 3 < length && nprbytes > 4) {
     *(bufout++) =
         (unsigned char) (pr2six[*bufin] << 2 | pr2six[bufin[1]] >> 4);
     *(bufout++) =
@@ -323,8 +325,11 @@ int Base64decode(char *bufplain, const char *bufcoded)
         (unsigned char) (pr2six[bufin[2]] << 6 | pr2six[bufin[3]]);
     bufin += 4;
     nprbytes -= 4;
+    cnt += 3;
     }
 
+    if(cnt + 3 >= length && nprbytes > length - cnt)
+        nprbytes = length - cnt;
     /* Note: (nprbytes == 1) would be an error, so just ingore that case */
     if (nprbytes > 1) {
     *(bufout++) =

@@ -25,21 +25,4 @@
 #define LIB_NETCONF_WIRELESS_JAPAN                  "Japan"
 #define LIB_NETCONF_WIRELESS_OTHERS                 "Others"
 
-/*
-#define LIB_DDNS_SUCCESS                  "Update good and successful"
-#define LIB_DDNS_BAD_AUTH                 "Bad authorization(username or password)"
-#define LIB_DDNS_PARAMETER_INVALID        "Parameter not valid"
-#define LIB_DDNS_BLOCKED                  "Client has been blocked"
-#define LIB_DDNS_DOMAIN_NOT_SUPPORTED     "Fully-Qualified Domain not provided"
-#define LIB_DDNS_HOSTNAME_NOT_EXIST       "Hostname not exists"
-#define LIB_DDNS_USER_IS_NOT_A_DONATOR    "User is not a donator"
-#define LIB_DDNS_NOT_YOURS                "Hostname is not yours"
-#define LIB_DDNS_CUSTOM_DNS_NOT_ACT       "Custom DNS domain not activated"
-#define LIB_DDNS_HOSTNAME_IS_BLOCKED_BY_ABUSE     "Hostname is blocked for abuse"
-#define LIB_DDNS_TOO_MANY_OR_FEW          "Too many or few hosts found"
-#define LIB_DDNS_DDNS_ERROR               "DNS error encountered"
-#define LIB_DDNS_SERVER_SHUTDOWN          "Server shutdown"
-#define LIB_DDNS_CONN_FAIL                "Connection fail"
-#define LIB_DDNS_ONLY_ONE_DOMAIN          "Another hostname registered already"
-#define LIB_DDNS_UNKNOWN_ERROR            "Unknown error"
-*/
+

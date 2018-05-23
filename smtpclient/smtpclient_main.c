@@ -183,7 +183,7 @@ void chat(char *fmt, ...)
 
 char auth_method[128];
 
-void auth_get_response(char *response)
+void auth_get_response(char *response, int length)
 {
     char buf[BUFSIZ];
 
@@ -204,7 +204,7 @@ void auth_get_response(char *response)
         }
 	if(!strncmp( buf, "334", 3 ))
 		//base64_decode( response, &buf[4], strlen(buf) - 5 ); 
-		Base64decode( response, &buf[4] );
+		Base64decode( response, length, &buf[4] );
 
 	if(!strncmp( buf, "250", 3 ))
 	{
@@ -295,7 +295,7 @@ void auth_chat(void)
 
     fprintf(sfp,"EHLO router\r\n" );
     fflush(sfp);
-    auth_get_response(auth_response);
+    auth_get_response(auth_response, 512);
 
     dprintf("Received Auth method = %s\n", auth_method );
 
@@ -316,7 +316,7 @@ void auth_chat(void)
 
     fflush(sfp);
 
-    auth_get_response(auth_response);
+    auth_get_response(auth_response, 512);
 
     dprintf("\t\tAUTH RESPONSE = %s\n", auth_response );
     	
@@ -359,7 +359,7 @@ void auth_chat(void)
     fflush(sfp);
 
     /* Username Request :base 64 */ 
-    auth_get_response(auth_response);
+    auth_get_response(auth_response, 512);
     dprintf("\t\tAUTH RESPONSE = %s\n", auth_response );
 
     if(!strcmp(auth_method, "LOGIN"))
@@ -375,7 +375,7 @@ void auth_chat(void)
 
         fflush(sfp);
  
-        auth_get_response(auth_response);
+        auth_get_response(auth_response, 512);
         dprintf("\t\tAUTH RESPONSE = %s\n", auth_response );
     }
 }

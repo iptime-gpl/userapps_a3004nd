@@ -1,3 +1,5 @@
+void set_ux_text_lib_string();
+char *get_ux_text_lib_string(int idx);
 #define BATTLENET_COMMENT get_ux_text_lib_string(0)
 #define COMMENT get_ux_text_lib_string(1)
 #define EDONKEY_COMMENT get_ux_text_lib_string(2)

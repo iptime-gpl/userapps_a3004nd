@@ -245,9 +245,12 @@ function applyNatOnOff( reboot_seconds )
 		return;
 	maskRebootMsg( reboot_seconds );
 
-	var F = document.natrouterconf_fm, F2 = document.getElementsByName('natrouterconf_misc_submit')[0].contentWindow.document.natrouterconf_misc_natonoff_fm;
-	F2.nat_run.value = F.nat_run.value;
-	F2.submit();
+	var F = document.getElementsByName('natrouterconf_misc_submit')[0].contentWindow.document.natrouterconf_misc_natonoff_fm;
+	if(document.getElementById("nat_on").checked)
+		F.nat_run.value = "1";
+	else
+		F.nat_run.value = "0";
+	F.submit();
 }
 
 function maskRebootMsg( second )

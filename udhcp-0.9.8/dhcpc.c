@@ -487,8 +487,10 @@ int main(int argc, char *argv[])
 #endif
 					if(dhclient_chk)
 					{
+#ifndef USE_WIFI_EXTENDER
 #ifdef USE_SYSTEM_LOG
 						if(get_dhcp_auto_detect_status(client_config.interface)) syslog_msg( SYSMSG_LOG_INFO, SYSLOG_MSG_DHCP_SERVER_RESUME );
+#endif
 #endif
 						set_dhcp_auto_detect_status(client_config.interface,0);
 						exit_client(0);
@@ -620,9 +622,11 @@ int main(int argc, char *argv[])
 // fprintf(stderr,"DHCP SERVER AUTO DETECTED\n");
  					char *ptr;
 
+#ifndef USE_WIFI_EXTENDER
 #ifdef USE_SYSTEM_LOG
 					if(!get_dhcp_auto_detect_status(client_config.interface))
 						syslog_msg( SYSMSG_LOG_INFO, SYSLOG_MSG_DHCP_SERVER_SUSPENDED );
+#endif
 #endif
 
 					set_dhcp_auto_detect_status(client_config.interface,1);

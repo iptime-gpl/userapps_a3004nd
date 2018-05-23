@@ -286,9 +286,8 @@ typedef struct hostinfo_s {
         char ip[20];
 #define MAX_HINFO_MAC_LEN 20
         char mac[MAX_HINFO_MAC_LEN];
-#ifdef USE_EFM_PRODUCT
         char ifname[20];
-#endif
+	int dynamic_flag;
 } hostinfo_t;
 
 typedef struct ppp_secret_s {

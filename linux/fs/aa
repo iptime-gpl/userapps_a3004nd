@@ -1,0 +1,82 @@
+Only in fat: .built-in.o.cmd
+Only in fat: .cache.o.cmd
+Only in fat: .dir.o.cmd
+Only in fat: .fat.o.cmd
+Only in fat: .fatent.o.cmd
+Only in fat: .file.o.cmd
+Only in fat: .inode.o.cmd
+Only in fat: .misc.o.cmd
+Only in fat: .namei_vfat.o.cmd
+Only in fat: .vfat.o.cmd
+diff -r fat/CVS/Entries /home/bcmac/broadcom_sdk/bcm_6.37.14.106.fsrc/components/opensource/linux/linux-2.6.36/fs/fat/CVS/Entries
+1,11c1,11
+< /Kconfig/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /Makefile/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /cache.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /dir.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /fat.h/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /fatent.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /file.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /inode.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /misc.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /namei_msdos.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+< /namei_vfat.c/1.1.1.1/Wed Jan 14 09:43:15 2015//
+---
+> /Kconfig/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /Makefile/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /cache.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /dir.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /fat.h/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /fatent.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /file.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /inode.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /misc.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /namei_msdos.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+> /namei_vfat.c/1.1.1.1/Wed Oct  7 06:18:33 2015/-ko/
+diff -r fat/CVS/Repository /home/bcmac/broadcom_sdk/bcm_6.37.14.106.fsrc/components/opensource/linux/linux-2.6.36/fs/fat/CVS/Repository
+1c1
+< MT762X_SDK_4300/RT288x_SDK/source/linux-2.6.36.x/fs/fat
+---
+> broadcom_sdk/bcm_6.37.14.106.fsrc/components/opensource/linux/linux-2.6.36/fs/fat
+Only in fat: built-in.o
+Only in fat: cache.o
+Only in fat: dir.o
+Only in fat: fat.o
+diff -r fat/fatent.c /home/bcmac/broadcom_sdk/bcm_6.37.14.106.fsrc/components/opensource/linux/linux-2.6.36/fs/fat/fatent.c
+367d366
+< /* FIXME: We can write the blocks as more big chunk. */
+Only in fat: fatent.o
+diff -r fat/file.c /home/bcmac/broadcom_sdk/bcm_6.37.14.106.fsrc/components/opensource/linux/linux-2.6.36/fs/fat/file.c
+393,398d392
+< 	/*
+< 	 * Expand the file. Since inode_setattr() updates ->i_size
+< 	 * before calling the ->truncate(), but FAT needs to fill the
+< 	 * hole before it. XXX: this is no longer true with new truncate
+< 	 * sequence.
+< 	 */
+Only in fat: file.o
+diff -r fat/inode.c /home/bcmac/broadcom_sdk/bcm_6.37.14.106.fsrc/components/opensource/linux/linux-2.6.36/fs/fat/inode.c
+49,50d48
+< 	/* FIXME: this cluster should be added after data of this
+< 	 * cluster is writed */
+197,205d194
+< 		/*
+< 		 * FIXME: blockdev_direct_IO() doesn't use ->write_begin(),
+< 		 * so we need to update the ->mmu_private to block boundary.
+< 		 *
+< 		 * But we must fill the remaining area or hole by nul for
+< 		 * updating ->mmu_private.
+< 		 *
+< 		 * Return 0, and fallback to normal buffered write.
+< 		 */
+1478d1466
+< 	/* FIXME: utf8 is using iocharset for upper/lower conversion */
+Only in fat: inode.o
+diff -r fat/misc.c /home/bcmac/broadcom_sdk/bcm_6.37.14.106.fsrc/components/opensource/linux/linux-2.6.36/fs/fat/misc.c
+48d47
+< /* XXX: Need to write one per FSINFO block.  Currently only writes 1 */
+Only in fat: misc.o
+Only in fat: modules.builtin
+Only in fat: modules.order
+Only in fat: namei_vfat.o
+Only in fat: vfat.o

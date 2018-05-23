@@ -143,7 +143,7 @@ int main(int argc, char *argv[])
 
 #ifdef USE_NEW_LIB
 #ifdef USE_WL_IPTIME_HELPER
-        if (!strcmp(argv[0],"dhcpd.helper"))
+        if (strstr(argv[0],"dhcpd.helper"))
 	{
 		helper_dhcpd=1;
 		create_pid("dhcpd.helper");

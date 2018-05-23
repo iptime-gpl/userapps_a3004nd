@@ -46,7 +46,7 @@ var S_lang = {
 
 	"S_WIRELESS"  : "무선",	
 	"S_WIRE" : "유선",	
-	"S_WIRE_UNKNOWN" : "알수없음",	
+	"S_WIRE_UNKNOWN" : " -- ",	
 	"S_WIRE_NOT_CONNECT" : "",
 	"S_DYNAMIC_ALLOC" : "자동할당",
 	"S_STATIC_ALLOC" : "수동할당",

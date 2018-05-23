@@ -339,7 +339,7 @@ function disable_ip_Form(flag)
 	}
 }
 
-function setupIpType(maxspeed, cur_ippool, max_ippool)
+function setupIpType(maxdn,maxup, cur_ippool, max_ippool)
 {
 	var F = document.qosrule_fm;
 	var port_err, obj;
@@ -431,15 +431,15 @@ function setupIpType(maxspeed, cur_ippool, max_ippool)
 		F.dn.focus();
 		return;
 	}
-	if ((F.dn.value!='0' && F.dnu.value=='0' && checkRange(F.dn.value, 32, maxspeed*1000)) ||
-	    (F.dn.value!='0' && F.dnu.value=='1' && checkRange(F.dn.value, 1, maxspeed)))
+	if ((F.dn.value!='0' && F.dnu.value=='0' && checkRange(F.dn.value, 32, maxdn)) ||
+	    (F.dn.value!='0' && F.dnu.value=='1' && checkRange(F.dn.value*1000, 1000, maxdn)))
 	{
 		alert(QOS_RATE_RANGE);
 		F.dn.focus();
 		return;
 	}
-	if ((F.up.value!='0' && F.upu.value=='0' && checkRange(F.up.value, 32, maxspeed*1000)) ||
-	    (F.up.value!='0' && F.upu.value=='1' && checkRange(F.up.value, 1, maxspeed)))
+	if ((F.up.value!='0' && F.upu.value=='0' && checkRange(F.up.value, 32, maxup)) ||
+	    (F.up.value!='0' && F.upu.value=='1' && checkRange(F.up.value*1000, 1000, maxup)))
 	{
 		alert(QOS_RATE_RANGE);
 		F.up.focus();
@@ -484,7 +484,7 @@ function deleteIpType(chk_name)
 	}
 }
 
-function setupAppType(maxspeed, cur_ippool, max_ippool)
+function setupAppType(maxdn, maxup,cur_ippool, max_ippool)
 {
 	var F = document.qosrule_fm;
 	var obj;
@@ -540,15 +540,15 @@ function setupAppType(maxspeed, cur_ippool, max_ippool)
 		F.dn.focus();
 		return;
 	}
-	if ((F.dn.value!='0' && F.dnu.value=='0' && checkRange(F.dn.value, 32, maxspeed*1000)) ||
-	    (F.dn.value!='0' && F.dnu.value=='1' && checkRange(F.dn.value, 1, maxspeed)))
+	if ((F.dn.value!='0' && F.dnu.value=='0' && checkRange(F.dn.value, 32, maxdn)) ||
+	    (F.dn.value!='0' && F.dnu.value=='1' && checkRange(F.dn.value*1000, 1000, maxdn)))
 	{
 		alert(QOS_RATE_RANGE);
 		F.dn.focus();
 		return;
 	}
-	if ((F.up.value!='0' && F.upu.value=='0' && checkRange(F.up.value, 32, maxspeed*1000)) ||
-	    (F.up.value!='0' && F.upu.value=='1' && checkRange(F.up.value, 1, maxspeed)))
+	if ((F.up.value!='0' && F.upu.value=='0' && checkRange(F.up.value, 32, maxup)) ||
+	    (F.up.value!='0' && F.upu.value=='1' && checkRange(F.up.value*1000, 1000, maxup)))
 	{
 		alert(QOS_RATE_RANGE);
 		F.up.focus();

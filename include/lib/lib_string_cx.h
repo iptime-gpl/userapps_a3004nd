@@ -1,3 +1,4 @@
+#ifdef USE_NETDETECT
 #define LATEST_TIME     	"最近檢測時間"
 #define IPADDRESS       	"IP位址"
 #define PROTOCOL        	"通訊協定"
@@ -15,6 +16,7 @@
 #define KAZAA_COMMENT     	"已偵測到KaZaA"
 #define BATTLENET_COMMENT     	"已偵測到Battle.Net"
 #define OTHERS_COMMENT    	"已偵測到未知通訊埠.請注意"
+#endif
 
 #define LIB_NETCONF_WIRELESS_KOREA                  "韓國"
 #define LIB_NETCONF_WIRELESS_EU                     "歐洲"

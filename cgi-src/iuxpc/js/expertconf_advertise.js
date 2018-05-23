@@ -1,6 +1,6 @@
 <script>
 var regExp_string = /[\{\}\[\]\/?;:|*~`!^+<>@$%\\\=\'\"]/g;
-var regExp_http = /[\{\}\[\]\?;|*~`!^+<>@$%\\\=\'\"]/g;
+var regExp_http = /[\{\}\[\];|*~`!^+<>@$%\\\'\"]/g;
 
 function isIE6()
 {

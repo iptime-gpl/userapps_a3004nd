@@ -320,7 +320,7 @@ var QOS_PROTOCOL_SELECT="Select a Protocol type."
 var QOS_PORT_PORTRANGE="Port range should be from 1 to 65,535"
 var QOS_PORT_INVALID_EXT_PORT_RANGE="Invalid External Port Range."
 var QOS_BADNWIDTH_EMPTY="Bandwidth Field Empty."
-var QOS_RATE_RANGE="Rate range : 32 Kbps ~ 50 Mbps"
+var QOS_RATE_RANGE="Invalid Download/Upload Value"
 var QOS_BPI_RANGE="Invaild IP address range for BPI. (Available: 2 ~ 31)"
 
 

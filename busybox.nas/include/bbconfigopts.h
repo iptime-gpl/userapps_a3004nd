@@ -443,7 +443,7 @@ static const char *const bbconfig_config =
 "# CONFIG_WATCHDOG is not set\n"
 "CONFIG_FEATURE_IPV6=y\n"
 "# CONFIG_VERBOSE_RESOLUTION_ERRORS is not set\n"
-"# CONFIG_ARP is not set\n"
+"CONFIG_ARP=y\n"
 "# CONFIG_ARPING is not set\n"
 "# CONFIG_DNSD is not set\n"
 "# CONFIG_ETHER_WAKE is not set\n"

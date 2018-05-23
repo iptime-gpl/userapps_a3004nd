@@ -21,7 +21,7 @@ var result_submit_func = [];
 var localpostdata = [];
 var regExp_string = /[\{\}\[\]\/?;:|*~`!^+<>@$%\\\=\'\"]/g;
 
-var regExp_http = /[\{\}\[\]\?;|*~`!^+<>@$%\\\=\'\"]/g;
+var regExp_http = /[\{\}\[\];|*~`!^+<>@$%\\\'\"]/g;
 
 //var regExp_http = /^[a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|COM|ORG|NET|MIL|EDU)$/;
 var regExp_cycle =  /^[0-9]{1,3}$/;
